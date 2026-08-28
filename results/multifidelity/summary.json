@@ -1,0 +1,46 @@
+{
+  "release": "0.6.0",
+  "scientific_question": "Can cheap lab and glasshouse evidence reduce expensive field-selection regret under a fixed experimental budget?",
+  "scope": {
+    "status": "controlled synthetic multi-fidelity experiment",
+    "reason": "The public real-data case does not contain harmonised lab, glasshouse and field measurements for the same candidate set; synthetic truth makes transfer error auditable.",
+    "n_candidates_per_rollout": 80,
+    "n_selected": 8,
+    "n_rollouts": 5000
+  },
+  "fidelity_costs": {
+    "lab": 1,
+    "glasshouse": 4,
+    "field": 20,
+    "common_budget_units": 1040
+  },
+  "calibration_gate": {
+    "held_out_lab_only_rmse": 0.7324991696099217,
+    "held_out_lab_plus_glasshouse_rmse": 0.47004849051165587,
+    "rmse_improvement_percent": 35.8294848631745,
+    "promotion_threshold_percent": 10.0,
+    "glasshouse_stage_promoted": true
+  },
+  "equal_budget_policy_result": {
+    "field_only_top8_recall": 0.324575,
+    "lab_field_top8_recall": 0.648725,
+    "multifidelity_top8_recall": 0.707625,
+    "field_only_regret": 0.6632607293457682,
+    "lab_field_regret": 0.2020199909644403,
+    "multifidelity_regret": 0.14007968198348364,
+    "multifidelity_regret_reduction_vs_lab_field_percent": 30.66048497738,
+    "paired_regret_difference_multifidelity_minus_lab_field": {
+      "mean_difference": -0.06194030898095661,
+      "mc_standard_error": 0.0013049434467904567,
+      "mc95_low": -0.0644979981366659,
+      "mc95_high": -0.05938261982524731
+    },
+    "paired_recall_difference_multifidelity_minus_lab_field": {
+      "mean_difference": 0.0589,
+      "mc_standard_error": 0.0014414657695252225,
+      "mc95_low": 0.056074727091730565,
+      "mc95_high": 0.061725272908269437
+    }
+  },
+  "interpretation": "Lower-fidelity evidence is valuable only after demonstrating transport to field truth. Under the controlled cost structure, glasshouse evidence passes that gate and reduces field-selection regret. The numerical gains are properties of the explicit synthetic DGP, not empirical claims about any commercial Crop Protection pipeline."
+}

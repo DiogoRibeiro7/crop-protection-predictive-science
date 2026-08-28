@@ -1,0 +1,7 @@
+seed: 20260826
+n_sites: 8
+years: [2023, 2024, 2025]
+blocks_per_site_year: 4
+formulations: [A, B]
+doses_g_ai_ha: [0.0, 2.5, 5.0, 10.0, 20.0, 40.0]
+n_insects_per_plot: 60

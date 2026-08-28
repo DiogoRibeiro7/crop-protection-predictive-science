@@ -1,0 +1,62 @@
+{
+  "release": "0.8.0",
+  "scientific_question": "Under a fixed experimental budget, which formulation/application condition should be tested next when efficacy and environmental burden are competing objectives and crop injury is a hard safety constraint?",
+  "scope": {
+    "status": "controlled synthetic formulation/application optimisation experiment",
+    "grid_candidates": 1800,
+    "initial_evaluations": 12,
+    "sequential_evaluations": 18,
+    "total_evaluations_per_policy": 30,
+    "n_rollouts": 50,
+    "injury_limit": 0.34,
+    "warning": "Response surfaces, thresholds and design variables are controlled simulation parameters, not claims about a real formulation or Crop Protection product."
+  },
+  "optimisation_structure": {
+    "objective_1": "maximise efficacy",
+    "objective_2": "minimise environmental burden",
+    "hard_constraint": "crop injury <= injury_limit",
+    "surrogate": "independent conjugate Bayesian nonlinear response surfaces",
+    "acquisition": "ParEGO-style deterministic scalarised expected improvement multiplied by posterior feasibility probability",
+    "evaluation": "true feasible two-objective hypervolume on a hidden finite candidate grid"
+  },
+  "oracle": {
+    "n_feasible_pareto_candidates": 41,
+    "feasible_pareto_hypervolume": 0.7782980928015737
+  },
+  "equal_budget_policy_results": {
+    "random": {
+      "mean_hypervolume_ratio": 0.8348125753772829,
+      "mean_unsafe_evaluation_rate": 0.25066666666666665,
+      "mean_oracle_frontier_recall": 0.012682926829268294,
+      "mean_balanced_high_value_evaluated": 0.38
+    },
+    "efficacy_only": {
+      "mean_hypervolume_ratio": 0.8317198504366433,
+      "mean_unsafe_evaluation_rate": 0.296,
+      "mean_oracle_frontier_recall": 0.03951219512195122,
+      "mean_balanced_high_value_evaluated": 0.56
+    },
+    "constrained_pareto": {
+      "mean_hypervolume_ratio": 0.9016332627939905,
+      "mean_unsafe_evaluation_rate": 0.19399999999999998,
+      "mean_oracle_frontier_recall": 0.058048780487804874,
+      "mean_balanced_high_value_evaluated": 1.28
+    }
+  },
+  "promotion_gate": {
+    "minimum_hypervolume_improvement_vs_efficacy_only_percent": 8.0,
+    "observed_hypervolume_improvement_vs_efficacy_only_percent": 8.405884784479223,
+    "paired_hypervolume_ratio_difference_constrained_pareto_minus_efficacy_only": {
+      "mean": 0.069913412357347,
+      "mc95_low": 0.06352686932603514,
+      "mc95_high": 0.07629995538865884
+    },
+    "paired_unsafe_rate_difference_constrained_pareto_minus_random": {
+      "mean": -0.05666666666666667,
+      "mc95_low": -0.07788845840168387,
+      "mc95_high": -0.035444874931649474
+    },
+    "promoted": true
+  },
+  "interpretation": "An efficacy-only optimiser can find potent conditions while systematically neglecting the environmental objective. Constrained multi-objective acquisition instead searches for feasible efficacy-versus-burden trade-offs and explicitly accounts for posterior uncertainty about crop injury."
+}

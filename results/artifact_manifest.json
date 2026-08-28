@@ -1,0 +1,752 @@
+{
+  "release": "1.0.1",
+  "algorithm": "sha256",
+  "file_count": 149,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "bytes": 1027,
+      "sha256": "60713a1178962d47b89c339e4aa1bee546e7a3371ab3070b21e9461771846965"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 126,
+      "sha256": "ea3270d61030fa6e9b926784781169df727e6f5be5cd6ed6a318a6a810b6ca8a"
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "bytes": 152,
+      "sha256": "708463b62553169ada9e87b914c22f38158876b221fbbd26934fb446b4ddbafe"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 12395,
+      "sha256": "7f290b35b091a40f5d106fe096dd183ce3c2e9b23e1a157be535d3689f150e45"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 237,
+      "sha256": "1fb09dab7e4fcb90569a75b5a72b3c8a284c72e5494c3b2b18cbfe3d9041f366"
+    },
+    {
+      "path": "Dockerfile",
+      "bytes": 263,
+      "sha256": "6f5d0cdbe91c4da5517a137dc58bdd4528e72d2a5b8b185eb804efd300b4aa45"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1070,
+      "sha256": "8cf603917cce5c44df7f8b46441911bd426d0713eda59289fee9134525a46958"
+    },
+    {
+      "path": "Makefile",
+      "bytes": 1414,
+      "sha256": "e4659031f1a85eea88c3df800ca6ae0c28f8f071fcf11f27bcc6f2359cabfb43"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12546,
+      "sha256": "47bf81b631e9973a3a39d6f9f0a835d70d1be381c1c630f7366583cb53ea19f0"
+    },
+    {
+      "path": "RELEASE_VALIDATION.md",
+      "bytes": 6305,
+      "sha256": "4fdbcb1b044dc1959d361671e383545e5a28c30502e827eac5e3e7406e4209d8"
+    },
+    {
+      "path": "configs/demo.yaml",
+      "bytes": 169,
+      "sha256": "59fff24e7bd08e24af168ae326e0b20911cb9ed7564d5f416f47b44d16380b15"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 2289,
+      "sha256": "dd0fa11588af73b25f33535309a0028ea98f9dfac5d3437e6bcfdc7cc75d404c"
+    },
+    {
+      "path": "data/processed/hop_trial_primary.csv",
+      "bytes": 24365,
+      "sha256": "13f334afbc0251ab8bd383cc68eaf82864ad8519dbaea89d812162db89d0bc63"
+    },
+    {
+      "path": "data/processed/synthetic_field_trials.csv",
+      "bytes": 164157,
+      "sha256": "b2a5b6032fdb5c250792b6b0c60ab3d2126f0e815b50f03e4dd947e8c33c45ad"
+    },
+    {
+      "path": "data/raw/corvallis_monthly_weather_2009_2025.csv",
+      "bytes": 1833,
+      "sha256": "21da89ed983ad08829cdb3867ac10079df782912ced12a7b24ad627707338202"
+    },
+    {
+      "path": "data/raw/corvallis_monthly_weather_2009_2025.provenance.json",
+      "bytes": 1426,
+      "sha256": "b13cc5640e280785dbc1aa0fc7043eb609ba5144033662e24f8754a7565e3bdc"
+    },
+    {
+      "path": "data/raw/richardson_gent_hop_downy_mildew.csv",
+      "bytes": 9165,
+      "sha256": "4056c7290d264f5e9dda0f509dfd74cffdbf816f05de24e967a6c9f72b2768db"
+    },
+    {
+      "path": "data/raw/richardson_gent_hop_downy_mildew.provenance.json",
+      "bytes": 1117,
+      "sha256": "6fc1a438ba0b8467880bdd170b52e3000db2c827ab08c3510494f7aabba98e98"
+    },
+    {
+      "path": "docs/adaptive_experimental_design.md",
+      "bytes": 8523,
+      "sha256": "74be794e0648a94eba115da27221691bd4d93da7fb59f7264fcdad60d0d6c00d"
+    },
+    {
+      "path": "docs/bayesian_hierarchical_case.md",
+      "bytes": 6206,
+      "sha256": "2ffb98e9a2bbde67d2d4423afcae1a965e5aa6cf0f2e20fef9d1bee0e7ad6a79"
+    },
+    {
+      "path": "docs/environment_transportability.md",
+      "bytes": 6061,
+      "sha256": "62d2a1708948fba46c7a90d88725469e25a2b7aa3ad8b05c3b6061c1d848a02f"
+    },
+    {
+      "path": "docs/evidence_map.md",
+      "bytes": 4907,
+      "sha256": "4327355c30608033c7fbd77cb4b08a7fc566509cc8cfe20b1c10ddb0b5a846d9"
+    },
+    {
+      "path": "docs/model_risk_control.md",
+      "bytes": 6867,
+      "sha256": "d0286c1e610f3966ec4cc3ee893ffa3490f1f4de7833621fe9323bbe45486a23"
+    },
+    {
+      "path": "docs/multifidelity_candidate_progression.md",
+      "bytes": 5265,
+      "sha256": "816b7c2efef89071030d5d6e56390bbbfde9cb59c7cb1377939d8014dbb4d592"
+    },
+    {
+      "path": "docs/multiobjective_bayesian_optimisation.md",
+      "bytes": 6356,
+      "sha256": "5496fec5c0efdb3fef274feea1d87d20bb7eaa4c22df735211b0dfeef5c825bc"
+    },
+    {
+      "path": "docs/portfolio_decision.md",
+      "bytes": 6148,
+      "sha256": "e7e09052424ae8934375a59fd89008b13cc09f8dfc84d50fdfc3c16a4aa4fe30"
+    },
+    {
+      "path": "docs/principal_scientist_review.md",
+      "bytes": 7876,
+      "sha256": "aa3539c3f50d0f15a15bc1e1d1cac4dc4bafb9817c287cab780e77cb8eeca799"
+    },
+    {
+      "path": "docs/real_case_hop_downy_mildew.md",
+      "bytes": 5923,
+      "sha256": "9317f33d39bc4823abdf2733660816479a23999bc6e70a85af326ad329e3be1d"
+    },
+    {
+      "path": "docs/scientific_case.md",
+      "bytes": 1764,
+      "sha256": "23f44fc97ba737b3ae5c72637b5f211f05817e392ed3770493f0d0717f1c8e14"
+    },
+    {
+      "path": "docs/technical_walkthrough.md",
+      "bytes": 5470,
+      "sha256": "67b41bfd583a7d611c37ae4d0a28a4d498812832110e4f9832d3930495315d74"
+    },
+    {
+      "path": "docs/validated_environment.md",
+      "bytes": 730,
+      "sha256": "fdaa9216c61546e959eb06d7792a1abb4f821b115dce7421e866ef2debf825f0"
+    },
+    {
+      "path": "figures/model_risk/coverage_by_risk_control.png",
+      "bytes": 58798,
+      "sha256": "d31d19bb20732bfb876351dbd535e5717cc69b96adcd244ce05829e23b11c3bc"
+    },
+    {
+      "path": "figures/model_risk/error_vs_applicability_distance.png",
+      "bytes": 165456,
+      "sha256": "f5369169134bcfa45156f6518fedf7ed611e10ca7a31e8f4e3106404cda39e31"
+    },
+    {
+      "path": "notebooks/01_predictive_science_demo.ipynb",
+      "bytes": 157482,
+      "sha256": "c6642ee5876b131b4d530c77b51aa34615082ce6a3d4273204972ab170a8fb8b"
+    },
+    {
+      "path": "notebooks/02_real_fungicide_field_trial.ipynb",
+      "bytes": 25198,
+      "sha256": "76e4a7c2248b6e9c73039aec9ddfd850d335c187ddd792e466c0a2e4781dbfe6"
+    },
+    {
+      "path": "notebooks/03_bayesian_hierarchical_field_trial.ipynb",
+      "bytes": 240411,
+      "sha256": "7de01175e6755bb69b583934c512f79a8552a41e0631894b696c294c612c6ad9"
+    },
+    {
+      "path": "notebooks/04_environment_transportability.ipynb",
+      "bytes": 20410,
+      "sha256": "a85ca70034a75f94ce918ecc6a9d1de90f4edd67dd56bfa367a45b1f0caa4120"
+    },
+    {
+      "path": "notebooks/05_adaptive_experimental_design.ipynb",
+      "bytes": 124976,
+      "sha256": "52f4fb646d2defb78b79c31e93491ed86a67f03d61c9ebf8ce97b440f5282511"
+    },
+    {
+      "path": "notebooks/06_multifidelity_candidate_progression.ipynb",
+      "bytes": 14953,
+      "sha256": "6f59bf0385032ed046d9e2356552ba98f94654803a64c8a9ee93a2ef79a8b71d"
+    },
+    {
+      "path": "notebooks/07_portfolio_decision.ipynb",
+      "bytes": 12567,
+      "sha256": "6e8de9fe3c240445f2c79e7198c13a50bbb2fefa670beb576bc13e0b72b8d89f"
+    },
+    {
+      "path": "notebooks/08_multiobjective_bayesian_optimisation.ipynb",
+      "bytes": 15442,
+      "sha256": "6e85f4674f0600401ede22e5e9cd6bdeb1677ac911a776110bf4057e9e6cea7e"
+    },
+    {
+      "path": "notebooks/09_applicability_domain_model_risk.ipynb",
+      "bytes": 127369,
+      "sha256": "a65e7e617c7e5a777f03fc7da38cf651d3d46791d491c95eee43623d3d228c94"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1707,
+      "sha256": "638f1936af9fed3da5999e85ad75149ac78e33b02cbcc4f98063d0fd1eb7c350"
+    },
+    {
+      "path": "results/dose_response_bootstrap.csv",
+      "bytes": 16749,
+      "sha256": "ec5a4efbd6412ad1a1ce3784bde7297212ed815ec43bc4f50e516256c67ef78f"
+    },
+    {
+      "path": "results/figures/dose_response.png",
+      "bytes": 66377,
+      "sha256": "6290bc590ca20d0d0dafce89f150e566b21e166c9fb949879d368ba00f26c493"
+    },
+    {
+      "path": "results/figures/validation_gap.png",
+      "bytes": 41185,
+      "sha256": "49bd28ff1867cb96240dd1cd303e37a98d3f966748d701bf70f2fcf35d4ce710"
+    },
+    {
+      "path": "results/mixed_effects_summary.txt",
+      "bytes": 1372,
+      "sha256": "526e9298cfb9fced28f98ced5105de9fd0d3220f6c693ec7103354546a5af226"
+    },
+    {
+      "path": "results/model_risk/example_stress_predictions.csv",
+      "bytes": 125996,
+      "sha256": "449eec5341e2a0728c87ecbabef9882ee6cf9c4cc6b340de8ec3e5a245f3825f"
+    },
+    {
+      "path": "results/model_risk/promotion_gate.json",
+      "bytes": 745,
+      "sha256": "23b2984179c0587f8bf43a95ac0b5233e2466ba1358004b301e5f8824f540364"
+    },
+    {
+      "path": "results/model_risk/rollout_metrics.csv",
+      "bytes": 15715,
+      "sha256": "2bb8062033c652157eaa7301f40193f8c330b2d53ea36626532aac9bbc85fcd6"
+    },
+    {
+      "path": "results/model_risk/summary.json",
+      "bytes": 4045,
+      "sha256": "5b829b331dbe1a1a63c16a827e6a611993cb549ff9a880f5ec262360362d8621"
+    },
+    {
+      "path": "results/model_risk/summary_metrics.csv",
+      "bytes": 854,
+      "sha256": "d927720655d87c0617a0becbff0ec5474aa1c684810603e6e0da5a9b6b780dfb"
+    },
+    {
+      "path": "results/multifidelity/calibration_metrics.csv",
+      "bytes": 211,
+      "sha256": "2153065a90813bc0ff1a1b97b66b525213067aa557677ebbcb714e331cfb0add"
+    },
+    {
+      "path": "results/multifidelity/figures/cross_fidelity_calibration.png",
+      "bytes": 153215,
+      "sha256": "6bb655a5c95db1b516c0f92647e41526f3a8198dc01fc54f2d862c857f5e8812"
+    },
+    {
+      "path": "results/multifidelity/figures/equal_budget_selection_regret.png",
+      "bytes": 50773,
+      "sha256": "b0647a40a25d1447b49ae259f0707470d9d7151e63503893c1060dada05d0d9d"
+    },
+    {
+      "path": "results/multifidelity/policy_costs.csv",
+      "bytes": 152,
+      "sha256": "957976809f70aa0ee52d07766ee846cfe268e16dcb16e5d2510bcda4a10b9add"
+    },
+    {
+      "path": "results/multifidelity/screening_policy_metrics.csv",
+      "bytes": 600,
+      "sha256": "936cde1798d88064af8c13af4d56b39b3f41a35dcb55615c928fcc9d1f30096d"
+    },
+    {
+      "path": "results/multifidelity/summary.json",
+      "bytes": 2102,
+      "sha256": "8bdfcbbc2079b2e922a7fc7cb850bea865f5554e864a1630e803e690f4cd5239"
+    },
+    {
+      "path": "results/multiobjective_bo/figures/hypervolume_ratio_by_policy.png",
+      "bytes": 77028,
+      "sha256": "0b4ee76b1050ae807bb832ea991d999cd271052e5a6e850762c668957b19e831"
+    },
+    {
+      "path": "results/multiobjective_bo/figures/unsafe_evaluation_rate.png",
+      "bytes": 79509,
+      "sha256": "e1bf41138d8d1e6fbdc9e99ad0c1434d06dbf6c8daca06c13e0de460bcbda738"
+    },
+    {
+      "path": "results/multiobjective_bo/oracle_feasible_pareto_frontier.csv",
+      "bytes": 4726,
+      "sha256": "f6302d701ee3f5a6281564d4197e3ee2d3766cff228ab37bd2b7b37b8c9d9caa"
+    },
+    {
+      "path": "results/multiobjective_bo/paired_rollout_metrics.csv",
+      "bytes": 20973,
+      "sha256": "1c5f864ba0e5541f530dd6c532095ea15c24ff0f2e16d4f4b66d6dd56c44729a"
+    },
+    {
+      "path": "results/multiobjective_bo/policy_metrics.csv",
+      "bytes": 989,
+      "sha256": "e8b06db0024b92f03e21136ab15a5092e37822f7b953f16e488c56e483a005c6"
+    },
+    {
+      "path": "results/multiobjective_bo/promotion_gate.json",
+      "bytes": 548,
+      "sha256": "704729b4e564ee26270259ba5573a97ad983cc5230229c29016da246f6cfd6ef"
+    },
+    {
+      "path": "results/multiobjective_bo/summary.json",
+      "bytes": 2985,
+      "sha256": "b438be62439a1b71ad4ec0c5c6578ae49346f00e862af3981cf7544af4e818e6"
+    },
+    {
+      "path": "results/next_experiment_design.csv",
+      "bytes": 151,
+      "sha256": "0550d54f735fe7d5c7fd22b671b23b521e8b1d2f43c76a25bd2d5e046ee2146e"
+    },
+    {
+      "path": "results/portfolio_decision/figures/advanced_success_rate.png",
+      "bytes": 73206,
+      "sha256": "e32304b2dedbda7a7c68242e66323310bce3ce98e61585459718d683177f7455"
+    },
+    {
+      "path": "results/portfolio_decision/figures/portfolio_regret_by_policy.png",
+      "bytes": 73906,
+      "sha256": "7790c4d7d1319f48807ea53dac0628e8ab63c93c0d39f462d1a9cf6095e893fb"
+    },
+    {
+      "path": "results/portfolio_decision/portfolio_policy_metrics.csv",
+      "bytes": 1768,
+      "sha256": "5562d8f3abc2f1a30bfc81d04703b35d8908d54d2f90ddad31511728537136e7"
+    },
+    {
+      "path": "results/portfolio_decision/portfolio_policy_rollouts.csv",
+      "bytes": 230246,
+      "sha256": "4971172ebc16071703faa8604d1fa2554eed0fcf827f5295656d596bbb380718"
+    },
+    {
+      "path": "results/portfolio_decision/portfolio_promotion_gate.json",
+      "bytes": 679,
+      "sha256": "d43d6f5318c91d5740bd854befdcbe28da3b9388e1b959806e23adf7f1d91a23"
+    },
+    {
+      "path": "results/portfolio_decision/summary.json",
+      "bytes": 3442,
+      "sha256": "736e82b88df285e05b6f20f0fe6d7a556546424dcbf2d3ffb357773f43a6dd5e"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/figures/initial_decision_information_gain.png",
+      "bytes": 48620,
+      "sha256": "75128fcccfcb61ab209084aaec658d7c4fc920cab9efbf63a632719224ba9912"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/figures/policy_regret_by_budget.png",
+      "bytes": 99321,
+      "sha256": "885438e783aaa541f17509e591786603e7e1f2a2ff89686c6bdc9b91ccc7fe8a"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/initial_acquisition_ranking.csv",
+      "bytes": 1209,
+      "sha256": "1bc045a721a2fed7674ce6ced2d785beb8c9d48bc65e67cae6adb37cc3348805"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/mean_replication_allocations.csv",
+      "bytes": 631,
+      "sha256": "3ae13f567cbef675cd3826280f928fa08daaf361b9553998b3842cf854d88a6d"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/policy_budget_metrics.csv",
+      "bytes": 3066,
+      "sha256": "e8a036e827019be5192dc58bab3c7fd5c9c96266de3a9df711ce54b9f5b2a996"
+    },
+    {
+      "path": "results/real_hop_trial/adaptive_design/summary.json",
+      "bytes": 2803,
+      "sha256": "2f4d2165d932f576c6fa7d01f2cf44a6922848c7ce7b0e711a267d214770fee9"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/figures/leave_one_year_out_coverage.png",
+      "bytes": 91815,
+      "sha256": "836a65ea22362d936c94d29833e1d585431a94fcffbfaf0535b9c358af28afe1"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/figures/leave_one_year_out_predictions.png",
+      "bytes": 100264,
+      "sha256": "1836ba2913486639146d8da0b4a26fc4f5101025ac87d0bb1d4adc80323c0583"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/figures/partial_pooling_timing_effects.png",
+      "bytes": 69138,
+      "sha256": "74a11cffdd8b8761a3631e28540a6f09f235e1ae44f1abcb5f83682de4d579ba"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/leave_one_year_out_metrics.csv",
+      "bytes": 644,
+      "sha256": "811164da79c2684710a4eaadf2f449b840d2a50d1ad3a16526a934baab4b48fb"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/leave_one_year_out_predictions.csv",
+      "bytes": 26767,
+      "sha256": "87e4675b6b7c468dd8fa7bd34b4429544defae4ca4885fe14a878b06494008c6"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/partial_pooling_comparison.csv",
+      "bytes": 1023,
+      "sha256": "883d8782884715e93ad4e955db0e56d72e29228b3f27b8a0cb49d6294d49c2ff"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/posterior_predictive_checks.csv",
+      "bytes": 608,
+      "sha256": "02ab2ed1825133b2e32f55f69a3f7516e053e9f542b64ce03e7d53b46fd75737"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/posterior_predictive_rows.csv",
+      "bytes": 30225,
+      "sha256": "e4de1e18fc5d63cd64bf004dc452424a98093f3a894eea1067203d80e07be4c8"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/posterior_timing_effects.csv",
+      "bytes": 928,
+      "sha256": "7cfd9e0821ef7fed75cda2151b836e269781a0dfcc59e8e2b9c340f62b47fe6f"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/prior_sensitivity.csv",
+      "bytes": 463,
+      "sha256": "eb6721e0384d89fef828681281e7b1dbd0199d74caf390ec846ba6b09a20d38b"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/summary.json",
+      "bytes": 1767,
+      "sha256": "669d0aa24b2c4adf539b3bac9dffead3e448a52ed59ab0c9124c950ba5dc1ea8"
+    },
+    {
+      "path": "results/real_hop_trial/bayesian/variance_components.csv",
+      "bytes": 567,
+      "sha256": "c4dea608cdf3d7c6723ed86d7f6636e2a3a39511bbac4f0a2627ef7cc5991327"
+    },
+    {
+      "path": "results/real_hop_trial/environment/environment_state_by_year.csv",
+      "bytes": 504,
+      "sha256": "d4760373fc939eda5c7af4104c9ca2e314b822c44b1d87faf2a732edbdd747c4"
+    },
+    {
+      "path": "results/real_hop_trial/environment/figures/environment_model_comparison.png",
+      "bytes": 81063,
+      "sha256": "22253a38a01a5fc80ce95318d136a1357ae64049fe5fd18acba3099d21e3b943"
+    },
+    {
+      "path": "results/real_hop_trial/environment/figures/sentinel_leave_one_year_out_predictions.png",
+      "bytes": 116268,
+      "sha256": "405e232e30cb670f5d8aa3635bf0c2c4da32d68bc07f9d8e04ca34e4123ae8aa"
+    },
+    {
+      "path": "results/real_hop_trial/environment/figures/weather_vs_realised_disease_pressure.png",
+      "bytes": 68590,
+      "sha256": "d84702329407115e6ae2d1751a0531d0760bb4596a03bf7f65215b547a0767bc"
+    },
+    {
+      "path": "results/real_hop_trial/environment/gxe_promotion_gate.json",
+      "bytes": 225,
+      "sha256": "6438fb375fe73c1bdea76b92b07e9d4e22f849dc5d098564492ff7e503b4f55e"
+    },
+    {
+      "path": "results/real_hop_trial/environment/leave_one_year_out_model_metrics.csv",
+      "bytes": 1547,
+      "sha256": "999d03e9a3cf8c56043e776d293acd04feeb5442325862a5ac052e6a1d4d761c"
+    },
+    {
+      "path": "results/real_hop_trial/environment/leave_one_year_out_predictions.csv",
+      "bytes": 57589,
+      "sha256": "e69899f52807dc3fe0ac60755d123cfba669bda8d26720f9102ca01704a98a15"
+    },
+    {
+      "path": "results/real_hop_trial/environment/regularisation_sensitivity.csv",
+      "bytes": 1177,
+      "sha256": "1d6c14ae73f755695f5d8ae160d54b130e8cd78229dacd7ef95ef630d1df6dcf"
+    },
+    {
+      "path": "results/real_hop_trial/environment/summary.json",
+      "bytes": 2244,
+      "sha256": "786471d72f26db85632fa43849fdc9c9a333f5732315e7c23e4c312fc3fd1560"
+    },
+    {
+      "path": "results/real_hop_trial/figures/paired_timing_effects.png",
+      "bytes": 51587,
+      "sha256": "429daede677fa59a85e88f54d5006a4370017fa0113bcc6f06aadd5702c0b776"
+    },
+    {
+      "path": "results/real_hop_trial/figures/year_disease_pressure.png",
+      "bytes": 72256,
+      "sha256": "b1ba1d1ab4227814613fa55bd7f812e06b254f3160efe69ab48254938e2757d3"
+    },
+    {
+      "path": "results/real_hop_trial/figures/year_transportability_gap.png",
+      "bytes": 37410,
+      "sha256": "2c0c0206965af1d5bc1b87d7d1993c67dc93e2f0984f4ab249dcf9960813b4bf"
+    },
+    {
+      "path": "results/real_hop_trial/paired_timing_differences.csv",
+      "bytes": 10078,
+      "sha256": "fe2bfcef735f9ee372008e8055de8ef5f435f40f65c2696de2c5aad99358bd38"
+    },
+    {
+      "path": "results/real_hop_trial/source_aligned_fixed_effects_anova.csv",
+      "bytes": 441,
+      "sha256": "4e6d24786e5bbb1e5aad4b91f68c39bcf6eb479c418f705bd08bebe83e33ccb9"
+    },
+    {
+      "path": "results/real_hop_trial/source_aligned_fixed_effects_summary.txt",
+      "bytes": 5476,
+      "sha256": "13bf88163916f1987f4c74f454afa4f5fe3c97a1ab6da5939cc4661f9e147d50"
+    },
+    {
+      "path": "results/real_hop_trial/summary.json",
+      "bytes": 1650,
+      "sha256": "8fdc9df7a049671bcf32fd610bd79bdc04c1b447a0cbc6aaeaaedaa696d39e2a"
+    },
+    {
+      "path": "results/real_hop_trial/timing_effect_bootstrap.csv",
+      "bytes": 939,
+      "sha256": "4775644389a8ec789979f43e9ab69f21e2ad917c7f2706d2615603e4160d4e26"
+    },
+    {
+      "path": "results/real_hop_trial/treatment_timing_summary.csv",
+      "bytes": 957,
+      "sha256": "683ac9981f58b4b08fd2d4c1eec364e0c2218703b47eb5c4f8873283e869754a"
+    },
+    {
+      "path": "results/real_hop_trial/year_severity.csv",
+      "bytes": 400,
+      "sha256": "b396d6f76d99d830cd2b850e9b141fecb98e6d76218088250440af21774d04be"
+    },
+    {
+      "path": "results/real_hop_trial/year_transportability.csv",
+      "bytes": 588,
+      "sha256": "c72112e06f23c1c13bd4f5444b9d0993fb51d74b0472002cde1047c6d4ac6bdb"
+    },
+    {
+      "path": "results/summary.json",
+      "bytes": 1550,
+      "sha256": "53d616b56be2776cfb47ab9c73317b3cae29dccc9a6bfaeedddfeebbbfbd8f2a"
+    },
+    {
+      "path": "results/validation_comparison.csv",
+      "bytes": 182,
+      "sha256": "21a90f063e86c7e5187979ae1e5004a680affced2794856f518ee9387fe4c3ae"
+    },
+    {
+      "path": "src/crop_protection_ps/__init__.py",
+      "bytes": 272,
+      "sha256": "84a3c8916da9875d65f4a3568855078ebc6c2bdc6d5dd10cd4d8a786c299709c"
+    },
+    {
+      "path": "src/crop_protection_ps/adaptive_demo.py",
+      "bytes": 8379,
+      "sha256": "120599e13c3ed49905aada6616adc331a873e317c4b82ee8c72cb7adacdd8767"
+    },
+    {
+      "path": "src/crop_protection_ps/adaptive_design.py",
+      "bytes": 22170,
+      "sha256": "ada7f67c036f4fd9c8b5bbb1dfc2d8ad555e75ae5a590cf7b83fba456f0cf6b3"
+    },
+    {
+      "path": "src/crop_protection_ps/bayesian_demo.py",
+      "bytes": 10245,
+      "sha256": "4d01755300fa51e7a50c99014b67643f00da7a7a747cb79615a60d46e2a939f8"
+    },
+    {
+      "path": "src/crop_protection_ps/bayesian_hierarchical.py",
+      "bytes": 32040,
+      "sha256": "c28bfbb7c013984d1457c2735724d98215880f48654d8c0de9153083a21949b1"
+    },
+    {
+      "path": "src/crop_protection_ps/config.py",
+      "bytes": 2647,
+      "sha256": "c6698883deafa8d16e86c5d565ee9f908585c56b67177710ced1341a75310458"
+    },
+    {
+      "path": "src/crop_protection_ps/demo.py",
+      "bytes": 4508,
+      "sha256": "7c4cd731a5515a590ad4b39a74ff06afcada316918024659935053cca52e30a9"
+    },
+    {
+      "path": "src/crop_protection_ps/design.py",
+      "bytes": 3498,
+      "sha256": "235cc530e975644d48ce8840a20552df42d13b3e8ded042a6753450a641266b5"
+    },
+    {
+      "path": "src/crop_protection_ps/dose_response.py",
+      "bytes": 3814,
+      "sha256": "89522630688999568e88af18edf7c82c5cbb948959e70c0f5822cae2936225a2"
+    },
+    {
+      "path": "src/crop_protection_ps/environment_demo.py",
+      "bytes": 8494,
+      "sha256": "ed8b22e57db15adf95b93fbd2fcfc6805ed3b28d75479b3648b5ad2bec754259"
+    },
+    {
+      "path": "src/crop_protection_ps/environment_transport.py",
+      "bytes": 17456,
+      "sha256": "96d6f4ca2d2939bca2e5fa157cb1f2e8f0ed38ae6d2c3291240b51bfd7c6cb61"
+    },
+    {
+      "path": "src/crop_protection_ps/hop_trial.py",
+      "bytes": 16559,
+      "sha256": "250dc93655382bc9cafc6f278309758d8d4528b7da539c007b3a5a8086e70f76"
+    },
+    {
+      "path": "src/crop_protection_ps/mixed_effects.py",
+      "bytes": 1713,
+      "sha256": "bacc08d34acbe5c9f74dd9afa54468f6c6bc99ad008f44e9ee6206712730031a"
+    },
+    {
+      "path": "src/crop_protection_ps/model_risk.py",
+      "bytes": 19110,
+      "sha256": "bff89755b0e5df57bc94a500d003d4c785c84ae4774c3d7b3a62e036e1c8623d"
+    },
+    {
+      "path": "src/crop_protection_ps/model_risk_demo.py",
+      "bytes": 5471,
+      "sha256": "647e08244a1a6b838996864c8e5ec38de84661089f291f70f04a0d5bcfa295dc"
+    },
+    {
+      "path": "src/crop_protection_ps/multifidelity.py",
+      "bytes": 16590,
+      "sha256": "73e6645e9eace5c0ad729a1d2ef22a3c4938179753b18301c791028d56884cd5"
+    },
+    {
+      "path": "src/crop_protection_ps/multifidelity_demo.py",
+      "bytes": 8052,
+      "sha256": "70176a1b33cff963898d037c80dca966236ab71fbc093c243af461f85f1f9c86"
+    },
+    {
+      "path": "src/crop_protection_ps/multiobjective_bo.py",
+      "bytes": 22690,
+      "sha256": "25e0ba937202d62aeb35226d6d5beb4c1f48c2e462af1712f6ae620f2916cd8d"
+    },
+    {
+      "path": "src/crop_protection_ps/multiobjective_demo.py",
+      "bytes": 7339,
+      "sha256": "f4a32021a779a216fac8e91cd566412b6de0e21b3c8d138279ed03c9a338c85e"
+    },
+    {
+      "path": "src/crop_protection_ps/portfolio_decision.py",
+      "bytes": 27774,
+      "sha256": "2ac5435f02c3c16c09eb16b573f75bfa44804542ab9c6ff7502569d4e70b2605"
+    },
+    {
+      "path": "src/crop_protection_ps/portfolio_demo.py",
+      "bytes": 7491,
+      "sha256": "3e3e4459dc49475fd9f049eace47eb4207f61259da9e284bf7c8c520e266de5a"
+    },
+    {
+      "path": "src/crop_protection_ps/real_data.py",
+      "bytes": 1697,
+      "sha256": "0acb7acd0f47c066b0c2f8ce3fbc9ad89333f895fb9ef147d55b71984523778d"
+    },
+    {
+      "path": "src/crop_protection_ps/real_demo.py",
+      "bytes": 8640,
+      "sha256": "770a6330d5ccd6987fe5c67e2d88ef810c8b487617419e7866e80a213bdd67cc"
+    },
+    {
+      "path": "src/crop_protection_ps/simulate.py",
+      "bytes": 4306,
+      "sha256": "a75334b85a26b7b827a275dc8ec03b375eab75bf5848e43786b3a71c37d52332"
+    },
+    {
+      "path": "src/crop_protection_ps/validation.py",
+      "bytes": 4104,
+      "sha256": "36bedecec18c01908c88bd64e0b12aafff7791462c0b026b4ee0276f804d3283"
+    },
+    {
+      "path": "tests/test_adaptive_design.py",
+      "bytes": 3755,
+      "sha256": "eaf3c3b33933a79cf5ba1f5b2b33608f2e29d73dc85bdf2a153d7d936ea73f1b"
+    },
+    {
+      "path": "tests/test_bayesian_hierarchical.py",
+      "bytes": 3468,
+      "sha256": "443fe2b82a3e85c9dade4c3e8bd939055434ba2e5d83a66adfa161062727e3d2"
+    },
+    {
+      "path": "tests/test_config.py",
+      "bytes": 630,
+      "sha256": "aa0d9d0315185771fb431a910bb33032e5a29676ba7190312ea23274132c3687"
+    },
+    {
+      "path": "tests/test_design.py",
+      "bytes": 453,
+      "sha256": "f16cfecd332bc34acefc18524c8b3cd6de19c4503fb8aea2f888a2017a3f0cb5"
+    },
+    {
+      "path": "tests/test_dose_response.py",
+      "bytes": 968,
+      "sha256": "5a647ac35e40e01aa735461a77330602c3c14c76e86df7ba581a4ae763d73afa"
+    },
+    {
+      "path": "tests/test_environment_transport.py",
+      "bytes": 3134,
+      "sha256": "a89eb5df94df5821fbd1bb35a6f1fe23821eeb06d57cc25ae70a508c17192b93"
+    },
+    {
+      "path": "tests/test_hop_trial.py",
+      "bytes": 2493,
+      "sha256": "274e98860731307058193019c2d64821ed5c73b95d07ad78d0e33785ac73d7e0"
+    },
+    {
+      "path": "tests/test_model_risk.py",
+      "bytes": 2782,
+      "sha256": "0d0a1bf283c0708a8fb662734756ab25cfe6ac3a0641e28c01909800780b3cba"
+    },
+    {
+      "path": "tests/test_multifidelity.py",
+      "bytes": 2752,
+      "sha256": "174bf08c1f626a8f0585bcade53f58d0e62af1ebe7a700a34f154bbc5b231377"
+    },
+    {
+      "path": "tests/test_multiobjective_bo.py",
+      "bytes": 3385,
+      "sha256": "8d9b3cde6d32408553a3c1b2cd1b583a6a0cc142938a6a52fcac4a839fe6c49a"
+    },
+    {
+      "path": "tests/test_portfolio_decision.py",
+      "bytes": 3760,
+      "sha256": "531720c537d1e3f5d0faf1889adac916ce47278dfb2cf4c95630e532d2008641"
+    },
+    {
+      "path": "tests/test_simulate.py",
+      "bytes": 746,
+      "sha256": "a3295611625077e87b30393c68c0c956e21947a986430abcfcab9901f448c0de"
+    }
+  ]
+}

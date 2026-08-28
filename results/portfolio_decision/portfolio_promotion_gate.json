@@ -1,0 +1,18 @@
+{
+  "minimum_regret_reduction_vs_uncertainty_percent": 5.0,
+  "observed_regret_reduction_vs_uncertainty_percent": 16.743489290409656,
+  "observed_regret_reduction_vs_uniform_percent": 29.471224637502715,
+  "paired_regret_difference_portfolio_voi_minus_uncertainty": {
+    "mean_difference": -21.205794717521293,
+    "mc_standard_error": 2.6282733634217896,
+    "mc95_low": -26.357210509828,
+    "mc95_high": -16.054378925214586
+  },
+  "paired_regret_difference_portfolio_voi_minus_uniform": {
+    "mean_difference": -44.06143422706524,
+    "mc_standard_error": 3.2206459597822836,
+    "mc95_low": -50.37390030823852,
+    "mc95_high": -37.748968145891965
+  },
+  "promoted": true
+}

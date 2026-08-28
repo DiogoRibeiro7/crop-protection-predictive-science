@@ -1,0 +1,74 @@
+{
+  "release": "0.7.0",
+  "scientific_question": "Under a fixed follow-up experimental budget, which candidate and which uncertainty should be measured next before making a constrained R&D advancement decision?",
+  "scope": {
+    "status": "controlled synthetic R&D portfolio experiment",
+    "n_candidates_per_rollout": 36,
+    "max_candidates_advanced": 6,
+    "n_rollouts": 500,
+    "followup_budget_units": 24,
+    "downstream_development_budget_units": 130,
+    "warning": "Value units, success thresholds, rewards and costs are simulation parameters, not estimates of the economics of any real Crop Protection programme."
+  },
+  "decision_structure": {
+    "technical_success": "efficacy > threshold AND safety margin > threshold",
+    "candidate_expected_value": "P(technical success) * success reward - development cost",
+    "terminal_optimisation": "exact count-and-budget 0/1 knapsack",
+    "adaptive_acquisition": "Gauss-Hermite EVSI approximation around the current portfolio value-per-cost boundary"
+  },
+  "equal_followup_budget_result": {
+    "uniform": {
+      "mean_followup_cost_units": 24.0,
+      "mean_realised_portfolio_value": 245.20573160600185,
+      "mean_oracle_regret": 149.50662813989805,
+      "mean_advanced_technical_success_rate": 0.7507333333333334,
+      "mean_efficacy_followups": 4.0,
+      "mean_safety_followups": 4.0
+    },
+    "uncertainty": {
+      "mean_followup_cost_units": 24.0,
+      "mean_realised_portfolio_value": 268.06137111554574,
+      "mean_oracle_regret": 126.65098863035415,
+      "mean_advanced_technical_success_rate": 0.8093666666666667,
+      "mean_efficacy_followups": 0.522,
+      "mean_safety_followups": 10.956
+    },
+    "portfolio_voi": {
+      "mean_followup_cost_units": 24.0,
+      "mean_realised_portfolio_value": 289.2671658330671,
+      "mean_oracle_regret": 105.44519391283285,
+      "mean_advanced_technical_success_rate": 0.8335333333333333,
+      "mean_efficacy_followups": 2.012,
+      "mean_safety_followups": 7.976
+    }
+  },
+  "no_followup_reference": {
+    "mean_realised_portfolio_value": 232.81809452038783,
+    "mean_oracle_regret": 161.8942652255121
+  },
+  "promotion_gate": {
+    "minimum_regret_reduction_vs_uncertainty_percent": 5.0,
+    "observed_regret_reduction_vs_uncertainty_percent": 16.743489290409656,
+    "observed_regret_reduction_vs_uniform_percent": 29.471224637502715,
+    "paired_regret_difference_portfolio_voi_minus_uncertainty": {
+      "mean_difference": -21.205794717521293,
+      "mc_standard_error": 2.6282733634217896,
+      "mc95_low": -26.357210509828,
+      "mc95_high": -16.054378925214586
+    },
+    "paired_regret_difference_portfolio_voi_minus_uniform": {
+      "mean_difference": -44.06143422706524,
+      "mc_standard_error": 3.2206459597822836,
+      "mc95_low": -50.37390030823852,
+      "mc95_high": -37.748968145891965
+    },
+    "promoted": true
+  },
+  "paired_value_difference_portfolio_voi_minus_uncertainty": {
+    "mean_difference": 21.205794717521293,
+    "mc_standard_error": 2.6282733634217896,
+    "mc95_low": 16.054378925214586,
+    "mc95_high": 26.357210509828
+  },
+  "interpretation": "Technical uncertainty is not automatically decision-relevant uncertainty. The portfolio-aware policy spends follow-up evidence where a posterior change could alter a constrained advancement decision, whereas uncertainty sampling ignores reward, development cost and the opportunity cost of scarce portfolio capacity."
+}

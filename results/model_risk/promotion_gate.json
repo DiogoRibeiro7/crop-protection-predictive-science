@@ -1,0 +1,21 @@
+{
+  "minimum_distance_scaled_coverage": 0.9,
+  "minimum_selective_coverage": 0.87,
+  "minimum_ood_rejection_rate": 0.95,
+  "minimum_selective_mae_reduction_percent": 60.0,
+  "observed_distance_scaled_coverage": 0.9286538461538463,
+  "observed_selective_coverage": 0.8889494953002525,
+  "observed_ood_rejection_rate": 0.9810000000000001,
+  "observed_selective_mae_reduction_percent": 70.40482031756807,
+  "paired_coverage_gain_scaled_minus_global": {
+    "mean": 0.22896153846153847,
+    "mc95_low": 0.21759277517355394,
+    "mc95_high": 0.240330301749523
+  },
+  "paired_mae_difference_selective_minus_always": {
+    "mean": -0.11932761754416045,
+    "mc95_low": -0.1224634580038483,
+    "mc95_high": -0.1161917770844726
+  },
+  "promoted": true
+}

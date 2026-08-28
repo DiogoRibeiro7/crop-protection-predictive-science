@@ -1,0 +1,59 @@
+[tool.poetry]
+name = "crop-protection-predictive-science"
+version = "1.0.1"
+description = "Predictive-science methods for crop-protection experiments, transportability, uncertainty and R&D decisions."
+authors = ["Diogo Ribeiro"]
+readme = "README.md"
+packages = [{ include = "crop_protection_ps", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.14"
+numpy = ">=2.0"
+pandas = ">=2.2"
+scipy = ">=1.13"
+scikit-learn = ">=1.5"
+statsmodels = ">=0.14"
+matplotlib = ">=3.9"
+pydantic = ">=2.8"
+pyyaml = ">=6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8.0"
+pytest-cov = ">=5.0"
+ruff = ">=0.6"
+mypy = ">=1.11"
+pre-commit = ">=3.8"
+nbclient = ">=0.10"
+nbformat = ">=5.10"
+
+[tool.poetry.scripts]
+crop-protection-demo = "crop_protection_ps.demo:main"
+crop-protection-real = "crop_protection_ps.real_demo:main"
+crop-protection-bayesian = "crop_protection_ps.bayesian_demo:main"
+crop-protection-environment = "crop_protection_ps.environment_demo:main"
+crop-protection-adaptive = "crop_protection_ps.adaptive_demo:main"
+crop-protection-multifidelity = "crop_protection_ps.multifidelity_demo:main"
+crop-protection-portfolio = "crop_protection_ps.portfolio_demo:main"
+crop-protection-multiobjective = "crop_protection_ps.multiobjective_demo:main"
+crop-protection-model-risk = "crop_protection_ps.model_risk_demo:main"
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

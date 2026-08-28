@@ -1,0 +1,48 @@
+{
+  "source": {
+    "url": "https://github.com/DavidGent-Lab/Richardon-and-Gent-2024-Plant-Health-Progress/blob/main/Data%20Set.csv",
+    "local_file": "data/raw/richardson_gent_hop_downy_mildew.csv",
+    "local_sha256": "4056c7290d264f5e9dda0f509dfd74cffdbf816f05de24e967a6c9f72b2768db"
+  },
+  "data": {
+    "raw_rows": 290,
+    "missing_audpc": 3,
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "source_excluded_year": 2019,
+    "primary_rows": 227,
+    "timing_analysis_rows": 187,
+    "paired_timing_comparisons": 92
+  },
+  "paired_timing": {
+    "interpretation": "positive late-minus-early means greater disease under late timing",
+    "mean_delta_audpc_late_minus_early": 40.93152173913044,
+    "ci95_audpc": [
+      15.542572271045325,
+      67.2072367021276
+    ],
+    "mean_delta_sqrt_audpc_late_minus_early": 1.2518921338241278,
+    "ci95_sqrt_audpc": [
+      0.5128564942506636,
+      1.9960563848270307
+    ]
+  },
+  "transportability": {
+    "raw_sqrt_audpc_random_rmse": 2.7165449283787946,
+    "raw_sqrt_audpc_leave_one_year_out_rmse": 8.426839372667862,
+    "raw_rmse_increase_pct": 210.20430711951857,
+    "control_normalised_random_rmse": 0.285299295514626,
+    "control_normalised_leave_one_year_out_rmse": 0.3120310065224528,
+    "control_normalised_rmse_increase_pct": 9.36970803226409
+  },
+  "source_aligned_fixed_effects": {
+    "formula": "sqrt_audpc ~ C(treatment) * C(timing) + C(year) + C(year_block)",
+    "r_squared": 0.8838563353255016,
+    "note": "Transparent Python fixed-effect approximation; not a numerical reproduction of the source SAS GLIMMIX/Kenward-Roger analysis."
+  }
+}

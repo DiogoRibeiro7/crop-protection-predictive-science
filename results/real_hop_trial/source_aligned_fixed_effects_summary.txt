@@ -1,0 +1,57 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             sqrt_audpc   R-squared:                       0.884
+Model:                            OLS   Adj. R-squared:                  0.863
+Method:                 Least Squares   F-statistic:                     42.94
+Date:                Fri, 28 Aug 2026   Prob (F-statistic):           6.25e-60
+Time:                        18:07:16   Log-Likelihood:                -417.65
+No. Observations:                 187   AIC:                             893.3
+Df Residuals:                     158   BIC:                             987.0
+Df Model:                          28                                         
+Covariance Type:            nonrobust                                         
+==============================================================================================================
+                                                 coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------
+Intercept                                     11.8023      1.059     11.145      0.000       9.711      13.894
+C(treatment)[T.FungiPhi]                       2.2027      0.777      2.835      0.005       0.668       3.737
+C(treatment)[T.Presidio]                       1.2619      0.847      1.490      0.138      -0.411       2.935
+C(treatment)[T.Ranman]                         1.8455      0.777      2.376      0.019       0.311       3.380
+C(treatment)[T.Revus]                          0.7583      0.777      0.976      0.330      -0.776       2.293
+C(timing)[T.Late]                              1.6655      0.801      2.079      0.039       0.083       3.248
+C(year)[T.2018]                               -2.7191      0.833     -3.265      0.001      -4.364      -1.074
+C(year)[T.2020]                                9.9702      0.833     11.973      0.000       8.326      11.615
+C(year)[T.2021]                                5.4294      0.833      6.520      0.000       3.785       7.074
+C(year_block)[T.2017:II]                       0.1096      1.318      0.083      0.934      -2.494       2.713
+C(year_block)[T.2017:III]                      1.7742      1.274      1.393      0.166      -0.741       4.290
+C(year_block)[T.2017:IV]                      -1.7939      1.274     -1.409      0.161      -4.309       0.722
+C(year_block)[T.2017:V]                       -0.0806      1.318     -0.061      0.951      -2.684       2.523
+C(year_block)[T.2018:I]                       -0.1633      0.714     -0.229      0.819      -1.575       1.248
+C(year_block)[T.2018:II]                       1.8719      0.714      2.620      0.010       0.461       3.283
+C(year_block)[T.2018:III]                     -1.2792      0.714     -1.790      0.075      -2.690       0.132
+C(year_block)[T.2018:IV]                      -1.4598      0.714     -2.043      0.043      -2.871      -0.049
+C(year_block)[T.2018:V]                       -1.6886      0.714     -2.363      0.019      -3.100      -0.277
+C(year_block)[T.2020:I]                        0.7070      0.714      0.990      0.324      -0.704       2.118
+C(year_block)[T.2020:II]                       2.5875      0.714      3.621      0.000       1.176       3.999
+C(year_block)[T.2020:III]                      2.4022      0.714      3.362      0.001       0.991       3.813
+C(year_block)[T.2020:IV]                       2.2182      0.714      3.105      0.002       0.807       3.629
+C(year_block)[T.2020:V]                        2.0553      0.714      2.877      0.005       0.644       3.467
+C(year_block)[T.2021:I]                       -1.5088      0.714     -2.112      0.036      -2.920      -0.098
+C(year_block)[T.2021:II]                       0.1105      0.714      0.155      0.877      -1.301       1.522
+C(year_block)[T.2021:III]                      1.9290      0.714      2.700      0.008       0.518       3.340
+C(year_block)[T.2021:IV]                       2.8686      0.714      4.015      0.000       1.457       4.280
+C(year_block)[T.2021:V]                        2.0301      0.714      2.841      0.005       0.619       3.441
+C(treatment)[T.FungiPhi]:C(timing)[T.Late]    -0.5108      1.124     -0.454      0.650      -2.731       1.710
+C(treatment)[T.Presidio]:C(timing)[T.Late]     0.4211      1.203      0.350      0.727      -1.954       2.796
+C(treatment)[T.Ranman]:C(timing)[T.Late]      -0.4093      1.116     -0.367      0.714      -2.613       1.795
+C(treatment)[T.Revus]:C(timing)[T.Late]       -1.0511      1.116     -0.942      0.348      -3.255       1.153
+==============================================================================
+Omnibus:                        3.794   Durbin-Watson:                   1.914
+Prob(Omnibus):                  0.150   Jarque-Bera (JB):                3.894
+Skew:                           0.174   Prob(JB):                        0.143
+Kurtosis:                       3.615   Cond. No.                     4.26e+16
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 1.83e-31. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular.

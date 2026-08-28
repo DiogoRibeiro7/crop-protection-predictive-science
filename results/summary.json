@@ -1,0 +1,78 @@
+{
+  "n_rows": 1152,
+  "n_sites": 8,
+  "years": [
+    2023,
+    2024,
+    2025
+  ],
+  "dose_response": {
+    "formulation": "A",
+    "ed50": 10.936309804959455,
+    "ed50_ci95": [
+      10.37041924804998,
+      11.562707051461953
+    ],
+    "ed90": 41.84491323598268,
+    "ed90_ci95": [
+      36.266542047501645,
+      49.28714016536468
+    ],
+    "hill": 1.6374203407963615
+  },
+  "validation": [
+    {
+      "strategy": "random_5fold",
+      "n_folds": 5,
+      "rmse": 0.05474488294408282,
+      "mae": 0.04198597349970232,
+      "r2": 0.9705626099705598
+    },
+    {
+      "strategy": "leave_one_site_out",
+      "n_folds": 8,
+      "rmse": 0.06074580894933007,
+      "mae": 0.0465070428019516,
+      "r2": 0.9637552691633948
+    }
+  ],
+  "selected_next_experiments": [
+    {
+      "rank": 1,
+      "dose_g_ai_ha": 15.0,
+      "temperature_c": 20.0,
+      "spray_coverage_pct": 85.0
+    },
+    {
+      "rank": 2,
+      "dose_g_ai_ha": 15.0,
+      "temperature_c": 30.0,
+      "spray_coverage_pct": 45.0
+    },
+    {
+      "rank": 3,
+      "dose_g_ai_ha": 10.0,
+      "temperature_c": 30.0,
+      "spray_coverage_pct": 85.0
+    },
+    {
+      "rank": 4,
+      "dose_g_ai_ha": 5.0,
+      "temperature_c": 20.0,
+      "spray_coverage_pct": 45.0
+    },
+    {
+      "rank": 5,
+      "dose_g_ai_ha": 40.0,
+      "temperature_c": 20.0,
+      "spray_coverage_pct": 45.0
+    },
+    {
+      "rank": 6,
+      "dose_g_ai_ha": 5.0,
+      "temperature_c": 20.0,
+      "spray_coverage_pct": 85.0
+    }
+  ],
+  "site_random_intercept_variance": 0.056372938777844
+}

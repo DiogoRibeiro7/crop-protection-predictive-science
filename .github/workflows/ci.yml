@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: snok/install-poetry@v1
+      - run: poetry install
+      - run: poetry run ruff check .
+      - run: poetry run mypy src
+      - run: poetry run pytest --cov=crop_protection_ps --cov-report=term-missing
+      - run: poetry run crop-protection-real > /dev/null
+      - run: poetry run crop-protection-bayesian > /dev/null
+      - run: poetry run crop-protection-environment > /dev/null
+      - run: poetry run crop-protection-adaptive > /dev/null
+      - run: poetry run crop-protection-multifidelity > /dev/null
+      - run: poetry run crop-protection-portfolio > /dev/null
+      - run: poetry run crop-protection-multiobjective > /dev/null
+      - run: poetry run crop-protection-model-risk > /dev/null

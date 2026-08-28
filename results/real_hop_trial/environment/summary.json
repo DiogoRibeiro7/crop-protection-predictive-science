@@ -1,0 +1,61 @@
+{
+  "release": "0.4.0",
+  "environment_data": {
+    "trial_location": "experimental hop yard near Corvallis, Oregon",
+    "weather_resolution": "monthly Corvallis-area summaries",
+    "weather_months": [
+      "February",
+      "March",
+      "April",
+      "May"
+    ],
+    "external_climatology_years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016
+    ],
+    "primary_trial_years": [
+      2017,
+      2018,
+      2020,
+      2021
+    ],
+    "limitation": "Weather is a coarse geographic/monthly proxy and is not treated as exact plot exposure."
+  },
+  "models": {
+    "ridge_alpha": 10.0,
+    "baseline": "treatment + timing",
+    "coarse_weather": "treatment + timing + pre-season wetness + application-window wetness + application-window temperature anomaly",
+    "sentinel": "treatment + timing + same-year untreated-control disease pressure",
+    "sentinel_gxe": "sentinel model + timing-by-sentinel and product-by-sentinel interactions"
+  },
+  "leave_one_year_out": {
+    "baseline_rmse": 8.53148587796627,
+    "coarse_weather_rmse": 20.21416591841774,
+    "sentinel_rmse": 5.176149641938232,
+    "sentinel_gxe_rmse": 5.252285899695607,
+    "sentinel_rmse_reduction_vs_baseline_percent": 39.32886116231703,
+    "coarse_weather_rmse_change_vs_baseline_percent": 136.93605319823118,
+    "gxe_rmse_change_vs_sentinel_percent": 1.4709052678945709,
+    "sentinel_r2": 0.38970301160306176
+  },
+  "gxe_promotion_gate": {
+    "candidate_model": "sentinel_gxe",
+    "reference_model": "sentinel",
+    "aggregate_rmse_candidate": 5.252285899695607,
+    "aggregate_rmse_reference": 5.176149641938232,
+    "fold_wins": 0,
+    "n_folds": 4,
+    "promoted": false
+  },
+  "deployment_interpretation": {
+    "preseason": "The available coarse weather summaries are inadequate for a reliable prospective new-year predictor in this four-year trial.",
+    "in_season": "A small untreated sentinel signal measures realised disease pressure and materially improves transportability, but is only available after the new season has begun.",
+    "interaction_complexity": "Product-by-environment interactions are mathematically estimable but fail the unseen-year promotion gate and remain exploratory."
+  }
+}

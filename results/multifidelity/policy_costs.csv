@@ -1,0 +1,4 @@
+policy,lab_candidates,glasshouse_candidates,field_candidates,total_cost_units
+field_only,0,0,26,1040
+lab_field,80,0,22,1040
+multifidelity,80,30,16,1040

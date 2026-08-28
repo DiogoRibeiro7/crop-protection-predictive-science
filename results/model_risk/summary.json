@@ -1,0 +1,94 @@
+{
+  "release": "0.9.0",
+  "scientific_question": "When should a scientific prediction be widened, flagged or withheld because the candidate condition lies outside the experimentally validated applicability domain?",
+  "scope": {
+    "status": "controlled applicability-domain stress experiment",
+    "n_rollouts": 50,
+    "nominal_interval_coverage": 0.9,
+    "historical_training_rows_per_rollout": 160,
+    "final_stress_rows_per_rollout": 520,
+    "warning": "The response surface and support boundaries are controlled simulation choices. Numerical gains are model-risk demonstrations, not empirical product claims."
+  },
+  "risk_controls": {
+    "applicability_score": "mean seven-nearest-neighbour distance in standardised historical design space",
+    "abstention_threshold": "85th percentile of in-domain calibration distances, fixed before final testing",
+    "base_interval": "finite-sample 90% split conformal absolute-residual interval",
+    "shift_calibration": "separate near-shift calibration set; final in-domain, near-shift and far-shift stress rows remain unseen",
+    "distance_scaled_interval": "conformal residual score divided by max(1, distance/threshold)^2 during calibration, with the same factor restored at prediction time"
+  },
+  "metrics": {
+    "acceptance_rate": {
+      "mean": 0.21038461538461534,
+      "mc95_low": 0.20619152442038388,
+      "mc95_high": 0.2145777063488468
+    },
+    "always_predict_mae": {
+      "mean": 0.16948785183446413,
+      "mc95_low": 0.16658501678435197,
+      "mc95_high": 0.1723906868845763
+    },
+    "distance_scaled_interval_coverage": {
+      "mean": 0.9286538461538463,
+      "mc95_low": 0.922087043323832,
+      "mc95_high": 0.9352206489838606
+    },
+    "mean_global_interval_width": {
+      "mean": 0.43078220065258244,
+      "mc95_low": 0.41804528588892154,
+      "mc95_high": 0.44351911541624334
+    },
+    "mean_scaled_interval_width": {
+      "mean": 0.8255163668018592,
+      "mc95_low": 0.8076971996300835,
+      "mc95_high": 0.843335533973635
+    },
+    "naive_id_interval_coverage": {
+      "mean": 0.5064615384615384,
+      "mc95_low": 0.49481394948381074,
+      "mc95_high": 0.5181091274392661
+    },
+    "ood_rejection_rate": {
+      "mean": 0.9810000000000001,
+      "mc95_low": 0.9777346669388868,
+      "mc95_high": 0.9842653330611134
+    },
+    "selective_interval_coverage": {
+      "mean": 0.8889494953002525,
+      "mc95_low": 0.8751125137294912,
+      "mc95_high": 0.9027864768710138
+    },
+    "selective_mae": {
+      "mean": 0.05016023429030368,
+      "mc95_low": 0.049068956252391285,
+      "mc95_high": 0.05125151232821608
+    },
+    "stress_global_interval_coverage": {
+      "mean": 0.6996923076923077,
+      "mc95_low": 0.6895501391159158,
+      "mc95_high": 0.7098344762686997
+    }
+  },
+  "selective_mae_reduction_percent": 70.40482031756807,
+  "promotion_gate": {
+    "minimum_distance_scaled_coverage": 0.9,
+    "minimum_selective_coverage": 0.87,
+    "minimum_ood_rejection_rate": 0.95,
+    "minimum_selective_mae_reduction_percent": 60.0,
+    "observed_distance_scaled_coverage": 0.9286538461538463,
+    "observed_selective_coverage": 0.8889494953002525,
+    "observed_ood_rejection_rate": 0.9810000000000001,
+    "observed_selective_mae_reduction_percent": 70.40482031756807,
+    "paired_coverage_gain_scaled_minus_global": {
+      "mean": 0.22896153846153847,
+      "mc95_low": 0.21759277517355394,
+      "mc95_high": 0.240330301749523
+    },
+    "paired_mae_difference_selective_minus_always": {
+      "mean": -0.11932761754416045,
+      "mc95_low": -0.1224634580038483,
+      "mc95_high": -0.1161917770844726
+    },
+    "promoted": true
+  },
+  "interpretation": "A single global uncertainty band is not enough under extrapolation. Distance-aware inflation can recover stress-set coverage, but the resulting intervals can become so wide that abstention is the more useful scientific action. The applicability-domain policy therefore separates 'model can compute a number' from 'R&D should trust this number without another experiment'."
+}

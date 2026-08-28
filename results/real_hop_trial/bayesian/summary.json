@@ -1,0 +1,58 @@
+{
+  "model": {
+    "response": "sqrt_audpc standardised before fitting",
+    "structure": "population timing + partially pooled product effects + partially pooled product timing deviations + year random effects + year:block random effects",
+    "chains": 4,
+    "draws_per_chain": 800,
+    "burn_in": 800,
+    "thin": 2,
+    "max_classical_rhat": 1.0011303090972277,
+    "prior": {
+      "variance_shape": 2.0,
+      "residual_scale": 0.2,
+      "product_scale": 0.1,
+      "product_timing_scale": 0.05,
+      "year_scale": 1.0,
+      "year_block_scale": 0.1,
+      "intercept_sd": 2.0,
+      "population_timing_sd": 1.0
+    }
+  },
+  "population_timing_effect": {
+    "posterior_mean_delta_sqrt_audpc": 1.3306501118134044,
+    "q05": 0.7236231547859738,
+    "q95": 1.9420764606980698,
+    "prob_late_greater_disease": 0.9996875
+  },
+  "posterior_predictive_checks": {
+    "training_coverage_90": 0.93048128342246,
+    "training_coverage_95": 0.9786096256684492,
+    "negative_sqrt_prediction_fraction": 4.45632798573975e-05
+  },
+  "leave_one_year_out": {
+    "rmse": 8.362473715071342,
+    "mae": 7.379283960073253,
+    "coverage_90": 0.7700534759358288,
+    "coverage_95": 0.9144385026737968,
+    "mean_pi90_width": 24.603064536160623,
+    "mean_pi95_width": 30.32465236737607
+  },
+  "prior_sensitivity": {
+    "multipliers": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "population_timing_means": [
+      1.3282884491974978,
+      1.3609508672567678,
+      1.3397081011926604
+    ],
+    "prob_late_greater_disease": [
+      0.999,
+      1.0,
+      0.999
+    ]
+  },
+  "interpretation": "Partial pooling stabilises treatment-specific timing estimates, while honest unseen-year posterior prediction remains limited by absent environmental and biological covariates."
+}

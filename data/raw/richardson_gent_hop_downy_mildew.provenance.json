@@ -1,0 +1,30 @@
+{
+  "dataset": "Richardson and Gent 2024 hop downy mildew fungicide timing field trial",
+  "paper_title": "Suppression of Hop Downy Mildew as Influenced by the Timing of Selected Fungicides",
+  "authors": [
+    "Briana J. Richardson",
+    "David H. Gent"
+  ],
+  "doi": "10.1094/PHP-10-23-0086-BR",
+  "source_repository": "https://github.com/DavidGent-Lab/Richardon-and-Gent-2024-Plant-Health-Progress",
+  "source_file": "Data Set.csv",
+  "source_file_url": "https://github.com/DavidGent-Lab/Richardon-and-Gent-2024-Plant-Health-Progress/blob/main/Data%20Set.csv",
+  "accessed": "2026-08-26",
+  "local_file": "data/raw/richardson_gent_hop_downy_mildew.csv",
+  "local_normalisation": "Source CSV content retained; line endings normalised to LF.",
+  "local_sha256": "4056c7290d264f5e9dda0f509dfd74cffdbf816f05de24e967a6c9f72b2768db",
+  "raw_rows": 290,
+  "years": [
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "missing_audpc": 3,
+  "source_defined_exclusion": {
+    "year": 2019,
+    "reason": "Flooding caused uneven spring growth and confounded disease measurements.",
+    "raw_rows_preserved": true
+  }
+}

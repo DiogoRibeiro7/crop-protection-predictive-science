@@ -1,0 +1,9 @@
+{
+  "candidate_model": "sentinel_gxe",
+  "reference_model": "sentinel",
+  "aggregate_rmse_candidate": 5.252285899695607,
+  "aggregate_rmse_reference": 5.176149641938232,
+  "fold_wins": 0,
+  "n_folds": 4,
+  "promoted": false
+}

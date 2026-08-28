@@ -1,0 +1,16 @@
+policy,budget_paired_blocks,Curzate,FungiPhi,Presidio,Ranman,Revus
+decision_eig,0,0.0,0.0,0.0,0.0,0.0
+parameter_eig,0,0.0,0.0,0.0,0.0,0.0
+uniform,0,0.0,0.0,0.0,0.0,0.0
+decision_eig,5,0.2575,0.0111,0.0,0.0,4.7314
+parameter_eig,5,4.0,0.0,0.0,0.0,1.0
+uniform,5,1.0,1.0,1.0,1.0,1.0
+decision_eig,10,1.1433,0.3066,0.0,0.0502,8.4999
+parameter_eig,10,7.0,0.0,0.0,0.0,3.0
+uniform,10,2.0,2.0,2.0,2.0,2.0
+decision_eig,15,2.0488,0.9686,0.0,0.323,11.6596
+parameter_eig,15,9.0,0.0,0.0,0.0,6.0
+uniform,15,3.0,3.0,3.0,3.0,3.0
+decision_eig,20,2.8768,1.8545,0.0007,0.8399,14.4281
+parameter_eig,20,12.0,0.0,0.0,0.0,8.0
+uniform,20,4.0,4.0,4.0,4.0,4.0

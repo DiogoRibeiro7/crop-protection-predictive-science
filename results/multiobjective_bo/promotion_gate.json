@@ -1,0 +1,15 @@
+{
+  "minimum_hypervolume_improvement_vs_efficacy_only_percent": 8.0,
+  "observed_hypervolume_improvement_vs_efficacy_only_percent": 8.405884784479223,
+  "paired_hypervolume_ratio_difference_constrained_pareto_minus_efficacy_only": {
+    "mean": 0.069913412357347,
+    "mc95_low": 0.06352686932603514,
+    "mc95_high": 0.07629995538865884
+  },
+  "paired_unsafe_rate_difference_constrained_pareto_minus_random": {
+    "mean": -0.05666666666666667,
+    "mc95_low": -0.07788845840168387,
+    "mc95_high": -0.035444874931649474
+  },
+  "promoted": true
+}

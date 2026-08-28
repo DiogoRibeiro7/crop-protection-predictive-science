@@ -1,0 +1,30 @@
+{
+  "dataset": "Corvallis monthly historical weather summary, February-May, 2009-2025",
+  "retrieved_on": "2026-08-28",
+  "purpose": "Coarse exogenous environment covariates for transportability stress testing",
+  "trial_location_basis": {
+    "source": "Richardson & Gent (2024), Plant Health Progress 25(3), 324-326",
+    "doi": "10.1094/PHP-10-23-0086-BR",
+    "note": "The field experiments were conducted in an experimental hop yard near Corvallis, Oregon."
+  },
+  "weather_sources": [
+    "https://www.weatherapi.com/history/february/q/corvallis-2633401",
+    "https://www.weatherapi.com/history/march/q/corvallis-2633401",
+    "https://www.weatherapi.com/history/april/q/corvallis-2633401",
+    "https://www.weatherapi.com/history/may/q/corvallis-2633401"
+  ],
+  "variables": [
+    "avg_temp_c",
+    "sunshine_hours",
+    "rainfall_mm",
+    "rain_days"
+  ],
+  "extraction": "Year-by-year monthly values were transcribed from the public history tables.",
+  "limitations": [
+    "These are Corvallis-area monthly summaries, not measurements from the exact experimental hop yard.",
+    "Monthly aggregation is deliberately coarse relative to infection biology and application timing.",
+    "The weather table is therefore treated as an external transportability stress test, not as definitive causal exposure data."
+  ],
+  "local_sha256": "21da89ed983ad08829cdb3867ac10079df782912ced12a7b24ad627707338202",
+  "rows": 68
+}

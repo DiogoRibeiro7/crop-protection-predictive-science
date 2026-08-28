@@ -1,0 +1,60 @@
+{
+  "release": "0.5.0",
+  "decision_problem": {
+    "estimand": "product-specific Late-minus-Early effect on sqrt(AUDPC)",
+    "action": "choose Early when posterior mean Late-minus-Early is positive; otherwise Late",
+    "experimental_unit": "one additional paired block containing Early and Late timing for the same product",
+    "loss": "magnitude of the latent timing contrast when the selected timing sign is wrong"
+  },
+  "upstream_evidence_gate": {
+    "environment_state": "v0.4 showed that a same-year untreated sentinel is useful for disease-level transportability, but product-by-sentinel timing interactions failed promotion",
+    "consequence": "sentinel information defines the in-season decision stage but is not forced into product-specific timing effects without supporting GxE evidence"
+  },
+  "initial_acquisition": {
+    "decision_aware_first_product": "Revus",
+    "decision_sign_eig_nats": 0.010584391852149766,
+    "prob_wrong_timing_if_act_now": 0.09458276556919354,
+    "parameter_information_first_product": "Curzate",
+    "interpretation": "Parameter-centric and decision-centric design select different first experiments."
+  },
+  "preposterior_simulation": {
+    "n_rollouts": 10000,
+    "max_budget_paired_blocks": 20,
+    "checkpoints": [
+      0,
+      5,
+      10,
+      15,
+      20
+    ],
+    "common_random_numbers": true,
+    "budget_15": {
+      "decision_eig_mean_bayes_regret": 0.0346497129876129,
+      "uniform_mean_bayes_regret": 0.039951932826361836,
+      "regret_reduction_vs_uniform_percent": 13.271497681459667,
+      "decision_eig_mean_sign_entropy_nats": 0.49043045849881284,
+      "uniform_mean_sign_entropy_nats": 0.5417042627075281,
+      "sign_entropy_reduction_vs_uniform_percent": 9.46527611808707,
+      "paired_regret_difference_decision_minus_uniform": {
+        "mean_difference": -0.005302219838748937,
+        "mc_standard_error": 0.00034830647802758366,
+        "mc95_low": -0.005984900535683001,
+        "mc95_high": -0.004619539141814873
+      },
+      "paired_entropy_difference_decision_minus_uniform": {
+        "mean_difference": -0.05127380420871535,
+        "mc_standard_error": 0.0014710711594398734,
+        "mc95_low": -0.054157103681217504,
+        "mc95_high": -0.048390504736213195
+      },
+      "mean_decision_eig_allocation": {
+        "Curzate": 2.0488,
+        "FungiPhi": 0.9686,
+        "Presidio": 0.0,
+        "Ranman": 0.323,
+        "Revus": 11.6596
+      }
+    }
+  },
+  "interpretation": "When the scientific action is an Early-versus-Late timing choice, replication should target uncertainty about the sign of the treatment contrast rather than maximise generic parameter information. The result is conditional on the current posterior model and historical paired-block variability, not a grower recommendation."
+}

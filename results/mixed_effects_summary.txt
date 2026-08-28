@@ -1,0 +1,21 @@
+              Mixed Linear Model Regression Results
+=================================================================
+Model:              MixedLM  Dependent Variable:  logit_mortality
+No. Observations:   1152     Method:              REML           
+No. Groups:         8        Scale:               0.2023         
+Min. group size:    144      Log-Likelihood:      -755.5426      
+Max. group size:    144      Converged:           Yes            
+Mean group size:    144.0                                        
+-----------------------------------------------------------------
+                      Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+-----------------------------------------------------------------
+Intercept             -4.217    0.342 -12.323 0.000 -4.888 -3.547
+C(formulation)[T.B]    0.328    0.030  11.003 0.000  0.270  0.387
+log_dose               1.400    0.036  39.060 0.000  1.330  1.470
+I(log_dose ** 2)       0.033    0.009   3.648 0.000  0.015  0.051
+temperature_c          0.018    0.010   1.928 0.054 -0.000  0.037
+relative_humidity_pct -0.006    0.003  -1.678 0.093 -0.012  0.001
+rainfall_mm_7d        -0.014    0.002  -5.694 0.000 -0.018 -0.009
+spray_coverage_pct     0.015    0.002   7.598 0.000  0.011  0.018
+Group Var              0.056    0.071                            
+=================================================================
