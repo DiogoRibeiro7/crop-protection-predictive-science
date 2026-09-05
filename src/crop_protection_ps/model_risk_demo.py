@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from typing import cast
 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -28,7 +29,8 @@ def run_model_risk_demo(root: Path) -> dict[str, object]:
     metrics.to_csv(results_dir / "rollout_metrics.csv", index=False)
     example.to_csv(results_dir / "example_stress_predictions.csv", index=False)
     summary_rows = []
-    for metric, interval in summary["metrics"].items():
+    summary_metrics = cast(dict[str, dict[str, float]], summary["metrics"])
+    for metric, interval in summary_metrics.items():
         summary_rows.append({"metric": metric, **interval})
     pd.DataFrame(summary_rows).to_csv(results_dir / "summary_metrics.csv", index=False)
     (results_dir / "promotion_gate.json").write_text(

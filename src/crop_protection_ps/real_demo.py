@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 
 import matplotlib.pyplot as plt
-import pandas as pd
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 
@@ -147,13 +146,13 @@ def run_real_demo(root: Path) -> dict[str, object]:
             "local_sha256": _sha256(raw_path),
         },
         "data": {
-            "raw_rows": int(len(raw)),
+            "raw_rows": len(raw),
             "missing_audpc": int(raw["audpc"].isna().sum()),
             "years": sorted(int(value) for value in raw["year"].unique()),
             "source_excluded_year": EXCLUDED_YEAR,
-            "primary_rows": int(len(primary)),
-            "timing_analysis_rows": int(len(timing)),
-            "paired_timing_comparisons": int(len(paired)),
+            "primary_rows": len(primary),
+            "timing_analysis_rows": len(timing),
+            "paired_timing_comparisons": len(paired),
         },
         "paired_timing": {
             "interpretation": "positive late-minus-early means greater disease under late timing",

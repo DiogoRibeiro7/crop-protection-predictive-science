@@ -15,7 +15,7 @@ optimiser.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Final, Literal
+from typing import Final, Literal, cast
 
 import numpy as np
 import pandas as pd
@@ -253,7 +253,7 @@ def _expected_improvement(
     density = np.exp(-0.5 * z**2) / np.sqrt(2.0 * np.pi)
     ei = improvement * ndtr(z) + safe_sd * density
     ei = np.where(sd <= 1e-12, np.maximum(improvement, 0.0), ei)
-    return np.maximum(ei, 0.0).astype(np.float64)
+    return cast(NDArray[np.float64], np.maximum(ei, 0.0).astype(np.float64))
 
 
 def pareto_mask(points: NDArray[np.float64]) -> NDArray[np.bool_]:

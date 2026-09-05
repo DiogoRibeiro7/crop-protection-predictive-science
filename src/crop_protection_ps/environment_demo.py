@@ -8,7 +8,6 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 
 from crop_protection_ps.environment_transport import (
     attach_environment_state,
@@ -111,7 +110,7 @@ def run_environment_demo(root: Path) -> dict[str, object]:
     ax.set_ylabel("Leave-one-year-out RMSE on sqrt(AUDPC)")
     ax.set_title("Environment representation matters more than interaction complexity")
     for position, value in zip(positions, values, strict=True):
-        ax.text(position, value + 0.25, f"{value:.2f}", ha="center", va="bottom")
+        ax.text(float(position), value + 0.25, f"{value:.2f}", ha="center", va="bottom")
     fig.tight_layout()
     fig.savefig(figures_dir / "environment_model_comparison.png", dpi=180)
     plt.close(fig)

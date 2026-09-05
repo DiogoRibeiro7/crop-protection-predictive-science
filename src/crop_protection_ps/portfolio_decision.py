@@ -16,7 +16,7 @@ commercial Crop Protection portfolio.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Final, Literal
+from typing import Final, Literal, cast
 
 import numpy as np
 import pandas as pd
@@ -248,7 +248,10 @@ def technical_success_probability(
         state.efficacy_var
     )
     safety_z = (state.safety_mean - config.safety_success_threshold) / np.sqrt(state.safety_var)
-    return (ndtr(efficacy_z) * ndtr(safety_z)).astype(np.float64)
+    return cast(
+        NDArray[np.float64],
+        (ndtr(efficacy_z) * ndtr(safety_z)).astype(np.float64),
+    )
 
 
 def expected_development_value(
@@ -304,13 +307,16 @@ def solve_budgeted_portfolio(
         if value <= 0.0 or k <= 0 or budget < cost:
             continue
         previous = dp[i - 1, k - 1, budget - cost]
-        if np.isfinite(previous) and np.isclose(dp[i, k, budget], previous + value):
-            # Require strict improvement over the state that skips the item to resolve ties
-            # deterministically in favour of the smaller portfolio.
-            if dp[i, k, budget] > dp[i - 1, k, budget] + 1e-12:
-                selected.append(i - 1)
-                k -= 1
-                budget -= cost
+        # Require strict improvement over the state that skips the item to resolve ties
+        # deterministically in favour of the smaller portfolio.
+        if (
+            np.isfinite(previous)
+            and np.isclose(dp[i, k, budget], previous + value)
+            and dp[i, k, budget] > dp[i - 1, k, budget] + 1e-12
+        ):
+            selected.append(i - 1)
+            k -= 1
+            budget -= cost
     selected.reverse()
     return np.asarray(selected, dtype=np.int64), best_value
 
@@ -318,7 +324,10 @@ def solve_budgeted_portfolio(
 def _bernoulli_entropy(probability: NDArray[np.float64]) -> NDArray[np.float64]:
     """Natural-log Bernoulli entropy with stable clipping at the boundaries."""
     p = np.clip(probability, 1e-12, 1.0 - 1e-12)
-    return -(p * np.log(p) + (1.0 - p) * np.log(1.0 - p))
+    return cast(
+        NDArray[np.float64],
+        -(p * np.log(p) + (1.0 - p) * np.log(1.0 - p)),
+    )
 
 
 def _portfolio_ratio_threshold(

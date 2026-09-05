@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 import pandas as pd
+from numpy.typing import NDArray
 from scipy.optimize import curve_fit
 
 
@@ -30,9 +31,9 @@ def four_parameter_logistic(
     top: float,
     ed50: float,
     hill: float,
-) -> np.ndarray:
+) -> NDArray[np.float64]:
     """Increasing four-parameter logistic response curve."""
-    dose_arr = np.asarray(dose, dtype=float)
+    dose_arr = np.asarray(dose, dtype=np.float64)
     safe_dose = np.maximum(dose_arr, 1e-9)
     return bottom + (top - bottom) / (1.0 + (ed50 / safe_dose) ** hill)
 

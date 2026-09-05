@@ -4,10 +4,29 @@ on:
   push:
   pull_request:
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: snok/install-poetry@v1
+        with:
+          version: "2.4.3"
+      - run: poetry install --no-interaction
+      - run: poetry run ruff check src tests
+      - run: poetry run mypy src
+
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.11", "3.12", "3.13"]
     steps:
@@ -16,10 +35,22 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - uses: snok/install-poetry@v1
-      - run: poetry install
-      - run: poetry run ruff check .
-      - run: poetry run mypy src
+        with:
+          version: "2.4.3"
+      - run: poetry install --no-interaction
       - run: poetry run pytest --cov=crop_protection_ps --cov-report=term-missing
+
+  scientific-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - uses: snok/install-poetry@v1
+        with:
+          version: "2.4.3"
+      - run: poetry install --no-interaction
       - run: poetry run crop-protection-real > /dev/null
       - run: poetry run crop-protection-bayesian > /dev/null
       - run: poetry run crop-protection-environment > /dev/null

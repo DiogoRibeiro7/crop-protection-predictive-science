@@ -16,7 +16,7 @@ only for controlled evaluation; it is never exposed to the fitted deployment mod
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Final
+from typing import Final, cast
 
 import numpy as np
 import pandas as pd
@@ -231,7 +231,7 @@ def applicability_distance(
     difference = query_scaled[:, None, :] - train_scaled[None, :, :]
     distances = np.sqrt(np.sum(difference**2, axis=2))
     nearest = np.partition(distances, n_neighbors - 1, axis=1)[:, :n_neighbors]
-    return nearest.mean(axis=1).astype(np.float64)
+    return cast(NDArray[np.float64], nearest.mean(axis=1).astype(np.float64))
 
 
 def conformal_quantile(scores: NDArray[np.float64], coverage: float) -> float:
@@ -442,28 +442,37 @@ def summarise_model_risk(metrics: pd.DataFrame) -> dict[str, object]:
     mean_always = float(metrics["always_predict_mae"].mean())
     mae_reduction = 100.0 * (mean_always - mean_selective) / mean_always
 
-    gate = {
-        "minimum_distance_scaled_coverage": 0.90,
-        "minimum_selective_coverage": 0.87,
-        "minimum_ood_rejection_rate": 0.95,
-        "minimum_selective_mae_reduction_percent": 60.0,
-        "observed_distance_scaled_coverage": float(
-            metrics["distance_scaled_interval_coverage"].mean()
-        ),
-        "observed_selective_coverage": float(metrics["selective_interval_coverage"].mean()),
-        "observed_ood_rejection_rate": float(metrics["ood_rejection_rate"].mean()),
+    minimum_distance_scaled_coverage = 0.90
+    minimum_selective_coverage = 0.87
+    minimum_ood_rejection_rate = 0.95
+    minimum_selective_mae_reduction_percent = 60.0
+    observed_distance_scaled_coverage = float(
+        metrics["distance_scaled_interval_coverage"].mean()
+    )
+    observed_selective_coverage = float(metrics["selective_interval_coverage"].mean())
+    observed_ood_rejection_rate = float(metrics["ood_rejection_rate"].mean())
+    coverage_gain_interval = _mc_interval(scaled_minus_global)
+    selective_mae_interval = _mc_interval(selective_minus_always)
+
+    gate: dict[str, object] = {
+        "minimum_distance_scaled_coverage": minimum_distance_scaled_coverage,
+        "minimum_selective_coverage": minimum_selective_coverage,
+        "minimum_ood_rejection_rate": minimum_ood_rejection_rate,
+        "minimum_selective_mae_reduction_percent": minimum_selective_mae_reduction_percent,
+        "observed_distance_scaled_coverage": observed_distance_scaled_coverage,
+        "observed_selective_coverage": observed_selective_coverage,
+        "observed_ood_rejection_rate": observed_ood_rejection_rate,
         "observed_selective_mae_reduction_percent": mae_reduction,
-        "paired_coverage_gain_scaled_minus_global": _mc_interval(scaled_minus_global),
-        "paired_mae_difference_selective_minus_always": _mc_interval(selective_minus_always),
+        "paired_coverage_gain_scaled_minus_global": coverage_gain_interval,
+        "paired_mae_difference_selective_minus_always": selective_mae_interval,
     }
     gate["promoted"] = bool(
-        gate["observed_distance_scaled_coverage"] >= gate["minimum_distance_scaled_coverage"]
-        and gate["observed_selective_coverage"] >= gate["minimum_selective_coverage"]
-        and gate["observed_ood_rejection_rate"] >= gate["minimum_ood_rejection_rate"]
-        and gate["observed_selective_mae_reduction_percent"]
-        >= gate["minimum_selective_mae_reduction_percent"]
-        and gate["paired_coverage_gain_scaled_minus_global"]["mc95_low"] > 0.0
-        and gate["paired_mae_difference_selective_minus_always"]["mc95_high"] < 0.0
+        observed_distance_scaled_coverage >= minimum_distance_scaled_coverage
+        and observed_selective_coverage >= minimum_selective_coverage
+        and observed_ood_rejection_rate >= minimum_ood_rejection_rate
+        and mae_reduction >= minimum_selective_mae_reduction_percent
+        and coverage_gain_interval["mc95_low"] > 0.0
+        and selective_mae_interval["mc95_high"] < 0.0
     )
 
     metric_names = sorted(required)

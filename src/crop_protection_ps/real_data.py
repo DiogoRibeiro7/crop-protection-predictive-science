@@ -7,7 +7,6 @@ from pathlib import Path
 
 import pandas as pd
 
-
 FUNDECITRUS_PROJECT_URL = (
     "https://rdp.fundecitrus.com.br/project/"
     "measures-for-reducing-primary-infections-in-t-9"

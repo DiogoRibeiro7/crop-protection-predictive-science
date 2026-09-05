@@ -13,9 +13,10 @@ before promoting additional interaction complexity.
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Final, Literal, Sequence
+from typing import Final, Literal
 
 import numpy as np
 import pandas as pd
@@ -327,7 +328,7 @@ def leave_one_year_out_environment_models(
                 EnvironmentModelMetric(
                     model=model,
                     held_out_year=held_out_year,
-                    n_test=int(len(test)),
+                    n_test=len(test),
                     rmse=float(np.sqrt(mean_squared_error(y_test, predicted))),
                     mae=float(mean_absolute_error(y_test, predicted)),
                     r2=float(r2_score(y_test, predicted)),
@@ -350,7 +351,7 @@ def leave_one_year_out_environment_models(
             EnvironmentModelMetric(
                 model=model,
                 held_out_year="ALL",
-                n_test=int(len(y_all)),
+                n_test=len(y_all),
                 rmse=float(np.sqrt(mean_squared_error(y_all, p_all))),
                 mae=float(mean_absolute_error(y_all, p_all)),
                 r2=float(r2_score(y_all, p_all)),
@@ -404,7 +405,7 @@ def gxe_promotion_gate(metrics: pd.DataFrame) -> PromotionGate:
         validate="one_to_one",
     )
     wins = int((paired["rmse_candidate"] < paired["rmse_reference"]).sum())
-    n_folds = int(len(paired))
+    n_folds = len(paired)
     promoted = bool(cand_all < ref_all and wins >= 3)
     return PromotionGate(
         candidate_model="sentinel_gxe",
