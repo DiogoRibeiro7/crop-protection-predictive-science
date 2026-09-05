@@ -11,9 +11,10 @@ ranked by the expected reduction in posterior entropy of the sign of that contra
 
 from __future__ import annotations
 
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from math import pi, sqrt
-from typing import Final, Literal, Mapping, Sequence
+from typing import Final, Literal
 
 import numpy as np
 import pandas as pd

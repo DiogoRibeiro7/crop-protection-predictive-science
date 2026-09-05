@@ -7,7 +7,6 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
 
 from crop_protection_ps.config import load_config
 from crop_protection_ps.design import make_candidate_grid, select_d_optimal_candidates
@@ -95,7 +94,7 @@ def run_demo(root: Path) -> dict[str, object]:
     plt.close(fig)
 
     summary: dict[str, object] = {
-        "n_rows": int(len(frame)),
+        "n_rows": len(frame),
         "n_sites": int(frame["site"].nunique()),
         "years": sorted(map(int, frame["year"].unique())),
         "dose_response": {

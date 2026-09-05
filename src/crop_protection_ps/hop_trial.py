@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Final, Sequence
+from typing import Final
 
 import numpy as np
 import pandas as pd
@@ -278,7 +279,7 @@ def bootstrap_timing_effects(
         {
             "scope": "all_products",
             "treatment": "ALL",
-            "n_pairs": int(len(paired)),
+            "n_pairs": len(paired),
             "mean_delta_audpc_late_minus_early": float(
                 paired["delta_audpc_late_minus_early"].mean()
             ),
@@ -304,7 +305,7 @@ def bootstrap_timing_effects(
             {
                 "scope": "product",
                 "treatment": treatment,
-                "n_pairs": int(len(subset)),
+                "n_pairs": len(subset),
                 "mean_delta_audpc_late_minus_early": float(np.mean(raw)),
                 "ci95_low_audpc": raw_low,
                 "ci95_high_audpc": raw_high,

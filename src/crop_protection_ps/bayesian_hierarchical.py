@@ -7,8 +7,9 @@ posterior-predictive mechanism visible in a compact portfolio repository.
 
 from __future__ import annotations
 
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from typing import Final, Mapping, Sequence
+from typing import Final
 
 import numpy as np
 import pandas as pd
@@ -691,7 +692,7 @@ def leave_one_year_out_posterior_predictive(
         fold_metrics.append(
             {
                 "held_out_year": held_out_year,
-                "n_test": int(len(test)),
+                "n_test": len(test),
                 "rmse": float(np.sqrt(mean_squared_error(observed, mean_prediction))),
                 "mae": float(mean_absolute_error(observed, mean_prediction)),
                 "coverage_90": float(np.mean(coverage90)),
@@ -719,7 +720,7 @@ def leave_one_year_out_posterior_predictive(
         [
             {
                 "held_out_year": "ALL",
-                "n_test": int(len(predictions)),
+                "n_test": len(predictions),
                 "rmse": float(np.sqrt(mean_squared_error(observed_all, mean_all))),
                 "mae": float(mean_absolute_error(observed_all, mean_all)),
                 "coverage_90": float(predictions["covered_90"].mean()),
