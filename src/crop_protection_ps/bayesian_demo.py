@@ -152,7 +152,7 @@ def run_bayesian_demo(root: Path) -> dict[str, object]:
     predicted_min = float(loyo_predictions["posterior_predictive_mean"].min())
     observed_max = float(loyo_predictions["sqrt_audpc"].max())
     predicted_max = float(loyo_predictions["posterior_predictive_mean"].max())
-    limits = [min(observed_min, predicted_min), max(observed_max, predicted_max)]
+    limits = (min(observed_min, predicted_min), max(observed_max, predicted_max))
     ax.plot(limits, limits, linestyle="--")
     ax.set_xlim(limits)
     ax.set_ylim(limits)

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
-from typing import Final
+from typing import Final, cast
 
 import numpy as np
 import pandas as pd
@@ -642,7 +642,10 @@ def _new_year_predictive_draws(
     predictive_z = fixed_z + new_year[:, None] + residuals
     for row_index, block in enumerate(test["block"].astype(str)):
         predictive_z[:, row_index] += new_blocks[:, block_lookup[block]]
-    return fit.response_mean + fit.response_scale * predictive_z
+    return cast(
+        NDArray[np.float64],
+        fit.response_mean + fit.response_scale * predictive_z,
+    )
 
 
 def leave_one_year_out_posterior_predictive(

@@ -14,7 +14,7 @@ from __future__ import annotations
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
 from math import pi, sqrt
-from typing import Final, Literal
+from typing import Final, Literal, cast
 
 import numpy as np
 import pandas as pd
@@ -95,7 +95,7 @@ def _binary_entropy(probability: NDArray[np.float64] | float) -> NDArray[np.floa
     entropy = -(clipped * np.log(clipped) + (1.0 - clipped) * np.log1p(-clipped))
     if np.isscalar(probability):
         return float(entropy.item())
-    return entropy
+    return cast(NDArray[np.float64], entropy)
 
 
 def posterior_sign_probability(belief: NormalTimingBelief) -> float:
@@ -266,7 +266,7 @@ def _vector_bayes_regret(
     cdf = ndtr(z)
     regret_if_late = sd * density + mean * cdf
     regret_if_early = sd * density - mean * (1.0 - cdf)
-    return np.minimum(regret_if_early, regret_if_late)
+    return cast(NDArray[np.float64], np.minimum(regret_if_early, regret_if_late))
 
 
 def _vector_sign_information_gain(
@@ -293,7 +293,10 @@ def _vector_sign_information_gain(
         _vector_entropy(posterior_positive) * weights[None, None, :], axis=2
     )
     current_entropy = _vector_entropy(ndtr(mean / np.sqrt(variance)))
-    return np.maximum(current_entropy - expected_entropy, 0.0)
+    return cast(
+        NDArray[np.float64],
+        np.maximum(current_entropy - expected_entropy, 0.0),
+    )
 
 
 def _record_rollout_state(
