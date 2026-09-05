@@ -59,3 +59,5 @@ jobs:
       - run: poetry run crop-protection-portfolio > /dev/null
       - run: poetry run crop-protection-multiobjective > /dev/null
       - run: poetry run crop-protection-model-risk > /dev/null
+      - name: Verify regenerated scientific conclusions
+        run: poetry run pytest tests/test_scientific_contract.py
