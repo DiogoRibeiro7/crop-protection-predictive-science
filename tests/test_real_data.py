@@ -26,7 +26,7 @@ def test_inspect_workbook_returns_sheet_columns(monkeypatch, tmp_path: Path) -> 
     workbook.touch()
 
     class _FakeExcelFile:
-        sheet_names = ["Mortality", "Metadata"]
+        sheet_names = ("Mortality", "Metadata")
 
     monkeypatch.setattr(pd, "ExcelFile", lambda path: _FakeExcelFile())
 
