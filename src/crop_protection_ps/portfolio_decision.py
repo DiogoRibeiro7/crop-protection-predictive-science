@@ -304,13 +304,16 @@ def solve_budgeted_portfolio(
         if value <= 0.0 or k <= 0 or budget < cost:
             continue
         previous = dp[i - 1, k - 1, budget - cost]
-        if np.isfinite(previous) and np.isclose(dp[i, k, budget], previous + value):
-            # Require strict improvement over the state that skips the item to resolve ties
-            # deterministically in favour of the smaller portfolio.
-            if dp[i, k, budget] > dp[i - 1, k, budget] + 1e-12:
-                selected.append(i - 1)
-                k -= 1
-                budget -= cost
+        # Require strict improvement over the state that skips the item to resolve ties
+        # deterministically in favour of the smaller portfolio.
+        if (
+            np.isfinite(previous)
+            and np.isclose(dp[i, k, budget], previous + value)
+            and dp[i, k, budget] > dp[i - 1, k, budget] + 1e-12
+        ):
+            selected.append(i - 1)
+            k -= 1
+            budget -= cost
     selected.reverse()
     return np.asarray(selected, dtype=np.int64), best_value
 
