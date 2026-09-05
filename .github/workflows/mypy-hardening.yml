@@ -1,0 +1,177 @@
+name: Mypy hardening patch
+
+on:
+  push:
+    branches: [ci-hardening]
+    paths:
+      - '.github/workflows/mypy-hardening.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ci-hardening
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Apply reviewed typing fixes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          def replace_once(path: str, old: str, new: str) -> None:
+              file_path = Path(path)
+              text = file_path.read_text(encoding='utf-8')
+              if text.count(old) != 1:
+                  raise SystemExit(f'Unexpected content in {path}; refusing to patch.')
+              file_path.write_text(text.replace(old, new), encoding='utf-8')
+
+          replace_once(
+              'src/crop_protection_ps/portfolio_decision.py',
+              'from typing import Final, Literal\n',
+              'from typing import Final, Literal, cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/portfolio_decision.py',
+              '    return (ndtr(efficacy_z) * ndtr(safety_z)).astype(np.float64)\n',
+              '    return cast(\n'
+              '        NDArray[np.float64],\n'
+              '        (ndtr(efficacy_z) * ndtr(safety_z)).astype(np.float64),\n'
+              '    )\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/portfolio_decision.py',
+              '    return -(p * np.log(p) + (1.0 - p) * np.log(1.0 - p))\n',
+              '    return cast(\n'
+              '        NDArray[np.float64],\n'
+              '        -(p * np.log(p) + (1.0 - p) * np.log(1.0 - p)),\n'
+              '    )\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/multiobjective_bo.py',
+              'from typing import Final, Literal\n',
+              'from typing import Final, Literal, cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/multiobjective_bo.py',
+              '    return np.maximum(ei, 0.0).astype(np.float64)\n',
+              '    return cast(NDArray[np.float64], np.maximum(ei, 0.0).astype(np.float64))\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/dose_response.py',
+              'from dataclasses import dataclass\n\nimport numpy as np\n',
+              'from dataclasses import dataclass\nfrom typing import cast\n\nimport numpy as np\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/dose_response.py',
+              'import pandas as pd\nfrom scipy.optimize import curve_fit\n',
+              'import pandas as pd\nfrom numpy.typing import NDArray\nfrom scipy.optimize import curve_fit\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/dose_response.py',
+              ') -> np.ndarray:\n    """Increasing four-parameter logistic response curve."""\n'
+              '    dose_arr = np.asarray(dose, dtype=float)\n'
+              '    safe_dose = np.maximum(dose_arr, 1e-9)\n'
+              '    return bottom + (top - bottom) / (1.0 + (ed50 / safe_dose) ** hill)\n',
+              ') -> NDArray[np.float64]:\n    """Increasing four-parameter logistic response curve."""\n'
+              '    dose_arr = np.asarray(dose, dtype=np.float64)\n'
+              '    safe_dose = np.maximum(dose_arr, 1e-9)\n'
+              '    return cast(\n'
+              '        NDArray[np.float64],\n'
+              '        bottom + (top - bottom) / (1.0 + (ed50 / safe_dose) ** hill),\n'
+              '    )\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/bayesian_hierarchical.py',
+              'from typing import Final\n',
+              'from typing import Final, cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/bayesian_hierarchical.py',
+              '    return fit.response_mean + fit.response_scale * predictive_z\n',
+              '    return cast(\n'
+              '        NDArray[np.float64],\n'
+              '        fit.response_mean + fit.response_scale * predictive_z,\n'
+              '    )\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/adaptive_design.py',
+              'from typing import Final, Literal\n',
+              'from typing import Final, Literal, cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/adaptive_design.py',
+              '    return entropy\n',
+              '    return cast(NDArray[np.float64], entropy)\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/adaptive_design.py',
+              '    return np.minimum(regret_if_early, regret_if_late)\n',
+              '    return cast(NDArray[np.float64], np.minimum(regret_if_early, regret_if_late))\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/adaptive_design.py',
+              '    return np.maximum(current_entropy - expected_entropy, 0.0)\n',
+              '    return cast(\n'
+              '        NDArray[np.float64],\n'
+              '        np.maximum(current_entropy - expected_entropy, 0.0),\n'
+              '    )\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/model_risk.py',
+              'from typing import Final\n',
+              'from typing import Final, cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/model_risk.py',
+              '    return nearest.mean(axis=1).astype(np.float64)\n',
+              '    return cast(NDArray[np.float64], nearest.mean(axis=1).astype(np.float64))\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/model_risk.py',
+              '''    gate = {\n        "minimum_distance_scaled_coverage": 0.90,\n        "minimum_selective_coverage": 0.87,\n        "minimum_ood_rejection_rate": 0.95,\n        "minimum_selective_mae_reduction_percent": 60.0,\n        "observed_distance_scaled_coverage": float(\n            metrics["distance_scaled_interval_coverage"].mean()\n        ),\n        "observed_selective_coverage": float(metrics["selective_interval_coverage"].mean()),\n        "observed_ood_rejection_rate": float(metrics["ood_rejection_rate"].mean()),\n        "observed_selective_mae_reduction_percent": mae_reduction,\n        "paired_coverage_gain_scaled_minus_global": _mc_interval(scaled_minus_global),\n        "paired_mae_difference_selective_minus_always": _mc_interval(selective_minus_always),\n    }\n    gate["promoted"] = bool(\n        gate["observed_distance_scaled_coverage"] >= gate["minimum_distance_scaled_coverage"]\n        and gate["observed_selective_coverage"] >= gate["minimum_selective_coverage"]\n        and gate["observed_ood_rejection_rate"] >= gate["minimum_ood_rejection_rate"]\n        and gate["observed_selective_mae_reduction_percent"]\n        >= gate["minimum_selective_mae_reduction_percent"]\n        and gate["paired_coverage_gain_scaled_minus_global"]["mc95_low"] > 0.0\n        and gate["paired_mae_difference_selective_minus_always"]["mc95_high"] < 0.0\n    )\n''',
+              '''    minimum_distance_scaled_coverage = 0.90\n    minimum_selective_coverage = 0.87\n    minimum_ood_rejection_rate = 0.95\n    minimum_selective_mae_reduction_percent = 60.0\n    observed_distance_scaled_coverage = float(\n        metrics["distance_scaled_interval_coverage"].mean()\n    )\n    observed_selective_coverage = float(metrics["selective_interval_coverage"].mean())\n    observed_ood_rejection_rate = float(metrics["ood_rejection_rate"].mean())\n    coverage_gain_interval = _mc_interval(scaled_minus_global)\n    selective_mae_interval = _mc_interval(selective_minus_always)\n\n    gate: dict[str, object] = {\n        "minimum_distance_scaled_coverage": minimum_distance_scaled_coverage,\n        "minimum_selective_coverage": minimum_selective_coverage,\n        "minimum_ood_rejection_rate": minimum_ood_rejection_rate,\n        "minimum_selective_mae_reduction_percent": minimum_selective_mae_reduction_percent,\n        "observed_distance_scaled_coverage": observed_distance_scaled_coverage,\n        "observed_selective_coverage": observed_selective_coverage,\n        "observed_ood_rejection_rate": observed_ood_rejection_rate,\n        "observed_selective_mae_reduction_percent": mae_reduction,\n        "paired_coverage_gain_scaled_minus_global": coverage_gain_interval,\n        "paired_mae_difference_selective_minus_always": selective_mae_interval,\n    }\n    gate["promoted"] = bool(\n        observed_distance_scaled_coverage >= minimum_distance_scaled_coverage\n        and observed_selective_coverage >= minimum_selective_coverage\n        and observed_ood_rejection_rate >= minimum_ood_rejection_rate\n        and mae_reduction >= minimum_selective_mae_reduction_percent\n        and coverage_gain_interval["mc95_low"] > 0.0\n        and selective_mae_interval["mc95_high"] < 0.0\n    )\n''',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/model_risk_demo.py',
+              'import json\nfrom pathlib import Path\n',
+              'import json\nfrom pathlib import Path\nfrom typing import cast\n',
+          )
+          replace_once(
+              'src/crop_protection_ps/model_risk_demo.py',
+              '    summary_rows = []\n    for metric, interval in summary["metrics"].items():\n',
+              '    summary_rows = []\n'
+              '    summary_metrics = cast(dict[str, dict[str, float]], summary["metrics"])\n'
+              '    for metric, interval in summary_metrics.items():\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/environment_demo.py',
+              '        ax.text(position, value + 0.25, f"{value:.2f}", ha="center", va="bottom")\n',
+              '        ax.text(float(position), value + 0.25, f"{value:.2f}", ha="center", va="bottom")\n',
+          )
+
+          replace_once(
+              'src/crop_protection_ps/bayesian_demo.py',
+              '    limits = [min(observed_min, predicted_min), max(observed_max, predicted_max)]\n',
+              '    limits = (min(observed_min, predicted_min), max(observed_max, predicted_max))\n',
+          )
+          PY
+      - name: Commit reviewed typing fixes
+        run: |
+          git config user.name 'Diogo Ribeiro'
+          git config user.email 'diogo_dj@hotmail.com'
+          git add src
+          git commit -m 'Resolve strict mypy findings'
+          git push origin HEAD:ci-hardening
