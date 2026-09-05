@@ -8,7 +8,7 @@ packages = [{ include = "crop_protection_ps", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
-numpy = ">=2.0"
+numpy = ">=2.0,<2.4"
 pandas = ">=2.2"
 scipy = ">=1.13"
 scikit-learn = ">=1.5"
@@ -54,6 +54,20 @@ python_version = "3.11"
 strict = true
 warn_unreachable = true
 plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = [
+    "pandas",
+    "pandas.*",
+    "scipy",
+    "scipy.*",
+    "sklearn",
+    "sklearn.*",
+    "statsmodels",
+    "statsmodels.*",
+    "yaml",
+]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 addopts = "-q"
