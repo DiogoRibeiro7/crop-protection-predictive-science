@@ -9,28 +9,33 @@ from crop_protection_ps.bipolaris_demo import run_bipolaris_demo
 
 
 def _write_raw_case(root: Path) -> None:
-    """Write a compact three-hybrid/two-window source-shaped fixture."""
+    """Write a compact three-hybrid/four-environment source-shaped fixture."""
     rows: list[dict[str, object]] = []
     days = [30, 50, 70, 90, 110]
-    curves = {
-        ("SiteA_Cedo", "H1"): [0.0, 8.0, 20.0, 35.0, 50.0],
-        ("SiteA_Cedo", "H2"): [0.0, 12.0, 30.0, 50.0, 70.0],
-        ("SiteA_Cedo", "H3"): [0.0, 4.0, 12.0, 24.0, 36.0],
-        ("SiteB_Preferencial", "H1"): [0.0, 10.0, 25.0, 42.0, 60.0],
-        ("SiteB_Preferencial", "H2"): [0.0, 14.0, 34.0, 56.0, 78.0],
-        ("SiteB_Preferencial", "H3"): [0.0, 5.0, 14.0, 28.0, 40.0],
+    base_curves = {
+        "H1": [0.0, 8.0, 20.0, 35.0, 50.0],
+        "H2": [0.0, 12.0, 30.0, 50.0, 70.0],
+        "H3": [0.0, 4.0, 12.0, 24.0, 36.0],
     }
-    for (environment, hybrid), severity in curves.items():
-        for day, value in zip(days, severity, strict=True):
-            rows.append(
-                {
-                    "Ambiente": environment,
-                    "Hibrido": hybrid,
-                    "DAE": day,
-                    "Fenologia": "R1",
-                    "Bipolaris": value,
-                }
-            )
+    environment_scale = {
+        "SiteA_Cedo": 0.90,
+        "SiteB_Cedo": 1.00,
+        "SiteC_Preferencial": 1.10,
+        "SiteD_Preferencial": 1.20,
+    }
+    for environment, scale in environment_scale.items():
+        for hybrid, base_severity in base_curves.items():
+            severity = [value * scale for value in base_severity]
+            for day, value in zip(days, severity, strict=True):
+                rows.append(
+                    {
+                        "Ambiente": environment,
+                        "Hibrido": hybrid,
+                        "DAE": day,
+                        "Fenologia": "R1",
+                        "Bipolaris": value,
+                    }
+                )
 
     raw_dir = root / "data" / "raw"
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -70,9 +75,9 @@ def test_demo_persists_functional_prospective_and_promotion_bundle(tmp_path: Pat
         persisted["functional_shape_stability"][
             "same_hybrid_cross_environment_pairs"
         ]
-        == 3
+        == 18
     )
-    assert persisted["leave_one_environment_out"]["burden_folds"] == 2
-    assert persisted["leave_one_environment_out"]["shape_folds"] == 2
+    assert persisted["leave_one_environment_out"]["burden_folds"] == 4
+    assert persisted["leave_one_environment_out"]["shape_folds"] == 4
     assert isinstance(persisted["planting_window_candidate"]["burden"]["promoted"], bool)
     assert isinstance(persisted["planting_window_candidate"]["shape"]["promoted"], bool)
