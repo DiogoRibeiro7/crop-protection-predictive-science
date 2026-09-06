@@ -30,8 +30,12 @@ from crop_protection_ps.bipolaris_loeo import (
 )
 
 
-def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[str, object]:
-    """Run the independent field-disease case and persist auditable outputs."""
+def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict[str, object]:
+    """Run the independent field-disease case and persist auditable outputs.
+
+    The repository vendors the exact pinned upstream CSV, so normal reproduction is fully offline.
+    ``download_if_missing=True`` remains available only as an explicit recovery/refresh path.
+    """
     source = BipolarisSourceContract()
     raw_path = root / "data" / "raw" / "maize_bipolaris.csv"
     results_dir = root / "results" / "bipolaris"
