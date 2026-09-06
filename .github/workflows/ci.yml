@@ -52,6 +52,7 @@ jobs:
           version: "2.4.3"
       - run: poetry install --no-interaction
       - run: poetry run crop-protection-real > /dev/null
+      - run: poetry run crop-protection-bipolaris > /dev/null
       - run: poetry run crop-protection-bayesian > /dev/null
       - run: poetry run crop-protection-environment > /dev/null
       - run: poetry run crop-protection-adaptive > /dev/null
