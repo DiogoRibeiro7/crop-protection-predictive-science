@@ -66,7 +66,7 @@ def test_burden_fold_metrics_reward_transportable_hybrid_identity() -> None:
     folds = burden_fold_metrics(predictions)
 
     assert (folds["hybrid_history_rmse"] < folds["global_training_mean_rmse"]).all()
-    assert (folds["hybrid_history_spearman"] == pytest.approx(1.0)).all()
+    assert folds["hybrid_history_spearman"].tolist() == pytest.approx([1.0, 1.0, 1.0])
 
 
 def test_shape_predictions_use_same_hybrid_history_without_leakage() -> None:
