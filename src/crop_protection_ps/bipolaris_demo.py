@@ -30,6 +30,13 @@ from crop_protection_ps.bipolaris_loeo import (
 )
 
 
+def _required_float(value: int | float | None, *, name: str) -> float:
+    """Return a required numeric summary value with explicit optional narrowing."""
+    if value is None:
+        raise ValueError(f"Required Bipolaris summary value is missing: {name}.")
+    return float(value)
+
+
 def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict[str, object]:
     """Run the independent field-disease case and persist auditable outputs.
 
@@ -94,17 +101,22 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     fig.savefig(figures_dir / "median_audpc_by_environment.png", dpi=180)
     plt.close(fig)
 
-    shape_categories = [
-        "same hybrid\nacross environments",
-        "different hybrids\nacross environments",
+    same_shape_value = functional_summary[
+        "median_same_hybrid_cross_environment_shape_rmse"
     ]
-    shape_values = [
-        functional_summary["median_same_hybrid_cross_environment_shape_rmse"],
-        functional_summary["median_different_hybrid_cross_environment_shape_rmse"],
+    different_shape_value = functional_summary[
+        "median_different_hybrid_cross_environment_shape_rmse"
     ]
-    if all(value is not None for value in shape_values):
+    if same_shape_value is not None and different_shape_value is not None:
+        shape_categories = [
+            "same hybrid\nacross environments",
+            "different hybrids\nacross environments",
+        ]
         fig, ax = plt.subplots(figsize=(7.0, 4.8))
-        ax.bar(shape_categories, [float(value) for value in shape_values])
+        ax.bar(
+            shape_categories,
+            [float(same_shape_value), float(different_shape_value)],
+        )
         ax.set_ylabel("Median normalized trajectory RMSE")
         ax.set_title("Hybrid-specific disease-curve shape across environments")
         fig.tight_layout()
@@ -113,8 +125,14 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
 
     loeo_labels = ["global training mean", "hybrid history"]
     loeo_values = [
-        float(prospective_summary["mean_fold_global_training_audpc_rmse"]),
-        float(prospective_summary["mean_fold_hybrid_history_audpc_rmse"]),
+        _required_float(
+            prospective_summary["mean_fold_global_training_audpc_rmse"],
+            name="mean_fold_global_training_audpc_rmse",
+        ),
+        _required_float(
+            prospective_summary["mean_fold_hybrid_history_audpc_rmse"],
+            name="mean_fold_hybrid_history_audpc_rmse",
+        ),
     ]
     fig, ax = plt.subplots(figsize=(7.0, 4.8))
     ax.bar(loeo_labels, loeo_values)
