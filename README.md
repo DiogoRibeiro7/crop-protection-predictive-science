@@ -6,7 +6,7 @@ around one question:
 > **What decision is the model meant to support, does the validation design match that decision,
 > and when is another experiment more valuable than another prediction?**
 
-The project combines a public multi-year fungicide field trial with controlled experiments that make
+The project combines two independent public field-data cases with controlled experiments that make
 model failure, transfer error and decision quality auditable against known truth. It is deliberately
 closer to predictive science than to generic tabular machine learning.
 
@@ -127,6 +127,23 @@ Open:
 [`coverage_by_risk_control.png`](figures/model_risk/coverage_by_risk_control.png) ·
 [`model_risk_control.md`](docs/model_risk_control.md)
 
+## A second empirical field case
+
+The independent southern corn leaf blight case adds repeated disease-progress observations for
+maize hybrids across multiple field environments. It is used to examine environment-specific
+disease burden and the stability of hybrid AUDPC rankings while keeping scalar summaries separate
+from full curve-shape information.
+
+This is real field phenotyping, not a second fungicide intervention trial. It broadens the empirical
+base without pretending to validate the simulated discovery-programme economics or multi-fidelity
+gains.
+
+Open [`docs/second_empirical_case_bipolaris.md`](docs/second_empirical_case_bipolaris.md), or run:
+
+```bash
+poetry run crop-protection-bipolaris
+```
+
 ## What is real and what is controlled
 
 The project never mixes simulated performance numbers with empirical Crop Protection claims.
@@ -135,6 +152,7 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 | --- | --- | --- |
 | Multi-site dose response | Controlled synthetic | Audit dose response, site shift and D-optimal design against known truth |
 | Fungicide timing re-analysis | **Public real field data** | Experimental structure, paired contrasts, provenance and transportability |
+| Southern corn leaf blight phenotyping | **Independent public real field data** | Multi-environment disease-progress summaries and ranking stability |
 | Bayesian hierarchy | Real-data-derived | Partial pooling, posterior checks and leave-one-year-out uncertainty |
 | Environment transportability | Real field data + public weather | Test prospective versus in-season environment information |
 | Adaptive replication | Real-data-derived decision simulation | Ask which additional paired block is decision-most-informative |
@@ -143,7 +161,7 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 | Multi-objective optimisation | Controlled synthetic | Search efficacy/environment trade-offs under crop-injury constraints |
 | Applicability domain | Controlled synthetic | Stress uncertainty calibration, support detection and abstention |
 
-See [`docs/evidence_map.md`](docs/evidence_map.md) for source files, notebooks, outputs and limitations.
+See [`docs/evidence_map.md`](docs/evidence_map.md) for source files, analyses, outputs and limitations.
 
 ## Scientific principles demonstrated
 
@@ -186,12 +204,13 @@ The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md
 .
 ├── configs/
 ├── data/
-│   ├── raw/                   # public source data + provenance
+│   ├── raw/                   # public source data + provenance contracts
 │   └── processed/
 ├── docs/
 │   ├── technical_walkthrough.md
 │   ├── evidence_map.md
 │   ├── principal_scientist_review.md
+│   ├── second_empirical_case_bipolaris.md
 │   └── ... method notes ...
 ├── notebooks/                 # 01–09 executed analyses
 ├── results/                   # persisted metrics, tables and figures
@@ -207,6 +226,7 @@ With Poetry:
 poetry install
 poetry run pytest
 poetry run crop-protection-real
+poetry run crop-protection-bipolaris
 poetry run crop-protection-bayesian
 poetry run crop-protection-environment
 poetry run crop-protection-adaptive
@@ -221,6 +241,7 @@ Without Poetry:
 ```bash
 PYTHONPATH=src pytest -q
 PYTHONPATH=src python -m crop_protection_ps.real_demo
+PYTHONPATH=src python -m crop_protection_ps.bipolaris_demo
 PYTHONPATH=src python -m crop_protection_ps.multifidelity_demo
 PYTHONPATH=src python -m crop_protection_ps.portfolio_demo
 PYTHONPATH=src python -m crop_protection_ps.model_risk_demo
@@ -235,10 +256,11 @@ the package contract; the environment file is a reproducibility snapshot, not a 
 This is a **portfolio and research-methods demonstrator**, not a pesticide-use recommendation,
 registration study, regulatory risk assessment, or estimate of any company's R&D economics.
 
-The empirical evidence comes from one public multi-year field experiment. The later decision layers
-are controlled simulations designed to make methodological behaviour measurable against known
-truth. They demonstrate how the methods work; they do not establish that the reported percentage
-gains will transfer to a real discovery pipeline.
+The empirical evidence now comes from two independent public field-data cases: a multi-year hop
+fungicide-timing experiment and multi-environment maize disease-progress phenotyping. The later
+decision layers are controlled simulations designed to make methodological behaviour measurable
+against known truth. They demonstrate how the methods work; they do not establish that the reported
+percentage gains will transfer to a real discovery pipeline.
 
 The repository also does not claim agronomy, formulation chemistry, toxicology or regulatory subject
 matter expertise. In a real R&D setting, model structure, applicability domains, scientific
@@ -256,7 +278,7 @@ The v1.0 release validation is documented in [`RELEASE_VALIDATION.md`](RELEASE_V
 
 ## Source data
 
-The real-data case uses the public data accompanying:
+The first real-data case uses the public data accompanying:
 
 > Richardson, B. J. & Gent, D. H. (2024). *Suppression of Hop Downy Mildew as Influenced by the
 > Timing of Selected Fungicides*. Plant Health Progress, 25(3), 324–326.
@@ -264,6 +286,14 @@ The real-data case uses the public data accompanying:
 
 Source repository:
 `https://github.com/DavidGent-Lab/Richardon-and-Gent-2024-Plant-Health-Progress`
+
+The second real-data case uses `maize_bipolaris.csv` from:
+
+> Del Ponte, E. M. (2026). *From Scalar Summaries to Functional Comparisons: A Framework for
+> Analyzing Plant Disease Progress Curves*. DOI: `10.1094/PHYTO-01-26-0009-LE`.
+
+Source repository:
+`https://github.com/emdelponte/paper-hgam-curves`
 
 Product trade names appear only because they are present in the source experiment.
 
