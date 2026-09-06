@@ -16,6 +16,11 @@ from crop_protection_ps.bipolaris import (
     environment_rank_stability,
     load_bipolaris,
 )
+from crop_protection_ps.bipolaris_functional import (
+    functional_profiles,
+    functional_stability_summary,
+    pairwise_functional_distances,
+)
 
 
 def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[str, object]:
@@ -45,9 +50,14 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
     metrics = curve_metrics(frame)
     correlations = environment_rank_stability(metrics)
     case = empirical_case_summary(frame, metrics)
+    profiles = functional_profiles(frame)
+    functional_distances = pairwise_functional_distances(profiles)
+    functional_summary = functional_stability_summary(functional_distances)
 
     metrics.to_csv(results_dir / "curve_metrics.csv", index=False)
     correlations.to_csv(results_dir / "environment_rank_spearman.csv")
+    profiles.to_csv(results_dir / "functional_profiles.csv", index=False)
+    functional_distances.to_csv(results_dir / "functional_distances.csv", index=False)
 
     environment_summary = (
         metrics.groupby("environment", observed=True)
@@ -74,6 +84,26 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
     fig.tight_layout()
     fig.savefig(figures_dir / "median_audpc_by_environment.png", dpi=180)
     plt.close(fig)
+
+    # Compare the median normalized trajectory distance for a hybrid observed in different
+    # environments against different hybrids observed in different environments. This is a
+    # descriptive stability diagnostic, not a significance test or promotion gate.
+    shape_categories = [
+        "same hybrid\nacross environments",
+        "different hybrids\nacross environments",
+    ]
+    shape_values = [
+        functional_summary["median_same_hybrid_cross_environment_shape_rmse"],
+        functional_summary["median_different_hybrid_cross_environment_shape_rmse"],
+    ]
+    if all(value is not None for value in shape_values):
+        fig, ax = plt.subplots(figsize=(7.0, 4.8))
+        ax.bar(shape_categories, [float(value) for value in shape_values])
+        ax.set_ylabel("Median normalized trajectory RMSE")
+        ax.set_title("Hybrid-specific disease-curve shape across environments")
+        fig.tight_layout()
+        fig.savefig(figures_dir / "functional_shape_stability.png", dpi=180)
+        plt.close(fig)
 
     pairwise = correlations.where(
         np.triu(np.ones(correlations.shape, dtype=bool), k=1)
@@ -103,6 +133,14 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
             "interpretation": (
                 "Descriptive stability of hybrid AUDPC rankings across environments; "
                 "not a causal treatment effect or a substitute for full curve comparison."
+            ),
+        },
+        "functional_shape_stability": {
+            **functional_summary,
+            "interpretation": (
+                "Common-grid trajectory distances separate overall disease scale from "
+                "scale-normalized epidemic shape. Values are descriptive and do not reproduce "
+                "the source HGAM analysis."
             ),
         },
         "scope": {
