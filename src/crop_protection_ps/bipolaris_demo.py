@@ -82,6 +82,10 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     candidate_shape_predictions, candidate_shape_folds = loeo_planting_window_shape(profiles)
     burden_promotion = evaluate_burden_promotion(burden_folds, candidate_burden_folds)
     shape_promotion = evaluate_shape_promotion(shape_folds, candidate_shape_folds)
+    burden_decision = asdict(burden_promotion)
+    burden_decision["reasons"] = list(burden_promotion.reasons)
+    shape_decision = asdict(shape_promotion)
+    shape_decision["reasons"] = list(shape_promotion.reasons)
 
     metrics.to_csv(results_dir / "curve_metrics.csv", index=False)
     correlations.to_csv(results_dir / "environment_rank_spearman.csv")
@@ -205,8 +209,8 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
             ),
         },
         "planting_window_candidate": {
-            "burden": asdict(burden_promotion),
-            "shape": asdict(shape_promotion),
+            "burden": burden_decision,
+            "shape": shape_decision,
             "interpretation": (
                 "The candidate combines same-hybrid history with the pre-known planting-window "
                 "label. Promotion is decided by the criteria frozen before this candidate was "
