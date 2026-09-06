@@ -83,7 +83,7 @@ def test_additive_burden_candidate_recovers_known_window_effect() -> None:
     predictions, folds = loeo_planting_window_burden(_burden_metrics())
 
     assert len(predictions) == 8
-    assert (folds["candidate_rmse"] == 0.0).all()
+    assert (folds["candidate_rmse"] < 1e-12).all()
     assert (folds["candidate_rank_mae"] == 0.0).all()
 
 
