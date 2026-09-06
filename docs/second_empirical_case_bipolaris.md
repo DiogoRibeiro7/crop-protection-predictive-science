@@ -20,7 +20,8 @@ question:
 
 ## Source contract
 
-The canonical CSV is not copied into the repository. Acquisition is pinned to:
+The canonical CSV is committed at `data/raw/maize_bipolaris.csv` so the empirical workflow can be
+reproduced without network access. It is the exact Git object pinned to:
 
 - source repository: `https://github.com/emdelponte/paper-hgam-curves`;
 - source commit: `d793d54c17ad404df2f6618d2681c993fcf144cf`;
@@ -29,8 +30,13 @@ The canonical CSV is not copied into the repository. Acquisition is pinned to:
 - expected size: 53,293 bytes;
 - expected columns: `Ambiente`, `Hibrido`, `DAE`, `Fenologia`, `Bipolaris`.
 
-The upstream repository is MIT licensed. SHA-1 appears here only because Git blob identity is defined
-by SHA-1. It is not being used as a general-purpose cryptographic integrity claim.
+The local committed file has the same Git blob identity as the upstream object. Unit tests verify
+that byte length and object identity before parsing the dataset. The upstream repository is MIT
+licensed. SHA-1 appears here only because Git blob identity is defined by SHA-1; it is not being used
+as a general-purpose cryptographic integrity claim.
+
+A commit-pinned download helper remains available as an explicit recovery path if the local raw file
+is removed. Normal repository execution does not use it.
 
 ## Scalar analysis contract
 
@@ -124,9 +130,9 @@ From the repository root:
 poetry run crop-protection-bipolaris
 ```
 
-If `data/raw/maize_bipolaris.csv` is absent, the command downloads the exact commit-pinned upstream
-object and verifies its Git blob identity before analysis. Unit tests remain offline and do not
-require network access.
+The command uses the committed `data/raw/maize_bipolaris.csv` and requires no network access. If the
+raw file is intentionally removed, `download_bipolaris()` can recover the exact commit-pinned source
+and verifies its Git blob identity before writing it locally.
 
 Outputs are written under `results/bipolaris/`:
 
@@ -145,7 +151,8 @@ Outputs are written under `results/bipolaris/`:
 - `figures/loeo_audpc_transport.png`.
 
 The `summary.json` file contains scalar, functional and prospective-validation summaries in one
-reproducible empirical result bundle.
+reproducible empirical result bundle. CI now executes this full empirical workflow as part of the
+scientific-smoke job, using only the committed source data.
 
 ## Next scientific extension
 
