@@ -15,7 +15,8 @@ The source study contains repeated disease-progress observations for maize hybri
 field environments. The scientific question here remains narrower than the source paper's modelling
 question:
 
-> **How stable are hybrid disease burden and trajectory shape across field environments?**
+> **How stable are hybrid disease burden and trajectory shape across field environments, and do those
+> hybrid-specific signals help in a completely held-out environment?**
 
 ## Source contract
 
@@ -79,15 +80,36 @@ promotion gate. It is an auditable nonparametric diagnostic of cross-environment
 stability. The implementation details and limitations are documented in
 [`bipolaris_curve_shape_stability.md`](bipolaris_curve_shape_stability.md).
 
+## Prospective leave-one-environment-out validation
+
+Descriptive stability does not establish predictive transport. The empirical workflow therefore
+holds out each field environment in turn and constructs predictions using only the remaining
+environments.
+
+For scalar disease burden, two deliberately simple predictors are compared:
+
+1. the global mean training AUDPC across all hybrids and environments;
+2. the held-out hybrid's own mean AUDPC across the remaining environments.
+
+The second predictor earns a lower held-out error only when hybrid identity carries information that
+transports beyond the overall training disease burden.
+
+For normalized disease-curve shape, the same logic is applied pointwise on the common DAE grid. The
+baseline is the mean normalized trajectory across every training curve. The hybrid-history predictor
+is the mean normalized trajectory for that hybrid across the remaining environments.
+
+The leave-one-environment-out outputs report RMSE, MAE, fold-level hybrid ranking correlation and
+fold wins. No held-out outcome is used to construct either predictor. There is deliberately no
+promotion threshold or confirmatory significance test: this stage asks whether a simple
+hybrid-specific signal transports at all before a richer model is justified.
+
 ## What this adds to the portfolio
 
 The project now has two independent empirical field cases with different scientific structures:
 
 1. a fungicide-timing experiment with paired treatment contrasts and unseen-year validation;
 2. multi-environment disease-progress phenotyping with repeated temporal measurements, scalar host
-   rankings and explicit trajectory-shape comparisons.
-
-That is a meaningful increase in empirical breadth.
+   rankings, trajectory-shape comparisons and prospective held-out-environment validation.
 
 It does **not** solve every external-validity concern. The Bipolaris dataset is not a second fungicide
 intervention trial, and neither public case is linked historical lab, glasshouse and field evidence
@@ -113,17 +135,22 @@ Outputs are written under `results/bipolaris/`:
 - `environment_rank_spearman.csv`;
 - `functional_profiles.csv`;
 - `functional_distances.csv`;
+- `loeo_burden_predictions.csv`;
+- `loeo_burden_folds.csv`;
+- `loeo_shape_predictions.csv`;
+- `loeo_shape_folds.csv`;
 - `summary.json`;
 - `figures/median_audpc_by_environment.png`;
-- `figures/functional_shape_stability.png`.
+- `figures/functional_shape_stability.png`;
+- `figures/loeo_audpc_transport.png`.
 
-The `summary.json` file contains both the scalar ranking diagnostics and the functional shape
-stability summary, so the empirical case has one reproducible result bundle rather than disconnected
-analysis modules.
+The `summary.json` file contains scalar, functional and prospective-validation summaries in one
+reproducible empirical result bundle.
 
 ## Next scientific extension
 
-The next defensible question is prospective rather than more descriptive: can information learned
-from some environments predict hybrid disease burden or trajectory characteristics in an entirely
-held-out environment? That would require an explicit leave-one-environment-out design and should be
-judged against simple baselines before any richer model is promoted.
+Only if same-hybrid history materially improves held-out-environment performance should a richer
+prospective model be considered. The next candidate would need genuinely prospective environment
+covariates or a structured environment model, and it should be promoted only if it beats these
+simple leave-one-environment-out baselines consistently rather than merely fitting the pooled data
+better.
