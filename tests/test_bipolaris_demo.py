@@ -45,11 +45,11 @@ def _write_raw_case(root: Path) -> None:
 def test_demo_persists_functional_prospective_and_promotion_bundle(tmp_path: Path) -> None:
     """The executable empirical case must persist baseline and candidate outputs."""
     _write_raw_case(tmp_path)
-
     summary = run_bipolaris_demo(tmp_path, download_if_missing=False)
     results_dir = tmp_path / "results" / "bipolaris"
 
     expected_outputs = (
+        "functional_eligibility.csv",
         "functional_profiles.csv",
         "functional_distances.csv",
         "loeo_burden_predictions.csv",
@@ -71,12 +71,9 @@ def test_demo_persists_functional_prospective_and_promotion_bundle(tmp_path: Pat
     assert persisted["functional_shape_stability"] == summary["functional_shape_stability"]
     assert persisted["leave_one_environment_out"] == summary["leave_one_environment_out"]
     assert persisted["planting_window_candidate"] == summary["planting_window_candidate"]
-    assert (
-        persisted["functional_shape_stability"][
-            "same_hybrid_cross_environment_pairs"
-        ]
-        == 18
-    )
+    assert persisted["functional_shape_stability"]["same_hybrid_cross_environment_pairs"] == 18
+    assert persisted["functional_shape_stability"]["eligibility"]["total_curves"] == 12
+    assert persisted["functional_shape_stability"]["eligibility"]["eligible_curves"] == 12
     assert persisted["leave_one_environment_out"]["burden_folds"] == 4
     assert persisted["leave_one_environment_out"]["shape_folds"] == 4
     assert isinstance(persisted["planting_window_candidate"]["burden"]["promoted"], bool)
