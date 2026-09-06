@@ -96,7 +96,7 @@ def loeo_planting_window_burden(metrics: pd.DataFrame) -> tuple[pd.DataFrame, pd
         fold_rows.append(
             {
                 "held_out_environment": str(held_out_environment),
-                "n_hybrids": int(len(fold)),
+                "n_hybrids": len(fold),
                 "candidate_rmse": _rmse(observed, predicted),
                 "candidate_rank_mae": _rank_mae(
                     fold["observed_audpc_pct_days"], fold["candidate_prediction"]
