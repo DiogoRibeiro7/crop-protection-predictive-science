@@ -19,6 +19,8 @@ jobs:
       - uses: snok/install-poetry@v1
         with:
           version: "2.4.3"
+      - name: Verify Poetry lock consistency
+        run: poetry check --lock
       - run: poetry install --no-interaction
       - run: poetry run ruff check src tests
       - run: poetry run mypy src
@@ -66,5 +68,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: bipolaris-decision-bundle
-          path: results/bipolaris
+          path: |
+            results/bipolaris
+            pyproject.toml
+            poetry.lock
           if-no-files-found: error
