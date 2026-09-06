@@ -218,7 +218,7 @@ def curve_metrics(
             {
                 "environment": str(environment),
                 "hybrid": str(hybrid),
-                "n_assessments": int(len(ordered)),
+                "n_assessments": len(ordered),
                 "first_dae": float(days[0]),
                 "last_dae": float(days[-1]),
                 "audpc_pct_days": float(np.trapezoid(severity, days)),
@@ -262,9 +262,9 @@ def empirical_case_summary(
         float(upper.median()) if not upper.empty else float("nan")
     )
     return {
-        "rows": int(len(frame)),
+        "rows": len(frame),
         "environments": int(frame["environment"].nunique()),
         "hybrids": int(frame["hybrid"].nunique()),
-        "eligible_curves": int(len(metrics)),
+        "eligible_curves": len(metrics),
         "median_pairwise_spearman_audpc": median_rank_correlation,
     }

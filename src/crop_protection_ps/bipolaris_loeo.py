@@ -122,7 +122,7 @@ def burden_fold_metrics(predictions: pd.DataFrame) -> pd.DataFrame:
         records.append(
             {
                 "held_out_environment": str(held_out_environment),
-                "n_hybrids": int(len(fold)),
+                "n_hybrids": len(fold),
                 "global_training_mean_rmse": _rmse(observed, global_prediction),
                 "hybrid_history_rmse": _rmse(observed, hybrid_prediction),
                 "global_training_mean_mae": _mae(observed, global_prediction),
@@ -193,7 +193,9 @@ def leave_one_environment_out_shape(profiles: pd.DataFrame) -> pd.DataFrame:
             except KeyError:
                 continue
             if global_prediction.isna().any() or hybrid_prediction.isna().any():
-                raise ValueError("Training and held-out functional profiles must share one DAE grid.")
+                raise ValueError(
+                    "Training and held-out functional profiles must share one DAE grid."
+                )
 
             records.append(
                 {
@@ -281,7 +283,7 @@ def loeo_summary(
     )
 
     return {
-        "burden_folds": int(len(burden_folds)),
+        "burden_folds": len(burden_folds),
         "burden_evaluated_hybrid_rows": int(burden_folds["n_hybrids"].sum()),
         "mean_fold_global_training_audpc_rmse": burden_global,
         "mean_fold_hybrid_history_audpc_rmse": burden_hybrid,
@@ -293,7 +295,7 @@ def loeo_summary(
             ).sum()
         ),
         "mean_fold_hybrid_history_spearman": mean_spearman,
-        "shape_folds": int(len(shape_folds)),
+        "shape_folds": len(shape_folds),
         "shape_evaluated_hybrid_rows": int(shape_folds["n_hybrids"].sum()),
         "mean_fold_global_training_shape_rmse": shape_global,
         "mean_fold_hybrid_history_shape_rmse": shape_hybrid,

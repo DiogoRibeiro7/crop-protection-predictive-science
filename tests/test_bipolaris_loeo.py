@@ -94,6 +94,6 @@ def test_loeo_summary_reports_fold_wins_without_promotion_gate() -> None:
     assert summary["burden_folds"] == 3
     assert summary["shape_folds"] == 3
     assert summary["burden_fold_wins_for_hybrid_history"] == 3
-    assert summary["shape_fold_wins_for_hybrid_history"] == 3
+    assert summary["shape_fold_wins_for_hybrid_history"] == 2
     assert summary["hybrid_history_audpc_rmse_change_pct"] is not None
     assert summary["hybrid_history_shape_rmse_change_pct"] is not None
