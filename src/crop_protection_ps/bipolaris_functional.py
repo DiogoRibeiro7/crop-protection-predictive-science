@@ -122,7 +122,9 @@ def functional_profile_eligibility(
                 "n_assessments": len(ordered),
                 "min_dae": float(days[0]),
                 "max_dae": float(days[-1]),
-                "mean_severity_pct": mean_severity if mean_severity is not None else np.nan,
+                "mean_severity_pct": (
+                    mean_severity if mean_severity is not None else np.nan
+                ),
                 "enough_assessments": enough_assessments,
                 "covers_grid_start": covers_grid_start,
                 "covers_grid_end": covers_grid_end,
@@ -153,9 +155,9 @@ def functional_profiles(
     duration = profile_config.grid_end_dae - profile_config.grid_start_dae
     eligibility = functional_profile_eligibility(frame, profile_config)
     eligible_pairs = set(
-        eligibility.loc[eligibility["eligible"], ["environment", "hybrid"]].itertuples(
-            index=False, name=None
-        )
+        eligibility.loc[
+            eligibility["eligible"], ["environment", "hybrid"]
+        ].itertuples(index=False, name=None)
     )
 
     records: list[dict[str, str | float]] = []
@@ -192,7 +194,12 @@ def functional_profiles(
     ).reset_index(drop=True)
 
 
-def _relationship(environment_a: str, hybrid_a: str, environment_b: str, hybrid_b: str) -> str:
+def _relationship(
+    environment_a: str,
+    hybrid_a: str,
+    environment_b: str,
+    hybrid_b: str,
+) -> str:
     """Classify a pair of disease curves by environment and hybrid identity."""
     same_environment = environment_a == environment_b
     same_hybrid = hybrid_a == hybrid_b
@@ -251,24 +258,41 @@ def pairwise_functional_distances(profiles: pd.DataFrame) -> pd.DataFrame:
                     "hybrid_a": hybrid_a,
                     "environment_b": environment_b,
                     "hybrid_b": hybrid_b,
-                    "relationship": _relationship(environment_a, hybrid_a, environment_b, hybrid_b),
-                    "raw_severity_rmse_pct": float(np.sqrt(np.mean(np.square(severity_a - severity_b)))),
-                    "normalized_shape_rmse": float(np.sqrt(np.mean(np.square(shape_a - shape_b)))),
+                    "relationship": _relationship(
+                        environment_a,
+                        hybrid_a,
+                        environment_b,
+                        hybrid_b,
+                    ),
+                    "raw_severity_rmse_pct": float(
+                        np.sqrt(np.mean(np.square(severity_a - severity_b)))
+                    ),
+                    "normalized_shape_rmse": float(
+                        np.sqrt(np.mean(np.square(shape_a - shape_b)))
+                    ),
                 }
             )
     return pd.DataFrame.from_records(records)
 
 
-def functional_stability_summary(distances: pd.DataFrame) -> dict[str, int | float | None]:
+def functional_stability_summary(
+    distances: pd.DataFrame,
+) -> dict[str, int | float | None]:
     """Summarize whether hybrid-specific trajectory shape persists across environments."""
     required = {"relationship", "raw_severity_rmse_pct", "normalized_shape_rmse"}
     missing = required.difference(distances.columns)
     if missing:
         raise ValueError(f"Missing functional-distance columns: {sorted(missing)}.")
 
-    same = distances.loc[distances["relationship"] == "same_hybrid_different_environment"]
-    cross_other = distances.loc[distances["relationship"] == "different_hybrid_different_environment"]
-    within_other = distances.loc[distances["relationship"] == "different_hybrid_same_environment"]
+    same = distances.loc[
+        distances["relationship"] == "same_hybrid_different_environment"
+    ]
+    cross_other = distances.loc[
+        distances["relationship"] == "different_hybrid_different_environment"
+    ]
+    within_other = distances.loc[
+        distances["relationship"] == "different_hybrid_same_environment"
+    ]
 
     def median_or_none(table: pd.DataFrame, column: str) -> float | None:
         if table.empty:
@@ -285,9 +309,13 @@ def functional_stability_summary(distances: pd.DataFrame) -> dict[str, int | flo
         "same_hybrid_cross_environment_pairs": len(same),
         "different_hybrid_cross_environment_pairs": len(cross_other),
         "different_hybrid_within_environment_pairs": len(within_other),
-        "median_same_hybrid_cross_environment_raw_rmse_pct": median_or_none(same, "raw_severity_rmse_pct"),
+        "median_same_hybrid_cross_environment_raw_rmse_pct": median_or_none(
+            same, "raw_severity_rmse_pct"
+        ),
         "median_same_hybrid_cross_environment_shape_rmse": same_shape,
         "median_different_hybrid_cross_environment_shape_rmse": cross_other_shape,
-        "median_different_hybrid_within_environment_shape_rmse": median_or_none(within_other, "normalized_shape_rmse"),
+        "median_different_hybrid_within_environment_shape_rmse": median_or_none(
+            within_other, "normalized_shape_rmse"
+        ),
         "same_vs_different_cross_environment_shape_distance_ratio": ratio,
     }
