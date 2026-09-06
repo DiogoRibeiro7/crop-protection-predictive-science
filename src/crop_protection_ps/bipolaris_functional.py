@@ -47,11 +47,9 @@ class FunctionalProfileConfig:
 def common_dae_grid(config: FunctionalProfileConfig | None = None) -> np.ndarray:
     """Return the exact inclusive DAE grid defined by *config*."""
     profile_config = config or FunctionalProfileConfig()
-    intervals = int(
-        round(
-            (profile_config.grid_end_dae - profile_config.grid_start_dae)
-            / profile_config.grid_step_dae
-        )
+    intervals = round(
+        (profile_config.grid_end_dae - profile_config.grid_start_dae)
+        / profile_config.grid_step_dae
     )
     return np.linspace(
         profile_config.grid_start_dae,
@@ -249,9 +247,9 @@ def functional_stability_summary(
         ratio = same_shape / cross_other_shape
 
     return {
-        "same_hybrid_cross_environment_pairs": int(len(same)),
-        "different_hybrid_cross_environment_pairs": int(len(cross_other)),
-        "different_hybrid_within_environment_pairs": int(len(within_other)),
+        "same_hybrid_cross_environment_pairs": len(same),
+        "different_hybrid_cross_environment_pairs": len(cross_other),
+        "different_hybrid_within_environment_pairs": len(within_other),
         "median_same_hybrid_cross_environment_raw_rmse_pct": median_or_none(
             same, "raw_severity_rmse_pct"
         ),
