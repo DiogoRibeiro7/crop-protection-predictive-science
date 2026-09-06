@@ -18,6 +18,7 @@ from crop_protection_ps.bipolaris import (
     load_bipolaris,
 )
 from crop_protection_ps.bipolaris_functional import (
+    functional_profile_eligibility,
     functional_profiles,
     functional_stability_summary,
     pairwise_functional_distances,
@@ -47,11 +48,7 @@ def _required_float(value: int | float | None, *, name: str) -> float:
 
 
 def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict[str, object]:
-    """Run the independent field-disease case and persist auditable outputs.
-
-    The repository vendors the exact pinned upstream CSV, so normal reproduction is fully offline.
-    ``download_if_missing=True`` remains available only as an explicit recovery/refresh path.
-    """
+    """Run the independent field-disease case and persist auditable outputs."""
     source = BipolarisSourceContract()
     raw_path = root / "data" / "raw" / "maize_bipolaris.csv"
     results_dir = root / "results" / "bipolaris"
@@ -68,6 +65,7 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     metrics = curve_metrics(frame)
     correlations = environment_rank_stability(metrics)
     case = empirical_case_summary(frame, metrics)
+    eligibility = functional_profile_eligibility(frame)
     profiles = functional_profiles(frame)
     functional_distances = pairwise_functional_distances(profiles)
     functional_summary = functional_stability_summary(functional_distances)
@@ -89,6 +87,7 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
 
     metrics.to_csv(results_dir / "curve_metrics.csv", index=False)
     correlations.to_csv(results_dir / "environment_rank_spearman.csv")
+    eligibility.to_csv(results_dir / "functional_eligibility.csv", index=False)
     profiles.to_csv(results_dir / "functional_profiles.csv", index=False)
     functional_distances.to_csv(results_dir / "functional_distances.csv", index=False)
     burden_predictions.to_csv(results_dir / "loeo_burden_predictions.csv", index=False)
@@ -172,6 +171,9 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     finite_pairwise = pairwise[np.isfinite(pairwise)]
     minimum_pairwise = float(finite_pairwise.min()) if not finite_pairwise.empty else None
     maximum_pairwise = float(finite_pairwise.max()) if not finite_pairwise.empty else None
+    eligibility_counts = eligibility["reason"].value_counts().sort_index().to_dict()
+    total_curves = len(eligibility)
+    eligible_curves = int(eligibility["eligible"].sum())
 
     summary: dict[str, object] = {
         "source": {
@@ -194,10 +196,16 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
         },
         "functional_shape_stability": {
             **functional_summary,
+            "eligibility": {
+                "total_curves": total_curves,
+                "eligible_curves": eligible_curves,
+                "eligible_fraction": eligible_curves / total_curves,
+                "reason_counts": eligibility_counts,
+            },
             "interpretation": (
-                "Common-grid trajectory distances separate overall disease scale from "
-                "scale-normalized epidemic shape. Values are descriptive and do not reproduce "
-                "the source HGAM analysis."
+                "Common-grid trajectory distances are conditional on curves with enough "
+                "assessments, full 30–110 DAE support, and non-negligible mean severity. "
+                "functional_eligibility.csv records every included and excluded curve."
             ),
         },
         "leave_one_environment_out": {
