@@ -14,14 +14,19 @@ The repository is strongest when it is explicit about that boundary.
 
 ## What I would consider genuinely strong
 
-### 1. The real-data case respects experimental context
+### 1. The real-data cases respect experimental context
 
-The 2019 exclusion is inherited from the source investigators because flooding confounded the
-experiment. The repository retains the raw rows and applies the exclusion transparently rather than
-deleting an inconvenient year after model inspection.
+The 2019 exclusion in the hop trial is inherited from the source investigators because flooding
+confounded the experiment. The repository retains the raw rows and applies the exclusion
+transparently rather than deleting an inconvenient year after model inspection.
 
 The Early/Late comparison is also paired within year, block and product rather than being presented
 as a naive independent-row comparison.
+
+The independent southern corn leaf blight case adds a different empirical structure: repeated
+disease-progress measurements of maize hybrids across multiple field environments. It is not
+presented as another fungicide trial, and scalar summaries are retained only as an auditable
+baseline rather than being confused with full disease-curve information.
 
 ### 2. Deployment-style validation is treated as a scientific choice
 
@@ -48,24 +53,32 @@ scientifically defensible than reporting a point prediction for every input by c
 
 ## Concerns I would raise in review
 
-### 1. There is only one real Crop Protection dataset
+### 1. Empirical breadth has improved, but it is still not an industrial discovery dataset
 
-Most of the breadth after the field-trial analysis is demonstrated with controlled synthetic data.
-That is legitimate for method verification, but it limits external validity. The repository should
-never imply that the synthetic regret, hypervolume or calibration gains are empirical industry
-benchmarks.
+The repository now contains two independent public field-data cases: the hop fungicide-timing trial
+and a multi-environment southern corn leaf blight phenotyping dataset. That removes the earlier
+single-dataset weakness and makes it harder to dismiss the empirical layer as one carefully chosen
+example.
 
-**What I would want next:** a second independent field dataset or, ideally, historical linked
-lab/glasshouse/field observations from a real discovery programme.
+It does **not** turn the later synthetic layers into empirical industry evidence. The Bipolaris case
+is host-resistance phenotyping rather than a second fungicide intervention trial, and neither public
+case links historical lab, glasshouse and field observations from a discovery programme.
+
+**What I would want next:** real linked discovery-stage evidence across assay fidelities, preferably
+with programme decisions and experimental costs recorded prospectively.
 
 ### 2. Four usable years are not enough to learn a general environment-response surface
 
-After the source-defined 2019 exclusion, the real trial gives four usable years. That makes strong
+After the source-defined 2019 exclusion, the hop trial gives four usable years. That makes strong
 claims about year-level weather response or product × environment interaction poorly identified.
 The repository recognises this, which is why the failed G×E promotion gate is appropriate.
 
-**What I would want next:** multiple sites and seasons with field-proximal weather, phenology,
-initial disease pressure, application conditions and protocol metadata.
+The second empirical case supplies multiple field environments but a different scientific endpoint
+and experimental structure. It should not be used to pretend that the hop intervention model has
+suddenly acquired independent site-season replication.
+
+**What I would want next:** multiple intervention trials across sites and seasons with field-proximal
+weather, phenology, initial disease pressure, application conditions and protocol metadata.
 
 ### 3. The source-aligned re-analysis is not the published mixed model
 
@@ -128,11 +141,11 @@ That limitation should remain explicit.
 
 ## Questions I would ask the author
 
-1. What is the experimental unit in the real field trial, and why does it matter for uncertainty?
+1. What is the experimental unit in the hop field trial, and why does it matter for uncertainty?
 2. Why is leave-one-year-out validation harder than random folds here?
 3. Why did coarse weather hurt transportability, and what measurements would you request instead?
-4. What is the distinction between epistemic uncertainty and being outside the applicability domain?
-5. When would you use a hierarchical model rather than a boosted-tree benchmark?
+4. What does the Bipolaris case add that the hop trial could not, and what does it still not add?
+5. When does AUDPC hide scientifically relevant disease-progress information?
 6. What evidence would persuade you to promote a product × environment interaction model?
 7. Why can uncertainty sampling allocate experiments inefficiently for a portfolio decision?
 8. How would you validate a lab or glasshouse surrogate before it influences field progression?
@@ -150,4 +163,5 @@ It becomes less persuasive if it is presented as:
 > proof that the author already knows Crop Protection biology or that the simulated percentage gains
 > will reproduce in a proprietary R&D pipeline.
 
-The v1.0 front page is intentionally organised around that distinction.
+The addition of an independent multi-environment field-disease dataset strengthens the first claim
+without changing the second boundary.
