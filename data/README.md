@@ -28,6 +28,32 @@ Generated real-data outputs are written to:
 
 The raw-file SHA-256 is persisted in `results/real_hop_trial/summary.json`.
 
+## Independent maize disease-progress case
+
+The optional `raw/maize_bipolaris.csv` input is the public southern corn leaf blight disease-progress
+data accompanying:
+
+Del Ponte, E. M. (2026), *From Scalar Summaries to Functional Comparisons: A Framework for
+Analyzing Plant Disease Progress Curves*, Phytopathology 116(8):1188–1193,
+DOI `10.1094/PHYTO-01-26-0009-LE`.
+
+Source repository:
+https://github.com/emdelponte/paper-hgam-curves
+
+The repository does **not** vendor the CSV. `crop-protection-bipolaris` downloads it only when the
+local file is absent, from the exact upstream commit
+`d793d54c17ad404df2f6618d2681c993fcf144cf`, and verifies the Git blob identity
+`433a2d1c37ba4f6069d04d8ffc9f7916f0a8adc3` before writing it locally. The upstream repository is
+MIT licensed.
+
+This second empirical case broadens the project beyond one real field dataset. It represents
+multi-environment maize disease phenotyping and host-resistance comparison, **not** a second
+fungicide intervention experiment and not proprietary or linked discovery-programme data.
+
+Generated outputs are written to `../results/bipolaris/`. They use transparent AUDPC, final-severity
+and t50 summaries plus cross-environment rank correlations. Those scalar summaries are treated as a
+baseline description, not as a replacement for full disease-curve comparison.
+
 ## Corvallis environment covariates
 
 `raw/corvallis_monthly_weather_2009_2025.csv` contains public February-May monthly weather
