@@ -3,10 +3,11 @@
 This file separates empirical evidence from controlled demonstrations. Numerical results from a
 controlled DGP should never be presented as estimates of real Crop Protection performance.
 
-| Layer | Evidence status | Main question | Primary notebook | Key persisted evidence | Main limitation |
+| Layer | Evidence status | Main question | Primary analysis | Key persisted evidence | Main limitation |
 | --- | --- | --- | --- | --- | --- |
 | Multi-site dose response | Controlled synthetic | Can dose response and site shift be audited against known truth? | `01_predictive_science_demo.ipynb` | `results/summary.json` | Synthetic environmental structure |
-| Fungicide field trial | **Public real data** | What does the experimental design support, and how does validation change for a new year? | `02_real_fungicide_field_trial.ipynb` | `results/real_hop_trial/summary.json` | One public experiment; four usable years after source exclusion |
+| Fungicide field trial | **Public real data** | What does the experimental design support, and how does validation change for a new year? | `02_real_fungicide_field_trial.ipynb` | `results/real_hop_trial/summary.json` | One intervention experiment; four usable years after source exclusion |
+| Southern corn leaf blight phenotyping | **Independent public real data** | How stable are hybrid disease-burden rankings across field environments, and what can scalar curve summaries hide? | `crop-protection-bipolaris` | `results/bipolaris/summary.json` | Host-resistance phenotyping, not a fungicide intervention trial; scalar baseline only |
 | Bayesian hierarchy | Real-data-derived | Does partial pooling stabilise inference and predictive uncertainty? | `03_bayesian_hierarchical_field_trial.ipynb` | `results/real_hop_trial/bayesian/summary.json` | Gaussian transformed-response hierarchy; limited years |
 | Environment transportability | Real field data + public weather | Which environment information transports to a held-out season? | `04_environment_transportability.ipynb` | `results/real_hop_trial/environment/summary.json` | Coarse city weather; sentinel is in-season, not fully prospective |
 | Adaptive replication | Real-data-derived decision simulation | Which additional paired block reduces decision uncertainty most? | `05_adaptive_experimental_design.ipynb` | `results/real_hop_trial/adaptive_design/summary.json` | No prospective follow-up experiment was actually run |
@@ -17,7 +18,9 @@ controlled DGP should never be presented as estimates of real Crop Protection pe
 
 ## Real-data provenance
 
-The empirical case uses the public data accompanying:
+### Hop fungicide-timing experiment
+
+The first empirical case uses the public data accompanying:
 
 > Richardson, B. J. & Gent, D. H. (2024). *Suppression of Hop Downy Mildew as Influenced by the
 > Timing of Selected Fungicides*. Plant Health Progress, 25(3), 324–326.
@@ -29,9 +32,21 @@ The source investigators state that 2019 was not used because flooding caused un
 and confounded disease measurements. The raw rows are retained locally and the exclusion is applied
 explicitly in the primary analysis.
 
+### Southern corn leaf blight disease-progress data
+
+The second empirical case uses the public `maize_bipolaris.csv` dataset accompanying:
+
+> Del Ponte, E. M. (2026). *From Scalar Summaries to Functional Comparisons: A Framework for
+> Analyzing Plant Disease Progress Curves*. DOI `10.1094/PHYTO-01-26-0009-LE`.
+
+The source repository is `https://github.com/emdelponte/paper-hgam-curves`. The repository does not
+vendor the CSV. Instead, the acquisition contract pins the exact upstream Git commit, path, byte
+length and Git blob identity before analysis. See
+[`second_empirical_case_bipolaris.md`](second_empirical_case_bipolaris.md).
+
 ## Real-data claims that can be made
 
-The repository supports statements such as:
+For the hop experiment, the repository supports statements such as:
 
 - the source-defined primary dataset contains 227 observed rows after exclusion and missingness;
 - there are 92 matched Early/Late timing comparisons within year, block and product;
@@ -41,8 +56,17 @@ The repository supports statements such as:
 - same-year untreated disease pressure is materially more predictive of a held-out season than the
   coarse monthly weather representation used here.
 
-Those are empirical statements about this public experiment. They are not general fungicide-use
-recommendations.
+For the southern corn leaf blight dataset, the empirical claims are deliberately descriptive:
+
+- disease progress is observed repeatedly for maize hybrids across multiple field environments;
+- per-curve AUDPC, final severity, maximum severity and interpolated t50 can be compared across those
+  environments under a fixed analysis window;
+- pairwise Spearman correlations quantify how stable hybrid AUDPC rankings are across environments;
+- scalar agreement does not establish that disease-curve shape is equivalent, which is why this
+  analysis is treated as a baseline rather than the final model.
+
+These statements concern the specific public datasets. They are not general pesticide-use,
+resistance-management or cultivar recommendations.
 
 ## Controlled claims that can be made
 
