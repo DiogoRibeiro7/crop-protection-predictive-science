@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from dataclasses import asdict
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -27,6 +28,14 @@ from crop_protection_ps.bipolaris_loeo import (
     leave_one_environment_out_shape,
     loeo_summary,
     shape_fold_metrics,
+)
+from crop_protection_ps.bipolaris_planting_window import (
+    loeo_planting_window_burden,
+    loeo_planting_window_shape,
+)
+from crop_protection_ps.bipolaris_promotion import (
+    evaluate_burden_promotion,
+    evaluate_shape_promotion,
 )
 
 
@@ -69,6 +78,15 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     shape_folds = shape_fold_metrics(shape_predictions)
     prospective_summary = loeo_summary(burden_folds, shape_folds)
 
+    candidate_burden_predictions, candidate_burden_folds = loeo_planting_window_burden(metrics)
+    candidate_shape_predictions, candidate_shape_folds = loeo_planting_window_shape(profiles)
+    burden_promotion = evaluate_burden_promotion(burden_folds, candidate_burden_folds)
+    shape_promotion = evaluate_shape_promotion(shape_folds, candidate_shape_folds)
+    burden_decision = asdict(burden_promotion)
+    burden_decision["reasons"] = list(burden_promotion.reasons)
+    shape_decision = asdict(shape_promotion)
+    shape_decision["reasons"] = list(shape_promotion.reasons)
+
     metrics.to_csv(results_dir / "curve_metrics.csv", index=False)
     correlations.to_csv(results_dir / "environment_rank_spearman.csv")
     profiles.to_csv(results_dir / "functional_profiles.csv", index=False)
@@ -77,6 +95,14 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
     burden_folds.to_csv(results_dir / "loeo_burden_folds.csv", index=False)
     shape_predictions.to_csv(results_dir / "loeo_shape_predictions.csv", index=False)
     shape_folds.to_csv(results_dir / "loeo_shape_folds.csv", index=False)
+    candidate_burden_predictions.to_csv(
+        results_dir / "planting_window_burden_predictions.csv", index=False
+    )
+    candidate_burden_folds.to_csv(results_dir / "planting_window_burden_folds.csv", index=False)
+    candidate_shape_predictions.to_csv(
+        results_dir / "planting_window_shape_predictions.csv", index=False
+    )
+    candidate_shape_folds.to_csv(results_dir / "planting_window_shape_folds.csv", index=False)
 
     environment_summary = (
         metrics.groupby("environment", observed=True)
@@ -180,6 +206,15 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = False) -> dict
                 "Prospective validation compares an environment-agnostic training baseline with "
                 "same-hybrid history learned only from the remaining environments. Held-out "
                 "outcomes are never used to construct predictions."
+            ),
+        },
+        "planting_window_candidate": {
+            "burden": burden_decision,
+            "shape": shape_decision,
+            "interpretation": (
+                "The candidate combines same-hybrid history with the pre-known planting-window "
+                "label. Promotion is decided by the criteria frozen before this candidate was "
+                "evaluated; rejection is retained as a scientific result."
             ),
         },
         "scope": {

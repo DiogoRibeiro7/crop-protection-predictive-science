@@ -62,3 +62,9 @@ jobs:
       - run: poetry run crop-protection-model-risk > /dev/null
       - name: Verify regenerated scientific conclusions
         run: poetry run pytest tests/test_scientific_contract.py
+      - name: Upload Bipolaris decision bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: bipolaris-decision-bundle
+          path: results/bipolaris
+          if-no-files-found: error
