@@ -4,6 +4,12 @@ from pathlib import Path
 
 import pandas as pd
 
+from crop_protection_ps.bipolaris import (
+    BipolarisSourceContract,
+    git_blob_sha1,
+    load_bipolaris,
+    validate_source_bytes,
+)
 from crop_protection_ps.hop_trial import load_hop_trial
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -39,3 +45,18 @@ def test_weather_bytes_match_committed_provenance() -> None:
 
     assert _sha256(data_path) == provenance["local_sha256"]
     assert len(frame) == provenance["rows"]
+
+
+def test_bipolaris_bytes_match_pinned_upstream_git_object() -> None:
+    """The committed second empirical dataset must remain the exact upstream Git blob."""
+    data_path = RAW_DIR / "maize_bipolaris.csv"
+    contract = BipolarisSourceContract()
+    payload = data_path.read_bytes()
+
+    validate_source_bytes(payload, contract)
+    assert git_blob_sha1(payload) == contract.source_git_blob_sha1
+
+    frame = load_bipolaris(data_path)
+    assert not frame.empty
+    assert frame["environment"].nunique() >= 2
+    assert frame["hybrid"].nunique() >= 2
