@@ -59,16 +59,7 @@ def common_dae_grid(config: FunctionalProfileConfig | None = None) -> np.ndarray
     )
 
 
-def functional_profiles(
-    frame: pd.DataFrame,
-    config: FunctionalProfileConfig | None = None,
-) -> pd.DataFrame:
-    """Interpolate eligible disease curves on a common grid.
-
-    Raw interpolated severity retains disease burden. ``relative_shape`` divides
-    each curve by its own time-average severity, so it has time-average one and
-    isolates trajectory shape from overall disease scale.
-    """
+def _validate_frame(frame: pd.DataFrame) -> None:
     required = {
         "environment",
         "hybrid",
@@ -79,29 +70,107 @@ def functional_profiles(
     if missing:
         raise ValueError(f"Missing normalized Bipolaris columns: {sorted(missing)}.")
 
+
+def functional_profile_eligibility(
+    frame: pd.DataFrame,
+    config: FunctionalProfileConfig | None = None,
+) -> pd.DataFrame:
+    """Audit which environment×hybrid curves are eligible for shape analysis."""
+    _validate_frame(frame)
     profile_config = config or FunctionalProfileConfig()
     grid = common_dae_grid(profile_config)
     duration = profile_config.grid_end_dae - profile_config.grid_start_dae
 
-    records: list[dict[str, str | float]] = []
+    records: list[dict[str, str | int | float | bool]] = []
     grouped = frame.groupby(["environment", "hybrid"], sort=True, observed=True)
     for (environment, hybrid), group in grouped:
         ordered = group.sort_values("days_after_emergence")
-        if len(ordered) < profile_config.min_assessments:
-            continue
-
         days = ordered["days_after_emergence"].to_numpy(dtype=float)
         severity = ordered["severity_pct"].to_numpy(dtype=float)
-        if days[0] > profile_config.grid_start_dae:
-            continue
-        if days[-1] < profile_config.grid_end_dae:
-            continue
 
+        enough_assessments = len(ordered) >= profile_config.min_assessments
+        covers_grid_start = bool(days[0] <= profile_config.grid_start_dae)
+        covers_grid_end = bool(days[-1] >= profile_config.grid_end_dae)
+        mean_severity: float | None = None
+        above_severity_floor = False
+        if enough_assessments and covers_grid_start and covers_grid_end:
+            interpolated = np.interp(grid, days, severity)
+            mean_severity = float(np.trapezoid(interpolated, grid) / duration)
+            above_severity_floor = mean_severity > profile_config.minimum_mean_severity
+
+        eligible = (
+            enough_assessments
+            and covers_grid_start
+            and covers_grid_end
+            and above_severity_floor
+        )
+        if not enough_assessments:
+            reason = "too_few_assessments"
+        elif not covers_grid_start:
+            reason = "starts_after_grid"
+        elif not covers_grid_end:
+            reason = "ends_before_grid"
+        elif not above_severity_floor:
+            reason = "mean_severity_below_floor"
+        else:
+            reason = "eligible"
+
+        records.append(
+            {
+                "environment": str(environment),
+                "hybrid": str(hybrid),
+                "n_assessments": len(ordered),
+                "min_dae": float(days[0]),
+                "max_dae": float(days[-1]),
+                "mean_severity_pct": (
+                    mean_severity if mean_severity is not None else np.nan
+                ),
+                "enough_assessments": enough_assessments,
+                "covers_grid_start": covers_grid_start,
+                "covers_grid_end": covers_grid_end,
+                "above_severity_floor": above_severity_floor,
+                "eligible": eligible,
+                "reason": reason,
+            }
+        )
+
+    return pd.DataFrame.from_records(records).sort_values(
+        ["environment", "hybrid"]
+    ).reset_index(drop=True)
+
+
+def functional_profiles(
+    frame: pd.DataFrame,
+    config: FunctionalProfileConfig | None = None,
+) -> pd.DataFrame:
+    """Interpolate eligible disease curves on a common grid.
+
+    Raw interpolated severity retains disease burden. ``relative_shape`` divides
+    each curve by its own time-average severity, so it has time-average one and
+    isolates trajectory shape from overall disease scale.
+    """
+    _validate_frame(frame)
+    profile_config = config or FunctionalProfileConfig()
+    grid = common_dae_grid(profile_config)
+    duration = profile_config.grid_end_dae - profile_config.grid_start_dae
+    eligibility = functional_profile_eligibility(frame, profile_config)
+    eligible_pairs = set(
+        eligibility.loc[
+            eligibility["eligible"], ["environment", "hybrid"]
+        ].itertuples(index=False, name=None)
+    )
+
+    records: list[dict[str, str | float]] = []
+    grouped = frame.groupby(["environment", "hybrid"], sort=True, observed=True)
+    for (environment, hybrid), group in grouped:
+        key = (str(environment), str(hybrid))
+        if key not in eligible_pairs:
+            continue
+        ordered = group.sort_values("days_after_emergence")
+        days = ordered["days_after_emergence"].to_numpy(dtype=float)
+        severity = ordered["severity_pct"].to_numpy(dtype=float)
         interpolated = np.interp(grid, days, severity)
         mean_severity = float(np.trapezoid(interpolated, grid) / duration)
-        if mean_severity <= profile_config.minimum_mean_severity:
-            continue
-
         relative_shape = interpolated / mean_severity
         for dae, severity_pct, shape_value in zip(
             grid, interpolated, relative_shape, strict=True
@@ -166,7 +235,6 @@ def pairwise_functional_distances(profiles: pd.DataFrame) -> pd.DataFrame:
             expected_grid = grid
         elif len(grid) != len(expected_grid) or not np.allclose(grid, expected_grid):
             raise ValueError("All functional profiles must share the same DAE grid.")
-
         curves.append(
             (
                 str(environment),
@@ -204,7 +272,6 @@ def pairwise_functional_distances(profiles: pd.DataFrame) -> pd.DataFrame:
                     ),
                 }
             )
-
     return pd.DataFrame.from_records(records)
 
 
@@ -212,11 +279,7 @@ def functional_stability_summary(
     distances: pd.DataFrame,
 ) -> dict[str, int | float | None]:
     """Summarize whether hybrid-specific trajectory shape persists across environments."""
-    required = {
-        "relationship",
-        "raw_severity_rmse_pct",
-        "normalized_shape_rmse",
-    }
+    required = {"relationship", "raw_severity_rmse_pct", "normalized_shape_rmse"}
     missing = required.difference(distances.columns)
     if missing:
         raise ValueError(f"Missing functional-distance columns: {sorted(missing)}.")
@@ -239,11 +302,7 @@ def functional_stability_summary(
     same_shape = median_or_none(same, "normalized_shape_rmse")
     cross_other_shape = median_or_none(cross_other, "normalized_shape_rmse")
     ratio: float | None = None
-    if (
-        same_shape is not None
-        and cross_other_shape is not None
-        and cross_other_shape > 0.0
-    ):
+    if same_shape is not None and cross_other_shape is not None and cross_other_shape > 0.0:
         ratio = same_shape / cross_other_shape
 
     return {
