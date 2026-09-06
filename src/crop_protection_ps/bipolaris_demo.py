@@ -21,19 +21,17 @@ from crop_protection_ps.bipolaris_functional import (
     functional_stability_summary,
     pairwise_functional_distances,
 )
+from crop_protection_ps.bipolaris_loeo import (
+    burden_fold_metrics,
+    leave_one_environment_out_burden,
+    leave_one_environment_out_shape,
+    loeo_summary,
+    shape_fold_metrics,
+)
 
 
 def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[str, object]:
-    """Run the independent field-disease case and persist auditable outputs.
-
-    Parameters
-    ----------
-    root:
-        Repository root containing ``data`` and ``results`` directories.
-    download_if_missing:
-        Download the commit-pinned public CSV when the local raw file is absent.
-        Set to ``False`` for fully offline execution.
-    """
+    """Run the independent field-disease case and persist auditable outputs."""
     source = BipolarisSourceContract()
     raw_path = root / "data" / "raw" / "maize_bipolaris.csv"
     results_dir = root / "results" / "bipolaris"
@@ -54,10 +52,20 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
     functional_distances = pairwise_functional_distances(profiles)
     functional_summary = functional_stability_summary(functional_distances)
 
+    burden_predictions = leave_one_environment_out_burden(metrics)
+    burden_folds = burden_fold_metrics(burden_predictions)
+    shape_predictions = leave_one_environment_out_shape(profiles)
+    shape_folds = shape_fold_metrics(shape_predictions)
+    prospective_summary = loeo_summary(burden_folds, shape_folds)
+
     metrics.to_csv(results_dir / "curve_metrics.csv", index=False)
     correlations.to_csv(results_dir / "environment_rank_spearman.csv")
     profiles.to_csv(results_dir / "functional_profiles.csv", index=False)
     functional_distances.to_csv(results_dir / "functional_distances.csv", index=False)
+    burden_predictions.to_csv(results_dir / "loeo_burden_predictions.csv", index=False)
+    burden_folds.to_csv(results_dir / "loeo_burden_folds.csv", index=False)
+    shape_predictions.to_csv(results_dir / "loeo_shape_predictions.csv", index=False)
+    shape_folds.to_csv(results_dir / "loeo_shape_folds.csv", index=False)
 
     environment_summary = (
         metrics.groupby("environment", observed=True)
@@ -71,9 +79,6 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
     )
     environment_summary.to_csv(results_dir / "environment_summary.csv", index=False)
 
-    # The figure is intentionally descriptive. It exposes environment-specific disease
-    # burden without treating a scalar AUDPC summary as a complete representation of
-    # disease-curve shape.
     fig, ax = plt.subplots(figsize=(9.0, 5.2))
     ordered = environment_summary.sort_values("median_audpc_pct_days")
     ax.bar(ordered["environment"], ordered["median_audpc_pct_days"])
@@ -85,9 +90,6 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
     fig.savefig(figures_dir / "median_audpc_by_environment.png", dpi=180)
     plt.close(fig)
 
-    # Compare the median normalized trajectory distance for a hybrid observed in different
-    # environments against different hybrids observed in different environments. This is a
-    # descriptive stability diagnostic, not a significance test or promotion gate.
     shape_categories = [
         "same hybrid\nacross environments",
         "different hybrids\nacross environments",
@@ -105,16 +107,23 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
         fig.savefig(figures_dir / "functional_shape_stability.png", dpi=180)
         plt.close(fig)
 
-    pairwise = correlations.where(
-        np.triu(np.ones(correlations.shape, dtype=bool), k=1)
-    ).stack()
+    loeo_labels = ["global training mean", "hybrid history"]
+    loeo_values = [
+        float(prospective_summary["mean_fold_global_training_audpc_rmse"]),
+        float(prospective_summary["mean_fold_hybrid_history_audpc_rmse"]),
+    ]
+    fig, ax = plt.subplots(figsize=(7.0, 4.8))
+    ax.bar(loeo_labels, loeo_values)
+    ax.set_ylabel("Mean held-out-environment AUDPC RMSE")
+    ax.set_title("Prospective hybrid burden transport across environments")
+    fig.tight_layout()
+    fig.savefig(figures_dir / "loeo_audpc_transport.png", dpi=180)
+    plt.close(fig)
+
+    pairwise = correlations.where(np.triu(np.ones(correlations.shape, dtype=bool), k=1)).stack()
     finite_pairwise = pairwise[np.isfinite(pairwise)]
-    minimum_pairwise = (
-        float(finite_pairwise.min()) if not finite_pairwise.empty else None
-    )
-    maximum_pairwise = (
-        float(finite_pairwise.max()) if not finite_pairwise.empty else None
-    )
+    minimum_pairwise = float(finite_pairwise.min()) if not finite_pairwise.empty else None
+    maximum_pairwise = float(finite_pairwise.max()) if not finite_pairwise.empty else None
 
     summary: dict[str, object] = {
         "source": {
@@ -141,6 +150,14 @@ def run_bipolaris_demo(root: Path, *, download_if_missing: bool = True) -> dict[
                 "Common-grid trajectory distances separate overall disease scale from "
                 "scale-normalized epidemic shape. Values are descriptive and do not reproduce "
                 "the source HGAM analysis."
+            ),
+        },
+        "leave_one_environment_out": {
+            **prospective_summary,
+            "interpretation": (
+                "Prospective validation compares an environment-agnostic training baseline with "
+                "same-hybrid history learned only from the remaining environments. Held-out "
+                "outcomes are never used to construct predictions."
             ),
         },
         "scope": {
