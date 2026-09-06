@@ -63,7 +63,7 @@ def test_burden_candidate_is_rejected_when_ranking_worsens() -> None:
     decision = evaluate_burden_promotion(_burden_baseline(), candidate)
 
     assert not decision.promoted
-    assert "ranking" in " ".join(decision.reasons)
+    assert "rank" in " ".join(decision.reasons)
 
 
 def test_burden_candidate_cannot_change_evaluation_population() -> None:
