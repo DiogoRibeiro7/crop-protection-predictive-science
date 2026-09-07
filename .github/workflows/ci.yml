@@ -42,18 +42,30 @@ jobs:
       - run: poetry install --no-interaction
       - run: poetry run pytest --cov=crop_protection_ps --cov-report=term-missing
 
-  container-smoke:
+  container-scientific:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build locked scientific image
-        run: docker build --pull=false --tag crop-protection-ps:ci .
-      - name: Run default container command offline
-        run: docker run --rm --network none crop-protection-ps:ci > /dev/null
-      - name: Run real-data pipelines offline
+      - name: Build locked runtime image
+        run: docker build --pull=false --target runtime --tag crop-protection-ps:runtime .
+      - name: Run default runtime command offline
+        run: docker run --rm --network none crop-protection-ps:runtime > /dev/null
+      - name: Build locked scientific-test image
+        run: docker build --pull=false --target scientific-test --tag crop-protection-ps:scientific-test .
+      - name: Regenerate and verify all scientific conclusions offline
         run: |
-          docker run --rm --network none crop-protection-ps:ci crop-protection-real > /dev/null
-          docker run --rm --network none crop-protection-ps:ci crop-protection-bipolaris > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test sh -lc '
+            crop-protection-real > /dev/null &&
+            crop-protection-bipolaris > /dev/null &&
+            crop-protection-bayesian > /dev/null &&
+            crop-protection-environment > /dev/null &&
+            crop-protection-adaptive > /dev/null &&
+            crop-protection-multifidelity > /dev/null &&
+            crop-protection-portfolio > /dev/null &&
+            crop-protection-multiobjective > /dev/null &&
+            crop-protection-model-risk > /dev/null &&
+            poetry run pytest tests/test_scientific_contract.py
+          '
 
   scientific-smoke:
     runs-on: ubuntu-latest
