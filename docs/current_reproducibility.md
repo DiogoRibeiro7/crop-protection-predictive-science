@@ -28,26 +28,34 @@ poetry check --lock
 before dependency installation, Ruff and strict mypy. This makes a stale or inconsistent lockfile a
 CI failure rather than a documentation-only concern.
 
-The test matrix installs from the lockfile on Python 3.11, 3.12 and 3.13. The scientific-smoke job
-also installs from the same lockfile before regenerating all scientific pipelines and checking the
-cross-pipeline scientific contract.
+The test matrix installs from the lockfile on Python 3.11, 3.12 and 3.13. The direct scientific-smoke
+job also installs from the same lockfile on Python 3.13, regenerates all scientific pipelines, checks
+the cross-pipeline scientific contract and uploads the Bipolaris decision bundle.
 
 ## Locked container runtime
 
-The Docker image uses the official Python 3.12.14 slim Bookworm base image pinned by manifest digest,
-not a floating `python:3.12-slim` tag. Poetry is pinned to 2.4.3 and the build copies both
-`pyproject.toml` and `poetry.lock` before installing dependencies.
+The Dockerfile uses the official Python 3.12.14 slim Bookworm base image pinned by manifest digest,
+not a floating Python tag. Poetry is pinned to 2.4.3 and the build consumes both `pyproject.toml` and
+`poetry.lock`.
 
-The image also vendors the repository's empirical data and runs as a non-root user. CI builds the
-image and then runs the default demonstration plus the two empirical pipelines with Docker networking
-disabled. This verifies that the container can execute the scientific entry points without fetching
-runtime data or dependencies.
+Two targets share that same pinned base:
 
-The container gate does not publish an image. It is a reproducibility and packaging check only.
+- `runtime` contains only the main dependency group and is the lean user-facing execution image;
+- `scientific-test` adds the locked development group and the repository tests for CI validation.
+
+The image vendors the repository's empirical data and runs as a non-root user. CI builds both targets
+and runs the runtime command with Docker networking disabled.
+
+The scientific-test target then performs one continuous offline execution that regenerates every
+scientific pipeline and immediately runs `tests/test_scientific_contract.py` against those exact
+outputs. Keeping regeneration and verification in the same container prevents results from being
+lost between isolated container invocations.
+
+No image is published. The container gate is a reproducibility and packaging check only.
 
 ## Scientific artifact provenance
 
-The scientific-smoke artifact includes:
+The direct scientific-smoke artifact includes:
 
 - the complete regenerated `results/bipolaris` decision bundle;
 - `pyproject.toml`;
@@ -58,10 +66,10 @@ resolved dependency graph used by the workflow that produced it.
 
 ## Remaining boundary
 
-The digest-pinned container substantially narrows the platform variability for the container path,
-but it still does not imply bitwise identity across CPU implementations, container engines or host
-kernels. The ordinary Python CI matrix also continues to run directly on GitHub-hosted Ubuntu rather
-than inside the container because its purpose is to validate the supported Python-version range.
+The digest-pinned container substantially narrows platform variability but does not imply bitwise
+identity across CPU implementations, container engines or host kernels. The Python 3.11–3.13 matrix
+also remains outside the container because its purpose is portability across the supported Python
+range rather than fixed-environment reproduction.
 
 For this repository's purpose, the current contract is therefore:
 
@@ -69,9 +77,10 @@ For this repository's purpose, the current contract is therefore:
 2. provenance-checked raw empirical data;
 3. Poetry-resolved transitive Python dependencies with hashes;
 4. CI validation that the lock matches the project declaration;
-5. an immutable Python container base plus fixed Poetry version for the container execution path;
-6. offline container execution of the default and empirical scientific entry points;
-7. regenerated scientific outputs and scientific-contract tests on the supported CI environment.
+5. an immutable Python container base plus fixed Poetry version;
+6. offline regeneration of all scientific pipelines inside the pinned container;
+7. immediate scientific-contract validation against those same container-generated outputs;
+8. an independent Python 3.13 scientific-smoke path and Python 3.11–3.13 portability matrix.
 
 That is stronger than the original v1.0.1 release receipt, while preserving the historical record of
 what was actually available at release time.
