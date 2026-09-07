@@ -42,18 +42,29 @@ jobs:
       - run: poetry install --no-interaction
       - run: poetry run pytest --cov=crop_protection_ps --cov-report=term-missing
 
-  container-smoke:
+  container-scientific:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build locked scientific image
-        run: docker build --pull=false --tag crop-protection-ps:ci .
-      - name: Run default container command offline
-        run: docker run --rm --network none crop-protection-ps:ci > /dev/null
-      - name: Run real-data pipelines offline
+      - name: Build locked runtime image
+        run: docker build --pull=false --target runtime --tag crop-protection-ps:runtime .
+      - name: Run default runtime command offline
+        run: docker run --rm --network none crop-protection-ps:runtime > /dev/null
+      - name: Build locked scientific-test image
+        run: docker build --pull=false --target scientific-test --tag crop-protection-ps:scientific-test .
+      - name: Regenerate all scientific pipelines offline
         run: |
-          docker run --rm --network none crop-protection-ps:ci crop-protection-real > /dev/null
-          docker run --rm --network none crop-protection-ps:ci crop-protection-bipolaris > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-real > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-bipolaris > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-bayesian > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-environment > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-adaptive > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-multifidelity > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-portfolio > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-multiobjective > /dev/null
+          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-model-risk > /dev/null
+      - name: Verify scientific contract offline
+        run: docker run --rm --network none crop-protection-ps:scientific-test
 
   scientific-smoke:
     runs-on: ubuntu-latest
