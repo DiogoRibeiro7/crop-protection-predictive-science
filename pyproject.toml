@@ -1,9 +1,26 @@
-[tool.poetry]
+[project]
 name = "crop-protection-predictive-science"
 version = "1.0.1"
 description = "Predictive-science methods for crop-protection experiments, transportability, uncertainty and R&D decisions."
-authors = ["Diogo Ribeiro"]
 readme = "README.md"
+dynamic = ["dependencies"]
+authors = [
+    { name = "Diogo Ribeiro" },
+]
+
+[project.scripts]
+crop-protection-demo = "crop_protection_ps.demo:main"
+crop-protection-real = "crop_protection_ps.real_demo:main"
+crop-protection-bipolaris = "crop_protection_ps.bipolaris_demo:main"
+crop-protection-bayesian = "crop_protection_ps.bayesian_demo:main"
+crop-protection-environment = "crop_protection_ps.environment_demo:main"
+crop-protection-adaptive = "crop_protection_ps.adaptive_demo:main"
+crop-protection-multifidelity = "crop_protection_ps.multifidelity_demo:main"
+crop-protection-portfolio = "crop_protection_ps.portfolio_demo:main"
+crop-protection-multiobjective = "crop_protection_ps.multiobjective_demo:main"
+crop-protection-model-risk = "crop_protection_ps.model_risk_demo:main"
+
+[tool.poetry]
 packages = [{ include = "crop_protection_ps", from = "src" }]
 
 [tool.poetry.dependencies]
@@ -25,18 +42,6 @@ mypy = ">=1.11"
 pre-commit = ">=3.8"
 nbclient = ">=0.10"
 nbformat = ">=5.10"
-
-[tool.poetry.scripts]
-crop-protection-demo = "crop_protection_ps.demo:main"
-crop-protection-real = "crop_protection_ps.real_demo:main"
-crop-protection-bipolaris = "crop_protection_ps.bipolaris_demo:main"
-crop-protection-bayesian = "crop_protection_ps.bayesian_demo:main"
-crop-protection-environment = "crop_protection_ps.environment_demo:main"
-crop-protection-adaptive = "crop_protection_ps.adaptive_demo:main"
-crop-protection-multifidelity = "crop_protection_ps.multifidelity_demo:main"
-crop-protection-portfolio = "crop_protection_ps.portfolio_demo:main"
-crop-protection-multiobjective = "crop_protection_ps.multiobjective_demo:main"
-crop-protection-model-risk = "crop_protection_ps.model_risk_demo:main"
 
 [build-system]
 requires = ["poetry-core>=1.9.0"]
