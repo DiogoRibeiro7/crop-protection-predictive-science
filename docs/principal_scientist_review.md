@@ -170,13 +170,19 @@ defined with subject-matter experts.
 The portfolio and multi-fidelity costs are relative simulation units. They show how to formulate a
 resource-allocation problem but are not estimates of real programme economics.
 
-### 10. Reproducibility is good but not environment-locked
+### 10. Python dependencies are locked, but the full execution platform is not bitwise frozen
 
-The project supplies Poetry dependency ranges, tests, CI, persisted results and artifact hashes.
-The v1.0 release also records the exact direct package versions used for validation. It still does
-not provide a complete transitive lockfile generated from an external package index.
+Current `main` contains a Poetry 2.4.3-generated `poetry.lock` with the resolved transitive Python
+dependency graph and package artifact hashes. CI checks that the lock remains consistent with
+`pyproject.toml` before installation, and the scientific Bipolaris artifact includes both files.
+This is materially stronger than the original v1.0.1 release receipt, which predated the lockfile.
 
-That limitation should remain explicit.
+The remaining boundary is narrower: a Poetry lockfile does not freeze the Ubuntu runner image,
+CPU, BLAS/LAPACK implementation, compiler toolchain or every platform-specific binary detail.
+Therefore the repository should claim reproducibility within the supported CI environment, not
+bitwise identity across arbitrary machines.
+
+See `docs/current_reproducibility.md` for the current contract.
 
 ## Questions I would ask the author
 
@@ -205,4 +211,5 @@ It becomes less persuasive if it is presented as:
 
 The recent Bipolaris work strengthens the first claim because it now combines prospective
 environment-level validation, a frozen promotion rule, a retained negative result and an explicit
-model-selection stop boundary. It does not change the second boundary.
+model-selection stop boundary. The current dependency lock and CI consistency check also strengthen
+reproducibility without changing the second boundary.
