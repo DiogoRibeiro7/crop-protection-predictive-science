@@ -3,7 +3,7 @@ name = "crop-protection-predictive-science"
 version = "1.0.1"
 description = "Predictive-science methods for crop-protection experiments, transportability, uncertainty and R&D decisions."
 readme = "README.md"
-dynamic = ["dependencies"]
+dynamic = ["dependencies", "requires-python"]
 authors = [
     { name = "Diogo Ribeiro" },
 ]
