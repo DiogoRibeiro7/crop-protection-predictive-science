@@ -28,9 +28,22 @@ poetry check --lock
 before dependency installation, Ruff and strict mypy. This makes a stale or inconsistent lockfile a
 CI failure rather than a documentation-only concern.
 
-The test matrix then installs from the lockfile on Python 3.11, 3.12 and 3.13. The scientific-smoke
-job also installs from the same lockfile before regenerating all scientific pipelines and checking
-the cross-pipeline scientific contract.
+The test matrix installs from the lockfile on Python 3.11, 3.12 and 3.13. The scientific-smoke job
+also installs from the same lockfile before regenerating all scientific pipelines and checking the
+cross-pipeline scientific contract.
+
+## Locked container runtime
+
+The Docker image uses the official Python 3.12.14 slim Bookworm base image pinned by manifest digest,
+not a floating `python:3.12-slim` tag. Poetry is pinned to 2.4.3 and the build copies both
+`pyproject.toml` and `poetry.lock` before installing dependencies.
+
+The image also vendors the repository's empirical data and runs as a non-root user. CI builds the
+image and then runs the default demonstration plus the two empirical pipelines with Docker networking
+disabled. This verifies that the container can execute the scientific entry points without fetching
+runtime data or dependencies.
+
+The container gate does not publish an image. It is a reproducibility and packaging check only.
 
 ## Scientific artifact provenance
 
@@ -45,11 +58,10 @@ resolved dependency graph used by the workflow that produced it.
 
 ## Remaining boundary
 
-A Python dependency lockfile does not freeze the complete operating system, CPU, BLAS/LAPACK
-implementation, compiler toolchain or every platform-specific binary detail. GitHub Actions currently
-runs the scientific-smoke job on `ubuntu-latest`, so numerical reproducibility should still be
-interpreted within that execution environment rather than as bitwise identity across arbitrary
-platforms.
+The digest-pinned container substantially narrows the platform variability for the container path,
+but it still does not imply bitwise identity across CPU implementations, container engines or host
+kernels. The ordinary Python CI matrix also continues to run directly on GitHub-hosted Ubuntu rather
+than inside the container because its purpose is to validate the supported Python-version range.
 
 For this repository's purpose, the current contract is therefore:
 
@@ -57,7 +69,9 @@ For this repository's purpose, the current contract is therefore:
 2. provenance-checked raw empirical data;
 3. Poetry-resolved transitive Python dependencies with hashes;
 4. CI validation that the lock matches the project declaration;
-5. regenerated scientific outputs and scientific-contract tests on the supported CI environment.
+5. an immutable Python container base plus fixed Poetry version for the container execution path;
+6. offline container execution of the default and empirical scientific entry points;
+7. regenerated scientific outputs and scientific-contract tests on the supported CI environment.
 
 That is stronger than the original v1.0.1 release receipt, while preserving the historical record of
 what was actually available at release time.
