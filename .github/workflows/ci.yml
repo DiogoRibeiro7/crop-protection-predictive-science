@@ -52,19 +52,20 @@ jobs:
         run: docker run --rm --network none crop-protection-ps:runtime > /dev/null
       - name: Build locked scientific-test image
         run: docker build --pull=false --target scientific-test --tag crop-protection-ps:scientific-test .
-      - name: Regenerate all scientific pipelines offline
+      - name: Regenerate and verify all scientific conclusions offline
         run: |
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-real > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-bipolaris > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-bayesian > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-environment > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-adaptive > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-multifidelity > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-portfolio > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-multiobjective > /dev/null
-          docker run --rm --network none crop-protection-ps:scientific-test crop-protection-model-risk > /dev/null
-      - name: Verify scientific contract offline
-        run: docker run --rm --network none crop-protection-ps:scientific-test
+          docker run --rm --network none crop-protection-ps:scientific-test sh -lc '
+            crop-protection-real > /dev/null &&
+            crop-protection-bipolaris > /dev/null &&
+            crop-protection-bayesian > /dev/null &&
+            crop-protection-environment > /dev/null &&
+            crop-protection-adaptive > /dev/null &&
+            crop-protection-multifidelity > /dev/null &&
+            crop-protection-portfolio > /dev/null &&
+            crop-protection-multiobjective > /dev/null &&
+            crop-protection-model-risk > /dev/null &&
+            poetry run pytest tests/test_scientific_contract.py
+          '
 
   scientific-smoke:
     runs-on: ubuntu-latest
