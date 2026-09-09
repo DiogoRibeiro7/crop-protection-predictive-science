@@ -83,6 +83,31 @@ def test_shape_predictions_use_same_hybrid_history_without_leakage() -> None:
     ]
 
 
+def test_numeric_environment_and_hybrid_ids_are_normalised() -> None:
+    metrics = _metrics().copy()
+    metrics["environment"] = metrics["environment"].str.removeprefix("E").astype(int)
+    metrics["hybrid"] = metrics["hybrid"].str.removeprefix("H").astype(int)
+
+    profiles = _profiles().copy()
+    profiles["environment"] = profiles["environment"].str.removeprefix("E").astype(int)
+    profiles["hybrid"] = profiles["hybrid"].str.removeprefix("H").astype(int)
+
+    burden_predictions = leave_one_environment_out_burden(metrics)
+    shape_predictions = leave_one_environment_out_shape(profiles)
+
+    assert set(burden_predictions["held_out_environment"]) == {"1", "2", "3"}
+    assert set(burden_predictions["hybrid"]) == {"1", "2"}
+    assert set(shape_predictions["held_out_environment"]) == {"1", "2", "3"}
+    assert set(shape_predictions["hybrid"]) == {"1", "2"}
+
+
+def test_shape_fold_metrics_requires_hybrid_column() -> None:
+    predictions = leave_one_environment_out_shape(_profiles()).drop(columns="hybrid")
+
+    with pytest.raises(ValueError, match="hybrid"):
+        shape_fold_metrics(predictions)
+
+
 def test_loeo_summary_reports_fold_wins_without_promotion_gate() -> None:
     burden_predictions = leave_one_environment_out_burden(_metrics())
     burden_folds = burden_fold_metrics(burden_predictions)
