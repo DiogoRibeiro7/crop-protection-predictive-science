@@ -21,3 +21,8 @@ def test_yaml_config_loads() -> None:
     path = Path(__file__).parents[1] / "configs" / "demo.yaml"
     config = load_config(path)
     assert config.seed == 20260826
+
+
+def test_demo_yaml_matches_packaged_defaults() -> None:
+    path = Path(__file__).parents[1] / "configs" / "demo.yaml"
+    assert load_config(path) == TrialSimulationConfig()
