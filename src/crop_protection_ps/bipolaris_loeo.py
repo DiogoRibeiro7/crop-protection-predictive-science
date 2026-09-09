@@ -39,6 +39,14 @@ def _spearman_or_none(observed: pd.Series, predicted: pd.Series) -> float | None
     return float(value)
 
 
+def _normalise_identifiers(frame: pd.DataFrame) -> pd.DataFrame:
+    """Return a copy with environment and hybrid identifiers represented consistently as strings."""
+    normalised = frame.copy()
+    normalised["environment"] = normalised["environment"].astype(str)
+    normalised["hybrid"] = normalised["hybrid"].astype(str)
+    return normalised
+
+
 def leave_one_environment_out_burden(metrics: pd.DataFrame) -> pd.DataFrame:
     """Predict held-out-environment AUDPC from training environments only.
 
@@ -59,14 +67,19 @@ def leave_one_environment_out_burden(metrics: pd.DataFrame) -> pd.DataFrame:
     if metrics.empty:
         raise ValueError("Bipolaris curve metrics must not be empty.")
 
+    metrics_normalised = _normalise_identifiers(metrics)
     records: list[dict[str, str | int | float]] = []
-    environments = sorted(str(value) for value in metrics["environment"].unique())
+    environments = sorted(metrics_normalised["environment"].unique())
     if len(environments) < 2:
         raise ValueError("At least two environments are required for leave-one-environment-out.")
 
     for held_out_environment in environments:
-        train = metrics.loc[metrics["environment"] != held_out_environment].copy()
-        test = metrics.loc[metrics["environment"] == held_out_environment].copy()
+        train = metrics_normalised.loc[
+            metrics_normalised["environment"] != held_out_environment
+        ].copy()
+        test = metrics_normalised.loc[
+            metrics_normalised["environment"] == held_out_environment
+        ].copy()
         if train.empty or test.empty:
             continue
 
@@ -161,14 +174,19 @@ def leave_one_environment_out_shape(profiles: pd.DataFrame) -> pd.DataFrame:
     if profiles.empty:
         raise ValueError("Functional profiles must not be empty.")
 
-    environments = sorted(str(value) for value in profiles["environment"].unique())
+    profiles_normalised = _normalise_identifiers(profiles)
+    environments = sorted(profiles_normalised["environment"].unique())
     if len(environments) < 2:
         raise ValueError("At least two environments are required for leave-one-environment-out.")
 
     records: list[dict[str, str | int | float]] = []
     for held_out_environment in environments:
-        train = profiles.loc[profiles["environment"] != held_out_environment].copy()
-        test = profiles.loc[profiles["environment"] == held_out_environment].copy()
+        train = profiles_normalised.loc[
+            profiles_normalised["environment"] != held_out_environment
+        ].copy()
+        test = profiles_normalised.loc[
+            profiles_normalised["environment"] == held_out_environment
+        ].copy()
         if train.empty or test.empty:
             continue
 
@@ -221,6 +239,7 @@ def shape_fold_metrics(predictions: pd.DataFrame) -> pd.DataFrame:
     """Summarize normalized-trajectory error within each held-out environment."""
     required = {
         "held_out_environment",
+        "hybrid",
         "global_training_shape_rmse",
         "hybrid_history_shape_rmse",
     }
