@@ -8,7 +8,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-from crop_protection_ps.config import load_config
+from crop_protection_ps.config import TrialSimulationConfig, load_config
 from crop_protection_ps.design import make_candidate_grid, select_d_optimal_candidates
 from crop_protection_ps.dose_response import (
     bootstrap_interval,
@@ -21,9 +21,17 @@ from crop_protection_ps.simulate import simulate_field_trials
 from crop_protection_ps.validation import validation_table
 
 
+def _load_demo_config(root: Path) -> TrialSimulationConfig:
+    """Load the repository demo config when present, otherwise use packaged defaults."""
+    config_path = root / "configs" / "demo.yaml"
+    if config_path.is_file():
+        return load_config(config_path)
+    return TrialSimulationConfig()
+
+
 def run_demo(root: Path) -> dict[str, object]:
     """Run the complete synthetic field-trial analysis and persist outputs."""
-    config = load_config(root / "configs" / "demo.yaml")
+    config = _load_demo_config(root)
     frame = simulate_field_trials(config)
     processed_dir = root / "data" / "processed"
     results_dir = root / "results"
@@ -117,8 +125,7 @@ def run_demo(root: Path) -> dict[str, object]:
 
 def main() -> None:
     """CLI entry point."""
-    root = Path(__file__).resolve().parents[2]
-    summary = run_demo(root)
+    summary = run_demo(Path.cwd())
     print(json.dumps(summary, indent=2))
 
 
