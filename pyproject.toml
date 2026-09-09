@@ -1,6 +1,6 @@
 [project]
 name = "crop-protection-predictive-science"
-version = "1.0.1"
+version = "1.1.0"
 description = "Predictive-science methods for crop-protection experiments, transportability, uncertainty and R&D decisions."
 readme = "README.md"
 dynamic = ["dependencies", "requires-python"]

@@ -1,5 +1,32 @@
 # Changelog
 
+## 1.1.0 — 2026-09-09
+
+### New empirical evidence
+
+- added a second independent public Crop Protection field-data case using multi-environment Bipolaris / southern corn leaf blight phenotyping data;
+- added scalar AUDPC burden and functional disease-trajectory analysis across 1,105 observations, six environments and 13 hybrids;
+- added prospective leave-one-environment-out transport validation for global and hybrid-history baselines;
+- added a pre-specified promotion contract for richer candidates and preserved the planting-window candidate as a negative result when it improved pooled error but won only three of six held-out environments;
+- added an explicit model-selection stop boundary preventing further prospective promotion on the same six environments without genuinely new evidence.
+
+### Reproducibility and engineering
+
+- strengthened raw-data provenance and cross-pipeline scientific contracts;
+- added fully offline locked-container scientific validation;
+- enforced Poetry lock consistency and migrated static package metadata to PEP 621 without dependency-lock drift;
+- pinned and hardened GitHub Actions dependencies and permissions;
+- added wheel/sdist build validation plus clean-environment wheel installation and execution outside the repository tree;
+- hardened Bipolaris LOEO identifier handling for numeric environment/hybrid IDs;
+- changed pull-request CI to checkout the literal PR head SHA so release-candidate evidence refers to the exact tested commit.
+
+### Scientific boundary
+
+- no promotion criterion was relaxed after observing results;
+- the planting-window result remains predictive metadata rather than a causal planting-date effect;
+- no additional Bipolaris candidate should be prospectively promoted using only the same six environments;
+- NumPy 2.4.x was intentionally not adopted because it was unnecessary for the validated numerical baseline and changed the typing/lock surface.
+
 ## 1.0.1 — 2026-08-28
 
 ### Publication patch
@@ -69,7 +96,7 @@ industry performance estimates.
 - exact hidden feasible Pareto-front construction and two-objective hypervolume scoring;
 - equal 30-evaluation budget comparison across random, efficacy-only and constrained multi-objective search;
 - 50-rollout paired Monte Carlo evaluation and a pre-specified hypervolume promotion gate;
-- `08_multiobjective_bayesian_optimisation.ipynb`, methodology documentation, figures, tests and CI integration.
+- `08_multiobjective_bayesian_optimisation.ipynb`, methodology documentation, figures and tests;
 
 ### Scientific result
 
@@ -100,7 +127,6 @@ industry performance estimates.
 - Portfolio-VOI reduces regret by 16.74% versus uncertainty sampling and 29.47% versus uniform allocation.
 - The paired regret difference versus uncertainty is -21.21 with Monte Carlo 95% interval [-26.36, -16.05].
 - The numerical result is explicitly scoped to the controlled DGP and is not presented as a commercial portfolio estimate.
-
 
 ## 0.6.0 — 2026-08-28
 
