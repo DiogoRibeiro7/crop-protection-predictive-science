@@ -16,6 +16,11 @@ on:
         required: true
         default: false
         type: boolean
+      dry_run:
+        description: "Validate and build without creating or changing a tag/release"
+        required: true
+        default: true
+        type: boolean
 
 permissions:
   actions: read
@@ -32,6 +37,7 @@ jobs:
       VERSION: ${{ inputs.version }}
       TARGET_SHA: ${{ inputs.target_sha }}
       TAG: v${{ inputs.version }}
+      DRY_RUN: ${{ inputs.dry_run }}
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Validate requested release target
@@ -122,7 +128,10 @@ jobs:
             cd /tmp
             /tmp/crop-protection-release-smoke/bin/crop-protection-demo > /dev/null
           )
-          sha256sum dist/* > SHA256SUMS
+          (
+            cd dist
+            sha256sum * > ../SHA256SUMS
+          )
 
       - name: Create or verify annotated tag
         shell: bash
@@ -136,6 +145,8 @@ jobs:
               exit 1
             fi
             echo "$TAG already points to the requested commit"
+          elif [[ "$DRY_RUN" == "true" ]]; then
+            echo "Dry run: $TAG does not exist and would be created at $TARGET_SHA"
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -147,12 +158,26 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if [[ "$DRY_RUN" == "true" ]]; then
+            if gh release view "$TAG" >/dev/null 2>&1; then
+              echo "Dry run: GitHub Release $TAG exists and its managed assets would be replaced"
+            else
+              echo "Dry run: GitHub Release $TAG would be created"
+            fi
+            exit 0
+          fi
+
           PRERELEASE_FLAG=()
           if [[ "${{ inputs.prerelease }}" == "true" ]]; then
             PRERELEASE_FLAG+=(--prerelease)
           fi
 
           if gh release view "$TAG" >/dev/null 2>&1; then
+            EXISTING_PRERELEASE="$(gh release view "$TAG" --json isPrerelease --jq '.isPrerelease')"
+            if [[ "$EXISTING_PRERELEASE" != "${{ inputs.prerelease }}" ]]; then
+              echo "Existing release prerelease state does not match requested state" >&2
+              exit 1
+            fi
             echo "GitHub Release $TAG exists; replacing managed assets from this verified build"
             gh release upload "$TAG" dist/* SHA256SUMS --clobber
           else
@@ -168,6 +193,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          if [[ "$DRY_RUN" == "true" ]]; then
+            echo "Dry run: skipping published-asset verification because no release was changed"
+            exit 0
+          fi
+
           rm -rf /tmp/release-assets
           mkdir -p /tmp/release-assets
           gh release download "$TAG" \
@@ -186,3 +216,19 @@ jobs:
           test -f /tmp/release-assets/SHA256SUMS
           test "$(sha256sum SHA256SUMS | cut -d' ' -f1)" = \
             "$(sha256sum /tmp/release-assets/SHA256SUMS | cut -d' ' -f1)"
+          (
+            cd /tmp/release-assets
+            sha256sum -c SHA256SUMS
+          )
+
+      - name: Summarize release run
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "$DRY_RUN" == "true" ]]; then
+            printf '### Release dry run passed\n\n`%s` at `%s` was validated and built without tag or release mutation.\n' \
+              "$TAG" "$TARGET_SHA" >> "$GITHUB_STEP_SUMMARY"
+          else
+            printf '### Release published\n\n`%s` at `%s` passed release verification.\n' \
+              "$TAG" "$TARGET_SHA" >> "$GITHUB_STEP_SUMMARY"
+          fi
