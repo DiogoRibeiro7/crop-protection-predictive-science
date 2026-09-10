@@ -1,12 +1,11 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import re
 import tomllib
+from pathlib import Path
 
 import crop_protection_ps
-
 
 ROOT = Path(__file__).parents[1]
 ORCID = "0009-0001-2022-7072"
