@@ -54,7 +54,7 @@ jobs:
           fi
 
           SUCCESSFUL_PUSH_CI="$(
-            gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${TARGET_SHA}&event=push&status=success&per_page=100" \
+            gh api "repos/${GITHUB_REPOSITORY}/actions/runs?head_sha=${TARGET_SHA}&event=push&status=success&per_page=100" \
               --jq '[.workflow_runs[] | select(.name == "CI" and .head_branch == "main" and .conclusion == "success")] | length'
           )"
           if [[ "$SUCCESSFUL_PUSH_CI" -lt 1 ]]; then
@@ -143,17 +143,19 @@ jobs:
             git push origin "refs/tags/$TAG"
           fi
 
-      - name: Publish or verify GitHub Release
+      - name: Publish or repair GitHub Release
         shell: bash
         run: |
           set -euo pipefail
+          PRERELEASE_FLAG=()
+          if [[ "${{ inputs.prerelease }}" == "true" ]]; then
+            PRERELEASE_FLAG+=(--prerelease)
+          fi
+
           if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "GitHub Release $TAG already exists; leaving it unchanged"
+            echo "GitHub Release $TAG exists; replacing managed assets from this verified build"
+            gh release upload "$TAG" dist/* SHA256SUMS --clobber
           else
-            PRERELEASE_FLAG=()
-            if [[ "${{ inputs.prerelease }}" == "true" ]]; then
-              PRERELEASE_FLAG+=(--prerelease)
-            fi
             gh release create "$TAG" \
               dist/* SHA256SUMS \
               --title "$TAG" \
@@ -161,3 +163,26 @@ jobs:
               --verify-tag \
               "${PRERELEASE_FLAG[@]}"
           fi
+
+      - name: Verify published release assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/release-assets
+          mkdir -p /tmp/release-assets
+          gh release download "$TAG" \
+            --pattern '*.whl' \
+            --pattern '*.tar.gz' \
+            --pattern 'SHA256SUMS' \
+            --dir /tmp/release-assets
+
+          for source in dist/*; do
+            name="$(basename "$source")"
+            test -f "/tmp/release-assets/$name"
+            test "$(sha256sum "$source" | cut -d' ' -f1)" = \
+              "$(sha256sum "/tmp/release-assets/$name" | cut -d' ' -f1)"
+          done
+
+          test -f /tmp/release-assets/SHA256SUMS
+          test "$(sha256sum SHA256SUMS | cut -d' ' -f1)" = \
+            "$(sha256sum /tmp/release-assets/SHA256SUMS | cut -d' ' -f1)"
