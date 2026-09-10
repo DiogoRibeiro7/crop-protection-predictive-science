@@ -1,7 +1,9 @@
 # Current reproducibility contract
 
-This document describes the reproducibility guarantees of the current `main` branch. It is separate
-from `RELEASE_VALIDATION.md`, which is a historical receipt for the v1.0.1 release on 28 August 2026.
+This document describes the reproducibility guarantees of the current `main` branch. The current
+`RELEASE_VALIDATION.md` is the historical receipt for the published v1.1.0 release on 9 September
+2026. The older `docs/validated_environment.md` remains a separate snapshot of the direct-package
+environment used for the v1.0 scientific release.
 
 ## Dependency lock
 
@@ -64,6 +66,16 @@ The direct scientific-smoke artifact includes:
 This couples the empirical output bundle to both the declared dependency contract and the exact
 resolved dependency graph used by the workflow that produced it.
 
+## Release reproducibility
+
+The permanent manual release workflow is documented in `docs/releasing.md`. It requires the exact
+current `main` commit to have successful push CI, validates agreement across package, citation,
+Zenodo and changelog metadata, builds wheel and source distributions, smoke-tests the installed
+wheel outside the repository, and generates portable SHA-256 checksums.
+
+The workflow defaults to a non-mutating dry run. Actual publication requires an explicit second run
+with `dry_run=false`, after which the annotated tag, GitHub Release assets and checksums are verified.
+
 ## Remaining boundary
 
 The digest-pinned container substantially narrows platform variability but does not imply bitwise
@@ -80,7 +92,8 @@ For this repository's purpose, the current contract is therefore:
 5. an immutable Python container base plus fixed Poetry version;
 6. offline regeneration of all scientific pipelines inside the pinned container;
 7. immediate scientific-contract validation against those same container-generated outputs;
-8. an independent Python 3.13 scientific-smoke path and Python 3.11–3.13 portability matrix.
+8. an independent Python 3.13 scientific-smoke path and Python 3.11–3.13 portability matrix;
+9. dry-run-first release validation with immutable annotated tags and verified distribution hashes.
 
-That is stronger than the original v1.0.1 release receipt, while preserving the historical record of
-what was actually available at release time.
+That is stronger than the original v1.0.1 release receipt while preserving the historical record of
+what was actually available at each release stage.
