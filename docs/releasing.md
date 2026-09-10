@@ -2,6 +2,8 @@
 
 This repository uses a permanent manual release workflow in `.github/workflows/release.yml`.
 Releases are created only from the current `main` commit after that exact commit has passed push CI.
+The workflow defaults to a non-mutating dry run so the full release validation path can be rehearsed
+before any tag or GitHub Release is changed.
 
 ## 1. Prepare release metadata
 
@@ -40,7 +42,7 @@ Do not dispatch the release workflow with a branch name, abbreviated SHA, previo
 feature-branch commit. The workflow intentionally requires the requested SHA to equal current
 `main`.
 
-## 4. Dispatch the release workflow
+## 4. Rehearse the release
 
 In GitHub Actions, open the `Release` workflow and choose **Run workflow**.
 
@@ -49,8 +51,9 @@ Provide:
 - `version`: semantic version without the `v` prefix, for example `1.2.0`
 - `target_sha`: the full green `main` commit SHA
 - `prerelease`: `true` only for an intentional prerelease
+- `dry_run`: leave this at the default `true`
 
-The workflow then:
+The dry run performs all non-mutating release checks:
 
 1. validates the version format and exact release target;
 2. confirms a successful push CI exists for that SHA;
@@ -58,14 +61,32 @@ The workflow then:
 4. runs `poetry check --lock`;
 5. builds wheel and source distribution;
 6. installs the wheel in a clean environment and runs the installed CLI outside the repository;
-7. creates `SHA256SUMS`;
-8. creates an annotated `v<version>` tag if it does not already exist;
-9. refuses to move an existing tag to another commit;
-10. creates the GitHub Release or repairs its managed assets if a previous publication was partial;
-11. downloads the published assets and verifies that their SHA-256 hashes match the locally built
-    files from the same workflow run.
+7. creates a portable `SHA256SUMS` file whose entries use release-asset basenames;
+8. verifies any existing tag points to the requested commit, or reports the tag that would be
+   created;
+9. reports whether the GitHub Release would be created or repaired.
 
-## 5. Verify the published release
+A dry run must not create, move or modify a tag, GitHub Release or release asset.
+
+## 5. Publish the release
+
+Only after the dry run succeeds, run the same workflow again with the same `version`, `target_sha`
+and `prerelease` values, but set:
+
+- `dry_run`: `false`
+
+The publishing run then:
+
+1. creates an annotated `v<version>` tag if it does not already exist;
+2. refuses to move an existing tag to another commit;
+3. creates the GitHub Release or repairs its managed wheel, sdist and `SHA256SUMS` assets if a
+   previous publication was partial;
+4. refuses to silently change an existing release between normal and prerelease state;
+5. downloads the published assets and verifies their SHA-256 hashes against the files built in the
+   same workflow run;
+6. runs `sha256sum -c SHA256SUMS` on the downloaded release assets.
+
+## 6. Verify the published release
 
 After the workflow succeeds, verify all of the following in GitHub:
 
@@ -74,13 +95,13 @@ After the workflow succeeds, verify all of the following in GitHub:
 - prerelease state matches the dispatch input;
 - the wheel is present;
 - the source distribution is present;
-- `SHA256SUMS` is present.
+- `SHA256SUMS` is present and verifies against the downloaded assets.
 
 The release workflow is designed to be safely rerunnable. If the tag already exists at the exact
 requested commit, it is preserved. If the release exists, the workflow replaces the managed wheel,
 sdist and checksum assets from the newly verified build and validates them again.
 
-## 6. Zenodo
+## 7. Zenodo
 
 The repository contains both `CITATION.cff` and `.zenodo.json`.
 
