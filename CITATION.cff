@@ -6,5 +6,9 @@ authors:
   - family-names: Ribeiro
     given-names: Diogo
     orcid: "https://orcid.org/0009-0001-2022-7072"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22707679"
+    description: "Concept DOI for all versions"
 license: MIT
 date-released: 2026-09-11
