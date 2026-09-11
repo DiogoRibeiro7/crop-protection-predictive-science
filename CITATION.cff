@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Crop Protection Predictive Science"
-version: 1.1.0
+version: 1.1.1
 authors:
   - family-names: Ribeiro
     given-names: Diogo
     orcid: "https://orcid.org/0009-0001-2022-7072"
 license: MIT
-date-released: 2026-09-09
+date-released: 2026-09-11
