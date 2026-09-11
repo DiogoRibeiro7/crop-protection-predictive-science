@@ -1,5 +1,7 @@
 # Crop Protection Predictive Science
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22707679.svg)](https://doi.org/10.5281/zenodo.22707679)
+
 A reproducible scientific-modelling portfolio for **Crop Protection R&D**. The repository is built
 around one question:
 
@@ -9,6 +11,9 @@ around one question:
 The project combines two independent public field-data cases with controlled experiments that make
 model failure, transfer error and decision quality auditable against known truth. It is deliberately
 closer to predictive science than to generic tabular machine learning.
+
+For citation across all versions, use the Zenodo concept DOI:
+[`10.5281/zenodo.22707679`](https://doi.org/10.5281/zenodo.22707679).
 
 ## Start here
 
@@ -74,7 +79,7 @@ Only then is it allowed into the equal-budget progression experiment. With every
 1,040 relative cost units:
 
 | Policy | Field candidates | Top-8 recall | Selection regret |
-| --- | ---: | ---: | ---: |
+| --- | ---: | ---: |
 | Field only | 26 | 0.3246 | 0.6633 |
 | Lab → field | 22 | 0.6487 | 0.2020 |
 | **Lab → glasshouse → field** | **16** | **0.7076** | **0.1401** |
