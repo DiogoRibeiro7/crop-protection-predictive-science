@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.1 — 2026-09-11
+
+### Maintenance release
+
+- added permanent reusable GitHub Release automation with exact-main and successful-push-CI gates;
+- added Zenodo metadata and author ORCID integration;
+- hardened release reruns so partially published assets can be repaired and re-verified;
+- added dry-run-first release rehearsal before any tag or release mutation;
+- made `SHA256SUMS` portable for downloaded release assets and verified published asset hashes;
+- added a release runbook and aligned current reproducibility/README references with the v1.1.x release process;
+- made no changes to scientific models, data, numerical results, promotion rules, stopping rules or dependency constraints.
+
 ## 1.1.0 — 2026-09-09
 
 ### New empirical evidence
