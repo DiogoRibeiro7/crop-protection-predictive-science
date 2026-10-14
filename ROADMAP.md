@@ -84,6 +84,16 @@ The following are not useful next steps on the existing data alone:
   recommendations;
 - replacing the rejected candidate with a post-hoc feature combination chosen from the same folds.
 
+## Stand-alone synthetic methods extensions
+
+Synthetic methods work may continue when it is scientifically distinct from the
+closed empirical model-selection loop. The verified one-dimensional
+transport-reaction forward model is the first such extension: it is checked
+against analytic truth, no-flux mass balance and grid refinement without using
+the six Bipolaris environments for another model-promotion attempt.
+
+Inverse calibration and identifiability remain future work under issue #45.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
