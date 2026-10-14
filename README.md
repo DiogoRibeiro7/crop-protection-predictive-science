@@ -199,7 +199,14 @@ The supporting notebooks cover the deeper statistical path behind those four hea
 - decision-specific expected information gain for additional paired blocks;
 - D-optimal sequential design;
 - constrained multi-objective Bayesian optimisation over efficacy, environmental burden and crop
-  injury.
+  injury;
+- a verified one-dimensional diffusion-decay forward model with analytic-limit,
+  mass-balance and grid-convergence checks as a stand-alone synthetic
+  scientific-computing demonstration.
+
+See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
+for the PDE verification contract. It is deliberately separate from the empirical
+field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
 
