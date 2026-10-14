@@ -59,7 +59,7 @@ class TransportReactionConfig:
     @property
     def n_steps(self) -> int:
         """Return the number of implicit Euler updates."""
-        return int(round(self.final_time / self.dt))
+        return round(self.final_time / self.dt)
 
 
 @dataclass(frozen=True)
