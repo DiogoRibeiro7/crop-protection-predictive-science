@@ -88,11 +88,15 @@ The following are not useful next steps on the existing data alone:
 
 Synthetic methods work may continue when it is scientifically distinct from the
 closed empirical model-selection loop. The verified one-dimensional
-transport-reaction forward model is the first such extension: it is checked
-against analytic truth, no-flux mass balance and grid refinement without using
-the six Bipolaris environments for another model-promotion attempt.
+transport-reaction demonstration now includes both a checked forward model and a
+known-truth inverse-calibration layer with explicit identifiability diagnostics,
+without using the six Bipolaris environments for another model-promotion
+attempt.
 
-Inverse calibration and identifiability remain future work under issue #45.
+Inverse calibration and identifiability are now complete under issue #45.
+The known-truth experiment recovers diffusion and decay under a declared Gaussian
+observation model, while a uniform-profile negative control correctly identifies
+diffusion as unidentifiable.
 
 ## Maintenance mode
 
