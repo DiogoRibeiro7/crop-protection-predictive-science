@@ -12,6 +12,7 @@ optimises strictly positive diffusion/decay parameters in log space.
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
+from typing import cast
 
 import numpy as np
 from numpy.typing import NDArray
@@ -290,5 +291,5 @@ def calibrate_transport_reaction(
         reduced_chi_square=reduced_chi_square,
         at_bound=at_bound,
         success=bool(fit.success),
-        n_function_evaluations=fit.nfev,
+        n_function_evaluations=cast(int, fit.nfev),
     )
