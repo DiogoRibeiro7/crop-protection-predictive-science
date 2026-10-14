@@ -149,7 +149,8 @@ def test_uniform_initial_state_flags_diffusion_as_unidentifiable() -> None:
 
     assert result.success
     assert not result.identifiable
-    assert result.jacobian_condition_number > 1e6
+    assert result.diffusion_standard_error is not None
+    assert result.diffusion_standard_error / result.diffusion > 2.0
 
 
 def test_observation_grid_must_align_with_solver_time_grid() -> None:
