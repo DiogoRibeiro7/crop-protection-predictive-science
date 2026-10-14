@@ -57,6 +57,7 @@ class InverseCalibrationConfig:
     decay_rate_bounds: tuple[float, float] = (1e-6, 1.0)
     max_nfev: int = 200
     identifiability_condition_limit: float = 1e8
+    identifiability_relative_se_limit: float = 2.0
 
     def __post_init__(self) -> None:
         d_low, d_high = self.diffusion_bounds
@@ -73,6 +74,8 @@ class InverseCalibrationConfig:
             raise ValueError("max_nfev must be positive.")
         if self.identifiability_condition_limit <= 1.0:
             raise ValueError("identifiability_condition_limit must exceed 1.")
+        if self.identifiability_relative_se_limit <= 0.0:
+            raise ValueError("identifiability_relative_se_limit must be positive.")
 
 
 @dataclass(frozen=True)
@@ -271,10 +274,23 @@ def calibrate_transport_reaction(
         or np.any(np.abs(upper_log - np.asarray(fit.x, dtype=np.float64)) <= tolerance)
     )
 
+    relative_diffusion_se = (
+        diffusion_se / float(estimate[0])
+        if diffusion_se is not None and estimate[0] > 0.0
+        else float("inf")
+    )
+    relative_decay_se = (
+        decay_se / float(estimate[1])
+        if decay_se is not None and estimate[1] > 0.0
+        else float("inf")
+    )
+
     identifiable = bool(
         rank == 2
         and np.isfinite(condition_number)
         and condition_number <= settings.identifiability_condition_limit
+        and relative_diffusion_se <= settings.identifiability_relative_se_limit
+        and relative_decay_se <= settings.identifiability_relative_se_limit
         and not at_bound
     )
 
