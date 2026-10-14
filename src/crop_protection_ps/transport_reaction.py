@@ -224,10 +224,11 @@ def cosine_mode_solution(
     mean_component = mean * np.exp(-config.decay_rate * time)
     mode_rate = config.decay_rate + config.diffusion * wave_number**2
     mode_component = amplitude * np.exp(-mode_rate * time)
-    return (
+    solution = (
         mean_component
         + mode_component * np.cos(wave_number * x)
     ).astype(np.float64)
+    return np.asarray(solution, dtype=np.float64)
 
 
 def relative_l2_error(
