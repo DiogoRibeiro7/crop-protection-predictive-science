@@ -16,6 +16,7 @@ controlled DGP should never be presented as estimates of real Crop Protection pe
 | Multi-objective BO | Controlled synthetic | How should efficacy and environmental burden be searched under a crop-safety constraint? | `08_multiobjective_bayesian_optimisation.ipynb` | `results/multiobjective_bo/summary.json` | Abstract design variables and synthetic response surfaces |
 | Applicability domain | Controlled synthetic | When should uncertainty be widened or a prediction withheld under shift? | `09_applicability_domain_model_risk.ipynb` | `results/model_risk/summary.json` | kNN support distance is a heuristic, not a scientific-domain guarantee |
 | Transport-reaction verification | Controlled synthetic | Can a diffusion-decay forward model be verified against conservation laws and analytic truth? | `src/crop_protection_ps/transport_reaction.py` | `tests/test_transport_reaction.py`, `docs/transport_reaction_verification.md` | Methods demonstration only; no real transport parameters or crop-protection field claims |
+| Transport-reaction inverse calibration | Controlled synthetic | Can known diffusion and decay parameters be recovered under calibrated observation noise, and can unidentifiable designs be detected? | `src/crop_protection_ps/transport_reaction_inverse.py` | `tests/test_transport_reaction_inverse.py`, `docs/transport_reaction_inverse.md` | Known-truth methods demonstration only; no field transport parameter claim |
 
 ## Real-data provenance
 
