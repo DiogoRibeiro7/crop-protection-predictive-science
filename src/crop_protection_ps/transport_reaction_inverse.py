@@ -4,7 +4,9 @@ This module is a controlled scientific-computing demonstration built on the
 verified forward solver in :mod:`crop_protection_ps.transport_reaction`.
 
 It does not use empirical crop-protection field data and does not alter any
-model-selection decision elsewhere in the repository.
+model-selection decision elsewhere in the repository. Calibration assumes
+independent Gaussian observation noise with known standard deviation and
+optimises strictly positive diffusion/decay parameters in log space.
 """
 
 from __future__ import annotations
@@ -74,7 +76,7 @@ class InverseCalibrationConfig:
 
 @dataclass(frozen=True)
 class InverseCalibrationResult:
-    """Recovered parameters and local identifiability diagnostics."""
+    """Recovered physical parameters and local log-parameter diagnostics."""
 
     diffusion: float
     decay_rate: float
