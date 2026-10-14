@@ -58,10 +58,10 @@ class InverseCalibrationConfig:
     def __post_init__(self) -> None:
         d_low, d_high = self.diffusion_bounds
         k_low, k_high = self.decay_rate_bounds
-        if not (0.0 <= d_low < d_high):
-            raise ValueError("diffusion_bounds must satisfy 0 <= lower < upper.")
-        if not (0.0 <= k_low < k_high):
-            raise ValueError("decay_rate_bounds must satisfy 0 <= lower < upper.")
+        if not (0.0 < d_low < d_high):
+            raise ValueError("diffusion_bounds must satisfy 0 < lower < upper.")
+        if not (0.0 < k_low < k_high):
+            raise ValueError("decay_rate_bounds must satisfy 0 < lower < upper.")
         if not d_low <= self.initial_diffusion <= d_high:
             raise ValueError("initial_diffusion must lie inside diffusion_bounds.")
         if not k_low <= self.initial_decay_rate <= k_high:
@@ -183,7 +183,8 @@ def calibrate_transport_reaction(
     ):
         raise ValueError("observation cell indices are outside the spatial grid.")
 
-    def residuals(parameters: NDArray[np.float64]) -> NDArray[np.float64]:
+    def residuals(log_parameters: NDArray[np.float64]) -> NDArray[np.float64]:
+        parameters = np.exp(log_parameters)
         trial = replace(
             base_config,
             diffusion=float(parameters[0]),
@@ -202,16 +203,21 @@ def calibrate_transport_reaction(
 
     d_bounds = settings.diffusion_bounds
     k_bounds = settings.decay_rate_bounds
+    lower_log = np.log(
+        np.asarray([d_bounds[0], k_bounds[0]], dtype=np.float64)
+    )
+    upper_log = np.log(
+        np.asarray([d_bounds[1], k_bounds[1]], dtype=np.float64)
+    )
     fit = least_squares(
         residuals,
-        x0=np.asarray(
-            [settings.initial_diffusion, settings.initial_decay_rate],
-            dtype=np.float64,
+        x0=np.log(
+            np.asarray(
+                [settings.initial_diffusion, settings.initial_decay_rate],
+                dtype=np.float64,
+            )
         ),
-        bounds=(
-            np.asarray([d_bounds[0], k_bounds[0]], dtype=np.float64),
-            np.asarray([d_bounds[1], k_bounds[1]], dtype=np.float64),
-        ),
+        bounds=(lower_log, upper_log),
         x_scale="jac",
         max_nfev=settings.max_nfev,
     )
@@ -234,15 +240,18 @@ def calibrate_transport_reaction(
             covariance = None
             condition_number = float("inf")
 
+    estimate = np.exp(np.asarray(fit.x, dtype=np.float64))
     if covariance is None:
         diffusion_se = None
         decay_se = None
         correlation = None
     else:
         diagonal = np.diag(covariance)
-        diffusion_se = float(np.sqrt(max(float(diagonal[0]), 0.0)))
-        decay_se = float(np.sqrt(max(float(diagonal[1]), 0.0)))
-        denominator = diffusion_se * decay_se
+        log_diffusion_se = float(np.sqrt(max(float(diagonal[0]), 0.0)))
+        log_decay_se = float(np.sqrt(max(float(diagonal[1]), 0.0)))
+        diffusion_se = float(estimate[0] * log_diffusion_se)
+        decay_se = float(estimate[1] * log_decay_se)
+        denominator = log_diffusion_se * log_decay_se
         correlation = (
             float(covariance[0, 1] / denominator)
             if denominator > 0.0
@@ -253,14 +262,10 @@ def calibrate_transport_reaction(
     reduced_chi_square = float(np.sum(residual**2) / degrees_of_freedom)
     normalized_rmse = float(np.sqrt(np.mean(residual**2)))
 
-    lower = np.asarray([d_bounds[0], k_bounds[0]], dtype=np.float64)
-    upper = np.asarray([d_bounds[1], k_bounds[1]], dtype=np.float64)
-    estimate = np.asarray(fit.x, dtype=np.float64)
-    scale = np.maximum(upper - lower, 1.0)
-    tolerance = 1e-6 * scale
+    tolerance = 1e-6
     at_bound = bool(
-        np.any(np.abs(estimate - lower) <= tolerance)
-        or np.any(np.abs(upper - estimate) <= tolerance)
+        np.any(np.abs(np.asarray(fit.x, dtype=np.float64) - lower_log) <= tolerance)
+        or np.any(np.abs(upper_log - np.asarray(fit.x, dtype=np.float64)) <= tolerance)
     )
 
     identifiable = bool(
@@ -283,5 +288,5 @@ def calibrate_transport_reaction(
         reduced_chi_square=reduced_chi_square,
         at_bound=at_bound,
         success=bool(fit.success),
-        n_function_evaluations=int(fit.nfev),
+        n_function_evaluations=fit.nfev,
     )
