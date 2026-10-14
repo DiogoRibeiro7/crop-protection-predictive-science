@@ -122,4 +122,5 @@ does not use Piedade field data, and does not alter any empirical conclusion in
 this repository.
 
 Inverse parameter recovery, observation-noise calibration and identifiability
-analysis remain separate work under issue #45.
+analysis are documented separately in
+[Transport-Reaction Inverse Calibration](transport_reaction_inverse.md).
