@@ -213,13 +213,12 @@ def cosine_mode_solution(
     """Analytic cosine-mode solution for the continuous no-flux problem."""
     if time < 0.0:
         raise ValueError("time must be non-negative.")
-    initial = cosine_mode_initial(
+    _ = cosine_mode_initial(
         config,
         mean=mean,
         amplitude=amplitude,
         mode=mode,
     )
-    del initial
     x = cell_centres(config)
     wave_number = mode * np.pi / config.length
     mean_component = mean * np.exp(-config.decay_rate * time)
