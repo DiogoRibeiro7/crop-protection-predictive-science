@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from dataclasses import replace
+
 import numpy as np
 import pytest
 
@@ -147,9 +149,7 @@ def test_uniform_initial_state_flags_diffusion_as_unidentifiable() -> None:
 
     assert result.success
     assert not result.identifiable
-    assert result.jacobian_rank < 2 or not np.isfinite(
-        result.jacobian_condition_number
-    )
+    assert result.jacobian_condition_number > 1e6
 
 
 def test_observation_grid_must_align_with_solver_time_grid() -> None:
@@ -174,3 +174,31 @@ def test_inverse_configuration_rejects_invalid_bounds() -> None:
             initial_decay_rate=0.8,
             decay_rate_bounds=(0.05, 0.4),
         )
+
+
+def test_misspecified_noise_scale_is_detected_by_reduced_chi_square() -> None:
+    truth, initial, observation_times, cell_indices = _truth_problem()
+    observations = simulate_transport_observations(
+        truth,
+        initial,
+        observation_times=observation_times,
+        cell_indices=cell_indices,
+        noise_sigma=0.01,
+        seed=99,
+    )
+    overconfident = replace(observations, noise_sigma=0.002)
+
+    result = calibrate_transport_reaction(
+        truth,
+        initial,
+        overconfident,
+        calibration=InverseCalibrationConfig(
+            initial_diffusion=0.02,
+            initial_decay_rate=0.10,
+            diffusion_bounds=(0.005, 0.10),
+            decay_rate_bounds=(0.05, 0.40),
+        ),
+    )
+
+    assert result.success
+    assert result.reduced_chi_square > 5.0
