@@ -207,14 +207,19 @@ The supporting notebooks cover the deeper statistical path behind those four hea
   deliberately unidentifiable uniform-profile failure test;
 - profile-likelihood diagnostics that re-optimise the nuisance parameter,
   derive likelihood-ratio intervals and distinguish finite intervals from
-  profiles that remain open at the admissible search boundary.
+  profiles that remain open at the admissible search boundary;
+- prospective observation-design diagnostics using log-parameter sensitivities,
+  local Fisher information, D-optimality and conditioning under a fixed
+  observation budget.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
 [`docs/transport_reaction_inverse.md`](docs/transport_reaction_inverse.md)
 for the inverse-calibration contract, and
 [`docs/transport_reaction_profile_likelihood.md`](docs/transport_reaction_profile_likelihood.md)
-for profile-likelihood identifiability. All are stand-alone synthetic methods
+for profile-likelihood identifiability, and
+[`docs/transport_reaction_observation_design.md`](docs/transport_reaction_observation_design.md)
+for prospective observation design. All are stand-alone synthetic methods
 evidence, deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
