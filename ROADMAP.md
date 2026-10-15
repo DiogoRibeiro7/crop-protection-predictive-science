@@ -93,10 +93,18 @@ known-truth inverse-calibration layer with explicit identifiability diagnostics,
 without using the six Bipolaris environments for another model-promotion
 attempt.
 
-Inverse calibration and identifiability are now complete under issue #45.
+Inverse calibration and local identifiability are complete under issue #45.
 The known-truth experiment recovers diffusion and decay under a declared Gaussian
 observation model, while a uniform-profile negative control correctly identifies
 diffusion as unidentifiable.
+
+Issue #53 extends that result with profile likelihood. Each parameter is profiled
+over a declared positive log-scale range while the nuisance parameter is
+re-optimised. The identified known-truth experiment must produce closed
+likelihood-ratio intervals containing the true parameters, while the uniform
+negative control must leave the diffusion interval open at both search
+boundaries. This adds practical non-local identifiability evidence without
+claiming global structural identifiability.
 
 ## Maintenance mode
 
