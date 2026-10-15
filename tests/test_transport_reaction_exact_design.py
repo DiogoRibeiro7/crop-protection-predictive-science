@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from itertools import pairwise
+
 import numpy as np
 import pytest
 
@@ -139,7 +141,7 @@ def test_ranked_subsets_are_monotone_by_primary_criterion() -> None:
 
     assert all(
         left + 1e-12 >= right
-        for left, right in zip(scores, scores[1:])
+        for left, right in pairwise(scores)
     )
 
 
