@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from itertools import pairwise
+
 import numpy as np
 import pytest
 
@@ -101,7 +103,7 @@ def test_worst_case_information_is_non_decreasing_across_accepted_steps() -> Non
 
     assert all(
         next_score >= score
-        for score, next_score in zip(scores, scores[1:], strict=True)
+        for score, next_score in pairwise(scores)
     )
 
 
