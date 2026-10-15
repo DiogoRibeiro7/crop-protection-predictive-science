@@ -1,8 +1,8 @@
 # Current reproducibility contract
 
 This document describes the reproducibility guarantees of the current `main` branch. The current
-`RELEASE_VALIDATION_1.2.0.md` is the current release-candidate receipt for v1.2.0. The older
-`RELEASE_VALIDATION.md` remains the historical receipt for the published v1.1.0 release on 9 September 2026. The older `docs/validated_environment.md` remains a separate snapshot of the direct-package
+`RELEASE_VALIDATION_1.2.0.md` is the validation receipt for the published v1.2.0 release at tag
+`v1.2.0`, commit `d1e140bf673b1c6d96d13c93df52ca1306639e36`. The older `RELEASE_VALIDATION.md` remains the historical receipt for the published v1.1.0 release on 9 September 2026. The older `docs/validated_environment.md` remains a separate snapshot of the direct-package
 environment used for the v1.0 scientific release.
 
 ## Dependency lock
