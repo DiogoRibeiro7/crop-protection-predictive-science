@@ -290,7 +290,7 @@ For the deliberately critical version of these limitations, see
 The package uses typed Python, Pydantic data/configuration checks, deterministic seeds, pytest,
 pre-commit, CI, Docker, persisted analysis outputs and SHA-256 artifact verification.
 
-The v1.1.0 release validation is documented in [`RELEASE_VALIDATION.md`](RELEASE_VALIDATION.md).
+The v1.2.0 release validation is documented in [`RELEASE_VALIDATION_1.2.0.md`](RELEASE_VALIDATION_1.2.0.md). The historical v1.1.0 receipt remains in [`RELEASE_VALIDATION.md`](RELEASE_VALIDATION.md).
 The repeatable release procedure is documented in [`docs/releasing.md`](docs/releasing.md).
 
 ## Source data
