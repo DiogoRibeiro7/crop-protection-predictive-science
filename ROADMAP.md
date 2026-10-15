@@ -106,6 +106,14 @@ negative control must leave the diffusion interval open at both search
 boundaries. This adds practical non-local identifiability evidence without
 claiming global structural identifiability.
 
+Issue #55 moves from diagnosis to prospective design. Candidate space-time
+observation sets are scored at a declared nominal parameter point using
+finite-difference log-parameter sensitivities and local Fisher information.
+Equal-budget centre-only, final-time spatial and mixed space-time designs are
+compared transparently, with a uniform-field negative control required to remain
+rank deficient. The design criterion is explicitly local and does not imply
+global identifiability or real-world sampling optimality.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
