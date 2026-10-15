@@ -214,7 +214,9 @@ The supporting notebooks cover the deeper statistical path behind those four hea
 - finite-scenario robustness diagnostics that compare nominal, mean and
   worst-case D-optimality across a declared transport-parameter uncertainty set;
 - deterministic finite-candidate selection that applies a full-rank robustness
-  gate before ranking equal-budget designs by worst-case D-optimality.
+  gate before ranking equal-budget designs by worst-case D-optimality;
+- greedy sequential augmentation that spends the next observation on the
+  candidate space-time point with the largest robust information gain.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
@@ -227,7 +229,9 @@ for prospective observation design, and
 [`docs/transport_reaction_robust_observation_design.md`](docs/transport_reaction_robust_observation_design.md)
 for finite-scenario robustness, and
 [`docs/transport_reaction_design_selection.md`](docs/transport_reaction_design_selection.md)
-for finite-candidate robust selection. All are stand-alone synthetic methods
+for finite-candidate robust selection, and
+[`docs/transport_reaction_sequential_design.md`](docs/transport_reaction_sequential_design.md)
+for greedy sequential augmentation. All are stand-alone synthetic methods
 evidence, deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
