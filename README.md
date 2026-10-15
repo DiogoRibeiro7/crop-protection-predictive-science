@@ -212,7 +212,9 @@ The supporting notebooks cover the deeper statistical path behind those four hea
   local Fisher information, D-optimality and conditioning under a fixed
   observation budget;
 - finite-scenario robustness diagnostics that compare nominal, mean and
-  worst-case D-optimality across a declared transport-parameter uncertainty set.
+  worst-case D-optimality across a declared transport-parameter uncertainty set;
+- deterministic finite-candidate selection that applies a full-rank robustness
+  gate before ranking equal-budget designs by worst-case D-optimality.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
@@ -223,8 +225,10 @@ for profile-likelihood identifiability, and
 [`docs/transport_reaction_observation_design.md`](docs/transport_reaction_observation_design.md)
 for prospective observation design, and
 [`docs/transport_reaction_robust_observation_design.md`](docs/transport_reaction_robust_observation_design.md)
-for finite-scenario robustness. All are stand-alone synthetic methods evidence,
-deliberately separate from the empirical field-data programme.
+for finite-scenario robustness, and
+[`docs/transport_reaction_design_selection.md`](docs/transport_reaction_design_selection.md)
+for finite-candidate robust selection. All are stand-alone synthetic methods
+evidence, deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
 
