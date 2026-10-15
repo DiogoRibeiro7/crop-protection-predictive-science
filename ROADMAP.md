@@ -122,6 +122,13 @@ remain full rank across the declared scenarios, while the centre-only design
 must remain structurally weak. This is finite-scenario robustness, not
 continuous minimax optimality or Bayesian averaging.
 
+Issue #59 turns those robust scores into an explicit finite-candidate decision.
+Equal-budget candidates first face a hard gate requiring full-rank information
+across every declared scenario. Eligible designs are then ranked by worst-case
+D-optimality with deterministic secondary criteria and complete ranking output.
+The result is optimal only within the declared candidate set and does not claim
+continuous global design optimality.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
