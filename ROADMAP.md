@@ -114,6 +114,14 @@ compared transparently, with a uniform-field negative control required to remain
 rank deficient. The design criterion is explicitly local and does not imply
 global identifiability or real-world sampling optimality.
 
+Issue #57 stress-tests that local design across a finite declared uncertainty
+set for diffusion and decay. Each scenario reuses the same Fisher-information
+scorer, and the design summary records nominal, mean and worst-case
+D-optimality, worst-case conditioning and rank failures. The mixed design must
+remain full rank across the declared scenarios, while the centre-only design
+must remain structurally weak. This is finite-scenario robustness, not
+continuous minimax optimality or Bayesian averaging.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
