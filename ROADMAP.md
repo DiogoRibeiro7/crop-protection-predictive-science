@@ -129,6 +129,13 @@ D-optimality with deterministic secondary criteria and complete ranking output.
 The result is optimal only within the declared candidate set and does not claim
 continuous global design optimality.
 
+Issue #61 makes the design process incremental. Starting from a fixed seed,
+each candidate next observation is scored by the same robust criterion and the
+best finite-pool augmentation is accepted greedily. The full decision history is
+retained, input order cannot change the sequence, and worst-case information
+must not decrease across accepted additions. This remains a greedy method, not a
+guarantee of globally optimal fixed-budget design.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
