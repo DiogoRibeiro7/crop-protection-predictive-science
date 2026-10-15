@@ -101,11 +101,16 @@ A fit is marked identifiable only when:
 
 1. the Jacobian has rank two;
 2. its condition number is finite and below the declared threshold;
-3. the optimum is not effectively pinned to a bound.
+3. both parameters have tolerable relative standard error;
+4. the optimum is not effectively pinned to a bound.
 
 The parameter estimate and the identifiability decision are therefore separate
 outputs. Optimizer convergence alone is not treated as evidence that both
 physical parameters are estimable.
+
+These are local diagnostics. The complementary likelihood-based analysis is
+documented in
+[Transport-Reaction Profile Likelihood](transport_reaction_profile_likelihood.md).
 
 ## Deliberate failure mode: uniform initial condition
 

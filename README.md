@@ -204,12 +204,17 @@ The supporting notebooks cover the deeper statistical path behind those four hea
   mass-balance and grid-convergence checks;
 - known-truth inverse calibration of diffusion and decay with explicit
   observation-noise assumptions, Jacobian identifiability diagnostics and a
-  deliberately unidentifiable uniform-profile failure test.
+  deliberately unidentifiable uniform-profile failure test;
+- profile-likelihood diagnostics that re-optimise the nuisance parameter,
+  derive likelihood-ratio intervals and distinguish finite intervals from
+  profiles that remain open at the admissible search boundary.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
 [`docs/transport_reaction_inverse.md`](docs/transport_reaction_inverse.md)
-for the inverse-calibration contract. Both are stand-alone synthetic methods
+for the inverse-calibration contract, and
+[`docs/transport_reaction_profile_likelihood.md`](docs/transport_reaction_profile_likelihood.md)
+for profile-likelihood identifiability. All are stand-alone synthetic methods
 evidence, deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
