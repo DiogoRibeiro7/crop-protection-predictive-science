@@ -11,6 +11,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+import numpy as np
 from numpy.typing import NDArray
 
 from .transport_reaction import TransportReactionConfig
@@ -55,7 +56,7 @@ class RobustDesignSelection:
 
 def select_robust_observation_design(
     base_config: TransportReactionConfig,
-    initial_concentration: NDArray,
+    initial_concentration: NDArray[np.float64],
     candidates: tuple[NamedObservationDesign, ...],
     scenarios: tuple[TransportParameterScenario, ...],
     *,
