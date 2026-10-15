@@ -170,6 +170,37 @@ def simulate_transport_observations(
     )
 
 
+def normalized_transport_residuals(
+    base_config: TransportReactionConfig,
+    initial_concentration: NDArray[np.float64],
+    observations: TransportObservationSet,
+    *,
+    diffusion: float,
+    decay_rate: float,
+) -> NDArray[np.float64]:
+    """Return observation-noise-normalized residuals for fixed parameters."""
+    if diffusion <= 0.0:
+        raise ValueError("diffusion must be positive.")
+    if decay_rate <= 0.0:
+        raise ValueError("decay_rate must be positive.")
+
+    trial = replace(
+        base_config,
+        diffusion=diffusion,
+        decay_rate=decay_rate,
+    )
+    predicted = _predict_observations(
+        trial,
+        initial_concentration,
+        observations.time_index,
+        observations.cell_index,
+    )
+    return np.asarray(
+        (predicted - observations.observed) / observations.noise_sigma,
+        dtype=np.float64,
+    )
+
+
 def calibrate_transport_reaction(
     base_config: TransportReactionConfig,
     initial_concentration: NDArray[np.float64],
@@ -191,20 +222,12 @@ def calibrate_transport_reaction(
 
     def residuals(log_parameters: NDArray[np.float64]) -> NDArray[np.float64]:
         parameters = np.exp(log_parameters)
-        trial = replace(
+        return normalized_transport_residuals(
             base_config,
+            initial_concentration,
+            observations,
             diffusion=float(parameters[0]),
             decay_rate=float(parameters[1]),
-        )
-        predicted = _predict_observations(
-            trial,
-            initial_concentration,
-            observations.time_index,
-            observations.cell_index,
-        )
-        return np.asarray(
-            (predicted - observations.observed) / observations.noise_sigma,
-            dtype=np.float64,
         )
 
     d_bounds = settings.diffusion_bounds
