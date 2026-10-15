@@ -122,14 +122,17 @@ def _profile_one_parameter(
     for index, fixed_value in enumerate(grid):
         fixed = float(fixed_value)
 
-        def nuisance_objective(log_nuisance: float) -> float:
+        def nuisance_objective(
+            log_nuisance: float,
+            fixed_parameter: float = fixed,
+        ) -> float:
             nuisance = float(np.exp(log_nuisance))
             if parameter == "diffusion":
                 return _objective(
                     base_config,
                     initial_concentration,
                     observations,
-                    diffusion=fixed,
+                    diffusion=fixed_parameter,
                     decay_rate=nuisance,
                 )
             return _objective(
@@ -137,7 +140,7 @@ def _profile_one_parameter(
                 initial_concentration,
                 observations,
                 diffusion=nuisance,
-                decay_rate=fixed,
+                decay_rate=fixed_parameter,
             )
 
         optimized = minimize_scalar(
