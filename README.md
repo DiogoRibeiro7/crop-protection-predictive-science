@@ -210,7 +210,9 @@ The supporting notebooks cover the deeper statistical path behind those four hea
   profiles that remain open at the admissible search boundary;
 - prospective observation-design diagnostics using log-parameter sensitivities,
   local Fisher information, D-optimality and conditioning under a fixed
-  observation budget.
+  observation budget;
+- finite-scenario robustness diagnostics that compare nominal, mean and
+  worst-case D-optimality across a declared transport-parameter uncertainty set.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
@@ -219,8 +221,10 @@ for the inverse-calibration contract, and
 [`docs/transport_reaction_profile_likelihood.md`](docs/transport_reaction_profile_likelihood.md)
 for profile-likelihood identifiability, and
 [`docs/transport_reaction_observation_design.md`](docs/transport_reaction_observation_design.md)
-for prospective observation design. All are stand-alone synthetic methods
-evidence, deliberately separate from the empirical field-data programme.
+for prospective observation design, and
+[`docs/transport_reaction_robust_observation_design.md`](docs/transport_reaction_robust_observation_design.md)
+for finite-scenario robustness. All are stand-alone synthetic methods evidence,
+deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
 
