@@ -1,5 +1,23 @@
 # Changelog
 
+## 1.2.0 — 2026-10-15
+
+### Scientific methods
+
+- added a verified one-dimensional diffusion-decay finite-volume forward model with homogeneous no-flux boundaries and implicit Euler time integration;
+- added analytic uniform-decay and cosine-mode verification, non-negative/finite-state checks, discrete mass-balance closure and grid-convergence tests;
+- added known-truth inverse calibration for diffusion and first-order decay under an explicit Gaussian observation model;
+- added normalized residual diagnostics, reduced chi-square, local parameter standard errors, parameter correlation, Jacobian rank/conditioning and bound detection;
+- separated optimizer convergence from practical parameter identifiability by requiring finite conditioning and tolerable relative parameter uncertainty;
+- added a deliberately uninformative uniform-profile negative control that correctly flags diffusion as unidentifiable instead of reporting a misleading precise estimate.
+
+### Scope and reproducibility
+
+- kept the transport-reaction work strictly synthetic and separate from the closed Bipolaris empirical model-selection loop;
+- added dedicated forward-verification and inverse-calibration documentation plus evidence-map and roadmap integration;
+- preserved all existing empirical results, promotion criteria, stopping rules and dependency constraints;
+- validated the new methods across Python 3.11, 3.12 and 3.13 with Ruff, strict mypy, package-artifact checks and the locked scientific container.
+
 ## 1.1.1 — 2026-09-11
 
 ### Maintenance release
