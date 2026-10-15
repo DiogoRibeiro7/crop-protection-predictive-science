@@ -120,6 +120,7 @@ def _profile_one_parameter(
     profile_objective = np.empty(grid.size, dtype=np.float64)
 
     for index, fixed_value in enumerate(grid):
+        fixed = float(fixed_value)
 
         def nuisance_objective(log_nuisance: float) -> float:
             nuisance = float(np.exp(log_nuisance))
@@ -128,7 +129,7 @@ def _profile_one_parameter(
                     base_config,
                     initial_concentration,
                     observations,
-                    diffusion=float(fixed_value),
+                    diffusion=fixed,
                     decay_rate=nuisance,
                 )
             return _objective(
@@ -136,7 +137,7 @@ def _profile_one_parameter(
                 initial_concentration,
                 observations,
                 diffusion=nuisance,
-                decay_rate=float(fixed_value),
+                decay_rate=fixed,
             )
 
         optimized = minimize_scalar(
@@ -164,15 +165,39 @@ def _profile_one_parameter(
 
     first = int(accepted_indices[0])
     last = int(accepted_indices[-1])
+
+    def interpolate_crossing(left: int, right: int) -> float:
+        log_values = np.log(grid[[left, right]])
+        objective_values = increase[[left, right]]
+        denominator = float(objective_values[1] - objective_values[0])
+        if denominator == 0.0:
+            return float(np.exp(np.mean(log_values)))
+        fraction = float((threshold - objective_values[0]) / denominator)
+        fraction = min(max(fraction, 0.0), 1.0)
+        return float(np.exp(log_values[0] + fraction * (log_values[1] - log_values[0])))
+
+    lower_closed = first > 0
+    upper_closed = last < grid.size - 1
+    lower = (
+        interpolate_crossing(first - 1, first)
+        if lower_closed
+        else float(grid[0])
+    )
+    upper = (
+        interpolate_crossing(last, last + 1)
+        if upper_closed
+        else float(grid[-1])
+    )
+
     return ParameterProfile(
         parameter=parameter,
         values=np.asarray(grid, dtype=np.float64),
         objective_increase=np.asarray(increase, dtype=np.float64),
         threshold=threshold,
-        lower=float(grid[first]),
-        upper=float(grid[last]),
-        lower_closed=first > 0,
-        upper_closed=last < grid.size - 1,
+        lower=lower,
+        upper=upper,
+        lower_closed=lower_closed,
+        upper_closed=upper_closed,
         accepted_count=int(accepted_indices.size),
     )
 
