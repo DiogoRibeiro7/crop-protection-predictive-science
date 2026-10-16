@@ -1,8 +1,8 @@
 # Current reproducibility contract
 
 This document describes the reproducibility guarantees of the current `main` branch. The current
-`RELEASE_VALIDATION_1.2.0.md` is the validation receipt for the published v1.2.0 release at tag
-`v1.2.0`, commit `d1e140bf673b1c6d96d13c93df52ca1306639e36`. The older `RELEASE_VALIDATION.md` remains the historical receipt for the published v1.1.0 release on 9 September 2026. The older `docs/validated_environment.md` remains a separate snapshot of the direct-package
+`RELEASE_VALIDATION_1.3.0.md` is the release-candidate validation receipt for v1.3.0. The published
+v1.2.0 receipt remains in `RELEASE_VALIDATION_1.2.0.md`, and `RELEASE_VALIDATION.md` remains the historical receipt for the published v1.1.0 release on 9 September 2026. The older `docs/validated_environment.md` remains a separate snapshot of the direct-package
 environment used for the v1.0 scientific release.
 
 ## Dependency lock
@@ -32,7 +32,7 @@ CI failure rather than a documentation-only concern.
 
 The test matrix installs from the lockfile on Python 3.11, 3.12 and 3.13. The direct scientific-smoke
 job also installs from the same lockfile on Python 3.13, regenerates all scientific pipelines, checks
-the cross-pipeline scientific contract and uploads the Bipolaris decision bundle.
+the cross-pipeline scientific contract and uploads both the Bipolaris decision bundle and the transport-design evidence bundle.
 
 ## Locked container runtime
 
@@ -60,6 +60,7 @@ No image is published. The container gate is a reproducibility and packaging che
 The direct scientific-smoke artifact includes:
 
 - the complete regenerated `results/bipolaris` decision bundle;
+- the regenerated `results/transport_design` evidence bundle;
 - `pyproject.toml`;
 - `poetry.lock`.
 

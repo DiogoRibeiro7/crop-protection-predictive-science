@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.3.0 — 2026-10-16
+
+### Transport design and identifiability
+
+- added profile-likelihood diagnostics that complement local Jacobian/covariance identifiability checks and distinguish closed intervals from profiles that remain open at admissible boundaries;
+- added prospective observation-design diagnostics using log-parameter sensitivities, local Fisher information, D-optimality and conditioning;
+- added finite-scenario robustness analysis across a declared diffusion/decay uncertainty set;
+- added deterministic equal-budget candidate selection with a full-rank robustness gate and worst-case D-optimality ranking;
+- added greedy sequential augmentation from a finite candidate pool with complete step-by-step decision history;
+- added exact finite-pool subset enumeration to quantify the greedy method's absolute and relative optimality gap when exhaustive search is tractable;
+- added a consolidated `crop-protection-transport-design` CLI that regenerates `results/transport_design/summary.json` with the scenario set, candidate designs, robust scores, selected design, sequential history and exact benchmark.
+
+### Reproducibility and engineering
+
+- added scientific-contract assertions for the transport-design conclusions and regenerated the transport-design evidence in both direct and locked-container scientific smoke paths;
+- added a dedicated CI artifact for the regenerated transport-design evidence bundle;
+- integrated the repository with `DiogoRibeiro7/safe-dependabot@v1` and expanded Dependabot coverage to pip, GitHub Actions, Docker and pre-commit manifests;
+- preserved the existing Poetry dependency graph; `poetry.lock` is not regenerated solely for this release version bump.
+
+### Scientific boundary
+
+- all transport-design results remain controlled synthetic known-truth evidence;
+- no new empirical pesticide transport, regulatory, field-monitoring or real-cost claim is introduced;
+- the Bipolaris six-environment model-selection stop boundary and all prior empirical promotion decisions remain unchanged.
+
 ## 1.2.0 — 2026-10-15
 
 ### Scientific methods
