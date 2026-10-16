@@ -27,7 +27,7 @@ packages = [{ include = "crop_protection_ps", from = "src" }]
 [tool.poetry.dependencies]
 python = ">=3.11,<3.14"
 numpy = ">=2.0,<2.4"
-pandas = ">=2.2"
+pandas = ">=3.0.6"
 scipy = ">=1.13"
 scikit-learn = ">=1.5"
 statsmodels = ">=0.14"
