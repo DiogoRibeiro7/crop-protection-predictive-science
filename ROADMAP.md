@@ -143,6 +143,12 @@ an absolute/relative greedy optimality gap. A subset-count safety limit prevents
 the code from pretending exhaustive search is tractable when combinatorics make
 it inappropriate.
 
+Issue #70 consolidates the transport-design chain into a regenerated scientific
+evidence bundle at `results/transport_design/summary.json`. The CLI persists the
+declared scenarios, candidate designs, robust selection, greedy history and exact
+benchmark, and the scientific contract checks qualitative conclusions rather than
+pinning brittle floating-point snapshots.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model
