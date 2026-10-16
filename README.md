@@ -218,7 +218,9 @@ The supporting notebooks cover the deeper statistical path behind those four hea
 - greedy sequential augmentation that spends the next observation on the
   candidate space-time point with the largest robust information gain;
 - exact finite-pool subset benchmarking that measures the greedy method's
-  absolute and relative optimality gap when exhaustive enumeration is tractable.
+  absolute and relative optimality gap when exhaustive enumeration is tractable;
+- a reproducible `crop-protection-transport-design` evidence bundle that persists
+  the scenario set, candidate designs, robust selection, sequential history and exact benchmark.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
@@ -235,8 +237,9 @@ for finite-candidate robust selection, and
 [`docs/transport_reaction_sequential_design.md`](docs/transport_reaction_sequential_design.md)
 for greedy sequential augmentation, and
 [`docs/transport_reaction_exact_design_benchmark.md`](docs/transport_reaction_exact_design_benchmark.md)
-for exact finite-pool optimality benchmarking. All are stand-alone synthetic
-methods evidence, deliberately separate from the empirical field-data programme.
+for exact finite-pool optimality benchmarking. The consolidated regenerated output is
+`results/transport_design/summary.json`. All are stand-alone synthetic methods evidence,
+deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
 
