@@ -101,6 +101,7 @@ jobs:
             crop-protection-portfolio > /dev/null &&
             crop-protection-multiobjective > /dev/null &&
             crop-protection-model-risk > /dev/null &&
+            crop-protection-transport-design > /dev/null &&
             poetry run pytest tests/test_scientific_contract.py
           '
 
@@ -126,6 +127,7 @@ jobs:
       - run: poetry run crop-protection-portfolio > /dev/null
       - run: poetry run crop-protection-multiobjective > /dev/null
       - run: poetry run crop-protection-model-risk > /dev/null
+      - run: poetry run crop-protection-transport-design > /dev/null
       - name: Verify regenerated scientific conclusions
         run: poetry run pytest tests/test_scientific_contract.py
       - name: Upload Bipolaris decision bundle
@@ -134,6 +136,15 @@ jobs:
           name: bipolaris-decision-bundle
           path: |
             results/bipolaris
+            pyproject.toml
+            poetry.lock
+          if-no-files-found: error
+      - name: Upload transport design evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: transport-design-evidence
+          path: |
+            results/transport_design
             pyproject.toml
             poetry.lock
           if-no-files-found: error
