@@ -136,6 +136,13 @@ retained, input order cannot change the sequence, and worst-case information
 must not decrease across accepted additions. This remains a greedy method, not a
 guarantee of globally optimal fixed-budget design.
 
+Issue #68 quantifies that limitation whenever the candidate pool is small enough
+for exhaustive search. Every subset of the requested size is evaluated under the
+same finite-scenario robust criterion, giving an exact finite-pool optimum and
+an absolute/relative greedy optimality gap. A subset-count safety limit prevents
+the code from pretending exhaustive search is tractable when combinatorics make
+it inappropriate.
+
 ## Maintenance mode
 
 Until a reopen criterion is met, the appropriate work is maintenance rather than further model

@@ -216,7 +216,9 @@ The supporting notebooks cover the deeper statistical path behind those four hea
 - deterministic finite-candidate selection that applies a full-rank robustness
   gate before ranking equal-budget designs by worst-case D-optimality;
 - greedy sequential augmentation that spends the next observation on the
-  candidate space-time point with the largest robust information gain.
+  candidate space-time point with the largest robust information gain;
+- exact finite-pool subset benchmarking that measures the greedy method's
+  absolute and relative optimality gap when exhaustive enumeration is tractable.
 
 See [`docs/transport_reaction_verification.md`](docs/transport_reaction_verification.md)
 for the forward-model verification contract and
@@ -231,8 +233,10 @@ for finite-scenario robustness, and
 [`docs/transport_reaction_design_selection.md`](docs/transport_reaction_design_selection.md)
 for finite-candidate robust selection, and
 [`docs/transport_reaction_sequential_design.md`](docs/transport_reaction_sequential_design.md)
-for greedy sequential augmentation. All are stand-alone synthetic methods
-evidence, deliberately separate from the empirical field-data programme.
+for greedy sequential augmentation, and
+[`docs/transport_reaction_exact_design_benchmark.md`](docs/transport_reaction_exact_design_benchmark.md)
+for exact finite-pool optimality benchmarking. All are stand-alone synthetic
+methods evidence, deliberately separate from the empirical field-data programme.
 
 The complete technical index is in [`docs/evidence_map.md`](docs/evidence_map.md).
 
