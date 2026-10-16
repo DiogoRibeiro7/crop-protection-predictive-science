@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from crop_protection_ps.transport_design_demo import run_transport_design_demo
+
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 
@@ -99,3 +101,44 @@ def test_model_risk_controls_keep_promotion_gate() -> None:
     assert isinstance(naive, dict)
     assert isinstance(scaled, dict)
     assert float(scaled["mean"]) > float(naive["mean"])
+
+
+def test_transport_design_evidence_contract_remains_true() -> None:
+    run_transport_design_demo(ROOT)
+    summary = _load_json(RESULTS / "transport_design" / "summary.json")
+
+    local = summary["local_scores"]
+    robust = summary["robust_scores"]
+    benchmark = summary["exact_benchmark"]
+    history = summary["sequential_history"]
+    assert isinstance(local, dict)
+    assert isinstance(robust, dict)
+    assert isinstance(benchmark, dict)
+    assert isinstance(history, list)
+
+    center_local = local["center-temporal"]
+    center_robust = robust["center-temporal"]
+    mixed_robust = robust["mixed-space-time"]
+    assert isinstance(center_local, dict)
+    assert isinstance(center_robust, dict)
+    assert isinstance(mixed_robust, dict)
+
+    assert int(center_local["rank"]) < 2
+    assert center_robust["robustly_identifiable"] is False
+    assert mixed_robust["robustly_identifiable"] is True
+    assert summary["selected_design"] != "center-temporal"
+
+    assert int(benchmark["subset_count"]) > 1
+    assert float(benchmark["optimal_worst_case_d_optimality"]) + 1e-10 >= float(
+        benchmark["greedy_worst_case_d_optimality"]
+    )
+    assert float(benchmark["absolute_gap"]) >= 0.0
+    assert float(benchmark["relative_gap"]) >= 0.0
+
+    history_scores = [
+        float(step["worst_case_d_optimality"])
+        for step in history
+        if isinstance(step, dict)
+    ]
+    assert len(history_scores) == 4
+    assert history_scores == sorted(history_scores)
