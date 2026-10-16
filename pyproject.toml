@@ -19,6 +19,7 @@ crop-protection-multifidelity = "crop_protection_ps.multifidelity_demo:main"
 crop-protection-portfolio = "crop_protection_ps.portfolio_demo:main"
 crop-protection-multiobjective = "crop_protection_ps.multiobjective_demo:main"
 crop-protection-model-risk = "crop_protection_ps.model_risk_demo:main"
+crop-protection-transport-design = "crop_protection_ps.transport_design_demo:main"
 
 [tool.poetry]
 packages = [{ include = "crop_protection_ps", from = "src" }]
