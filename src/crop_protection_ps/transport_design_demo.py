@@ -31,11 +31,16 @@ def _design_payload(design: ObservationDesign) -> dict[str, object]:
 
 
 def _robust_payload(result: RobustDesignResult) -> dict[str, object]:
+    condition = (
+        float(result.worst_case_condition_number)
+        if np.isfinite(result.worst_case_condition_number)
+        else None
+    )
     return {
         "nominal_d_optimality": float(result.nominal_d_optimality),
         "mean_d_optimality": float(result.mean_d_optimality),
         "worst_case_d_optimality": float(result.worst_case_d_optimality),
-        "worst_case_condition_number": float(result.worst_case_condition_number),
+        "worst_case_condition_number": condition,
         "rank_deficient_count": int(result.rank_deficient_count),
         "robustly_identifiable": bool(result.robustly_identifiable),
     }
@@ -79,19 +84,18 @@ def run_transport_design_demo(root: Path) -> dict[str, object]:
         NamedObservationDesign("mixed-space-time", mixed),
     )
 
-    local_scores = {
-        candidate.name: {
-            "rank": score_observation_design(
-                config, initial, candidate.design, noise_sigma=0.003
-            ).rank,
-            "d_optimality": float(
-                score_observation_design(
-                    config, initial, candidate.design, noise_sigma=0.003
-                ).d_optimality
-            ),
+    local_scores: dict[str, dict[str, object]] = {}
+    for candidate in named:
+        local = score_observation_design(
+            config,
+            initial,
+            candidate.design,
+            noise_sigma=0.003,
+        )
+        local_scores[candidate.name] = {
+            "rank": local.rank,
+            "d_optimality": float(local.d_optimality),
         }
-        for candidate in named
-    }
     robust_scores = {
         candidate.name: _robust_payload(
             score_design_robustness(
