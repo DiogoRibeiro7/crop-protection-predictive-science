@@ -15,6 +15,7 @@ from .transport_reaction_design_selection import (
 )
 from .transport_reaction_exact_design import benchmark_greedy_against_exact
 from .transport_reaction_robust_design import (
+    RobustDesignResult,
     TransportParameterScenario,
     score_design_robustness,
 )
@@ -29,15 +30,14 @@ def _design_payload(design: ObservationDesign) -> dict[str, object]:
     }
 
 
-def _robust_payload(result: object) -> dict[str, object]:
-    robust = result
+def _robust_payload(result: RobustDesignResult) -> dict[str, object]:
     return {
-        "nominal_d_optimality": float(robust.nominal_d_optimality),
-        "mean_d_optimality": float(robust.mean_d_optimality),
-        "worst_case_d_optimality": float(robust.worst_case_d_optimality),
-        "worst_case_condition_number": float(robust.worst_case_condition_number),
-        "rank_deficient_count": int(robust.rank_deficient_count),
-        "robustly_identifiable": bool(robust.robustly_identifiable),
+        "nominal_d_optimality": float(result.nominal_d_optimality),
+        "mean_d_optimality": float(result.mean_d_optimality),
+        "worst_case_d_optimality": float(result.worst_case_d_optimality),
+        "worst_case_condition_number": float(result.worst_case_condition_number),
+        "rank_deficient_count": int(result.rank_deficient_count),
+        "robustly_identifiable": bool(result.robustly_identifiable),
     }
 
 
