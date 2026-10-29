@@ -208,6 +208,8 @@ The supporting notebooks cover the deeper statistical path behind those four hea
 - profile-likelihood diagnostics that re-optimise the nuisance parameter,
   derive likelihood-ratio intervals and distinguish finite intervals from
   profiles that remain open at the admissible search boundary;
+- a stdout-only `crop-protection-transport-inverse` JSON demonstration that
+  reproduces known-truth calibration and disjoint held-out predictive diagnostics;
 - prospective observation-design diagnostics using log-parameter sensitivities,
   local Fisher information, D-optimality and conditioning under a fixed
   observation budget;

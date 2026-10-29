@@ -51,6 +51,16 @@ Independent Gaussian observation noise is added with known standard deviation
 The random seed is fixed, so the synthetic inverse experiment is exactly
 reproducible.
 
+The same split is available as a stdout-only JSON demonstration:
+
+```bash
+poetry run crop-protection-transport-inverse
+```
+
+The report includes the known truth, declared seeds and observation locations,
+calibration diagnostics, and disjoint held-out prediction diagnostics. It uses
+no empirical data and does not create or update any generated results files.
+
 ## Objective
 
 Calibration minimizes normalized residuals
