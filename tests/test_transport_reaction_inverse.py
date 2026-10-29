@@ -11,6 +11,7 @@ from crop_protection_ps.transport_reaction import (
 )
 from crop_protection_ps.transport_reaction_inverse import (
     InverseCalibrationConfig,
+    TransportObservationSet,
     _wilson_coverage_interval,
     calibrate_transport_reaction,
     simulate_transport_observations,
@@ -166,6 +167,46 @@ def test_observation_grid_must_align_with_solver_time_grid() -> None:
             cell_indices=cell_indices,
             noise_sigma=0.003,
             seed=1,
+        )
+
+
+def test_observation_indices_reject_fractional_and_boolean_locations() -> None:
+    truth, initial, times, cells = _truth_problem()
+
+    for invalid in (
+        np.asarray([3.7, 9.0, 15.0], dtype=np.float64),
+        np.asarray([True, False], dtype=np.bool_),
+    ):
+        with pytest.raises(ValueError, match="integer grid indices"):
+            simulate_transport_observations(
+                truth,
+                initial,
+                observation_times=times,
+                cell_indices=invalid,
+                noise_sigma=0.003,
+                seed=1,
+            )
+
+    valid = simulate_transport_observations(
+        truth,
+        initial,
+        observation_times=times,
+        cell_indices=cells,
+        noise_sigma=0.003,
+        seed=1,
+    )
+    with pytest.raises(ValueError, match="time_index must contain integer"):
+        replace(valid, time_index=valid.time_index.astype(np.float64))
+    with pytest.raises(ValueError, match="cell_index must contain integer"):
+        replace(valid, cell_index=valid.cell_index.astype(np.float64))
+
+    # Explicit construction is subject to the same contract as synthetic generation.
+    with pytest.raises(ValueError, match="cell_index must contain integer"):
+        TransportObservationSet(
+            time_index=valid.time_index,
+            cell_index=valid.cell_index.astype(np.float64),
+            observed=valid.observed,
+            noise_sigma=valid.noise_sigma,
         )
 
 

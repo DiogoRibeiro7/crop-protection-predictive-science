@@ -182,6 +182,8 @@ The inverse test suite also verifies that:
 
 - observation times must lie on the declared solver time grid;
 - spatial indices must lie inside the finite-volume grid;
+- time and spatial indices must have an integer dtype; fractional positions and
+  booleans are rejected, not silently truncated into grid indices;
 - noise standard deviation must be positive and finite;
 - parameter bounds and starting values must be internally consistent;
 - synthetic observations are exactly reproducible for a fixed seed.

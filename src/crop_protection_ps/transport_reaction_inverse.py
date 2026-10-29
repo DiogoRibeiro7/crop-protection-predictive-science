@@ -39,6 +39,9 @@ class TransportObservationSet:
             raise ValueError("time_index must match observed shape.")
         if self.cell_index.shape != (n,):
             raise ValueError("cell_index must match observed shape.")
+        for name, indices in (("time_index", self.time_index), ("cell_index", self.cell_index)):
+            if not np.issubdtype(indices.dtype, np.integer):
+                raise ValueError(f"{name} must contain integer grid indices.")
         if not np.isfinite(self.observed).all():
             raise ValueError("observed values must be finite.")
         if self.noise_sigma <= 0.0 or not np.isfinite(self.noise_sigma):
@@ -137,11 +140,13 @@ def _validate_observation_grid(
     cell_indices: NDArray[np.int64],
 ) -> tuple[NDArray[np.int64], NDArray[np.int64]]:
     times = np.asarray(observation_times, dtype=np.float64)
-    cells = np.asarray(cell_indices, dtype=np.int64)
+    cells = np.asarray(cell_indices)
     if times.ndim != 1 or times.size == 0:
         raise ValueError("observation_times must be a non-empty one-dimensional array.")
     if cells.ndim != 1 or cells.size == 0:
         raise ValueError("cell_indices must be a non-empty one-dimensional array.")
+    if not np.issubdtype(cells.dtype, np.integer):
+        raise ValueError("cell_indices must contain integer grid indices.")
     if not np.isfinite(times).all():
         raise ValueError("observation_times must be finite.")
     if np.any(times < 0.0) or np.any(times > config.final_time):
@@ -155,7 +160,7 @@ def _validate_observation_grid(
         raise ValueError("observation_times must align with the solver time grid.")
 
     time_index = np.repeat(rounded, cells.size)
-    cell_index = np.tile(cells, rounded.size)
+    cell_index = np.tile(np.asarray(cells, dtype=np.int64), rounded.size)
     return time_index, cell_index
 
 
