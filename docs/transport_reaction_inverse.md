@@ -103,6 +103,13 @@ reported only when calibration succeeds and passes the local identifiability
 checks. This approximation is not a profile-likelihood or bootstrap interval,
 and neither interval includes structural model discrepancy, parameter
 nonlinearity beyond first order, or a guarantee of field-data coverage.
+For each empirical coverage fraction, the validator also reports a two-sided
+95% Wilson score interval to show sampling uncertainty. This interval treats
+the held-out coverage indicators as independent Bernoulli outcomes; spatial or
+temporal dependence would make it optimistic. It is not a confidence interval
+for the physical parameters, nor evidence that nominal 90% coverage is attained
+by the underlying predictive procedure. In particular, 14 held-out observations
+cannot estimate coverage precisely.
 The regression test also checks that deliberately misspecified parameters
 increase the held-out prediction error and that a non-identifiable fit
 does not receive a deceptively precise uncertainty-aware interval.
