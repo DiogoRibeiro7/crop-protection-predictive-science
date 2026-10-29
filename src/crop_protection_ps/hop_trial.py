@@ -190,7 +190,8 @@ def paired_timing_differences(timing: pd.DataFrame) -> pd.DataFrame:
         values="sqrt_audpc",
         aggfunc="first",
     )
-    paired = audpc.join(sqrt_audpc, lsuffix="_audpc", rsuffix="_sqrt_audpc")
+    # Apply explicit names before joining to support pandas 2.x and newer releases.
+    paired = audpc.add_suffix("_audpc").join(sqrt_audpc.add_suffix("_sqrt_audpc"))
     paired = paired.dropna(
         subset=["Early_audpc", "Late_audpc", "Early_sqrt_audpc", "Late_sqrt_audpc"]
     ).reset_index()
