@@ -105,6 +105,8 @@ class HoldoutValidationResult:
     rmse: float
     normalized_rmse: float
     gaussian_90_coverage: float
+    local_parameter_90_coverage: float | None
+    local_parameter_mean_half_width: float | None
 
 
 def _validate_observation_grid(
@@ -353,8 +355,9 @@ def validate_inverse_holdout(
 ) -> HoldoutValidationResult:
     """Evaluate fixed fitted parameters on disjoint, independently observed cells/times.
 
-    The Gaussian interval uses known observation noise only; it does not account
-    for parameter-estimation uncertainty or guarantee future-field coverage.
+    Also report a first-order delta-method interval when the local parameter
+    covariance is available and the fit is identifiable. Neither interval
+    accounts for structural model error or guarantees future-field coverage.
     """
     for observations in (training, holdout):
         if np.any(observations.time_index < 0) or np.any(
@@ -385,9 +388,62 @@ def validate_inverse_holdout(
     normalized = residual / holdout.noise_sigma
     # Central 90% normal interval: z_(0.95), conditional on the fitted parameters.
     gaussian_90_half_width = 1.6448536269514722 * holdout.noise_sigma
+    local_coverage: float | None = None
+    local_half_width: float | None = None
+    standard_errors = (fit.diffusion_standard_error, fit.decay_rate_standard_error)
+    if (
+        fit.success
+        and fit.identifiable
+        and fit.parameter_correlation is not None
+        and all(se is not None and np.isfinite(se) and se >= 0.0 for se in standard_errors)
+        and np.isfinite(fit.parameter_correlation)
+        and abs(fit.parameter_correlation) <= 1.0
+    ):
+        diffusion_se, decay_se = standard_errors
+        assert diffusion_se is not None and decay_se is not None
+        covariance = np.asarray(
+            [
+                [diffusion_se**2, fit.parameter_correlation * diffusion_se * decay_se],
+                [fit.parameter_correlation * diffusion_se * decay_se, decay_se**2],
+            ],
+            dtype=np.float64,
+        )
+        # Central differences of held-out predictions in physical parameters.
+        gradient = np.empty((holdout.observed.size, 2), dtype=np.float64)
+        for column, name in enumerate(("diffusion", "decay_rate")):
+            parameter = float(getattr(fit, name))
+            step = parameter * 1e-4
+            positive = replace(base_config, diffusion=fit.diffusion, decay_rate=fit.decay_rate)
+            if name == "diffusion":
+                upper_config = replace(positive, diffusion=parameter + step)
+                lower_config = replace(positive, diffusion=parameter - step)
+            else:
+                upper_config = replace(positive, decay_rate=parameter + step)
+                lower_config = replace(positive, decay_rate=parameter - step)
+            upper = _predict_observations(
+                upper_config,
+                initial_concentration,
+                holdout.time_index,
+                holdout.cell_index,
+            )
+            lower = _predict_observations(
+                lower_config,
+                initial_concentration,
+                holdout.time_index,
+                holdout.cell_index,
+            )
+            gradient[:, column] = (upper - lower) / (2.0 * step)
+        parameter_variance = np.einsum("ni,ij,nj->n", gradient, covariance, gradient)
+        widths = 1.6448536269514722 * np.sqrt(
+            holdout.noise_sigma**2 + np.maximum(parameter_variance, 0.0)
+        )
+        local_coverage = float(np.mean(np.abs(residual) <= widths))
+        local_half_width = float(np.mean(widths))
     return HoldoutValidationResult(
         n_observations=int(holdout.observed.size),
         rmse=float(np.sqrt(np.mean(residual**2))),
         normalized_rmse=float(np.sqrt(np.mean(normalized**2))),
         gaussian_90_coverage=float(np.mean(np.abs(residual) <= gaussian_90_half_width)),
+        local_parameter_90_coverage=local_coverage,
+        local_parameter_mean_half_width=local_half_width,
     )

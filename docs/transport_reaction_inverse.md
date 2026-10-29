@@ -95,10 +95,17 @@ pairs are rejected before evaluation.
 The diagnostic reports held-out RMSE, noise-normalised RMSE and empirical
 coverage of a central 90% Gaussian observation interval. Its interval width
 uses the declared observation-noise standard deviation, conditional on the
-estimated parameters. It does not incorporate parameter uncertainty, and its
-observed coverage on one small synthetic holdout is not a general coverage
-guarantee. The regression test also checks that deliberately misspecified
-parameters increase the held-out prediction error.
+estimated parameters. A separate optional local delta-method interval adds
+first-order parameter-estimation variance to observation-noise variance. It
+uses finite-difference prediction sensitivities and the local covariance
+reconstructed from the fitted parameter standard errors and correlation. It is
+reported only when calibration succeeds and passes the local identifiability
+checks. This approximation is not a profile-likelihood or bootstrap interval,
+and neither interval includes structural model discrepancy, parameter
+nonlinearity beyond first order, or a guarantee of field-data coverage.
+The regression test also checks that deliberately misspecified parameters
+increase the held-out prediction error and that a non-identifiable fit
+does not receive a deceptively precise uncertainty-aware interval.
 
 ## Local identifiability
 

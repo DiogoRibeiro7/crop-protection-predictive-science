@@ -245,7 +245,37 @@ def test_inverse_holdout_is_disjoint_and_detects_predictive_misspecification() -
     assert evaluated.n_observations == 14
     assert evaluated.normalized_rmse < 2.0
     assert 0.0 <= evaluated.gaussian_90_coverage <= 1.0
+    assert evaluated.local_parameter_90_coverage is not None
+    assert evaluated.local_parameter_90_coverage >= evaluated.gaussian_90_coverage
+    assert evaluated.local_parameter_mean_half_width is not None
+    assert evaluated.local_parameter_mean_half_width >= 1.6448536269514722 * 0.003
     assert misspecified.rmse > evaluated.rmse
+
+    assert fit.diffusion_standard_error is not None
+    assert fit.decay_rate_standard_error is not None
+    widened = validate_inverse_holdout(
+        truth,
+        initial,
+        training,
+        holdout,
+        replace(
+            fit,
+            diffusion_standard_error=10.0 * fit.diffusion_standard_error,
+            decay_rate_standard_error=10.0 * fit.decay_rate_standard_error,
+        ),
+    )
+    assert widened.local_parameter_mean_half_width is not None
+    assert widened.local_parameter_mean_half_width > evaluated.local_parameter_mean_half_width
+
+    unidentifiable = validate_inverse_holdout(
+        truth,
+        initial,
+        training,
+        holdout,
+        replace(fit, identifiable=False),
+    )
+    assert unidentifiable.local_parameter_90_coverage is None
+    assert unidentifiable.local_parameter_mean_half_width is None
 
     with pytest.raises(ValueError, match="disjoint"):
         validate_inverse_holdout(truth, initial, training, training, fit)
