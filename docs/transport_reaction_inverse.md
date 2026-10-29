@@ -55,11 +55,18 @@ The same split is available as a stdout-only JSON demonstration:
 
 ```bash
 poetry run crop-protection-transport-inverse
+poetry run crop-protection-transport-inverse --scenario uniform
 ```
 
 The report includes the known truth, declared seeds and observation locations,
 calibration diagnostics, and disjoint held-out prediction diagnostics. It uses
 no empirical data and does not create or update any generated results files.
+The default `informative` case uses a spatial cosine profile. The `uniform`
+case is a deliberate negative control: diffusion cannot be identified when the
+initial concentration is spatially constant under no-flux boundaries. It
+should report `identifiable: false` and no local-parameter predictive interval
+or score. An infinite Jacobian condition number is represented as JSON `null`,
+not an invalid `Infinity` literal.
 
 ## Objective
 
