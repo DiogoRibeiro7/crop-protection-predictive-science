@@ -110,6 +110,20 @@ temporal dependence would make it optimistic. It is not a confidence interval
 for the physical parameters, nor evidence that nominal 90% coverage is attained
 by the underlying predictive procedure. In particular, 14 held-out observations
 cannot estimate coverage precisely.
+The validator also reports the mean Gaussian negative log likelihood (NLL)
+for the noise-only prediction and, when available, the first-order local
+parameter-uncertainty prediction. The per-observation score is
+
+\[
+\frac12\left[\log(2\pi v_i)+\frac{(y_i-\hat y_i)^2}{v_i}\right],
+\]
+
+where \(v_i\) is the declared predictive variance. Lower scores indicate a
+better tradeoff between predictive accuracy and uncertainty width; inflating
+the variance indefinitely incurs a logarithmic penalty. NLL values are
+comparable only for observations in the same units and evaluation set. Like
+the intervals themselves, these scores rely on the assumed Gaussian model
+and do not establish field-level calibration.
 The regression test also checks that deliberately misspecified parameters
 increase the held-out prediction error and that a non-identifiable fit
 does not receive a deceptively precise uncertainty-aware interval.

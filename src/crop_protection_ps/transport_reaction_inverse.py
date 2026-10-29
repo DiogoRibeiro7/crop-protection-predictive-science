@@ -104,9 +104,11 @@ class HoldoutValidationResult:
     n_observations: int
     rmse: float
     normalized_rmse: float
+    gaussian_mean_negative_log_likelihood: float
     gaussian_90_coverage: float
     gaussian_90_coverage_ci95: tuple[float, float]
     local_parameter_90_coverage: float | None
+    local_parameter_mean_negative_log_likelihood: float | None
     local_parameter_90_coverage_ci95: tuple[float, float] | None
     local_parameter_mean_half_width: float | None
 
@@ -409,6 +411,7 @@ def validate_inverse_holdout(
     # Central 90% normal interval: z_(0.95), conditional on the fitted parameters.
     gaussian_90_half_width = 1.6448536269514722 * holdout.noise_sigma
     local_coverage: float | None = None
+    local_log_score: float | None = None
     local_coverage_ci: tuple[float, float] | None = None
     local_half_width: float | None = None
     standard_errors = (fit.diffusion_standard_error, fit.decay_rate_standard_error)
@@ -455,8 +458,15 @@ def validate_inverse_holdout(
             )
             gradient[:, column] = (upper - lower) / (2.0 * step)
         parameter_variance = np.einsum("ni,ij,nj->n", gradient, covariance, gradient)
-        widths = 1.6448536269514722 * np.sqrt(
-            holdout.noise_sigma**2 + np.maximum(parameter_variance, 0.0)
+        predictive_variance = holdout.noise_sigma**2 + np.maximum(parameter_variance, 0.0)
+        widths = 1.6448536269514722 * np.sqrt(predictive_variance)
+        # Gaussian log score: lower is better; wide intervals pay a log-variance penalty.
+        local_log_score = float(
+            0.5
+            * np.mean(
+                np.log(2.0 * np.pi * predictive_variance)
+                + residual**2 / predictive_variance
+            )
         )
         local_coverage = float(np.mean(np.abs(residual) <= widths))
         local_coverage_ci = _wilson_coverage_interval(
@@ -468,9 +478,13 @@ def validate_inverse_holdout(
         n_observations=int(holdout.observed.size),
         rmse=float(np.sqrt(np.mean(residual**2))),
         normalized_rmse=float(np.sqrt(np.mean(normalized**2))),
+        gaussian_mean_negative_log_likelihood=float(
+            0.5 * (np.log(2.0 * np.pi * holdout.noise_sigma**2) + np.mean(normalized**2))
+        ),
         gaussian_90_coverage=noise_covered / int(residual.size),
         gaussian_90_coverage_ci95=_wilson_coverage_interval(noise_covered, int(residual.size)),
         local_parameter_90_coverage=local_coverage,
+        local_parameter_mean_negative_log_likelihood=local_log_score,
         local_parameter_90_coverage_ci95=local_coverage_ci,
         local_parameter_mean_half_width=local_half_width,
     )
