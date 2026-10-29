@@ -105,8 +105,28 @@ class HoldoutValidationResult:
     rmse: float
     normalized_rmse: float
     gaussian_90_coverage: float
+    gaussian_90_coverage_ci95: tuple[float, float]
     local_parameter_90_coverage: float | None
+    local_parameter_90_coverage_ci95: tuple[float, float] | None
     local_parameter_mean_half_width: float | None
+
+
+def _wilson_coverage_interval(successes: int, total: int) -> tuple[float, float]:
+    """Return the two-sided 95% Wilson score interval for a binomial proportion."""
+    if total <= 0 or not 0 <= successes <= total:
+        raise ValueError("coverage counts must satisfy 0 <= successes <= total.")
+    z = 1.959963984540054
+    proportion = successes / total
+    denominator = 1.0 + z**2 / total
+    centre = (proportion + z**2 / (2.0 * total)) / denominator
+    margin = (
+        z
+        * np.sqrt(proportion * (1.0 - proportion) / total + z**2 / (4.0 * total**2))
+        / denominator
+    )
+    lower = 0.0 if successes == 0 else float(max(0.0, centre - margin))
+    upper = 1.0 if successes == total else float(min(1.0, centre + margin))
+    return lower, upper
 
 
 def _validate_observation_grid(
@@ -389,6 +409,7 @@ def validate_inverse_holdout(
     # Central 90% normal interval: z_(0.95), conditional on the fitted parameters.
     gaussian_90_half_width = 1.6448536269514722 * holdout.noise_sigma
     local_coverage: float | None = None
+    local_coverage_ci: tuple[float, float] | None = None
     local_half_width: float | None = None
     standard_errors = (fit.diffusion_standard_error, fit.decay_rate_standard_error)
     if (
@@ -438,12 +459,18 @@ def validate_inverse_holdout(
             holdout.noise_sigma**2 + np.maximum(parameter_variance, 0.0)
         )
         local_coverage = float(np.mean(np.abs(residual) <= widths))
+        local_coverage_ci = _wilson_coverage_interval(
+            int(np.count_nonzero(np.abs(residual) <= widths)), int(residual.size)
+        )
         local_half_width = float(np.mean(widths))
+    noise_covered = int(np.count_nonzero(np.abs(residual) <= gaussian_90_half_width))
     return HoldoutValidationResult(
         n_observations=int(holdout.observed.size),
         rmse=float(np.sqrt(np.mean(residual**2))),
         normalized_rmse=float(np.sqrt(np.mean(normalized**2))),
-        gaussian_90_coverage=float(np.mean(np.abs(residual) <= gaussian_90_half_width)),
+        gaussian_90_coverage=noise_covered / int(residual.size),
+        gaussian_90_coverage_ci95=_wilson_coverage_interval(noise_covered, int(residual.size)),
         local_parameter_90_coverage=local_coverage,
+        local_parameter_90_coverage_ci95=local_coverage_ci,
         local_parameter_mean_half_width=local_half_width,
     )

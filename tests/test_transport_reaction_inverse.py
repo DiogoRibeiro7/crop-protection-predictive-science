@@ -11,6 +11,7 @@ from crop_protection_ps.transport_reaction import (
 )
 from crop_protection_ps.transport_reaction_inverse import (
     InverseCalibrationConfig,
+    _wilson_coverage_interval,
     calibrate_transport_reaction,
     simulate_transport_observations,
     validate_inverse_holdout,
@@ -245,7 +246,13 @@ def test_inverse_holdout_is_disjoint_and_detects_predictive_misspecification() -
     assert evaluated.n_observations == 14
     assert evaluated.normalized_rmse < 2.0
     assert 0.0 <= evaluated.gaussian_90_coverage <= 1.0
+    lower, upper = evaluated.gaussian_90_coverage_ci95
+    assert 0.0 <= lower <= evaluated.gaussian_90_coverage <= upper <= 1.0
+    assert upper - lower > 0.1  # Fourteen observations do not tightly resolve coverage.
     assert evaluated.local_parameter_90_coverage is not None
+    assert evaluated.local_parameter_90_coverage_ci95 is not None
+    local_lower, local_upper = evaluated.local_parameter_90_coverage_ci95
+    assert local_lower <= evaluated.local_parameter_90_coverage <= local_upper
     assert evaluated.local_parameter_90_coverage >= evaluated.gaussian_90_coverage
     assert evaluated.local_parameter_mean_half_width is not None
     assert evaluated.local_parameter_mean_half_width >= 1.6448536269514722 * 0.003
@@ -275,7 +282,21 @@ def test_inverse_holdout_is_disjoint_and_detects_predictive_misspecification() -
         replace(fit, identifiable=False),
     )
     assert unidentifiable.local_parameter_90_coverage is None
+    assert unidentifiable.local_parameter_90_coverage_ci95 is None
     assert unidentifiable.local_parameter_mean_half_width is None
 
     with pytest.raises(ValueError, match="disjoint"):
         validate_inverse_holdout(truth, initial, training, training, fit)
+
+
+def test_wilson_interval_handles_extreme_and_small_sample_coverage() -> None:
+    all_missed = _wilson_coverage_interval(0, 14)
+    all_covered = _wilson_coverage_interval(14, 14)
+    assert all_missed[0] == 0.0
+    assert all_missed[1] > 0.0
+    assert all_covered[0] < 1.0
+    assert all_covered[1] == 1.0
+    assert _wilson_coverage_interval(7, 14)[0] < 0.5
+    assert _wilson_coverage_interval(7, 14)[1] > 0.5
+    with pytest.raises(ValueError, match="coverage counts"):
+        _wilson_coverage_interval(2, 1)
