@@ -84,6 +84,22 @@ The result reports:
 For a correctly specified synthetic noise model, reduced chi-square should be
 of order one rather than being driven artificially close to zero.
 
+## Held-out predictive validation
+
+Parameter recovery on the fitted observations is not evidence of predictive
+performance at new observation locations. The inverse module therefore also
+provides `validate_inverse_holdout`, which evaluates fitted parameters at
+time–cell pairs excluded from the inverse fit. Overlapping training and test
+pairs are rejected before evaluation.
+
+The diagnostic reports held-out RMSE, noise-normalised RMSE and empirical
+coverage of a central 90% Gaussian observation interval. Its interval width
+uses the declared observation-noise standard deviation, conditional on the
+estimated parameters. It does not incorporate parameter uncertainty, and its
+observed coverage on one small synthetic holdout is not a general coverage
+guarantee. The regression test also checks that deliberately misspecified
+parameters increase the held-out prediction error.
+
 ## Local identifiability
 
 The inverse solver reports the local Jacobian of normalized residuals with

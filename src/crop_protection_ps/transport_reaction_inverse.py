@@ -97,6 +97,16 @@ class InverseCalibrationResult:
     n_function_evaluations: int
 
 
+@dataclass(frozen=True)
+class HoldoutValidationResult:
+    """Predictive diagnostics on observations excluded from inverse fitting."""
+
+    n_observations: int
+    rmse: float
+    normalized_rmse: float
+    gaussian_90_coverage: float
+
+
 def _validate_observation_grid(
     config: TransportReactionConfig,
     observation_times: NDArray[np.float64],
@@ -331,4 +341,53 @@ def calibrate_transport_reaction(
         at_bound=at_bound,
         success=bool(fit.success),
         n_function_evaluations=cast(int, fit.nfev),
+    )
+
+
+def validate_inverse_holdout(
+    base_config: TransportReactionConfig,
+    initial_concentration: NDArray[np.float64],
+    training: TransportObservationSet,
+    holdout: TransportObservationSet,
+    fit: InverseCalibrationResult,
+) -> HoldoutValidationResult:
+    """Evaluate fixed fitted parameters on disjoint, independently observed cells/times.
+
+    The Gaussian interval uses known observation noise only; it does not account
+    for parameter-estimation uncertainty or guarantee future-field coverage.
+    """
+    for observations in (training, holdout):
+        if np.any(observations.time_index < 0) or np.any(
+            observations.time_index > base_config.n_steps
+        ):
+            raise ValueError("observation time indices are outside the forward solution.")
+        if np.any(observations.cell_index < 0) or np.any(
+            observations.cell_index >= base_config.n_cells
+        ):
+            raise ValueError("observation cell indices are outside the spatial grid.")
+
+    training_pairs = set(
+        zip(training.time_index.tolist(), training.cell_index.tolist(), strict=True)
+    )
+    holdout_pairs = set(
+        zip(holdout.time_index.tolist(), holdout.cell_index.tolist(), strict=True)
+    )
+    if not training_pairs.isdisjoint(holdout_pairs):
+        raise ValueError("training and holdout observation locations must be disjoint.")
+
+    prediction = _predict_observations(
+        replace(base_config, diffusion=fit.diffusion, decay_rate=fit.decay_rate),
+        initial_concentration,
+        holdout.time_index,
+        holdout.cell_index,
+    )
+    residual = prediction - holdout.observed
+    normalized = residual / holdout.noise_sigma
+    # Central 90% normal interval: z_(0.95), conditional on the fitted parameters.
+    gaussian_90_half_width = 1.6448536269514722 * holdout.noise_sigma
+    return HoldoutValidationResult(
+        n_observations=int(holdout.observed.size),
+        rmse=float(np.sqrt(np.mean(residual**2))),
+        normalized_rmse=float(np.sqrt(np.mean(normalized**2))),
+        gaussian_90_coverage=float(np.mean(np.abs(residual) <= gaussian_90_half_width)),
     )

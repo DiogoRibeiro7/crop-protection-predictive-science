@@ -13,6 +13,7 @@ from crop_protection_ps.transport_reaction_inverse import (
     InverseCalibrationConfig,
     calibrate_transport_reaction,
     simulate_transport_observations,
+    validate_inverse_holdout,
 )
 
 
@@ -203,3 +204,48 @@ def test_misspecified_noise_scale_is_detected_by_reduced_chi_square() -> None:
 
     assert result.success
     assert result.reduced_chi_square > 5.0
+
+
+def test_inverse_holdout_is_disjoint_and_detects_predictive_misspecification() -> None:
+    truth, initial, _, cell_indices = _truth_problem()
+    training = simulate_transport_observations(
+        truth,
+        initial,
+        observation_times=np.asarray([0.02, 0.05, 0.10], dtype=np.float64),
+        cell_indices=cell_indices,
+        noise_sigma=0.003,
+        seed=1729,
+    )
+    holdout = simulate_transport_observations(
+        truth,
+        initial,
+        observation_times=np.asarray([0.15, 0.20], dtype=np.float64),
+        cell_indices=cell_indices,
+        noise_sigma=0.003,
+        seed=1730,
+    )
+    fit = calibrate_transport_reaction(
+        truth,
+        initial,
+        training,
+        calibration=InverseCalibrationConfig(
+            diffusion_bounds=(0.005, 0.10),
+            decay_rate_bounds=(0.05, 0.40),
+        ),
+    )
+    evaluated = validate_inverse_holdout(truth, initial, training, holdout, fit)
+    misspecified = validate_inverse_holdout(
+        truth,
+        initial,
+        training,
+        holdout,
+        replace(fit, diffusion=0.10, decay_rate=0.40),
+    )
+
+    assert evaluated.n_observations == 14
+    assert evaluated.normalized_rmse < 2.0
+    assert 0.0 <= evaluated.gaussian_90_coverage <= 1.0
+    assert misspecified.rmse > evaluated.rmse
+
+    with pytest.raises(ValueError, match="disjoint"):
+        validate_inverse_holdout(truth, initial, training, training, fit)
