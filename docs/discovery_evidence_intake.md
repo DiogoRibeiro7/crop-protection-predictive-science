@@ -64,3 +64,28 @@ audit = audit_linked_discovery_evidence(records)
 `external_rows` represents records acquired and reviewed through an authorized
 scientific data source. There is intentionally no bundled example pretending
 that synthetic lab, glasshouse and field outcomes are empirical observations.
+
+## Read-only CSV intake
+
+For a reviewed local CSV with a header matching the `DiscoveryObservation`
+fields, use the built-in loader. It reads UTF-8 (including UTF-8 BOM), retains
+row order, and rejects unknown/duplicate columns, malformed rows and invalid
+observations with a physical CSV line number. `site_id` and `season` columns
+may be omitted for non-field records; field records still require both values.
+
+```python
+from pathlib import Path
+
+from crop_protection_ps.discovery_csv import audit_discovery_csv, load_discovery_csv
+
+path = Path("/path/to/authorized_discovery_observations.csv")
+records = load_discovery_csv(path)
+audit = audit_discovery_csv(path)
+print(audit.model_dump(mode="json"))
+```
+
+The reader performs no downloads, file writes, unit conversions or biological
+validation. A successful structural audit does not establish assay calibration,
+candidate identity reconciliation, causal transportability or predictive value.
+CSV observations must come from a documented authorized source; the repository
+ships no empirical linked-discovery CSV.
