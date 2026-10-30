@@ -41,7 +41,36 @@ def test_inverse_demo_is_reproducible_and_uses_disjoint_times() -> None:
 
 
 def test_inverse_demo_cli_prints_json(capsys: pytest.CaptureFixture[str]) -> None:
-    main()
+    main([])
     output = capsys.readouterr().out
     payload = json.loads(output)
     assert payload == json.loads(json.dumps(run_transport_inverse_demo(), allow_nan=False))
+
+
+def test_uniform_negative_control_is_reproducible_and_unidentifiable() -> None:
+    first = run_transport_inverse_demo("uniform")
+    assert first == run_transport_inverse_demo("uniform")
+    experiment = first["experiment"]
+    fit = first["fit"]
+    holdout = first["holdout"]
+    assert isinstance(experiment, dict)
+    assert isinstance(fit, dict)
+    assert isinstance(holdout, dict)
+    assert experiment["scenario"] == "uniform"
+    assert experiment["expected_identifiable"] is False
+    assert fit["success"] is True
+    assert fit["identifiable"] is False
+    assert holdout["local_parameter_90_coverage"] is None
+    assert holdout["local_parameter_mean_negative_log_likelihood"] is None
+    json.dumps(first, allow_nan=False)
+
+
+def test_negative_control_cli_and_invalid_scenario(capsys: pytest.CaptureFixture[str]) -> None:
+    main(["--scenario", "uniform"])
+    assert json.loads(capsys.readouterr().out) == json.loads(
+        json.dumps(run_transport_inverse_demo("uniform"), allow_nan=False)
+    )
+    with pytest.raises(ValueError, match="scenario"):
+        run_transport_inverse_demo("invalid")  # type: ignore[arg-type]
+    with pytest.raises(SystemExit, match="2"):
+        main(["--scenario", "unknown"])
