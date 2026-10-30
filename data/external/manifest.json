@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "zenodo_wheat_fungicide_6521175",
+      "title": "Data from 56 fungicide trials in wheat fields across Europe 2017-2019",
+      "doi": "10.5281/zenodo.6521175",
+      "url": "https://zenodo.org/records/6521175",
+      "license": "CC-BY-4.0",
+      "scope": "field-only fungicide incidence and yield observations; no laboratory linkage",
+      "files": [
+        {
+          "path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+          "size": 240114,
+          "md5": "107ba039c535832223bf484acf1e5602"
+        }
+      ]
+    },
+    {
+      "id": "zenodo_aphid_pesticide_19805135",
+      "title": "Climate warming can reduce global pesticide use through thermal constraints on pest populations",
+      "doi": "10.5281/zenodo.19805135",
+      "url": "https://zenodo.org/records/19805135",
+      "license": "CC-BY-4.0",
+      "scope": "controlled pesticide/heat experiments and field observations; not fungicide trials",
+      "files": [
+        {
+          "path": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+          "size": 23838,
+          "md5": "befa6f2341f8a7c2a959047fa32a3be6"
+        },
+        {
+          "path": "zenodo_aphid_pesticide_19805135/README.txt",
+          "size": 4825,
+          "md5": "d7295df915d5c75f66a1e0f9bfbe33ac"
+        }
+      ]
+    },
+    {
+      "id": "dryad_pathogen_temperature_4mw6m90jv",
+      "title": "High temperatures reduce growth, infection, and transmission of a naturally occurring fungal plant pathogen",
+      "doi": "10.5061/dryad.4mw6m90jv",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.4mw6m90jv",
+      "license": "CC0-1.0",
+      "source_version": 3,
+      "scope": "growth chamber, greenhouse, field; thermal pathogen biology, not candidate pesticide efficacy",
+      "files": [
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_2.xlsx","size":14291,"sha256":"65594c8803fcecaac0d15c895ede9df7a2b7bcee43667f1b3972240ab993480b"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_3.xlsx","size":14172,"sha256":"beb63614aad62bad0bf578b29990a64712f83194101027556a3d59792b8fd95c"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_4.xlsx","size":14158,"sha256":"9bf62a25dfc103bd639036ad4cacafb4e9c7dde2856a92ae71de4056758a8317"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/daily_high_temps.txt","size":4044,"sha256":"a9da126ccc9a93af0804dd80d4db9640a46cd74865da6e85201f68dce3b949f8"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/flower_summary_data.xlsx","size":15913,"sha256":"bc5e88fe1a1155a5b2bfe0b5def015ecc6d81e98e5869235ed7babe7aebbd2c2"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Germination_data.xlsx","size":14331,"sha256":"714836a29bb8b209e2b86e2bbebcdfb982b7bdce3c5be3aa3824c7c906775953"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_2.xlsx","size":17221,"sha256":"c72aeb6b010de7f8d5f0928abcfeabaf0f40c5e854b4312510c4fce5b1ecedf6"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_3.xlsx","size":17194,"sha256":"8c0f00364e834516f962f9451dfd8afe3849f07b425d428547fb65ab0a8147a2"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_4.xlsx","size":17222,"sha256":"b0ef43a8a4327fe55d69a3bc6ac4b1c3a4a2520284d70c82c29163546ca31256"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/Raw_field_data.xlsx","size":81916,"sha256":"eca6464f178269c549d2f66d1bf66ab8bd86ec10ed2a96a332752e878ce80d37"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/README.md","size":6500,"sha256":"e5116c18fe91487b3370e740a7a6ed05fb8b382582ee672b4ad68ffb8a1fcb84"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_death_data.xlsx","size":16876,"sha256":"bc8d0ad6994599f2b5495808166c1628c11060e4707352fa2fae5a3232bf3d67"},
+        {"path":"dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_infection_data.xlsx","size":52667,"sha256":"bdca8dd8ccad0a96e836899ef0767c80b5b5f39d97af67f5203888a997aa7495"}
+      ]
+    }
+  ]
+}

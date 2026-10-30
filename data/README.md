@@ -1,5 +1,12 @@
 # Data
 
+## Additional public-source originals
+
+Three independently published datasets are retained in [`external/`](external/README.md)
+with dataset-level citations, original-file checksums, licences and explicit
+limits on cross-stage comparability. They are not automatically included in
+existing model fitting or validation workflows.
+
 ## Synthetic demonstration
 
 `processed/synthetic_field_trials.csv` is generated from an explicit, seeded data-generating
