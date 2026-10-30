@@ -21,6 +21,7 @@ crop-protection-multiobjective = "crop_protection_ps.multiobjective_demo:main"
 crop-protection-model-risk = "crop_protection_ps.model_risk_demo:main"
 crop-protection-transport-design = "crop_protection_ps.transport_design_demo:main"
 crop-protection-transport-inverse = "crop_protection_ps.transport_inverse_demo:main"
+crop-protection-discovery-audit = "crop_protection_ps.discovery_csv_cli:run"
 
 [tool.poetry]
 packages = [{ include = "crop_protection_ps", from = "src" }]

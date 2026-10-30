@@ -89,3 +89,20 @@ validation. A successful structural audit does not establish assay calibration,
 candidate identity reconciliation, causal transportability or predictive value.
 CSV observations must come from a documented authorized source; the repository
 ships no empirical linked-discovery CSV.
+
+### Command-line audit
+
+After installing the project, run:
+
+```bash
+crop-protection-discovery-audit /path/to/authorized_discovery_observations.csv
+```
+
+The command prints one JSON object with observation, candidate and stage
+counts, plus the number of candidates represented across all three stages.
+It excludes candidate identifiers by default to avoid exposing confidential
+discovery metadata in terminal logs. If disclosure is authorized, add
+`--include-candidate-ids`. Invalid input produces a descriptive error on
+stderr and exits with status 2; successful audits exit with status 0.
+It neither changes nor creates files, and a successful audit remains a
+*structural* result, not biological validation or proof of transportability.
