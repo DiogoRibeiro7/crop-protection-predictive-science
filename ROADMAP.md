@@ -66,6 +66,12 @@ dataset spanning laboratory, glasshouse and field evidence with programme decisi
 costs recorded prospectively. That would test the repository's multi-fidelity and portfolio ideas on
 real decision history rather than controlled simulations.
 
+Before any such dataset is analysed, apply the metadata intake and candidate-linkage
+checks described in [`docs/discovery_evidence_intake.md`](docs/discovery_evidence_intake.md).
+Passing them does not establish assay comparability or authorize model promotion;
+study design, endpoint harmonization and independent validation remain separate
+scientific requirements.
+
 For the intervention side, multiple crop-protection trials across sites and seasons with
 field-proximal weather, phenology, initial disease pressure, application conditions and protocol
 metadata would provide the replication needed to revisit environment-response and interaction
