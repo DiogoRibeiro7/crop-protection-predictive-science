@@ -57,6 +57,12 @@ an incomplete `Ever.dis` field, and a reversed weather high/low measurement on
 a field-visit date. These findings do not lift the field or weather protocol
 requirements.
 
+The [controlled-aphid condition exports](external_aphid_controlled_descriptives.md)
+exercise the existing `condition_mortality_description` permission for
+Experiments 1–4. They preserve source time labels, record-count imbalance and
+cohort totals without treating pooled fractions as treatment effects; the
+field worksheet and all protocol-gated models remain excluded.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

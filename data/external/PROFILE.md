@@ -87,6 +87,11 @@ The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphi
 separates controlled cohort records, field repeat measurements, laboratory
 assay batches, greenhouse plant records, and longitudinal field observations.
 
+The [controlled-aphid descriptive tables](../../docs/external_aphid_controlled_descriptives.md)
+aggregate only the four permitted `DEAD`/`TOTAL` worksheets by their literal
+experimental conditions. The fifth, field-design worksheet is not combined
+with these counts.
+
 The [Dryad field-panel audit](../../docs/external_dryad_field_panel.md)
 reconciles the original field-status header dates, flower-summary dates and
 weather observations; catalogs source status strings without recoding them;

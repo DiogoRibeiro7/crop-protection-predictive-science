@@ -1,0 +1,1317 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5281/zenodo.19805135",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "analysis": "condition_mortality_description",
+  "excluded_source_sheet": "Experiment5",
+  "observational_unit": "recorded_cohort_row",
+  "rate_denominator": "sum_of_recorded_TOTAL_within_condition",
+  "experiments": {
+    "Experiment1": {
+      "source_sheet": "Experiment1",
+      "factor_fields": [
+        "Temperature",
+        "CONC"
+      ],
+      "factor_levels_as_recorded": {
+        "Temperature": [
+          "22",
+          "30"
+        ],
+        "CONC": [
+          "0",
+          "0.625",
+          "1.25",
+          "10",
+          "2.5",
+          "5"
+        ]
+      },
+      "source_records": 36,
+      "condition_cells": 12,
+      "source_records_per_condition": {
+        "3": 12
+      },
+      "exact_source_row_match_excess": 3,
+      "counted_aphids": 1065,
+      "recorded_deaths": 415,
+      "conditions": [
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 6,
+          "pooled_recorded_mortality": 0.0652173913,
+          "min_source_cohort_fraction": 0.064516129,
+          "max_source_cohort_fraction": 0.0666666667
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0.625"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 10,
+          "pooled_recorded_mortality": 0.1086956522,
+          "min_source_cohort_fraction": 0.0714285714,
+          "max_source_cohort_fraction": 0.1515151515
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "1.25"
+          },
+          "source_records": 3,
+          "counted_aphids": 87,
+          "recorded_deaths": 18,
+          "pooled_recorded_mortality": 0.2068965517,
+          "min_source_cohort_fraction": 0.1785714286,
+          "max_source_cohort_fraction": 0.2333333333
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "10"
+          },
+          "source_records": 3,
+          "counted_aphids": 84,
+          "recorded_deaths": 71,
+          "pooled_recorded_mortality": 0.8452380952,
+          "min_source_cohort_fraction": 0.8333333333,
+          "max_source_cohort_fraction": 0.8518518519
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "2.5"
+          },
+          "source_records": 3,
+          "counted_aphids": 85,
+          "recorded_deaths": 25,
+          "pooled_recorded_mortality": 0.2941176471,
+          "min_source_cohort_fraction": 0.2592592593,
+          "max_source_cohort_fraction": 0.3225806452
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "5"
+          },
+          "source_records": 3,
+          "counted_aphids": 95,
+          "recorded_deaths": 62,
+          "pooled_recorded_mortality": 0.6526315789,
+          "min_source_cohort_fraction": 0.5666666667,
+          "max_source_cohort_fraction": 0.7
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 89,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0.625"
+          },
+          "source_records": 3,
+          "counted_aphids": 82,
+          "recorded_deaths": 11,
+          "pooled_recorded_mortality": 0.1341463415,
+          "min_source_cohort_fraction": 0.0833333333,
+          "max_source_cohort_fraction": 0.1724137931
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "1.25"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 25,
+          "pooled_recorded_mortality": 0.2747252747,
+          "min_source_cohort_fraction": 0.2258064516,
+          "max_source_cohort_fraction": 0.3
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "10"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 82,
+          "pooled_recorded_mortality": 0.9111111111,
+          "min_source_cohort_fraction": 0.875,
+          "max_source_cohort_fraction": 0.9655172414
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5"
+          },
+          "source_records": 3,
+          "counted_aphids": 85,
+          "recorded_deaths": 37,
+          "pooled_recorded_mortality": 0.4352941176,
+          "min_source_cohort_fraction": 0.4074074074,
+          "max_source_cohort_fraction": 0.4666666667
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "5"
+          },
+          "source_records": 3,
+          "counted_aphids": 93,
+          "recorded_deaths": 68,
+          "pooled_recorded_mortality": 0.7311827957,
+          "min_source_cohort_fraction": 0.7096774194,
+          "max_source_cohort_fraction": 0.75
+        }
+      ]
+    },
+    "Experiment2": {
+      "source_sheet": "Experiment2",
+      "factor_fields": [
+        "Temperature",
+        "CONC",
+        "Treatment_Time"
+      ],
+      "factor_levels_as_recorded": {
+        "Temperature": [
+          "22",
+          "30",
+          "33",
+          "36"
+        ],
+        "CONC": [
+          "0",
+          "2.5"
+        ],
+        "Treatment_Time": [
+          "12h",
+          "90"
+        ]
+      },
+      "source_records": 24,
+      "condition_cells": 8,
+      "source_records_per_condition": {
+        "3": 8
+      },
+      "exact_source_row_match_excess": 2,
+      "counted_aphids": 717,
+      "recorded_deaths": 131,
+      "conditions": [
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0",
+            "Treatment_Time": "12h"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "2.5",
+            "Treatment_Time": "12h"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 14,
+          "pooled_recorded_mortality": 0.1627906977,
+          "min_source_cohort_fraction": 0.1333333333,
+          "max_source_cohort_fraction": 0.2142857143
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 89,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 20,
+          "pooled_recorded_mortality": 0.2222222222,
+          "min_source_cohort_fraction": 0.2068965517,
+          "max_source_cohort_fraction": 0.2333333333
+        },
+        {
+          "factors": {
+            "Temperature": "33",
+            "CONC": "0",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 89,
+          "recorded_deaths": 1,
+          "pooled_recorded_mortality": 0.0112359551,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0357142857
+        },
+        {
+          "factors": {
+            "Temperature": "33",
+            "CONC": "2.5",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 26,
+          "pooled_recorded_mortality": 0.2888888889,
+          "min_source_cohort_fraction": 0.2666666667,
+          "max_source_cohort_fraction": 0.3
+        },
+        {
+          "factors": {
+            "Temperature": "36",
+            "CONC": "0",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 9,
+          "pooled_recorded_mortality": 0.097826087,
+          "min_source_cohort_fraction": 0.0666666667,
+          "max_source_cohort_fraction": 0.1290322581
+        },
+        {
+          "factors": {
+            "Temperature": "36",
+            "CONC": "2.5",
+            "Treatment_Time": "90"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 61,
+          "pooled_recorded_mortality": 0.6703296703,
+          "min_source_cohort_fraction": 0.6,
+          "max_source_cohort_fraction": 0.7096774194
+        }
+      ]
+    },
+    "Experiment3": {
+      "source_sheet": "Experiment3",
+      "factor_fields": [
+        "Temperature",
+        "CONC",
+        "Treatment_Time",
+        "Interval",
+        "Order"
+      ],
+      "factor_levels_as_recorded": {
+        "Temperature": [
+          "22",
+          "30",
+          "33",
+          "35",
+          "36"
+        ],
+        "CONC": [
+          "0",
+          "0.625",
+          "1.25",
+          "10",
+          "2.5",
+          "5"
+        ],
+        "Treatment_Time": [
+          "0",
+          "120",
+          "30",
+          "60",
+          "90"
+        ],
+        "Interval": [
+          "0",
+          "1",
+          "3",
+          "5"
+        ],
+        "Order": [
+          "Post_Pesticide",
+          "Pre_Pesticide"
+        ]
+      },
+      "source_records": 180,
+      "condition_cells": 48,
+      "source_records_per_condition": {
+        "3": 40,
+        "6": 4,
+        "9": 4
+      },
+      "exact_source_row_match_excess": 20,
+      "counted_aphids": 5322,
+      "recorded_deaths": 1495,
+      "conditions": [
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 6,
+          "counted_aphids": 180,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 9,
+          "counted_aphids": 272,
+          "recorded_deaths": 7,
+          "pooled_recorded_mortality": 0.0257352941,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0666666667
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0.625",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 10,
+          "pooled_recorded_mortality": 0.1086956522,
+          "min_source_cohort_fraction": 0.0714285714,
+          "max_source_cohort_fraction": 0.1515151515
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "1.25",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 87,
+          "recorded_deaths": 18,
+          "pooled_recorded_mortality": 0.2068965517,
+          "min_source_cohort_fraction": 0.1785714286,
+          "max_source_cohort_fraction": 0.2333333333
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "10",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 84,
+          "recorded_deaths": 71,
+          "pooled_recorded_mortality": 0.8452380952,
+          "min_source_cohort_fraction": 0.8333333333,
+          "max_source_cohort_fraction": 0.8518518519
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "2.5",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 6,
+          "counted_aphids": 176,
+          "recorded_deaths": 30,
+          "pooled_recorded_mortality": 0.1704545455,
+          "min_source_cohort_fraction": 0.1333333333,
+          "max_source_cohort_fraction": 0.2142857143
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "2.5",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 9,
+          "counted_aphids": 255,
+          "recorded_deaths": 63,
+          "pooled_recorded_mortality": 0.2470588235,
+          "min_source_cohort_fraction": 0.1612903226,
+          "max_source_cohort_fraction": 0.3461538462
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "5",
+            "Treatment_Time": "0",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 95,
+          "recorded_deaths": 62,
+          "pooled_recorded_mortality": 0.6526315789,
+          "min_source_cohort_fraction": 0.5666666667,
+          "max_source_cohort_fraction": 0.7
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 9,
+          "counted_aphids": 262,
+          "recorded_deaths": 1,
+          "pooled_recorded_mortality": 0.0038167939,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0322580645
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 89,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 87,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0.625",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 82,
+          "recorded_deaths": 11,
+          "pooled_recorded_mortality": 0.1341463415,
+          "min_source_cohort_fraction": 0.0833333333,
+          "max_source_cohort_fraction": 0.1724137931
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "1.25",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 25,
+          "pooled_recorded_mortality": 0.2747252747,
+          "min_source_cohort_fraction": 0.2258064516,
+          "max_source_cohort_fraction": 0.3
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "10",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 82,
+          "pooled_recorded_mortality": 0.9111111111,
+          "min_source_cohort_fraction": 0.875,
+          "max_source_cohort_fraction": 0.9655172414
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 9,
+          "counted_aphids": 257,
+          "recorded_deaths": 128,
+          "pooled_recorded_mortality": 0.4980544747,
+          "min_source_cohort_fraction": 0.3571428571,
+          "max_source_cohort_fraction": 0.6923076923
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "1",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 80,
+          "recorded_deaths": 44,
+          "pooled_recorded_mortality": 0.55,
+          "min_source_cohort_fraction": 0.4814814815,
+          "max_source_cohort_fraction": 0.6
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "3",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 41,
+          "pooled_recorded_mortality": 0.4659090909,
+          "min_source_cohort_fraction": 0.4482758621,
+          "max_source_cohort_fraction": 0.4827586207
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "5",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 41,
+          "pooled_recorded_mortality": 0.476744186,
+          "min_source_cohort_fraction": 0.4137931034,
+          "max_source_cohort_fraction": 0.5714285714
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 99,
+          "recorded_deaths": 21,
+          "pooled_recorded_mortality": 0.2121212121,
+          "min_source_cohort_fraction": 0.1818181818,
+          "max_source_cohort_fraction": 0.2424242424
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 14,
+          "pooled_recorded_mortality": 0.1590909091,
+          "min_source_cohort_fraction": 0.1333333333,
+          "max_source_cohort_fraction": 0.1724137931
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 20,
+          "pooled_recorded_mortality": 0.2222222222,
+          "min_source_cohort_fraction": 0.2068965517,
+          "max_source_cohort_fraction": 0.2333333333
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 28,
+          "pooled_recorded_mortality": 0.3111111111,
+          "min_source_cohort_fraction": 0.2903225806,
+          "max_source_cohort_fraction": 0.3448275862
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "5",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 93,
+          "recorded_deaths": 68,
+          "pooled_recorded_mortality": 0.7311827957,
+          "min_source_cohort_fraction": 0.7096774194,
+          "max_source_cohort_fraction": 0.75
+        },
+        {
+          "factors": {
+            "Temperature": "33",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 89,
+          "recorded_deaths": 1,
+          "pooled_recorded_mortality": 0.0112359551,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0357142857
+        },
+        {
+          "factors": {
+            "Temperature": "33",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 26,
+          "pooled_recorded_mortality": 0.2888888889,
+          "min_source_cohort_fraction": 0.2666666667,
+          "max_source_cohort_fraction": 0.3
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 1,
+          "pooled_recorded_mortality": 0.010989011,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0333333333
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 6,
+          "counted_aphids": 171,
+          "recorded_deaths": 6,
+          "pooled_recorded_mortality": 0.0350877193,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0714285714
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 84,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 1,
+          "pooled_recorded_mortality": 0.0113636364,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0357142857
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 96,
+          "recorded_deaths": 74,
+          "pooled_recorded_mortality": 0.7708333333,
+          "min_source_cohort_fraction": 0.7419354839,
+          "max_source_cohort_fraction": 0.7878787879
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 6,
+          "counted_aphids": 176,
+          "recorded_deaths": 124,
+          "pooled_recorded_mortality": 0.7045454545,
+          "min_source_cohort_fraction": 0.5172413793,
+          "max_source_cohort_fraction": 0.9
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "1",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 80,
+          "recorded_deaths": 56,
+          "pooled_recorded_mortality": 0.7,
+          "min_source_cohort_fraction": 0.6923076923,
+          "max_source_cohort_fraction": 0.7142857143
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "3",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 83,
+          "recorded_deaths": 57,
+          "pooled_recorded_mortality": 0.686746988,
+          "min_source_cohort_fraction": 0.6666666667,
+          "max_source_cohort_fraction": 0.7037037037
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "120",
+            "Interval": "5",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 46,
+          "pooled_recorded_mortality": 0.5348837209,
+          "min_source_cohort_fraction": 0.4814814815,
+          "max_source_cohort_fraction": 0.6
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 40,
+          "pooled_recorded_mortality": 0.4347826087,
+          "min_source_cohort_fraction": 0.4,
+          "max_source_cohort_fraction": 0.4838709677
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "30",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 90,
+          "recorded_deaths": 29,
+          "pooled_recorded_mortality": 0.3222222222,
+          "min_source_cohort_fraction": 0.3,
+          "max_source_cohort_fraction": 0.3666666667
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 53,
+          "pooled_recorded_mortality": 0.5824175824,
+          "min_source_cohort_fraction": 0.5666666667,
+          "max_source_cohort_fraction": 0.6
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "60",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 94,
+          "recorded_deaths": 16,
+          "pooled_recorded_mortality": 0.170212766,
+          "min_source_cohort_fraction": 0.1290322581,
+          "max_source_cohort_fraction": 0.1935483871
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 68,
+          "pooled_recorded_mortality": 0.7472527473,
+          "min_source_cohort_fraction": 0.7333333333,
+          "max_source_cohort_fraction": 0.7666666667
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Pre_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 94,
+          "recorded_deaths": 42,
+          "pooled_recorded_mortality": 0.4468085106,
+          "min_source_cohort_fraction": 0.40625,
+          "max_source_cohort_fraction": 0.46875
+        },
+        {
+          "factors": {
+            "Temperature": "36",
+            "CONC": "0",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 92,
+          "recorded_deaths": 9,
+          "pooled_recorded_mortality": 0.097826087,
+          "min_source_cohort_fraction": 0.0666666667,
+          "max_source_cohort_fraction": 0.1290322581
+        },
+        {
+          "factors": {
+            "Temperature": "36",
+            "CONC": "2.5",
+            "Treatment_Time": "90",
+            "Interval": "0",
+            "Order": "Post_Pesticide"
+          },
+          "source_records": 3,
+          "counted_aphids": 91,
+          "recorded_deaths": 61,
+          "pooled_recorded_mortality": 0.6703296703,
+          "min_source_cohort_fraction": 0.6,
+          "max_source_cohort_fraction": 0.7096774194
+        }
+      ]
+    },
+    "Experiment4": {
+      "source_sheet": "Experiment4",
+      "factor_fields": [
+        "Temperature",
+        "CONC",
+        "Treatment_Time",
+        "Interval"
+      ],
+      "factor_levels_as_recorded": {
+        "Temperature": [
+          "22",
+          "30",
+          "35"
+        ],
+        "CONC": [
+          "0",
+          "2.5"
+        ],
+        "Treatment_Time": [
+          "0",
+          "2"
+        ],
+        "Interval": [
+          "0",
+          "1",
+          "3",
+          "5"
+        ]
+      },
+      "source_records": 36,
+      "condition_cells": 12,
+      "source_records_per_condition": {
+        "3": 12
+      },
+      "exact_source_row_match_excess": 3,
+      "counted_aphids": 1007,
+      "recorded_deaths": 444,
+      "conditions": [
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "0",
+            "Treatment_Time": "0",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "22",
+            "CONC": "2.5",
+            "Treatment_Time": "0",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 81,
+          "recorded_deaths": 22,
+          "pooled_recorded_mortality": 0.2716049383,
+          "min_source_cohort_fraction": 0.2222222222,
+          "max_source_cohort_fraction": 0.3461538462
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "0",
+            "Treatment_Time": "2",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 83,
+          "recorded_deaths": 0,
+          "pooled_recorded_mortality": 0.0,
+          "min_source_cohort_fraction": 0.0,
+          "max_source_cohort_fraction": 0.0
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 81,
+          "recorded_deaths": 56,
+          "pooled_recorded_mortality": 0.6913580247,
+          "min_source_cohort_fraction": 0.6896551724,
+          "max_source_cohort_fraction": 0.6923076923
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "1"
+          },
+          "source_records": 3,
+          "counted_aphids": 80,
+          "recorded_deaths": 44,
+          "pooled_recorded_mortality": 0.55,
+          "min_source_cohort_fraction": 0.4814814815,
+          "max_source_cohort_fraction": 0.6
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "3"
+          },
+          "source_records": 3,
+          "counted_aphids": 88,
+          "recorded_deaths": 41,
+          "pooled_recorded_mortality": 0.4659090909,
+          "min_source_cohort_fraction": 0.4482758621,
+          "max_source_cohort_fraction": 0.4827586207
+        },
+        {
+          "factors": {
+            "Temperature": "30",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "5"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 41,
+          "pooled_recorded_mortality": 0.476744186,
+          "min_source_cohort_fraction": 0.4137931034,
+          "max_source_cohort_fraction": 0.5714285714
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "0",
+            "Treatment_Time": "2",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 85,
+          "recorded_deaths": 5,
+          "pooled_recorded_mortality": 0.0588235294,
+          "min_source_cohort_fraction": 0.037037037,
+          "max_source_cohort_fraction": 0.0714285714
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "0"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 76,
+          "pooled_recorded_mortality": 0.8837209302,
+          "min_source_cohort_fraction": 0.8571428571,
+          "max_source_cohort_fraction": 0.9
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "1"
+          },
+          "source_records": 3,
+          "counted_aphids": 80,
+          "recorded_deaths": 56,
+          "pooled_recorded_mortality": 0.7,
+          "min_source_cohort_fraction": 0.6923076923,
+          "max_source_cohort_fraction": 0.7142857143
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "3"
+          },
+          "source_records": 3,
+          "counted_aphids": 83,
+          "recorded_deaths": 57,
+          "pooled_recorded_mortality": 0.686746988,
+          "min_source_cohort_fraction": 0.6666666667,
+          "max_source_cohort_fraction": 0.7037037037
+        },
+        {
+          "factors": {
+            "Temperature": "35",
+            "CONC": "2.5",
+            "Treatment_Time": "2",
+            "Interval": "5"
+          },
+          "source_records": 3,
+          "counted_aphids": 86,
+          "recorded_deaths": 46,
+          "pooled_recorded_mortality": 0.5348837209,
+          "min_source_cohort_fraction": 0.4814814815,
+          "max_source_cohort_fraction": 0.6
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Experiments are separate study designs; no across-experiment effect is estimated.",
+    "Condition fractions are descriptive ratios of counted aphids, not effect sizes.",
+    "Individual aphids and repeated cohort rows are not verified randomized units.",
+    "Source time and concentration labels are retained without unit conversion.",
+    "Matching source rows are preserved; equal values do not prove duplicate units.",
+    "Protocol-gated interaction and causal models remain ineligible."
+  ]
+}

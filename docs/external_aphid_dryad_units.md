@@ -53,6 +53,12 @@ assumed independent treatment assignments without the original protocol.
 Experiment 3 has uneven recorded multiplicity, so assuming exactly three
 replicates per treatment is demonstrably incorrect.
 
+The [controlled-aphid descriptive exports](external_aphid_controlled_descriptives.md)
+provide one condition-level CSV per controlled experiment, including counts,
+observed cohort-rate ranges, and literal source time/dose labels. They do not
+grant an inferential analysis or combine the field design with laboratory
+counts.
+
 ### Field follow-up structure
 
 Experiment 5 contains **54 rows** but only **27 provisional observational
