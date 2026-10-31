@@ -73,6 +73,11 @@ The [wheat endpoint pairability audit](../../docs/external_wheat_pairability.md)
 assesses which treated measurements have a comparable untreated observation
 within the same trial, while retaining the trial-unit uncertainty.
 
+The [wheat geocode hierarchy audit](../../docs/external_wheat_site_hierarchy.md)
+finds 56 rounded country–coordinate combinations, 65 geocode–years, and 76
+distinct `TrialId` codes. The match to the publisher's *56 trials* title is
+suggestive, but cannot establish unique physical fields or plot replicates.
+
 The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphid_dryad_units.md)
 separates controlled cohort records, field repeat measurements, laboratory
 assay batches, greenhouse plant records, and longitudinal field observations.

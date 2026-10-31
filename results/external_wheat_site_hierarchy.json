@@ -1,0 +1,1151 @@
+{
+  "source_doi": "10.5281/zenodo.6521175",
+  "source_path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "source_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "schema_version": 1,
+  "source_rows": 2276,
+  "trial_id_count": 76,
+  "geocode_count": 56,
+  "geocode_year_count": 65,
+  "geocode_precision_degrees": "0.1",
+  "geocode_year_trial_multiplicity": {
+    "1": 56,
+    "2": 8,
+    "4": 1
+  },
+  "geocode_years_per_geocode": {
+    "1": 48,
+    "2": 7,
+    "3": 1
+  },
+  "geocode_years_with_multiple_trial_ids": 9,
+  "trial_ids_at_shared_geocode_years": 20,
+  "geocodes_reused_across_years": 8,
+  "country_summary": [
+    {
+      "country": "AUSTRIA",
+      "trial_ids": 1,
+      "geocodes": 1,
+      "geocode_years": 1
+    },
+    {
+      "country": "BULGARIA",
+      "trial_ids": 4,
+      "geocodes": 1,
+      "geocode_years": 1
+    },
+    {
+      "country": "CZECH REPUBLIC",
+      "trial_ids": 1,
+      "geocodes": 1,
+      "geocode_years": 1
+    },
+    {
+      "country": "DENMARK",
+      "trial_ids": 2,
+      "geocodes": 2,
+      "geocode_years": 2
+    },
+    {
+      "country": "FRANCE",
+      "trial_ids": 12,
+      "geocodes": 7,
+      "geocode_years": 10
+    },
+    {
+      "country": "GERMANY",
+      "trial_ids": 10,
+      "geocodes": 10,
+      "geocode_years": 10
+    },
+    {
+      "country": "IRELAND",
+      "trial_ids": 2,
+      "geocodes": 1,
+      "geocode_years": 1
+    },
+    {
+      "country": "NETHERLANDS",
+      "trial_ids": 2,
+      "geocodes": 1,
+      "geocode_years": 2
+    },
+    {
+      "country": "POLAND",
+      "trial_ids": 20,
+      "geocodes": 14,
+      "geocode_years": 17
+    },
+    {
+      "country": "ROMANIA",
+      "trial_ids": 2,
+      "geocodes": 2,
+      "geocode_years": 2
+    },
+    {
+      "country": "SLOWAKIA",
+      "trial_ids": 3,
+      "geocodes": 3,
+      "geocode_years": 3
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "trial_ids": 17,
+      "geocodes": 13,
+      "geocode_years": 15
+    }
+  ],
+  "shared_geocode_years": [
+    {
+      "country": "BULGARIA",
+      "latitude": "43.3",
+      "longitude": "25.0",
+      "year": 2019,
+      "trial_ids": [
+        "31",
+        "32",
+        "33",
+        "34"
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "48.0",
+      "longitude": "1.8",
+      "year": 2017,
+      "trial_ids": [
+        "8",
+        "10"
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "49.8",
+      "longitude": "2.9",
+      "year": 2019,
+      "trial_ids": [
+        "43",
+        "47"
+      ]
+    },
+    {
+      "country": "IRELAND",
+      "latitude": "51.9",
+      "longitude": "-8.3",
+      "year": 2019,
+      "trial_ids": [
+        "65",
+        "72"
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "50.3",
+      "longitude": "18.5",
+      "year": 2019,
+      "trial_ids": [
+        "51",
+        "56"
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.1",
+      "longitude": "17.2",
+      "year": 2019,
+      "trial_ids": [
+        "50",
+        "55"
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "53.2",
+      "longitude": "17.7",
+      "year": 2019,
+      "trial_ids": [
+        "53",
+        "57"
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.7",
+      "longitude": "-1.9",
+      "year": 2017,
+      "trial_ids": [
+        "18",
+        "76"
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.0",
+      "longitude": "-2.2",
+      "year": 2019,
+      "trial_ids": [
+        "71",
+        "75"
+      ]
+    }
+  ],
+  "reused_geocodes": [
+    {
+      "country": "FRANCE",
+      "latitude": "48.0",
+      "longitude": "1.8",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "8",
+            "10"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "23"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "46"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "49.8",
+      "longitude": "2.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "9"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "43",
+            "47"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "NETHERLANDS",
+      "latitude": "53.4",
+      "longitude": "6.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "11"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "24"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "50.3",
+      "longitude": "18.5",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "26"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "51",
+            "56"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "51.1",
+      "longitude": "17.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "25"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "48"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.1",
+      "longitude": "17.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "14"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "59"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.7",
+      "longitude": "-1.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "18",
+            "76"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "70"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.7",
+      "longitude": "0.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "17"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "29"
+          ]
+        }
+      ]
+    }
+  ],
+  "all_geocodes": [
+    {
+      "country": "AUSTRIA",
+      "latitude": "48.2",
+      "longitude": "14.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "3"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "BULGARIA",
+      "latitude": "43.3",
+      "longitude": "25.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "31",
+            "32",
+            "33",
+            "34"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "CZECH REPUBLIC",
+      "latitude": "49.5",
+      "longitude": "17.4",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "35"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "DENMARK",
+      "latitude": "55.6",
+      "longitude": "11.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "40"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "DENMARK",
+      "latitude": "55.7",
+      "longitude": "11.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "41"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "46.9",
+      "longitude": "-1.1",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "6"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "47.9",
+      "longitude": "1.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "7"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "48.0",
+      "longitude": "-2.4",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "45"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "48.0",
+      "longitude": "1.8",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "8",
+            "10"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "23"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "46"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "49.8",
+      "longitude": "2.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "9"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "43",
+            "47"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "50.4",
+      "longitude": "2.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "44"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "50.5",
+      "longitude": "2.5",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "42"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "48.3",
+      "longitude": "12.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "1"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "49.2",
+      "longitude": "8.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "22"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "49.4",
+      "longitude": "8.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "21"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "49.6",
+      "longitude": "10.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "38"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "51.0",
+      "longitude": "6.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "36"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "51.6",
+      "longitude": "8.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "37"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "51.7",
+      "longitude": "12.1",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "4"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "52.4",
+      "longitude": "9.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "5"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "52.8",
+      "longitude": "8.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "39"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "GERMANY",
+      "latitude": "54.0",
+      "longitude": "12.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "2"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "IRELAND",
+      "latitude": "51.9",
+      "longitude": "-8.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "65",
+            "72"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "NETHERLANDS",
+      "latitude": "53.4",
+      "longitude": "6.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "11"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "24"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "50.3",
+      "longitude": "18.5",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "26"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "51",
+            "56"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "51.0",
+      "longitude": "17.8",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "13"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "51.1",
+      "longitude": "17.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "25"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "48"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.1",
+      "longitude": "17.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "50",
+            "55"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.1",
+      "longitude": "17.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "14"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "59"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.2",
+      "longitude": "16.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "16"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.2",
+      "longitude": "17.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "12"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.5",
+      "longitude": "16.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "58"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.5",
+      "longitude": "16.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "49"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.6",
+      "longitude": "16.4",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "54"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.8",
+      "longitude": "16.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "52"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "53.2",
+      "longitude": "17.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "53",
+            "57"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "53.7",
+      "longitude": "20.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "27"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "54.0",
+      "longitude": "18.8",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "15"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "ROMANIA",
+      "latitude": "44.2",
+      "longitude": "26.4",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "61"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "ROMANIA",
+      "latitude": "44.5",
+      "longitude": "26.6",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "SLOWAKIA",
+      "latitude": "48.6",
+      "longitude": "19.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "62"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "SLOWAKIA",
+      "latitude": "48.8",
+      "longitude": "21.4",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "64"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "SLOWAKIA",
+      "latitude": "49.2",
+      "longitude": "20.5",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "63"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.4",
+      "longitude": "-2.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "74"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.5",
+      "longitude": "-1.7",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "69"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.7",
+      "longitude": "-2.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "28"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.7",
+      "longitude": "-1.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "18",
+            "76"
+          ]
+        },
+        {
+          "year": 2019,
+          "trial_ids": [
+            "70"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.9",
+      "longitude": "0.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "19"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.0",
+      "longitude": "-2.2",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "71",
+            "75"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.1",
+      "longitude": "1.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "20"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.2",
+      "longitude": "0.1",
+      "trial_ids_by_year": [
+        {
+          "year": 2018,
+          "trial_ids": [
+            "30"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.2",
+      "longitude": "0.3",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "68"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.2",
+      "longitude": "0.8",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "73"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.2",
+      "longitude": "0.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "67"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.2",
+      "longitude": "1.0",
+      "trial_ids_by_year": [
+        {
+          "year": 2019,
+          "trial_ids": [
+            "66"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.7",
+      "longitude": "0.9",
+      "trial_ids_by_year": [
+        {
+          "year": 2017,
+          "trial_ids": [
+            "17"
+          ]
+        },
+        {
+          "year": 2018,
+          "trial_ids": [
+            "29"
+          ]
+        }
+      ]
+    }
+  ]
+}
