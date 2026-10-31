@@ -41,6 +41,11 @@ and 852 Dryad greenhouse infection design cells are not 852 distinct plants.
 The three publications do not establish a common candidate identity for a
 cross-study discovery funnel.
 
+The [wheat geocode hierarchy audit](external_wheat_site_hierarchy.md) adds
+evidence for the 56-versus-76 question: 56 recorded geocodes but 65
+geocode–years and 76 trial codes. This finding does not clear the protocol
+gate for trial-level inference.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

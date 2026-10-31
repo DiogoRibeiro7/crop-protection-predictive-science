@@ -62,9 +62,11 @@ does not imply complete outcome matching at every assessment date.
 
 1. **Trial-definition discrepancy remains unresolved.** The Zenodo title and
    IPM Decisions deliverable describe 56 wheat trials. The actual TSV has 76
-   distinct `TrialId` values, each associated with one location and year.
-   Nothing in the imported fields explains the discrepancy. Neither number
-   should be presented as a confirmed count of independent physical trials.
+   distinct `TrialId` values, each associated with one recorded geocode and
+   year. A [geocode hierarchy audit](external_wheat_site_hierarchy.md) finds
+   exactly 56 distinct country–coordinate combinations and 65 geocode–years,
+   but coordinates are published at only 0.1° precision. Matching the title
+   count is a hypothesis, not proof of 56 physical trials or independent units.
 2. **No plot replicate identifier.** `SampleUnit` is a measurement code, not a
    unique plot identifier. Matched assessment records can share an untreated
    comparator; row-level confidence intervals would risk pseudoreplication.
