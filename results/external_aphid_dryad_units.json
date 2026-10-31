@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "aphid": {
+    "doi": "10.5281/zenodo.19805135",
+    "controlled": {
+      "Experiment1": {
+        "rows": 36,
+        "condition_fields": [
+          "Temperature",
+          "CONC"
+        ],
+        "condition_cells": 12,
+        "records_per_condition": {
+          "3": 12
+        },
+        "counted_aphids": 1065,
+        "recorded_deaths": 415,
+        "explicit_replicate_id": false
+      },
+      "Experiment2": {
+        "rows": 24,
+        "condition_fields": [
+          "Temperature",
+          "CONC",
+          "Treatment_Time"
+        ],
+        "condition_cells": 8,
+        "records_per_condition": {
+          "3": 8
+        },
+        "counted_aphids": 717,
+        "recorded_deaths": 131,
+        "explicit_replicate_id": false
+      },
+      "Experiment3": {
+        "rows": 180,
+        "condition_fields": [
+          "Temperature",
+          "CONC",
+          "Treatment_Time",
+          "Interval",
+          "Order"
+        ],
+        "condition_cells": 48,
+        "records_per_condition": {
+          "3": 40,
+          "6": 4,
+          "9": 4
+        },
+        "counted_aphids": 5322,
+        "recorded_deaths": 1495,
+        "explicit_replicate_id": false
+      },
+      "Experiment4": {
+        "rows": 36,
+        "condition_fields": [
+          "Temperature",
+          "CONC",
+          "Treatment_Time",
+          "Interval"
+        ],
+        "condition_cells": 12,
+        "records_per_condition": {
+          "3": 12
+        },
+        "counted_aphids": 1007,
+        "recorded_deaths": 444,
+        "explicit_replicate_id": false
+      }
+    },
+    "field": {
+      "rows": 54,
+      "provisional_series_fields": [
+        "Site",
+        "Treat",
+        "Replicate",
+        "Date",
+        "Interval"
+      ],
+      "provisional_series_count": 27,
+      "observations_per_series": {
+        "2": 27
+      },
+      "complete_day3_day7_series": 27,
+      "repeated_sampling_keys": 0,
+      "changed_baseline_series": 0,
+      "changed_exposure_series": 0,
+      "site_rows": {
+        "Langfang": 36,
+        "Xinxiang": 18
+      },
+      "source_date_serials_by_site": {
+        "Langfang": [
+          "45082",
+          "45083"
+        ],
+        "Xinxiang": [
+          "41414"
+        ]
+      },
+      "fractional_base_number_rows": 44,
+      "fractional_popsize_rows": 34,
+      "mortality_is_derived_rate": true
+    }
+  },
+  "dryad": {
+    "doi": "10.5061/dryad.4mw6m90jv",
+    "laboratory": {
+      "Conjugation_Data_strain_2.xlsx": {
+        "assay": "conjugation",
+        "rows": 84,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "3": 28
+        },
+        "distinct_run_codes": 11,
+        "unique_nested_record_keys": 84,
+        "duplicate_nested_record_keys": 0
+      },
+      "Conjugation_Data_strain_3.xlsx": {
+        "assay": "conjugation",
+        "rows": 84,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "3": 28
+        },
+        "distinct_run_codes": 11,
+        "unique_nested_record_keys": 84,
+        "duplicate_nested_record_keys": 0
+      },
+      "Conjugation_Data_strain_4.xlsx": {
+        "assay": "conjugation",
+        "rows": 84,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "3": 28
+        },
+        "distinct_run_codes": 11,
+        "unique_nested_record_keys": 84,
+        "duplicate_nested_record_keys": 0
+      },
+      "Germination_data.xlsx": {
+        "assay": "germination",
+        "rows": 84,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "3": 28
+        },
+        "distinct_run_codes": 10,
+        "unique_nested_record_keys": 84,
+        "duplicate_nested_record_keys": 0
+      },
+      "Growth_data_strain_2.xlsx": {
+        "assay": "growth",
+        "rows": 168,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "6": 28
+        },
+        "distinct_run_codes": 12,
+        "unique_nested_record_keys": 168,
+        "duplicate_nested_record_keys": 0,
+        "distinct_picture_ids": 84,
+        "repeated_picture_id_rows": 84
+      },
+      "Growth_data_strain_3.xlsx": {
+        "assay": "growth",
+        "rows": 168,
+        "temperatures": 14,
+        "temperature_run_groups": 30,
+        "records_per_temperature_run": {
+          "3": 4,
+          "6": 26
+        },
+        "distinct_run_codes": 13,
+        "unique_nested_record_keys": 168,
+        "duplicate_nested_record_keys": 0,
+        "distinct_picture_ids": 84,
+        "repeated_picture_id_rows": 84
+      },
+      "Growth_data_strain_4.xlsx": {
+        "assay": "growth",
+        "rows": 168,
+        "temperatures": 14,
+        "temperature_run_groups": 28,
+        "records_per_temperature_run": {
+          "6": 28
+        },
+        "distinct_run_codes": 12,
+        "unique_nested_record_keys": 168,
+        "duplicate_nested_record_keys": 0,
+        "distinct_picture_ids": 84,
+        "repeated_picture_id_rows": 84
+      }
+    },
+    "greenhouse": {
+      "infection_rows": 1112,
+      "infection_design_cells": 852,
+      "infection_rows_per_design_cell": {
+        "1": 667,
+        "2": 137,
+        "3": 32,
+        "4": 9,
+        "5": 4,
+        "6": 2,
+        "7": 1
+      },
+      "infection_exact_repeated_rows": 141,
+      "infection_year_codes": {
+        "22": 1033,
+        "23": 79
+      },
+      "disease_status_codes": {
+        "D": 171,
+        "HF": 507,
+        "HM": 325,
+        "LD": 109
+      },
+      "death_case_rows": 173,
+      "death_design_cells": 115,
+      "death_exact_repeated_rows": 58,
+      "death_case_value": 1,
+      "unique_plant_identifier_present": false
+    },
+    "field": {
+      "plant_rows": 178,
+      "unique_row_position_pairs": 178,
+      "reused_row_position_pairs": 0,
+      "raw_status_date_columns": 27,
+      "infection_status_date_columns": 27,
+      "populated_raw_status_cells": 4795,
+      "flower_summary_dates": 27,
+      "flower_summary_rows": 27,
+      "field_is_longitudinal": true
+    },
+    "weather": {
+      "weather_rows": 214,
+      "rows_with_missing_temperature": 1,
+      "rows_with_low_above_high": 1
+    }
+  }
+}
