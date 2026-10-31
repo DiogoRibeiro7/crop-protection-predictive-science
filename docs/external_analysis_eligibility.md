@@ -51,6 +51,12 @@ finds 22 exact pairwise record matches once `TrialId` is excluded. These are
 not automatically duplicate plots; the source's allocation and replicate
 protocol remain necessary.
 
+The [Dryad longitudinal field-panel audit](external_dryad_field_panel.md)
+confirms calendar-date alignment but shows mixed and unlisted status codes,
+an incomplete `Ever.dis` field, and a reversed weather high/low measurement on
+a field-visit date. These findings do not lift the field or weather protocol
+requirements.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

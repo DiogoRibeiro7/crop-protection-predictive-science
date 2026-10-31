@@ -87,6 +87,11 @@ The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphi
 separates controlled cohort records, field repeat measurements, laboratory
 assay batches, greenhouse plant records, and longitudinal field observations.
 
+The [Dryad field-panel audit](../../docs/external_dryad_field_panel.md)
+reconciles the original field-status header dates, flower-summary dates and
+weather observations; catalogs source status strings without recoding them;
+and locates the two known weather anomalies on the calendar.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and
