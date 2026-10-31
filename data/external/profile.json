@@ -1,0 +1,2136 @@
+{
+  "schema_version": 1,
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "sources": [
+    {
+      "id": "zenodo_wheat_fungicide_6521175",
+      "doi": "10.5281/zenodo.6521175",
+      "files": [
+        {
+          "path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+          "tables": [
+            {
+              "name": "basf-wheat-diseases.txt",
+              "role": "observations",
+              "rows": 2276,
+              "columns": 17,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "TrialId",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 76
+                },
+                {
+                  "name": "Country",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 12
+                },
+                {
+                  "name": "Latitude",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 39
+                },
+                {
+                  "name": "Longitude",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 48
+                },
+                {
+                  "name": "Date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 175
+                },
+                {
+                  "name": "Daft",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 80
+                },
+                {
+                  "name": "GsFrom",
+                  "missing_cells": 0,
+                  "literal_na_cells": 32,
+                  "distinct_nonblank": 45
+                },
+                {
+                  "name": "GsTo",
+                  "missing_cells": 0,
+                  "literal_na_cells": 132,
+                  "distinct_nonblank": 45
+                },
+                {
+                  "name": "NumSprays",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Treatment",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "Organism",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 13
+                },
+                {
+                  "name": "Parameter",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Clarifier",
+                  "missing_cells": 0,
+                  "literal_na_cells": 903,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "Method",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "SampleUnit",
+                  "missing_cells": 0,
+                  "literal_na_cells": 32,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "PlantPart",
+                  "missing_cells": 0,
+                  "literal_na_cells": 2,
+                  "distinct_nonblank": 15
+                },
+                {
+                  "name": "Value",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 720
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zenodo_aphid_pesticide_19805135",
+      "doi": "10.5281/zenodo.19805135",
+      "files": [
+        {
+          "path": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+          "tables": [
+            {
+              "name": "Experiment1",
+              "role": "observations",
+              "rows": 36,
+              "columns": 4,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "CONC",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "TOTAL",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "DEAD",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 21
+                }
+              ]
+            },
+            {
+              "name": "Experiment2",
+              "role": "observations",
+              "rows": 24,
+              "columns": 5,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "CONC",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Treatment_Time",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "TOTAL",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "DEAD",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 12
+                }
+              ]
+            },
+            {
+              "name": "Experiment3",
+              "role": "observations",
+              "rows": 180,
+              "columns": 7,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "CONC",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "Treatment_Time",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "Interval",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "TOTAL",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                },
+                {
+                  "name": "DEAD",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 29
+                },
+                {
+                  "name": "Order",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                }
+              ]
+            },
+            {
+              "name": "Experiment4",
+              "role": "observations",
+              "rows": 36,
+              "columns": 6,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "CONC",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Treatment_Time",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Interval",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "TOTAL",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "DEAD",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 17
+                }
+              ]
+            },
+            {
+              "name": "Experiment5",
+              "role": "observations",
+              "rows": 54,
+              "columns": 13,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Site",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Treat",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Replicate",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "SamplingDay",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "PopSize",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 30
+                },
+                {
+                  "name": "Base_number",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "Order",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Interval",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "Type",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "DH_above26",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "Mortality",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 40
+                },
+                {
+                  "name": "CONC",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "zenodo_aphid_pesticide_19805135/README.txt",
+          "tables": []
+        }
+      ]
+    },
+    {
+      "id": "dryad_pathogen_temperature_4mw6m90jv",
+      "doi": "10.5061/dryad.4mw6m90jv",
+      "files": [
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_2.xlsx",
+          "tables": [
+            {
+              "name": "Conjugation Data strain 2",
+              "role": "observations",
+              "rows": 84,
+              "columns": 7,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Sum.Mating",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 57
+                },
+                {
+                  "name": "Sum.Total",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 80
+                },
+                {
+                  "name": "Sum.Prop",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 72
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 7,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_3.xlsx",
+          "tables": [
+            {
+              "name": "Conjugation Data strain 3",
+              "role": "observations",
+              "rows": 84,
+              "columns": 7,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Sum.Mating",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 54
+                },
+                {
+                  "name": "Sum.Total",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 79
+                },
+                {
+                  "name": "Sum.Prop",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 68
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 7,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_4.xlsx",
+          "tables": [
+            {
+              "name": "Conjugation Data strain 4",
+              "role": "observations",
+              "rows": 84,
+              "columns": 7,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Sum.Mating",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 52
+                },
+                {
+                  "name": "Sum.Total",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 75
+                },
+                {
+                  "name": "Sum.Prop",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 70
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 7,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/daily_high_temps.txt",
+          "tables": [
+            {
+              "name": "daily_high_temps.txt",
+              "role": "observations",
+              "rows": 214,
+              "columns": 3,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 214
+                },
+                {
+                  "name": "High",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 80
+                },
+                {
+                  "name": "Low",
+                  "missing_cells": 1,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 68
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/flower_summary_data.xlsx",
+          "tables": [
+            {
+              "name": "flower summary data",
+              "role": "observations",
+              "rows": 27,
+              "columns": 29,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "days",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 27
+                },
+                {
+                  "name": "Date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 27
+                },
+                {
+                  "name": "high",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 16
+                },
+                {
+                  "name": "low",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 21
+                },
+                {
+                  "name": "Data.collection.pt",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "high.7",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "low.7",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "liquid.in",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "Degree.days",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 24
+                },
+                {
+                  "name": "Evap.in",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "high.14",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 26
+                },
+                {
+                  "name": "low.14",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "high.10",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 26
+                },
+                {
+                  "name": "low.10",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 26
+                },
+                {
+                  "name": "high.12",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "low.12",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 27
+                },
+                {
+                  "name": "high.16",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 26
+                },
+                {
+                  "name": "low.16",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 27
+                },
+                {
+                  "name": "Flwer.data",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "total.D.flwr",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 19
+                },
+                {
+                  "name": "total.H.flwr",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 16
+                },
+                {
+                  "name": "total",
+                  "missing_cells": 1,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 20
+                },
+                {
+                  "name": "proportion",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 16
+                },
+                {
+                  "name": "Flwr.plants",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                },
+                {
+                  "name": "Fully.Smutty.plants",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 23
+                },
+                {
+                  "name": "Partial.dis",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                },
+                {
+                  "name": "any.disease",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 24
+                },
+                {
+                  "name": "Prop.any.dis",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 27
+                },
+                {
+                  "name": "prop.flwr",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 25
+                }
+              ]
+            },
+            {
+              "name": "readme",
+              "role": "documentation",
+              "rows": 26,
+              "columns": 1,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "high",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 26
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Germination_data.xlsx",
+          "tables": [
+            {
+              "name": "Germination data",
+              "role": "observations",
+              "rows": 84,
+              "columns": 7,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Sum.Germ",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 66
+                },
+                {
+                  "name": "Sum.Total",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 71
+                },
+                {
+                  "name": "Sum.Prop",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 83
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 10
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 7,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_2.xlsx",
+          "tables": [
+            {
+              "name": "Growth data strain 2",
+              "role": "observations",
+              "rows": 168,
+              "columns": 8,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Picture ID",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 84
+                },
+                {
+                  "name": "Strain",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Mating.Type",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Replicate",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Colonly.Count",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 56
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 12
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 8,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_3.xlsx",
+          "tables": [
+            {
+              "name": "Growth data strain 3",
+              "role": "observations",
+              "rows": 168,
+              "columns": 8,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Picture ID",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 84
+                },
+                {
+                  "name": "Strain",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Mating.Type",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Replicate",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Colonly.Count",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 48
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 13
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 8,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_4.xlsx",
+          "tables": [
+            {
+              "name": "Growth data strain 4",
+              "role": "observations",
+              "rows": 168,
+              "columns": 8,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Picture ID",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 84
+                },
+                {
+                  "name": "Strain",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Temp.Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 14
+                },
+                {
+                  "name": "Mating.Type",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Replicate",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Colonly.Count",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 48
+                },
+                {
+                  "name": "Run.Num",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 12
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 8,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "Explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/Raw_field_data.xlsx",
+          "tables": [
+            {
+              "name": "Sheet1",
+              "role": "observations",
+              "rows": 178,
+              "columns": 124,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Row",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 15
+                },
+                {
+                  "name": "Position",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 12
+                },
+                {
+                  "name": "Status.May.17",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "veg.may.17",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.may.17",
+                  "missing_cells": 141,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Status.May.25",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "veg.may.25",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.may.25",
+                  "missing_cells": 124,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Dis.Flwr.May.25",
+                  "missing_cells": 124,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.flwr.may.25",
+                  "missing_cells": 177,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Status.June.1",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "veg.June.1",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "infect.status.june.1",
+                  "missing_cells": 94,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Dis.Flwr.June.1",
+                  "missing_cells": 92,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.flwr.June.1",
+                  "missing_cells": 169,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Status.June.8",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.june.8",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.jun.8",
+                  "missing_cells": 79,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Dis.Flwr.June.8",
+                  "missing_cells": 50,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.flwr.June.8",
+                  "missing_cells": 146,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.June.15",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "veg.june.15",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.jun.15",
+                  "missing_cells": 27,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Dis.Flwr.June.15",
+                  "missing_cells": 27,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.flwr.June.15",
+                  "missing_cells": 159,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.June.23",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "veg.june.23",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.jun.23",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwrs.June.23",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.flwr.June.23",
+                  "missing_cells": 146,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.June.29",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 10
+                },
+                {
+                  "name": "veg.june.29",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.jun.29",
+                  "missing_cells": 3,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwrs.June.29",
+                  "missing_cells": 3,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.flwrs.June.29",
+                  "missing_cells": 150,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Actual counts (row 1-6.5)",
+                  "missing_cells": 114,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 48
+                },
+                {
+                  "name": "Status.July.6",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "veg.july.6",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.july.6",
+                  "missing_cells": 11,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwrs.July.6",
+                  "missing_cells": 11,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "H.flwrs.july.6",
+                  "missing_cells": 142,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.July.15",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "Sex.July.15",
+                  "missing_cells": 2,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "veg.july.15",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.july.15",
+                  "missing_cells": 24,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwrs.July.15",
+                  "missing_cells": 24,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.flwrs.july.15",
+                  "missing_cells": 86,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.July.20",
+                  "missing_cells": 9,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "veg.july.20",
+                  "missing_cells": 24,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.july.20",
+                  "missing_cells": 12,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Dis.Flwrs.July.20",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.flwrs.july.20",
+                  "missing_cells": 55,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.July.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                },
+                {
+                  "name": "veg.july.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.july.27",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwr.July.27",
+                  "missing_cells": 8,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.flwrs.july.27",
+                  "missing_cells": 16,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Aug.6",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "veg.aug.6",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.aug.6",
+                  "missing_cells": 18,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwr.Aug.6",
+                  "missing_cells": 18,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.Flwr.Aug.6",
+                  "missing_cells": 83,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Aug.11",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "veg.aug.11",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.aug.11",
+                  "missing_cells": 30,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwr.Aug.11",
+                  "missing_cells": 29,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Aug.11",
+                  "missing_cells": 114,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Aug.16",
+                  "missing_cells": 1,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "veg.aug.16",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.aug.16",
+                  "missing_cells": 89,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwrs.Aug.16",
+                  "missing_cells": 88,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Aug.16",
+                  "missing_cells": 120,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Aug.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.aug.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.aug.27",
+                  "missing_cells": 58,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwr.Aug.27",
+                  "missing_cells": 58,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Aug.27",
+                  "missing_cells": 87,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Aug.31",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "veg.aug.31",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.aug.31",
+                  "missing_cells": 42,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwr.Aug.31",
+                  "missing_cells": 43,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Aug.31",
+                  "missing_cells": 56,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Sept.09",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "veg.sept.09",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.sept.09",
+                  "missing_cells": 53,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwrs.Sept.09",
+                  "missing_cells": 53,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Sept.09",
+                  "missing_cells": 115,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Sept.16",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 11
+                },
+                {
+                  "name": "veg.sept.16",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.sept.16",
+                  "missing_cells": 50,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Dis.Flwrs.Sept.16",
+                  "missing_cells": 50,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Sept.16",
+                  "missing_cells": 133,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Status.Spet.24",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.sept.24",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.sept.24",
+                  "missing_cells": 105,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwr.Sept.24",
+                  "missing_cells": 105,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "H.Flwr.Sept.24",
+                  "missing_cells": 165,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Status.Oct.1",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.oct.1",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.oct.1",
+                  "missing_cells": 74,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Dis.Flwr.Oct.1",
+                  "missing_cells": 75,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "H.Flwr.oct.1",
+                  "missing_cells": 156,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "Status.Oct.5",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.oct.5",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.oct.5",
+                  "missing_cells": 101,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Oct.12",
+                  "missing_cells": 1,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "veg.oct.12",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.oct.12",
+                  "missing_cells": 74,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "Status.Oct.19",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.oct.19",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.oct.19",
+                  "missing_cells": 81,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Status.Oct.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.oct.27",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.oct.27",
+                  "missing_cells": 104,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Status.Nov.4",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "veg.nov.4",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.nov.4",
+                  "missing_cells": 125,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Status.Nov.10",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "veg.nov.10",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.nov.10",
+                  "missing_cells": 152,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Status.Nov.18",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 6
+                },
+                {
+                  "name": "veg.nov.18",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Infect.status.nov.18",
+                  "missing_cells": 175,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Ever.dis",
+                  "missing_cells": 172,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/README.md",
+          "tables": []
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_death_data.xlsx",
+          "tables": [
+            {
+              "name": "seedling inoculation- death dat",
+              "role": "observations",
+              "rows": 173,
+              "columns": 8,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 7
+                },
+                {
+                  "name": "temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "smut exposure",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "time",
+                  "missing_cells": 0,
+                  "literal_na_cells": 35,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "replicate",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "family",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "dead",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 1
+                },
+                {
+                  "name": "year",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 8,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                },
+                {
+                  "name": "explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_infection_data.xlsx",
+          "tables": [
+            {
+              "name": "seedling inoculation- infection",
+              "role": "observations",
+              "rows": 1112,
+              "columns": 10,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "Date",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 61
+                },
+                {
+                  "name": "Temperature",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Smut Exposure",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Time",
+                  "missing_cells": 0,
+                  "literal_na_cells": 220,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Rep",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 3
+                },
+                {
+                  "name": "Family",
+                  "missing_cells": 0,
+                  "literal_na_cells": 2,
+                  "distinct_nonblank": 5
+                },
+                {
+                  "name": "Disease Status",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 4
+                },
+                {
+                  "name": "Observer",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "year",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 2
+                },
+                {
+                  "name": "Comments",
+                  "missing_cells": 1112,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 0
+                }
+              ]
+            },
+            {
+              "name": "read me",
+              "role": "documentation",
+              "rows": 9,
+              "columns": 2,
+              "formula_cells": 0,
+              "fields": [
+                {
+                  "name": "column",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                },
+                {
+                  "name": "explaination",
+                  "missing_cells": 0,
+                  "literal_na_cells": 0,
+                  "distinct_nonblank": 9
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

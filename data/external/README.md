@@ -42,6 +42,10 @@ linkage requirement. The datasets must be evaluated independently before
 scientific modelling, especially where dose units, targets, treatments, and
 experimental units differ.
 
+The [structural profile](PROFILE.md) inventories worksheet variables, source
+record counts, blank cells, and literal `NA` codes in a reproducible JSON file.
+It also records scientific caveats discovered during the first source review.
+
 ## Source awaiting direct access
 
 Meng (2021), [10.17632/97bfppx7c2.1](https://doi.org/10.17632/97bfppx7c2.1),
