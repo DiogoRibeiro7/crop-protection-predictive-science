@@ -76,3 +76,9 @@ within the same trial, while retaining the trial-unit uncertainty.
 The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphid_dryad_units.md)
 separates controlled cohort records, field repeat measurements, laboratory
 assay batches, greenhouse plant records, and longitudinal field observations.
+
+The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
+turns these audits into explicit table-level permissions: descriptive checks
+that are currently safe, inferential analyses awaiting protocol evidence, and
+prohibited assumptions. Its validation command fails closed on changed sources
+or reports, missing tables, and unsupported permissions.

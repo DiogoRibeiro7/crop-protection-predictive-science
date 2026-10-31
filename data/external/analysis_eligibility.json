@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "contract_status": "protocol_review_pending",
+  "evidence_sha256": {
+    "data/external/manifest.json": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+    "data/external/profile.json": "53c19054eee0245cf798b7ce788ce1761b94c3c4ecb18f09dd44970f4cc6231b",
+    "results/external_wheat_pairability.json": "39b941b1b6db4bc9dd56260f71cccca51bdc9cc28715c64aa97c621426ad800a",
+    "results/external_aphid_dryad_units.json": "51a49575be5eb8a3889f3dcc6707aeb29077b2f869cf8049d696bec0743f9d87"
+  },
+  "policies": {
+    "wheat_field": {
+      "allowed": ["structural_inventory", "matched_endpoint_coverage"],
+      "requires_protocol": {
+        "trial_level_treatment_effect": [
+          "reconcile_56_published_trials_vs_76_trial_ids",
+          "plot_replicate_identity",
+          "treatment_dictionary",
+          "endpoint_protocol"
+        ]
+      },
+      "blocked": [
+        "treat_observation_rows_as_independent_trials",
+        "cross_publication_candidate_linkage"
+      ]
+    },
+    "aphid_cohort": {
+      "allowed": ["structural_inventory", "condition_mortality_description"],
+      "requires_protocol": {
+        "binomial_temperature_interaction": [
+          "randomized_exposure_unit",
+          "batch_and_replicate_identity",
+          "clustering_and_overdispersion_plan"
+        ]
+      },
+      "blocked": [
+        "individual_aphids_as_randomized_units",
+        "cross_publication_fungicide_efficacy"
+      ]
+    },
+    "aphid_field": {
+      "allowed": ["structural_inventory", "within_series_mortality_description"],
+      "requires_protocol": {
+        "field_treatment_effect": [
+          "experimental_plot_identity",
+          "treatment_allocation_protocol",
+          "field_date_reconciliation",
+          "repeated_measure_analysis_plan"
+        ]
+      },
+      "blocked": [
+        "treat_54_field_rows_as_independent_units",
+        "field_mortality_as_integer_dead_total_likelihood"
+      ]
+    },
+    "dryad_binomial_lab": {
+      "allowed": ["structural_inventory", "assay_count_description"],
+      "requires_protocol": {
+        "temperature_response_model": [
+          "run_and_chamber_allocation",
+          "temperature_replicate_independence",
+          "within_run_clustering_plan"
+        ]
+      },
+      "blocked": [
+        "counted_spores_as_randomized_units",
+        "cross_publication_candidate_linkage"
+      ]
+    },
+    "dryad_growth": {
+      "allowed": ["structural_inventory", "colony_count_description"],
+      "requires_protocol": {
+        "temperature_response_model": [
+          "run_and_chamber_allocation",
+          "nested_replicate_structure",
+          "strain_and_mating_type_plan"
+        ]
+      },
+      "blocked": [
+        "picture_id_as_unique_record_id",
+        "cross_publication_candidate_linkage"
+      ]
+    },
+    "dryad_greenhouse_infection": {
+      "allowed": ["structural_inventory", "disease_status_frequencies"],
+      "requires_protocol": {
+        "disease_risk_model": [
+          "plant_level_independence_or_identity",
+          "disease_status_codebook",
+          "family_and_replicate_clustering"
+        ]
+      },
+      "blocked": [
+        "link_infection_to_death_by_nonunique_fields",
+        "assume_identical_rows_are_duplicate_plants"
+      ]
+    },
+    "dryad_greenhouse_death": {
+      "allowed": ["structural_inventory", "death_case_tally"],
+      "requires_protocol": {
+        "plant_death_risk_model": [
+          "at_risk_plant_denominators",
+          "unique_plant_linkage",
+          "event_time_and_censoring_definition"
+        ]
+      },
+      "blocked": [
+        "mortality_rate_from_death_cases_only",
+        "link_to_infection_by_nonunique_fields"
+      ]
+    },
+    "dryad_field": {
+      "allowed": ["structural_inventory", "within_plant_status_description"],
+      "requires_protocol": {
+        "longitudinal_disease_model": [
+          "state_transition_codebook",
+          "death_and_censoring_handling",
+          "date_alignment"
+        ],
+        "temperature_causal_effect": [
+          "weather_quality_resolution",
+          "confounder_measurement",
+          "causal_identification_design"
+        ]
+      },
+      "blocked": [
+        "status_cells_as_independent_plants",
+        "pesticide_efficacy_from_pathogen_field"
+      ]
+    },
+    "dryad_summary": {
+      "allowed": ["structural_inventory", "aggregate_flowering_description"],
+      "requires_protocol": {
+        "weather_association_model": [
+          "aggregation_and_denominator_definitions",
+          "weather_quality_resolution",
+          "field_date_alignment"
+        ]
+      },
+      "blocked": ["summary_rows_as_new_individual_plants"]
+    },
+    "dryad_weather": {
+      "allowed": ["structural_inventory", "source_weather_quality_review"],
+      "requires_protocol": {
+        "weather_exposure_model": [
+          "resolve_missing_temperature",
+          "resolve_low_above_high",
+          "site_and_date_alignment"
+        ]
+      },
+      "blocked": ["unvalidated_weather_as_causal_exposure"]
+    }
+  },
+  "assets": [
+    {
+      "id": "wheat_field",
+      "source": "zenodo_wheat_fungicide_6521175",
+      "file": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+      "table": "basf-wheat-diseases.txt",
+      "policy": "wheat_field",
+      "rows": 2276,
+      "group_basis": "trial_id_codes",
+      "group_count": 76
+    },
+    {
+      "id": "aphid_experiment_1",
+      "source": "zenodo_aphid_pesticide_19805135",
+      "file": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+      "table": "Experiment1",
+      "policy": "aphid_cohort",
+      "rows": 36,
+      "group_basis": "condition_cells",
+      "group_count": 12
+    },
+    {
+      "id": "aphid_experiment_2",
+      "source": "zenodo_aphid_pesticide_19805135",
+      "file": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+      "table": "Experiment2",
+      "policy": "aphid_cohort",
+      "rows": 24,
+      "group_basis": "condition_cells",
+      "group_count": 8
+    },
+    {
+      "id": "aphid_experiment_3",
+      "source": "zenodo_aphid_pesticide_19805135",
+      "file": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+      "table": "Experiment3",
+      "policy": "aphid_cohort",
+      "rows": 180,
+      "group_basis": "condition_cells",
+      "group_count": 48
+    },
+    {
+      "id": "aphid_experiment_4",
+      "source": "zenodo_aphid_pesticide_19805135",
+      "file": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+      "table": "Experiment4",
+      "policy": "aphid_cohort",
+      "rows": 36,
+      "group_basis": "condition_cells",
+      "group_count": 12
+    },
+    {
+      "id": "aphid_experiment_5_field",
+      "source": "zenodo_aphid_pesticide_19805135",
+      "file": "zenodo_aphid_pesticide_19805135/Experiment.xlsx",
+      "table": "Experiment5",
+      "policy": "aphid_field",
+      "rows": 54,
+      "group_basis": "provisional_field_series",
+      "group_count": 27
+    },
+    {
+      "id": "dryad_germination",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Germination_data.xlsx",
+      "table": "Germination data",
+      "policy": "dryad_binomial_lab",
+      "rows": 84,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_conjugation_2",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_2.xlsx",
+      "table": "Conjugation Data strain 2",
+      "policy": "dryad_binomial_lab",
+      "rows": 84,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_conjugation_3",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_3.xlsx",
+      "table": "Conjugation Data strain 3",
+      "policy": "dryad_binomial_lab",
+      "rows": 84,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_conjugation_4",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Conjugation_Data_strain_4.xlsx",
+      "table": "Conjugation Data strain 4",
+      "policy": "dryad_binomial_lab",
+      "rows": 84,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_growth_2",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_2.xlsx",
+      "table": "Growth data strain 2",
+      "policy": "dryad_growth",
+      "rows": 168,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_growth_3",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_3.xlsx",
+      "table": "Growth data strain 3",
+      "policy": "dryad_growth",
+      "rows": 168,
+      "group_basis": "temperature_run_groups",
+      "group_count": 30
+    },
+    {
+      "id": "dryad_growth_4",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Growth_data_strain_4.xlsx",
+      "table": "Growth data strain 4",
+      "policy": "dryad_growth",
+      "rows": 168,
+      "group_basis": "temperature_run_groups",
+      "group_count": 28
+    },
+    {
+      "id": "dryad_greenhouse_infection",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_infection_data.xlsx",
+      "table": "seedling inoculation- infection",
+      "policy": "dryad_greenhouse_infection",
+      "rows": 1112,
+      "group_basis": "recorded_design_cells",
+      "group_count": 852
+    },
+    {
+      "id": "dryad_greenhouse_death",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/seedling_inoculation-_death_data.xlsx",
+      "table": "seedling inoculation- death dat",
+      "policy": "dryad_greenhouse_death",
+      "rows": 173,
+      "group_basis": "recorded_design_cells",
+      "group_count": 115
+    },
+    {
+      "id": "dryad_field_plants",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/Raw_field_data.xlsx",
+      "table": "Sheet1",
+      "policy": "dryad_field",
+      "rows": 178,
+      "group_basis": "unique_row_position_pairs",
+      "group_count": 178
+    },
+    {
+      "id": "dryad_flowering_summary",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/flower_summary_data.xlsx",
+      "table": "flower summary data",
+      "policy": "dryad_summary",
+      "rows": 27,
+      "group_basis": "summary_dates",
+      "group_count": 27
+    },
+    {
+      "id": "dryad_daily_weather",
+      "source": "dryad_pathogen_temperature_4mw6m90jv",
+      "file": "dryad_pathogen_temperature_4mw6m90jv/daily_high_temps.txt",
+      "table": "daily_high_temps.txt",
+      "policy": "dryad_weather",
+      "rows": 214,
+      "group_basis": "weather_dates",
+      "group_count": 214
+    }
+  ]
+}
