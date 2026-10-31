@@ -1,0 +1,1268 @@
+{
+  "source_doi": "10.5281/zenodo.6521175",
+  "source_path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "source_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "schema_version": 1,
+  "pairing_fields": [
+    "TrialId",
+    "Date",
+    "Daft",
+    "GsFrom",
+    "GsTo",
+    "Organism",
+    "Parameter",
+    "Clarifier",
+    "Method",
+    "SampleUnit",
+    "PlantPart"
+  ],
+  "source_rows": 2276,
+  "trial_id_count": 76,
+  "endpoint_groups": 1164,
+  "paired_endpoint_groups": 921,
+  "paired_untreated_records": 921,
+  "paired_treated_records": 1112,
+  "unpaired_untreated_records": 239,
+  "unpaired_treated_records": 4,
+  "ambiguous_endpoint_groups": 0,
+  "ambiguous_records": 0,
+  "paired_by_parameter": {
+    "ERTRNE": {
+      "groups": 142,
+      "treated": 174
+    },
+    "INFECT": {
+      "groups": 779,
+      "treated": 938
+    }
+  },
+  "paired_by_treatment": {
+    "TreatmentA": 735,
+    "TreatmentB": 23,
+    "TreatmentC": 303,
+    "TreatmentD": 51
+  },
+  "paired_arm_multiplicity": {
+    "1": 760,
+    "2": 131,
+    "3": 30
+  },
+  "unpaired_treated_endpoints": [
+    {
+      "TrialId": "17",
+      "Date": "2017-07-05",
+      "Daft": "48",
+      "GsFrom": "83",
+      "GsTo": "85",
+      "Organism": "PUCCRT",
+      "Parameter": "INFECT",
+      "Clarifier": "INFECT % NR",
+      "Method": "P%INF",
+      "SampleUnit": "TPLOT",
+      "PlantPart": "LEAF, 1ST / FLAG LEAF",
+      "Treatment": "TreatmentC"
+    },
+    {
+      "TrialId": "17",
+      "Date": "2017-07-05",
+      "Daft": "48",
+      "GsFrom": "83",
+      "GsTo": "85",
+      "Organism": "PUCCRT",
+      "Parameter": "INFECT",
+      "Clarifier": "INFECT % NR",
+      "Method": "P%INF",
+      "SampleUnit": "TPLOT",
+      "PlantPart": "LEAF, 2ND",
+      "Treatment": "TreatmentC"
+    },
+    {
+      "TrialId": "70",
+      "Date": "2019-05-25",
+      "Daft": "32",
+      "GsFrom": "45",
+      "GsTo": "47",
+      "Organism": "PUCCST",
+      "Parameter": "INFECT",
+      "Clarifier": "INF % NR",
+      "Method": "P%INF",
+      "SampleUnit": "TPLOT",
+      "PlantPart": "LEAF, 4TH",
+      "Treatment": "TreatmentA"
+    },
+    {
+      "TrialId": "70",
+      "Date": "2019-05-25",
+      "Daft": "32",
+      "GsFrom": "45",
+      "GsTo": "47",
+      "Organism": "SEPTTR",
+      "Parameter": "INFECT",
+      "Clarifier": "INF % NR",
+      "Method": "P%INF",
+      "SampleUnit": "TPLOT",
+      "PlantPart": "LEAF, 4TH",
+      "Treatment": "TreatmentA"
+    }
+  ],
+  "ambiguous_endpoints": [],
+  "trial_summary": [
+    {
+      "trial_id": "1",
+      "country": "GERMANY",
+      "year": 2017,
+      "source_rows": 28,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 13,
+      "paired_treated_records": 13,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "2",
+      "country": "GERMANY",
+      "year": 2017,
+      "source_rows": 25,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "3",
+      "country": "AUSTRIA",
+      "year": 2017,
+      "source_rows": 28,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentB",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 7,
+      "paired_treated_records": 21,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "4",
+      "country": "GERMANY",
+      "year": 2017,
+      "source_rows": 37,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 17,
+      "paired_treated_records": 17,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "5",
+      "country": "GERMANY",
+      "year": 2017,
+      "source_rows": 86,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 28,
+      "paired_treated_records": 56,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "6",
+      "country": "FRANCE",
+      "year": 2017,
+      "source_rows": 19,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 8,
+      "paired_treated_records": 8,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "7",
+      "country": "FRANCE",
+      "year": 2017,
+      "source_rows": 13,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 4,
+      "paired_treated_records": 4,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "8",
+      "country": "FRANCE",
+      "year": 2017,
+      "source_rows": 22,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 4,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "9",
+      "country": "FRANCE",
+      "year": 2017,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 7,
+      "paired_treated_records": 14,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "10",
+      "country": "FRANCE",
+      "year": 2017,
+      "source_rows": 21,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 9,
+      "paired_treated_records": 9,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "11",
+      "country": "NETHERLANDS",
+      "year": 2017,
+      "source_rows": 43,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentB",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 30,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "12",
+      "country": "POLAND",
+      "year": 2017,
+      "source_rows": 30,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 14,
+      "paired_treated_records": 14,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "13",
+      "country": "POLAND",
+      "year": 2017,
+      "source_rows": 14,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "14",
+      "country": "POLAND",
+      "year": 2017,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 12,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "15",
+      "country": "POLAND",
+      "year": 2017,
+      "source_rows": 21,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "16",
+      "country": "POLAND",
+      "year": 2017,
+      "source_rows": 79,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 26,
+      "paired_treated_records": 52,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "17",
+      "country": "UNITED KINGDOM",
+      "year": 2017,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 2,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "18",
+      "country": "UNITED KINGDOM",
+      "year": 2017,
+      "source_rows": 27,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 7,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "19",
+      "country": "UNITED KINGDOM",
+      "year": 2017,
+      "source_rows": 47,
+      "treatment_labels": [
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 19,
+      "paired_treated_records": 19,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 9,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "20",
+      "country": "UNITED KINGDOM",
+      "year": 2017,
+      "source_rows": 84,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 26,
+      "paired_treated_records": 52,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 6,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "21",
+      "country": "GERMANY",
+      "year": 2018,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "22",
+      "country": "GERMANY",
+      "year": 2018,
+      "source_rows": 12,
+      "treatment_labels": [
+        "TreatmentB",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "23",
+      "country": "FRANCE",
+      "year": 2018,
+      "source_rows": 19,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 8,
+      "paired_treated_records": 8,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "24",
+      "country": "NETHERLANDS",
+      "year": 2018,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 12,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "25",
+      "country": "POLAND",
+      "year": 2018,
+      "source_rows": 34,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 16,
+      "paired_treated_records": 16,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "26",
+      "country": "POLAND",
+      "year": 2018,
+      "source_rows": 65,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 30,
+      "paired_treated_records": 30,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "27",
+      "country": "POLAND",
+      "year": 2018,
+      "source_rows": 22,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "28",
+      "country": "UNITED KINGDOM",
+      "year": 2018,
+      "source_rows": 32,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 13,
+      "paired_treated_records": 13,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 6,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "29",
+      "country": "UNITED KINGDOM",
+      "year": 2018,
+      "source_rows": 29,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 11,
+      "paired_treated_records": 11,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 7,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "30",
+      "country": "UNITED KINGDOM",
+      "year": 2018,
+      "source_rows": 28,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 11,
+      "paired_treated_records": 11,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 6,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "31",
+      "country": "BULGARIA",
+      "year": 2019,
+      "source_rows": 32,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 16,
+      "paired_treated_records": 16,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "32",
+      "country": "BULGARIA",
+      "year": 2019,
+      "source_rows": 30,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 15,
+      "paired_treated_records": 15,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "33",
+      "country": "BULGARIA",
+      "year": 2019,
+      "source_rows": 36,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 18,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "34",
+      "country": "BULGARIA",
+      "year": 2019,
+      "source_rows": 38,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 19,
+      "paired_treated_records": 19,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "35",
+      "country": "CZECH REPUBLIC",
+      "year": 2019,
+      "source_rows": 69,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 30,
+      "paired_treated_records": 30,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 9,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "36",
+      "country": "GERMANY",
+      "year": 2019,
+      "source_rows": 31,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 15,
+      "paired_treated_records": 15,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "37",
+      "country": "GERMANY",
+      "year": 2019,
+      "source_rows": 48,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 20,
+      "paired_treated_records": 20,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 8,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "38",
+      "country": "GERMANY",
+      "year": 2019,
+      "source_rows": 34,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 13,
+      "paired_treated_records": 13,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 8,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "39",
+      "country": "GERMANY",
+      "year": 2019,
+      "source_rows": 39,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 18,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "40",
+      "country": "DENMARK",
+      "year": 2019,
+      "source_rows": 17,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 8,
+      "paired_treated_records": 8,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "41",
+      "country": "DENMARK",
+      "year": 2019,
+      "source_rows": 11,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 5,
+      "paired_treated_records": 5,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "42",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 11,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 4,
+      "paired_treated_records": 4,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "43",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 15,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "44",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 17,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "45",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 29,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 9,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "46",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 8,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 4,
+      "paired_treated_records": 4,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "47",
+      "country": "FRANCE",
+      "year": 2019,
+      "source_rows": 12,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "48",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 43,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 20,
+      "paired_treated_records": 20,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "49",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 31,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 15,
+      "paired_treated_records": 15,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "50",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 12,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 5,
+      "paired_treated_records": 5,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "51",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 36,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 18,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "52",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 32,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 16,
+      "paired_treated_records": 16,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "53",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 23,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "54",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 27,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 12,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "55",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 11,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 5,
+      "paired_treated_records": 5,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "56",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 31,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 13,
+      "paired_treated_records": 13,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "57",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 23,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 3,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "58",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 21,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "59",
+      "country": "POLAND",
+      "year": 2019,
+      "source_rows": 13,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "60",
+      "country": "ROMANIA",
+      "year": 2019,
+      "source_rows": 44,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 22,
+      "paired_treated_records": 22,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "61",
+      "country": "ROMANIA",
+      "year": 2019,
+      "source_rows": 38,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 19,
+      "paired_treated_records": 19,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "62",
+      "country": "SLOWAKIA",
+      "year": 2019,
+      "source_rows": 18,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 9,
+      "paired_treated_records": 9,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 0,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "63",
+      "country": "SLOWAKIA",
+      "year": 2019,
+      "source_rows": 13,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 1,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "64",
+      "country": "SLOWAKIA",
+      "year": 2019,
+      "source_rows": 20,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 9,
+      "paired_treated_records": 9,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "65",
+      "country": "IRELAND",
+      "year": 2019,
+      "source_rows": 26,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 12,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "66",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 33,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 12,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 9,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "67",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 32,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 15,
+      "paired_treated_records": 15,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "68",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 10,
+      "paired_treated_records": 10,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 4,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "69",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 38,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 14,
+      "paired_treated_records": 14,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 10,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "70",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 6,
+      "unpaired_treated_records": 2,
+      "unpaired_untreated_records": 10,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "71",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 34,
+      "treatment_labels": [
+        "TreatmentA",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 14,
+      "paired_treated_records": 14,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 6,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "72",
+      "country": "IRELAND",
+      "year": 2019,
+      "source_rows": 31,
+      "treatment_labels": [
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 9,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 4,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "73",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 50,
+      "treatment_labels": [
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 14,
+      "paired_treated_records": 28,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 8,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "74",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 24,
+      "treatment_labels": [
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 6,
+      "paired_treated_records": 12,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 6,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "75",
+      "country": "UNITED KINGDOM",
+      "year": 2019,
+      "source_rows": 32,
+      "treatment_labels": [
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 9,
+      "paired_treated_records": 18,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 5,
+      "ambiguous_records": 0
+    },
+    {
+      "trial_id": "76",
+      "country": "UNITED KINGDOM",
+      "year": 2017,
+      "source_rows": 30,
+      "treatment_labels": [
+        "TreatmentA",
+        "TreatmentC",
+        "TreatmentD",
+        "Untreated"
+      ],
+      "paired_endpoint_groups": 7,
+      "paired_treated_records": 21,
+      "unpaired_treated_records": 0,
+      "unpaired_untreated_records": 2,
+      "ambiguous_records": 0
+    }
+  ]
+}

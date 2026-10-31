@@ -68,3 +68,7 @@ cells, which must not be interpreted as missing disease outcomes.
 The source-specific licensing and DOIs remain in [README.md](README.md) and
 `manifest.json`. The blocked Mendeley source remains excluded until its files
 can be obtained through an authorized download.
+
+The [wheat endpoint pairability audit](../../docs/external_wheat_pairability.md)
+assesses which treated measurements have a comparable untreated observation
+within the same trial, while retaining the trial-unit uncertainty.
