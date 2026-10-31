@@ -1,0 +1,1035 @@
+{
+  "source_doi": "10.5281/zenodo.6521175",
+  "source_path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "source_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "schema_version": 1,
+  "source_rows": 2276,
+  "trial_id_count": 76,
+  "geocode_count": 56,
+  "geocode_year_count": 65,
+  "shared_geocode_year_count": 9,
+  "trial_ids_in_shared_geocode_years": 20,
+  "pairwise_comparison_count": 14,
+  "pairs_with_common_date": 10,
+  "pairs_with_common_assessment_signature": 3,
+  "pairs_with_identical_records_except_trial_id": 3,
+  "pairwise_identical_record_matches": 22,
+  "pairs_with_common_nonuntreated_treatment_label": 12,
+  "assessment_signature_fields_without_trial_id": [
+    "Date",
+    "Daft",
+    "GsFrom",
+    "GsTo",
+    "Organism",
+    "Parameter",
+    "Clarifier",
+    "Method",
+    "SampleUnit",
+    "PlantPart"
+  ],
+  "exact_record_comparison_fields_without_trial_id": [
+    "Country",
+    "Latitude",
+    "Longitude",
+    "Date",
+    "Daft",
+    "GsFrom",
+    "GsTo",
+    "NumSprays",
+    "Treatment",
+    "Organism",
+    "Parameter",
+    "Clarifier",
+    "Method",
+    "SampleUnit",
+    "PlantPart",
+    "Value"
+  ],
+  "shared_geocode_years": [
+    {
+      "country": "BULGARIA",
+      "latitude": "43.3",
+      "longitude": "25.0",
+      "year": 2019,
+      "trial_ids": [
+        "31",
+        "32",
+        "33",
+        "34"
+      ],
+      "trials": [
+        {
+          "trial_id": "31",
+          "rows": 32,
+          "observation_dates": [
+            "2019-05-02",
+            "2019-05-12",
+            "2019-05-22",
+            "2019-06-01",
+            "2019-06-07",
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 16,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRE",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "32",
+          "rows": 30,
+          "observation_dates": [
+            "2019-05-02",
+            "2019-05-12",
+            "2019-05-22",
+            "2019-06-01",
+            "2019-06-07",
+            "2019-06-10",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 15,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRE",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "33",
+          "rows": 36,
+          "observation_dates": [
+            "2019-05-15",
+            "2019-05-25",
+            "2019-06-04",
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 18,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "34",
+          "rows": 38,
+          "observation_dates": [
+            "2019-05-15",
+            "2019-05-25",
+            "2019-06-04",
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 19,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "31",
+            "32"
+          ],
+          "shared_dates": [
+            "2019-05-02",
+            "2019-05-12",
+            "2019-05-22",
+            "2019-06-01",
+            "2019-06-07",
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 13,
+          "shared_arm_assessment_signatures": 26,
+          "identical_records_except_trial_id": 8,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "PUCCRE",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_ids": [
+            "31",
+            "33"
+          ],
+          "shared_dates": [
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_ids": [
+            "31",
+            "34"
+          ],
+          "shared_dates": [
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_ids": [
+            "32",
+            "33"
+          ],
+          "shared_dates": [
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_ids": [
+            "32",
+            "34"
+          ],
+          "shared_dates": [
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_ids": [
+            "33",
+            "34"
+          ],
+          "shared_dates": [
+            "2019-05-15",
+            "2019-05-25",
+            "2019-06-04",
+            "2019-06-11",
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 17,
+          "shared_arm_assessment_signatures": 34,
+          "identical_records_except_trial_id": 11,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "48.0",
+      "longitude": "1.8",
+      "year": 2017,
+      "trial_ids": [
+        "8",
+        "10"
+      ],
+      "trials": [
+        {
+          "trial_id": "8",
+          "rows": 22,
+          "observation_dates": [
+            "2017-05-24",
+            "2017-05-31",
+            "2017-06-07",
+            "2017-06-14",
+            "2017-07-15"
+          ],
+          "distinct_assessment_signatures": 10,
+          "treatment_labels": [
+            "TreatmentA",
+            "TreatmentC",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "10",
+          "rows": 21,
+          "observation_dates": [
+            "2017-05-11",
+            "2017-06-02",
+            "2017-06-08",
+            "2017-06-22",
+            "2017-07-12"
+          ],
+          "distinct_assessment_signatures": 12,
+          "treatment_labels": [
+            "TreatmentC",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "8",
+            "10"
+          ],
+          "shared_dates": [],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentC",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "FRANCE",
+      "latitude": "49.8",
+      "longitude": "2.9",
+      "year": 2019,
+      "trial_ids": [
+        "43",
+        "47"
+      ],
+      "trials": [
+        {
+          "trial_id": "43",
+          "rows": 15,
+          "observation_dates": [
+            "2019-05-13",
+            "2019-06-03",
+            "2019-06-20",
+            "2019-07-25"
+          ],
+          "distinct_assessment_signatures": 9,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "47",
+          "rows": 12,
+          "observation_dates": [
+            "2019-06-14",
+            "2019-06-26",
+            "2019-07-18"
+          ],
+          "distinct_assessment_signatures": 6,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "43",
+            "47"
+          ],
+          "shared_dates": [],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "IRELAND",
+      "latitude": "51.9",
+      "longitude": "-8.3",
+      "year": 2019,
+      "trial_ids": [
+        "65",
+        "72"
+      ],
+      "trials": [
+        {
+          "trial_id": "65",
+          "rows": 26,
+          "observation_dates": [
+            "2019-04-23",
+            "2019-05-13",
+            "2019-05-22",
+            "2019-06-03",
+            "2019-06-12",
+            "2019-06-22",
+            "2019-07-02",
+            "2019-08-02"
+          ],
+          "distinct_assessment_signatures": 14,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "72",
+          "rows": 31,
+          "observation_dates": [
+            "2019-05-10",
+            "2019-05-20",
+            "2019-05-30",
+            "2019-06-10",
+            "2019-06-20",
+            "2019-06-30",
+            "2019-08-08"
+          ],
+          "distinct_assessment_signatures": 13,
+          "treatment_labels": [
+            "TreatmentC",
+            "TreatmentD",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "65",
+            "72"
+          ],
+          "shared_dates": [],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "50.3",
+      "longitude": "18.5",
+      "year": 2019,
+      "trial_ids": [
+        "51",
+        "56"
+      ],
+      "trials": [
+        {
+          "trial_id": "51",
+          "rows": 36,
+          "observation_dates": [
+            "2019-06-03",
+            "2019-06-13",
+            "2019-06-23",
+            "2019-07-25"
+          ],
+          "distinct_assessment_signatures": 18,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "ERYSGR",
+            "NNNNN",
+            "PUCCRT",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "56",
+          "rows": 31,
+          "observation_dates": [
+            "2019-05-30",
+            "2019-06-09",
+            "2019-06-19",
+            "2019-06-28",
+            "2019-07-25"
+          ],
+          "distinct_assessment_signatures": 18,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "ERYSGR",
+            "NNNNN",
+            "PUCCRE",
+            "PUCCST",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "51",
+            "56"
+          ],
+          "shared_dates": [
+            "2019-07-25"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "ERYSGR",
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "52.1",
+      "longitude": "17.2",
+      "year": 2019,
+      "trial_ids": [
+        "50",
+        "55"
+      ],
+      "trials": [
+        {
+          "trial_id": "50",
+          "rows": 12,
+          "observation_dates": [
+            "2019-05-24",
+            "2019-06-03",
+            "2019-06-13",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 7,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "55",
+          "rows": 11,
+          "observation_dates": [
+            "2019-05-21",
+            "2019-05-31",
+            "2019-06-11",
+            "2019-06-17",
+            "2019-07-02"
+          ],
+          "distinct_assessment_signatures": 6,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "50",
+            "55"
+          ],
+          "shared_dates": [
+            "2019-07-02"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "POLAND",
+      "latitude": "53.2",
+      "longitude": "17.7",
+      "year": 2019,
+      "trial_ids": [
+        "53",
+        "57"
+      ],
+      "trials": [
+        {
+          "trial_id": "53",
+          "rows": 23,
+          "observation_dates": [
+            "2019-05-30",
+            "2019-06-10",
+            "2019-06-20",
+            "2019-07-20"
+          ],
+          "distinct_assessment_signatures": 13,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "PUCCST",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "57",
+          "rows": 23,
+          "observation_dates": [
+            "2019-05-30",
+            "2019-06-10",
+            "2019-06-20",
+            "2019-07-20"
+          ],
+          "distinct_assessment_signatures": 13,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "PUCCST",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "53",
+            "57"
+          ],
+          "shared_dates": [
+            "2019-05-30",
+            "2019-06-10",
+            "2019-06-20",
+            "2019-07-20"
+          ],
+          "shared_assessment_signatures": 13,
+          "shared_arm_assessment_signatures": 23,
+          "identical_records_except_trial_id": 3,
+          "shared_treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "PUCCST",
+            "PYRNTR",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "51.7",
+      "longitude": "-1.9",
+      "year": 2017,
+      "trial_ids": [
+        "18",
+        "76"
+      ],
+      "trials": [
+        {
+          "trial_id": "18",
+          "rows": 27,
+          "observation_dates": [
+            "2017-05-19",
+            "2017-05-26",
+            "2017-06-06",
+            "2017-06-21",
+            "2017-07-04",
+            "2017-08-29"
+          ],
+          "distinct_assessment_signatures": 17,
+          "treatment_labels": [
+            "TreatmentC",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "76",
+          "rows": 30,
+          "observation_dates": [
+            "2017-06-01",
+            "2017-06-22",
+            "2017-07-04",
+            "2017-08-29"
+          ],
+          "distinct_assessment_signatures": 9,
+          "treatment_labels": [
+            "TreatmentA",
+            "TreatmentC",
+            "TreatmentD",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "18",
+            "76"
+          ],
+          "shared_dates": [
+            "2017-07-04",
+            "2017-08-29"
+          ],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "TreatmentC",
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "PUCCRT",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UNITED KINGDOM",
+      "latitude": "52.0",
+      "longitude": "-2.2",
+      "year": 2019,
+      "trial_ids": [
+        "71",
+        "75"
+      ],
+      "trials": [
+        {
+          "trial_id": "71",
+          "rows": 34,
+          "observation_dates": [
+            "2019-04-30",
+            "2019-05-09",
+            "2019-05-22",
+            "2019-05-31",
+            "2019-06-07",
+            "2019-08-12"
+          ],
+          "distinct_assessment_signatures": 20,
+          "treatment_labels": [
+            "TreatmentA",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "PUCCST",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        },
+        {
+          "trial_id": "75",
+          "rows": 32,
+          "observation_dates": [
+            "2019-05-13",
+            "2019-05-23",
+            "2019-06-04",
+            "2019-06-13",
+            "2019-06-25",
+            "2019-08-22"
+          ],
+          "distinct_assessment_signatures": 14,
+          "treatment_labels": [
+            "TreatmentC",
+            "TreatmentD",
+            "Untreated"
+          ],
+          "organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ],
+      "pairwise_comparisons": [
+        {
+          "trial_ids": [
+            "71",
+            "75"
+          ],
+          "shared_dates": [],
+          "shared_assessment_signatures": 0,
+          "shared_arm_assessment_signatures": 0,
+          "identical_records_except_trial_id": 0,
+          "shared_treatment_labels": [
+            "Untreated"
+          ],
+          "shared_organisms": [
+            "NNNNN",
+            "SEPTTR"
+          ],
+          "shared_parameters": [
+            "ERTRNE",
+            "INFECT"
+          ]
+        }
+      ]
+    }
+  ]
+}

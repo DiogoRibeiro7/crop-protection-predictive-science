@@ -83,3 +83,8 @@ values at shared geocodes, and treatment/product dictionaries.
 
 No 76-to-56 mapping is asserted here. In particular, **never collapse all
 records sharing a 0.1° geocode into an experimental unit**.
+
+A subsequent [collision fingerprint audit](external_wheat_collision_fingerprints.md)
+examines the nine shared geocode–years more closely. Three trial-ID pairs
+share exact records after excluding only `TrialId`; this strengthens the
+need for an original plot and trial dictionary, without resolving it.

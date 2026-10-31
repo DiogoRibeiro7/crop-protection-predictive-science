@@ -78,6 +78,11 @@ finds 56 rounded country–coordinate combinations, 65 geocode–years, and 76
 distinct `TrialId` codes. The match to the publisher's *56 trials* title is
 suggestive, but cannot establish unique physical fields or plot replicates.
 
+The [cross-ID collision fingerprint audit](../../docs/external_wheat_collision_fingerprints.md)
+compares dates, endpoint signatures and exact raw records within the nine
+shared geocode–years. It finds overlap but does not reclassify records as
+duplicate experimental units.
+
 The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphid_dryad_units.md)
 separates controlled cohort records, field repeat measurements, laboratory
 assay batches, greenhouse plant records, and longitudinal field observations.
