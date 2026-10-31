@@ -46,6 +46,11 @@ evidence for the 56-versus-76 question: 56 recorded geocodes but 65
 geocode–years and 76 trial codes. This finding does not clear the protocol
 gate for trial-level inference.
 
+The [cross-ID collision fingerprint audit](external_wheat_collision_fingerprints.md)
+finds 22 exact pairwise record matches once `TrialId` is excluded. These are
+not automatically duplicate plots; the source's allocation and replicate
+protocol remain necessary.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:
