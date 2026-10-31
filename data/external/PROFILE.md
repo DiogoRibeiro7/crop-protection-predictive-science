@@ -72,3 +72,7 @@ can be obtained through an authorized download.
 The [wheat endpoint pairability audit](../../docs/external_wheat_pairability.md)
 assesses which treated measurements have a comparable untreated observation
 within the same trial, while retaining the trial-unit uncertainty.
+
+The [aphid and fungal-pathogen experimental-unit audit](../../docs/external_aphid_dryad_units.md)
+separates controlled cohort records, field repeat measurements, laboratory
+assay batches, greenhouse plant records, and longitudinal field observations.
