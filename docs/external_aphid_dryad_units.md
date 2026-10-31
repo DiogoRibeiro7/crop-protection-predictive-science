@@ -141,6 +141,11 @@ analyses; they do not restore the missing individual-plant links.
   and one row with recorded `Low` greater than `High`. These are kept
   visible, with no imputation or correction in the source data.
 
+The [longitudinal field-panel audit](external_dryad_field_panel.md) additionally
+verifies the 27-visit date alignment, inventories all literal status labels
+(including mixed and unlisted source codes), and identifies the exact weather
+anomaly dates without creating disease transitions or new experimental units.
+
 ## What these data currently support
 
 The imported data can support descriptive, source-specific analysis with
