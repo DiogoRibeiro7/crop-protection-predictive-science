@@ -63,6 +63,12 @@ Experiments 1–4. They preserve source time labels, record-count imbalance and
 cohort totals without treating pooled fractions as treatment effects; the
 field worksheet and all protocol-gated models remain excluded.
 
+The [aphid field paired-series exports](external_aphid_field_pairs.md) exercise
+the narrower `within_series_mortality_description` permission for Experiment
+5. They retain all 27 provisional day-3/day-7 pairs, literal rate strings,
+and unverified date serials without claiming a treatment effect, independent
+plot count, or compatibility with the controlled aphid cohorts.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

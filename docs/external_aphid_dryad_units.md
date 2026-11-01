@@ -85,6 +85,12 @@ while Xinxiang uses `41414`. These raw serials are preserved in the audit.
 They need source-level validation before treating the records as a common
 calendar-period field trial; this report does not silently amend the dates.
 
+The [paired field-follow-up exports](external_aphid_field_pairs.md) preserve
+all 27 provisional day-3/day-7 series and their reported mortality-rate
+differences. They also flag that each pair's nominal visits have the same
+recorded source `Date` serial. These are descriptive changes, not pesticide
+effect estimates or verified independent plots.
+
 ## Dryad pathogen experiments
 
 ### Laboratory assays

@@ -92,6 +92,11 @@ aggregate only the four permitted `DEAD`/`TOTAL` worksheets by their literal
 experimental conditions. The fifth, field-design worksheet is not combined
 with these counts.
 
+The [field-follow-up paired tables](../../docs/external_aphid_field_pairs.md)
+retain both `Experiment5` visits for each of its 27 provisional series and
+compute only the observed day-7 minus day-3 mortality-rate difference. No
+sampling calendar, randomized plot assignment, or treatment effect is inferred.
+
 The [Dryad field-panel audit](../../docs/external_dryad_field_panel.md)
 reconciles the original field-status header dates, flower-summary dates and
 weather observations; catalogs source status strings without recoding them;
