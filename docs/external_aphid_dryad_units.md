@@ -123,6 +123,11 @@ The source's `Run.Num` and `Temp.Rep` labels make within-batch dependence
 observable. A temperature-run group with three assay records is not
 automatically three independent experimental assignments.
 
+The [Dryad germination and conjugation descriptive tables](external_dryad_lab_assay_descriptives.md)
+preserve the nested `Rep` labels and report original counted numerator and
+denominator totals by recorded temperature/run group. They exclude the growth
+workbooks and make no claims about independent chambers or heat effects.
+
 ### Greenhouse seedlings
 
 - Infection workbook: **1,112 scored rows** in **852 recorded design cells**
