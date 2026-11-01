@@ -102,6 +102,11 @@ reconciles the original field-status header dates, flower-summary dates and
 weather observations; catalogs source status strings without recoding them;
 and locates the two known weather anomalies on the calendar.
 
+The [Dryad germination/conjugation descriptive exports](../../docs/external_dryad_lab_assay_descriptives.md)
+retain the original run and replicate labels in four distinct source-assay
+tables. They sum recorded numerator/denominator counts within each
+temperature/run label but do not estimate independent temperature effects.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and

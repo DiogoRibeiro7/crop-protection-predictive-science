@@ -1,0 +1,1955 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "analysis": "assay_count_description",
+  "assay_unit": "recorded_assay_row",
+  "aggregation_group": [
+    "Temperature",
+    "Temp.Rep",
+    "Run.Num"
+  ],
+  "assays": {
+    "germination": {
+      "source_file": "Germination_data.xlsx",
+      "assay_type": "germination",
+      "source_success_field": "Sum.Germ",
+      "group_fields": [
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num"
+      ],
+      "source_record_count": 84,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "source_rows_per_temperature_run": {
+        "3": 28
+      },
+      "source_total_count": 11174,
+      "source_success_count": 6774,
+      "groups": [
+        {
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 862,
+          "source_success_count": 128,
+          "pooled_recorded_success_fraction": 0.1484918794,
+          "min_source_assay_fraction": 0.047619048,
+          "max_source_assay_fraction": 0.195121951
+        },
+        {
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 423,
+          "source_success_count": 3,
+          "pooled_recorded_success_fraction": 0.0070921986,
+          "min_source_assay_fraction": 0.006493506,
+          "max_source_assay_fraction": 0.008403361
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 564,
+          "source_success_count": 7,
+          "pooled_recorded_success_fraction": 0.0124113475,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.019323671
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 320,
+          "source_success_count": 25,
+          "pooled_recorded_success_fraction": 0.078125,
+          "min_source_assay_fraction": 0.044247788,
+          "max_source_assay_fraction": 0.123809524
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 437,
+          "source_success_count": 211,
+          "pooled_recorded_success_fraction": 0.4828375286,
+          "min_source_assay_fraction": 0.357142857,
+          "max_source_assay_fraction": 0.563535912
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 366,
+          "source_success_count": 61,
+          "pooled_recorded_success_fraction": 0.1666666667,
+          "min_source_assay_fraction": 0.13,
+          "max_source_assay_fraction": 0.205673759
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 595,
+          "source_success_count": 564,
+          "pooled_recorded_success_fraction": 0.9478991597,
+          "min_source_assay_fraction": 0.924137931,
+          "max_source_assay_fraction": 0.967479675
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 344,
+          "source_success_count": 284,
+          "pooled_recorded_success_fraction": 0.8255813953,
+          "min_source_assay_fraction": 0.807407407,
+          "max_source_assay_fraction": 0.839416058
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 644,
+          "source_success_count": 623,
+          "pooled_recorded_success_fraction": 0.9673913043,
+          "min_source_assay_fraction": 0.958801498,
+          "max_source_assay_fraction": 0.975
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 261,
+          "source_success_count": 251,
+          "pooled_recorded_success_fraction": 0.9616858238,
+          "min_source_assay_fraction": 0.945054945,
+          "max_source_assay_fraction": 0.978494624
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 224,
+          "source_success_count": 209,
+          "pooled_recorded_success_fraction": 0.9330357143,
+          "min_source_assay_fraction": 0.803278689,
+          "max_source_assay_fraction": 0.98989899
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 370,
+          "source_success_count": 327,
+          "pooled_recorded_success_fraction": 0.8837837838,
+          "min_source_assay_fraction": 0.840336134,
+          "max_source_assay_fraction": 0.942622951
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 361,
+          "source_success_count": 218,
+          "pooled_recorded_success_fraction": 0.6038781163,
+          "min_source_assay_fraction": 0.443298969,
+          "max_source_assay_fraction": 0.941747573
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 582,
+          "source_success_count": 483,
+          "pooled_recorded_success_fraction": 0.8298969072,
+          "min_source_assay_fraction": 0.790123457,
+          "max_source_assay_fraction": 0.860824742
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 299,
+          "source_success_count": 263,
+          "pooled_recorded_success_fraction": 0.8795986622,
+          "min_source_assay_fraction": 0.782945736,
+          "max_source_assay_fraction": 0.973684211
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 292,
+          "source_success_count": 154,
+          "pooled_recorded_success_fraction": 0.5273972603,
+          "min_source_assay_fraction": 0.440677966,
+          "max_source_assay_fraction": 0.64
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 317,
+          "source_success_count": 263,
+          "pooled_recorded_success_fraction": 0.8296529968,
+          "min_source_assay_fraction": 0.789855072,
+          "max_source_assay_fraction": 0.879310345
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 341,
+          "source_success_count": 281,
+          "pooled_recorded_success_fraction": 0.8240469208,
+          "min_source_assay_fraction": 0.788990826,
+          "max_source_assay_fraction": 0.891891892
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 312,
+          "source_success_count": 291,
+          "pooled_recorded_success_fraction": 0.9326923077,
+          "min_source_assay_fraction": 0.891891892,
+          "max_source_assay_fraction": 0.952830189
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 591,
+          "source_success_count": 286,
+          "pooled_recorded_success_fraction": 0.4839255499,
+          "min_source_assay_fraction": 0.161585366,
+          "max_source_assay_fraction": 0.902097902
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 206,
+          "source_success_count": 100,
+          "pooled_recorded_success_fraction": 0.4854368932,
+          "min_source_assay_fraction": 0.1375,
+          "max_source_assay_fraction": 0.872727273
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 335,
+          "source_success_count": 281,
+          "pooled_recorded_success_fraction": 0.8388059701,
+          "min_source_assay_fraction": 0.719626168,
+          "max_source_assay_fraction": 0.925
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 292,
+          "source_success_count": 232,
+          "pooled_recorded_success_fraction": 0.7945205479,
+          "min_source_assay_fraction": 0.707317073,
+          "max_source_assay_fraction": 0.858695652
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 304,
+          "source_success_count": 278,
+          "pooled_recorded_success_fraction": 0.9144736842,
+          "min_source_assay_fraction": 0.885416667,
+          "max_source_assay_fraction": 0.943089431
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 392,
+          "source_success_count": 332,
+          "pooled_recorded_success_fraction": 0.8469387755,
+          "min_source_assay_fraction": 0.838461538,
+          "max_source_assay_fraction": 0.854700855
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 153,
+          "source_success_count": 133,
+          "pooled_recorded_success_fraction": 0.8692810458,
+          "min_source_assay_fraction": 0.824561404,
+          "max_source_assay_fraction": 0.902439024
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 416,
+          "source_success_count": 129,
+          "pooled_recorded_success_fraction": 0.3100961538,
+          "min_source_assay_fraction": 0.270833333,
+          "max_source_assay_fraction": 0.378787879
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 571,
+          "source_success_count": 357,
+          "pooled_recorded_success_fraction": 0.6252189142,
+          "min_source_assay_fraction": 0.597402597,
+          "max_source_assay_fraction": 0.641148325
+        }
+      ]
+    },
+    "conjugation_strain_2": {
+      "source_file": "Conjugation_Data_strain_2.xlsx",
+      "assay_type": "conjugation",
+      "source_success_field": "Sum.Mating",
+      "group_fields": [
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num"
+      ],
+      "source_record_count": 84,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "source_rows_per_temperature_run": {
+        "3": 28
+      },
+      "source_total_count": 30908,
+      "source_success_count": 9101,
+      "groups": [
+        {
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 454,
+          "source_success_count": 166,
+          "pooled_recorded_success_fraction": 0.3656387665,
+          "min_source_assay_fraction": 0.281690141,
+          "max_source_assay_fraction": 0.389438944
+        },
+        {
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 574,
+          "source_success_count": 168,
+          "pooled_recorded_success_fraction": 0.2926829268,
+          "min_source_assay_fraction": 0.178438662,
+          "max_source_assay_fraction": 0.508196721
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 400,
+          "source_success_count": 194,
+          "pooled_recorded_success_fraction": 0.485,
+          "min_source_assay_fraction": 0.402234637,
+          "max_source_assay_fraction": 0.571428571
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 670,
+          "source_success_count": 452,
+          "pooled_recorded_success_fraction": 0.6746268657,
+          "min_source_assay_fraction": 0.461538462,
+          "max_source_assay_fraction": 0.798722045
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1121,
+          "source_success_count": 474,
+          "pooled_recorded_success_fraction": 0.4228367529,
+          "min_source_assay_fraction": 0.186480186,
+          "max_source_assay_fraction": 0.663072776
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 799,
+          "source_success_count": 406,
+          "pooled_recorded_success_fraction": 0.508135169,
+          "min_source_assay_fraction": 0.472,
+          "max_source_assay_fraction": 0.680412371
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 255,
+          "source_success_count": 148,
+          "pooled_recorded_success_fraction": 0.5803921569,
+          "min_source_assay_fraction": 0.566037736,
+          "max_source_assay_fraction": 0.592592593
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 714,
+          "source_success_count": 462,
+          "pooled_recorded_success_fraction": 0.6470588235,
+          "min_source_assay_fraction": 0.45508982,
+          "max_source_assay_fraction": 0.762264151
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 443,
+          "source_success_count": 192,
+          "pooled_recorded_success_fraction": 0.4334085779,
+          "min_source_assay_fraction": 0.275303644,
+          "max_source_assay_fraction": 0.67961165
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 801,
+          "source_success_count": 560,
+          "pooled_recorded_success_fraction": 0.6991260924,
+          "min_source_assay_fraction": 0.666666667,
+          "max_source_assay_fraction": 0.768558952
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1571,
+          "source_success_count": 504,
+          "pooled_recorded_success_fraction": 0.3208147677,
+          "min_source_assay_fraction": 0.280612245,
+          "max_source_assay_fraction": 0.425149701
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1669,
+          "source_success_count": 820,
+          "pooled_recorded_success_fraction": 0.491312163,
+          "min_source_assay_fraction": 0.387096774,
+          "max_source_assay_fraction": 0.56445993
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1472,
+          "source_success_count": 542,
+          "pooled_recorded_success_fraction": 0.3682065217,
+          "min_source_assay_fraction": 0.318042813,
+          "max_source_assay_fraction": 0.45212766
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1736,
+          "source_success_count": 906,
+          "pooled_recorded_success_fraction": 0.5218894009,
+          "min_source_assay_fraction": 0.507462687,
+          "max_source_assay_fraction": 0.541528239
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1990,
+          "source_success_count": 572,
+          "pooled_recorded_success_fraction": 0.2874371859,
+          "min_source_assay_fraction": 0.226377953,
+          "max_source_assay_fraction": 0.467836257
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1393,
+          "source_success_count": 646,
+          "pooled_recorded_success_fraction": 0.463747308,
+          "min_source_assay_fraction": 0.448863636,
+          "max_source_assay_fraction": 0.47311828
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1886,
+          "source_success_count": 498,
+          "pooled_recorded_success_fraction": 0.2640509014,
+          "min_source_assay_fraction": 0.216962525,
+          "max_source_assay_fraction": 0.312757202
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1037,
+          "source_success_count": 410,
+          "pooled_recorded_success_fraction": 0.3953712633,
+          "min_source_assay_fraction": 0.370257967,
+          "max_source_assay_fraction": 0.536585366
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 2257,
+          "source_success_count": 343,
+          "pooled_recorded_success_fraction": 0.1519716438,
+          "min_source_assay_fraction": 0.110294118,
+          "max_source_assay_fraction": 0.177033493
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1115,
+          "source_success_count": 332,
+          "pooled_recorded_success_fraction": 0.2977578475,
+          "min_source_assay_fraction": 0.200647249,
+          "max_source_assay_fraction": 0.469387755
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1520,
+          "source_success_count": 128,
+          "pooled_recorded_success_fraction": 0.0842105263,
+          "min_source_assay_fraction": 0.082508251,
+          "max_source_assay_fraction": 0.08988764
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1379,
+          "source_success_count": 164,
+          "pooled_recorded_success_fraction": 0.1189267585,
+          "min_source_assay_fraction": 0.041800643,
+          "max_source_assay_fraction": 0.197894737
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 856,
+          "source_success_count": 6,
+          "pooled_recorded_success_fraction": 0.0070093458,
+          "min_source_assay_fraction": 0.005405405,
+          "max_source_assay_fraction": 0.008810573
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 738,
+          "source_success_count": 8,
+          "pooled_recorded_success_fraction": 0.0108401084,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.02173913
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1603,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 854,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 992,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 609,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        }
+      ]
+    },
+    "conjugation_strain_3": {
+      "source_file": "Conjugation_Data_strain_3.xlsx",
+      "assay_type": "conjugation",
+      "source_success_field": "Sum.Mating",
+      "group_fields": [
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num"
+      ],
+      "source_record_count": 84,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "source_rows_per_temperature_run": {
+        "3": 28
+      },
+      "source_total_count": 30145,
+      "source_success_count": 8264,
+      "groups": [
+        {
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 537,
+          "source_success_count": 214,
+          "pooled_recorded_success_fraction": 0.3985102421,
+          "min_source_assay_fraction": 0.329113924,
+          "max_source_assay_fraction": 0.453608247
+        },
+        {
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 590,
+          "source_success_count": 130,
+          "pooled_recorded_success_fraction": 0.2203389831,
+          "min_source_assay_fraction": 0.169381107,
+          "max_source_assay_fraction": 0.311111111
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 464,
+          "source_success_count": 122,
+          "pooled_recorded_success_fraction": 0.2629310345,
+          "min_source_assay_fraction": 0.158536585,
+          "max_source_assay_fraction": 0.397515528
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 755,
+          "source_success_count": 352,
+          "pooled_recorded_success_fraction": 0.4662251656,
+          "min_source_assay_fraction": 0.254545455,
+          "max_source_assay_fraction": 0.592105263
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1113,
+          "source_success_count": 462,
+          "pooled_recorded_success_fraction": 0.4150943396,
+          "min_source_assay_fraction": 0.235988201,
+          "max_source_assay_fraction": 0.633187773
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 429,
+          "source_success_count": 156,
+          "pooled_recorded_success_fraction": 0.3636363636,
+          "min_source_assay_fraction": 0.265822785,
+          "max_source_assay_fraction": 0.436619718
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 581,
+          "source_success_count": 198,
+          "pooled_recorded_success_fraction": 0.3407917384,
+          "min_source_assay_fraction": 0.247058824,
+          "max_source_assay_fraction": 0.444444444
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1018,
+          "source_success_count": 568,
+          "pooled_recorded_success_fraction": 0.557956778,
+          "min_source_assay_fraction": 0.492440605,
+          "max_source_assay_fraction": 0.733333333
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 368,
+          "source_success_count": 208,
+          "pooled_recorded_success_fraction": 0.5652173913,
+          "min_source_assay_fraction": 0.50955414,
+          "max_source_assay_fraction": 0.686868687
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 581,
+          "source_success_count": 344,
+          "pooled_recorded_success_fraction": 0.5920826162,
+          "min_source_assay_fraction": 0.5,
+          "max_source_assay_fraction": 0.761290323
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1261,
+          "source_success_count": 402,
+          "pooled_recorded_success_fraction": 0.3187946075,
+          "min_source_assay_fraction": 0.280898876,
+          "max_source_assay_fraction": 0.357142857
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1052,
+          "source_success_count": 528,
+          "pooled_recorded_success_fraction": 0.5019011407,
+          "min_source_assay_fraction": 0.356435644,
+          "max_source_assay_fraction": 0.631868132
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1973,
+          "source_success_count": 858,
+          "pooled_recorded_success_fraction": 0.4348707552,
+          "min_source_assay_fraction": 0.381951731,
+          "max_source_assay_fraction": 0.518900344
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 953,
+          "source_success_count": 480,
+          "pooled_recorded_success_fraction": 0.5036726128,
+          "min_source_assay_fraction": 0.432624113,
+          "max_source_assay_fraction": 0.549763033
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 2164,
+          "source_success_count": 586,
+          "pooled_recorded_success_fraction": 0.2707948244,
+          "min_source_assay_fraction": 0.235748792,
+          "max_source_assay_fraction": 0.333333333
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1513,
+          "source_success_count": 772,
+          "pooled_recorded_success_fraction": 0.5102445473,
+          "min_source_assay_fraction": 0.474226804,
+          "max_source_assay_fraction": 0.551851852
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 2062,
+          "source_success_count": 490,
+          "pooled_recorded_success_fraction": 0.2376333657,
+          "min_source_assay_fraction": 0.111597374,
+          "max_source_assay_fraction": 0.401913876
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1752,
+          "source_success_count": 610,
+          "pooled_recorded_success_fraction": 0.348173516,
+          "min_source_assay_fraction": 0.274576271,
+          "max_source_assay_fraction": 0.401154401
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1223,
+          "source_success_count": 196,
+          "pooled_recorded_success_fraction": 0.1602616517,
+          "min_source_assay_fraction": 0.110294118,
+          "max_source_assay_fraction": 0.212914485
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 804,
+          "source_success_count": 292,
+          "pooled_recorded_success_fraction": 0.3631840796,
+          "min_source_assay_fraction": 0.333333333,
+          "max_source_assay_fraction": 0.388140162
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1186,
+          "source_success_count": 164,
+          "pooled_recorded_success_fraction": 0.1382799325,
+          "min_source_assay_fraction": 0.013333333,
+          "max_source_assay_fraction": 0.192090395
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1016,
+          "source_success_count": 104,
+          "pooled_recorded_success_fraction": 0.1023622047,
+          "min_source_assay_fraction": 0.05,
+          "max_source_assay_fraction": 0.116731518
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1724,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 977,
+          "source_success_count": 26,
+          "pooled_recorded_success_fraction": 0.0266120778,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.044585987
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1228,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 624,
+          "source_success_count": 2,
+          "pooled_recorded_success_fraction": 0.0032051282,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.010204082
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1422,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 775,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        }
+      ]
+    },
+    "conjugation_strain_4": {
+      "source_file": "Conjugation_Data_strain_4.xlsx",
+      "assay_type": "conjugation",
+      "source_success_field": "Sum.Mating",
+      "group_fields": [
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num"
+      ],
+      "source_record_count": 84,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "source_rows_per_temperature_run": {
+        "3": 28
+      },
+      "source_total_count": 26479,
+      "source_success_count": 7010,
+      "groups": [
+        {
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 623,
+          "source_success_count": 108,
+          "pooled_recorded_success_fraction": 0.1733547352,
+          "min_source_assay_fraction": 0.14532872,
+          "max_source_assay_fraction": 0.22826087
+        },
+        {
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 901,
+          "source_success_count": 190,
+          "pooled_recorded_success_fraction": 0.2108768036,
+          "min_source_assay_fraction": 0.14939759,
+          "max_source_assay_fraction": 0.352941176
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 650,
+          "source_success_count": 186,
+          "pooled_recorded_success_fraction": 0.2861538462,
+          "min_source_assay_fraction": 0.241269841,
+          "max_source_assay_fraction": 0.456692913
+        },
+        {
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 572,
+          "source_success_count": 268,
+          "pooled_recorded_success_fraction": 0.4685314685,
+          "min_source_assay_fraction": 0.387351779,
+          "max_source_assay_fraction": 0.546341463
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "8",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 692,
+          "source_success_count": 328,
+          "pooled_recorded_success_fraction": 0.4739884393,
+          "min_source_assay_fraction": 0.417040359,
+          "max_source_assay_fraction": 0.646153846
+        },
+        {
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 579,
+          "source_success_count": 284,
+          "pooled_recorded_success_fraction": 0.4905008636,
+          "min_source_assay_fraction": 0.363636364,
+          "max_source_assay_fraction": 0.520833333
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1271,
+          "source_success_count": 498,
+          "pooled_recorded_success_fraction": 0.3918174666,
+          "min_source_assay_fraction": 0.39100346,
+          "max_source_assay_fraction": 0.396946565
+        },
+        {
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 822,
+          "source_success_count": 450,
+          "pooled_recorded_success_fraction": 0.5474452555,
+          "min_source_assay_fraction": 0.532150776,
+          "max_source_assay_fraction": 0.603773585
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "7",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 538,
+          "source_success_count": 256,
+          "pooled_recorded_success_fraction": 0.4758364312,
+          "min_source_assay_fraction": 0.260416667,
+          "max_source_assay_fraction": 0.659898477
+        },
+        {
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 524,
+          "source_success_count": 376,
+          "pooled_recorded_success_fraction": 0.7175572519,
+          "min_source_assay_fraction": 0.604026846,
+          "max_source_assay_fraction": 0.877192982
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 2736,
+          "source_success_count": 658,
+          "pooled_recorded_success_fraction": 0.240497076,
+          "min_source_assay_fraction": 0.124863089,
+          "max_source_assay_fraction": 0.303082192
+        },
+        {
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 607,
+          "source_success_count": 296,
+          "pooled_recorded_success_fraction": 0.4876441516,
+          "min_source_assay_fraction": 0.255319149,
+          "max_source_assay_fraction": 0.572649573
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 722,
+          "source_success_count": 406,
+          "pooled_recorded_success_fraction": 0.5623268698,
+          "min_source_assay_fraction": 0.468965517,
+          "max_source_assay_fraction": 0.745454545
+        },
+        {
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1295,
+          "source_success_count": 600,
+          "pooled_recorded_success_fraction": 0.4633204633,
+          "min_source_assay_fraction": 0.384210526,
+          "max_source_assay_fraction": 0.555831266
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1342,
+          "source_success_count": 434,
+          "pooled_recorded_success_fraction": 0.3233979136,
+          "min_source_assay_fraction": 0.235602094,
+          "max_source_assay_fraction": 0.359223301
+        },
+        {
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1055,
+          "source_success_count": 442,
+          "pooled_recorded_success_fraction": 0.418957346,
+          "min_source_assay_fraction": 0.351297405,
+          "max_source_assay_fraction": 0.489177489
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1423,
+          "source_success_count": 448,
+          "pooled_recorded_success_fraction": 0.3148278285,
+          "min_source_assay_fraction": 0.12952381,
+          "max_source_assay_fraction": 0.595238095
+        },
+        {
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 582,
+          "source_success_count": 236,
+          "pooled_recorded_success_fraction": 0.4054982818,
+          "min_source_assay_fraction": 0.193103448,
+          "max_source_assay_fraction": 0.480620155
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 1801,
+          "source_success_count": 278,
+          "pooled_recorded_success_fraction": 0.1543586896,
+          "min_source_assay_fraction": 0.124324324,
+          "max_source_assay_fraction": 0.216494845
+        },
+        {
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 641,
+          "source_success_count": 160,
+          "pooled_recorded_success_fraction": 0.2496099844,
+          "min_source_assay_fraction": 0.161016949,
+          "max_source_assay_fraction": 0.368627451
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 757,
+          "source_success_count": 76,
+          "pooled_recorded_success_fraction": 0.1003963012,
+          "min_source_assay_fraction": 0.043763676,
+          "max_source_assay_fraction": 0.2
+        },
+        {
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "4",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 839,
+          "source_success_count": 12,
+          "pooled_recorded_success_fraction": 0.0143027414,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.030188679
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 641,
+          "source_success_count": 10,
+          "pooled_recorded_success_fraction": 0.015600624,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.04048583
+        },
+        {
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 727,
+          "source_success_count": 8,
+          "pooled_recorded_success_fraction": 0.0110041265,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.025974026
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 2150,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "3",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 777,
+          "source_success_count": 2,
+          "pooled_recorded_success_fraction": 0.0025740026,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.007843137
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 700,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        },
+        {
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "source_assay_rows": 3,
+          "source_rep_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_total_count": 512,
+          "source_success_count": 0,
+          "pooled_recorded_success_fraction": 0.0,
+          "min_source_assay_fraction": 0.0,
+          "max_source_assay_fraction": 0.0
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Germination and each conjugation strain are separate assays; no pooling across them.",
+    "Pooled fractions within recorded temperature/run groups describe counts only.",
+    "Rep labels describe nested source rows, not independent exposure chambers.",
+    "Temp.Rep and Run.Num labels do not establish randomized treatment units.",
+    "Repeated run codes are preserved, not treated as unique global batch IDs.",
+    "No temperature-response model, causal contrast, p-value, or interval is estimated."
+  ]
+}

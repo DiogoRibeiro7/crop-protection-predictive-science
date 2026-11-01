@@ -69,6 +69,12 @@ the narrower `within_series_mortality_description` permission for Experiment
 and unverified date serials without claiming a treatment effect, independent
 plot count, or compatibility with the controlled aphid cohorts.
 
+The [Dryad laboratory count exports](external_dryad_lab_assay_descriptives.md)
+exercise the existing `assay_count_description` permission for germination
+and the three conjugation-strain datasets. Count-weighted proportions remain
+within recorded temperature/run labels; the chamber-allocation and clustering
+requirements for temperature-effect inference have not been resolved.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:
