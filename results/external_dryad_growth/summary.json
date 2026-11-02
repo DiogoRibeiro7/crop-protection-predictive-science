@@ -3839,10 +3839,10 @@
   },
   "limitations": [
     "Counts describe original assay rows, not independent randomized temperature units.",
-    "The same Picture ID label may recur across temperature replicates; no rows are deduplicated.",
+    "Picture ID labels may recur across temperature replicates; no rows are removed.",
     "Mating types and strains are kept separate; their counts are not pooled into effects.",
     "Run.Num and Temp.Rep are source codes, not verified independent growth chambers.",
     "Strain 3 splits some recorded temperature/run groups by mating-type run codes.",
-    "No growth rate, temperature-response model, significance test or causal effect is estimated."
+    "No growth rate, temperature model, significance test or causal effect is estimated."
   ]
 }
