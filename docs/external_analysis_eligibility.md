@@ -75,6 +75,12 @@ and the three conjugation-strain datasets. Count-weighted proportions remain
 within recorded temperature/run labels; the chamber-allocation and clustering
 requirements for temperature-effect inference have not been resolved.
 
+The [Dryad growth colony-count exports](external_dryad_growth_descriptives.md)
+exercise the separate `colony_count_description` permission for strain 2–4
+growth datasets. Source mating-type and temperature/run groups are preserved,
+and repeated picture IDs are reported without deduplication. They do not
+grant an inferential heat-response analysis.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

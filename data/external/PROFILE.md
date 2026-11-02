@@ -107,6 +107,11 @@ retain the original run and replicate labels in four distinct source-assay
 tables. They sum recorded numerator/denominator counts within each
 temperature/run label but do not estimate independent temperature effects.
 
+The [Dryad colony-growth descriptive exports](../../docs/external_dryad_growth_descriptives.md)
+summarize `Colonly.Count` by strain, temperature/run and mating type while
+preserving source picture-ID collisions and all assay rows. The apparent
+repetition of picture labels does not establish duplicate biological samples.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and

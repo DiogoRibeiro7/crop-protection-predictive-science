@@ -128,6 +128,11 @@ preserve the nested `Rep` labels and report original counted numerator and
 denominator totals by recorded temperature/run group. They exclude the growth
 workbooks and make no claims about independent chambers or heat effects.
 
+The [Dryad colony-growth descriptive tables](external_dryad_growth_descriptives.md)
+cover those separate strain 2–4 growth workbooks. They retain mating-type
+cells, `Replicate` labels, and repeated `Picture ID` strings, including the
+strain-3 run-code mismatch, without fitting a temperature-response model.
+
 ### Greenhouse seedlings
 
 - Infection workbook: **1,112 scored rows** in **852 recorded design cells**
