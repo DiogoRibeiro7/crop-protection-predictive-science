@@ -1,0 +1,20 @@
+year,temperature,smut exposure,time,recorded_case_cells,source_death_case_rows
+21,24,no,NA,1,1
+21,24,with,NA,6,11
+21,26,no,after,4,10
+21,26,no,at,1,2
+21,26,with,after,7,18
+21,26,with,at,4,7
+21,30,no,at,5,8
+21,30,with,after,2,4
+21,30,with,at,1,1
+22,24,no,NA,9,9
+22,24,with,NA,10,14
+22,26,no,after,4,4
+22,26,no,at,9,10
+22,26,with,after,12,17
+22,26,with,at,9,16
+22,30,no,after,8,10
+22,30,no,at,8,8
+22,30,with,after,9,12
+22,30,with,at,6,11

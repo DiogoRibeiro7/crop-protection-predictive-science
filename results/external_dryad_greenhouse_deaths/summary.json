@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "source_workbook": "seedling_inoculation-_death_data.xlsx",
+  "source_sheet": "seedling inoculation- death dat",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "analysis": "death_case_tally",
+  "observational_unit": "recorded_death_case_row_not_verified_unique_plant",
+  "source_death_case_rows": 173,
+  "recorded_case_cells": 115,
+  "source_exact_repeated_row_excess": 58,
+  "source_year_code_counts": {
+    "21": 62,
+    "22": 111
+  },
+  "source_date_serial_counts": {
+    "45313": 64,
+    "45339": 9,
+    "45361": 2,
+    "45368": 3,
+    "45382": 4,
+    "45403": 29,
+    "45641": 62
+  },
+  "source_temperature_code_counts": {
+    "24": 35,
+    "26": 84,
+    "30": 54
+  },
+  "source_case_value": "1",
+  "source_records_per_case_cell": {
+    "1": 81,
+    "2": 22,
+    "3": 8,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "9": 1
+  },
+  "cell_fields": [
+    "year",
+    "date",
+    "temperature",
+    "smut exposure",
+    "time",
+    "replicate",
+    "family"
+  ],
+  "stratum_fields": [
+    "year",
+    "temperature",
+    "smut exposure",
+    "time"
+  ],
+  "limitations": [
+    "The source is case-only: no at-risk population or noncase records are supplied.",
+    "All dead values are literal 1 labels; case rows are never an infection risk.",
+    "Fully identical death-case records are retained, not deduplicated as plants.",
+    "Date serials and year codes are retained without calendar reinterpretation.",
+    "Shared factor labels do not link death cases to greenhouse infection rows.",
+    "No mortality rate, survival curve, hazard ratio or temperature effect is estimated."
+  ]
+}

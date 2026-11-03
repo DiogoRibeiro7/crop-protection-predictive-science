@@ -170,7 +170,8 @@ See [`docs/evidence_map.md`](docs/evidence_map.md) for source files, analyses, o
 
 The additional [external source-data inventory](data/external/README.md)
 includes permission-gated descriptive exports, including
-[Dryad greenhouse status frequencies](docs/external_dryad_greenhouse_status_descriptives.md).
+[Dryad greenhouse status frequencies](docs/external_dryad_greenhouse_status_descriptives.md)
+and [separate death-case tallies](docs/external_dryad_greenhouse_death_descriptives.md).
 These are not new validated intervention-effect models or linked
 lab-to-field experiments.
 
