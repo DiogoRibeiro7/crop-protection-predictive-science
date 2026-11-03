@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "source_workbook": "seedling_inoculation-_infection_data.xlsx",
+  "source_sheet": "seedling inoculation- infection",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "analysis": "disease_status_frequencies",
+  "observational_unit": "recorded_plant_score_row_not_verified_unique_plant",
+  "source_scored_rows": 1112,
+  "recorded_visit_cells": 852,
+  "source_exact_repeated_row_excess": 141,
+  "source_year_code_counts": {
+    "22": 1033,
+    "23": 79
+  },
+  "source_observer_code_counts": {
+    "DC": 1107,
+    "SPS": 5
+  },
+  "source_status_code_counts": {
+    "D": 171,
+    "HF": 507,
+    "HM": 325,
+    "LD": 109
+  },
+  "source_nonblank_comment_rows": 0,
+  "source_records_per_visit_cell": {
+    "1": 667,
+    "2": 137,
+    "3": 32,
+    "4": 9,
+    "5": 4,
+    "6": 2,
+    "7": 1
+  },
+  "visit_fields": [
+    "year",
+    "Date",
+    "Temperature",
+    "Smut Exposure",
+    "Time",
+    "Rep",
+    "Family"
+  ],
+  "stratum_fields": [
+    "year",
+    "Temperature",
+    "Smut Exposure",
+    "Time"
+  ],
+  "limitations": [
+    "D, LD, HF and HM are literal source codes; no binary disease endpoint is constructed.",
+    "Year and Excel Date serial values are labels, not validated calendar dates.",
+    "Identical records remain counted; equal scores need not be duplicate plants.",
+    "Visit cells, family and Rep labels do not establish independent plants.",
+    "The separate death-case file has no linkable plant IDs or at-risk denominator.",
+    "No infection risk, mortality rate, temperature effect or causal estimate is made."
+  ]
+}

@@ -168,6 +168,12 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 
 See [`docs/evidence_map.md`](docs/evidence_map.md) for source files, analyses, outputs and limitations.
 
+The additional [external source-data inventory](data/external/README.md)
+includes permission-gated descriptive exports, including
+[Dryad greenhouse status frequencies](docs/external_dryad_greenhouse_status_descriptives.md).
+These are not new validated intervention-effect models or linked
+lab-to-field experiments.
+
 ## Scientific principles demonstrated
 
 The repository is organised around a few recurring rules rather than a catalogue of algorithms:

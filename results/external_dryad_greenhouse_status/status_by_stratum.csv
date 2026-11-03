@@ -1,0 +1,22 @@
+year,Temperature,Smut Exposure,Time,recorded_visit_cells,source_scored_rows,status_D,status_HF,status_HM,status_LD
+22,24,no,NA,56,77,0,46,31,0
+22,24,no,after,1,1,0,1,0,0
+22,24,with,NA,103,136,51,31,26,28
+22,26,no,after,58,72,1,49,22,0
+22,26,no,at,68,88,1,57,30,0
+22,26,with,after,91,123,31,28,35,29
+22,26,with,at,93,125,32,47,22,24
+22,30,no,after,59,71,0,43,28,0
+22,30,no,at,56,70,0,45,25,0
+22,30,with,after,105,139,33,53,35,18
+22,30,with,at,94,131,20,62,40,9
+23,24,no,NA,5,5,0,1,4,0
+23,24,with,NA,2,2,0,0,2,0
+23,26,no,after,4,4,0,3,1,0
+23,26,no,at,4,4,0,2,2,0
+23,26,with,after,10,11,1,8,2,0
+23,26,with,at,9,13,1,7,5,0
+23,30,no,after,8,9,0,5,4,0
+23,30,no,at,5,5,0,3,2,0
+23,30,with,after,8,10,0,7,3,0
+23,30,with,at,13,16,0,9,6,1
