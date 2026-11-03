@@ -1,0 +1,3848 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "analysis": "colony_count_description",
+  "source_count_unit": "recorded_colonies_per_assay_row",
+  "group_fields": [
+    "Strain",
+    "Temperature",
+    "Temp.Rep",
+    "Run.Num",
+    "Mating.Type"
+  ],
+  "strains": {
+    "strain_2": {
+      "source_file": "Growth_data_strain_2.xlsx",
+      "source_strain_label": "2",
+      "source_colony_field": "Colonly.Count",
+      "group_fields": [
+        "Strain",
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num",
+        "Mating.Type"
+      ],
+      "source_record_count": 168,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "records_per_temperature_run": {
+        "6": 28
+      },
+      "strain_run_mating_cells": 56,
+      "records_per_strain_run_mating_cell": {
+        "3": 56
+      },
+      "source_total_recorded_colonies": 5729,
+      "source_distinct_picture_id_labels": 84,
+      "source_repeated_picture_id_rows": 84,
+      "groups": [
+        {
+          "Strain": "2",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 4.1",
+            "2 A1 4.2",
+            "2 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 4.1",
+            "2 A2 4.2",
+            "2 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 4.1",
+            "2 A1 4.2",
+            "2 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 4.1",
+            "2 A2 4.2",
+            "2 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 6.1",
+            "2 A1 6.2",
+            "2 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 6.1",
+            "2 A2 6.2",
+            "2 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 6.1",
+            "2 A1 6.2",
+            "2 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 6.1",
+            "2 A2 6.2",
+            "2 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 8.1",
+            "2 A1 8.2",
+            "2 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 8.1",
+            "2 A2 8.2",
+            "2 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 8.1",
+            "2 A1 8.2",
+            "2 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 8.1",
+            "2 A2 8.2",
+            "2 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 10.1",
+            "2 A1 10.2",
+            "2 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 10.1",
+            "2 A2 10.2",
+            "2 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 10.1",
+            "2 A1 10.2",
+            "2 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 10.1",
+            "2 A2 10.2",
+            "2 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 12.1",
+            "2 A1 12.2",
+            "2 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 12.1",
+            "2 A2 12.2",
+            "2 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 12.1",
+            "2 A1 12.2",
+            "2 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 12.1",
+            "2 A2 12.2",
+            "2 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 14.1",
+            "2 A1 14.2",
+            "2 A1 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 14.1",
+            "2 A2 14.2",
+            "2 A2 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 14.1",
+            "2 A1 14.2",
+            "2 A1 14.3"
+          ],
+          "total_recorded_colonies": 178,
+          "mean_colonies_per_source_row": 59.3333333333,
+          "min_source_colony_count": 50,
+          "max_source_colony_count": 66
+        },
+        {
+          "Strain": "2",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 14.1",
+            "2 A2 14.2",
+            "2 A2 14.3"
+          ],
+          "total_recorded_colonies": 187,
+          "mean_colonies_per_source_row": 62.3333333333,
+          "min_source_colony_count": 55,
+          "max_source_colony_count": 69
+        },
+        {
+          "Strain": "2",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 16.1",
+            "2 A1 16.2",
+            "2 A1 16.3"
+          ],
+          "total_recorded_colonies": 198,
+          "mean_colonies_per_source_row": 66.0,
+          "min_source_colony_count": 47,
+          "max_source_colony_count": 92
+        },
+        {
+          "Strain": "2",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 16.1",
+            "2 A2 16.2",
+            "2 A2 16.3"
+          ],
+          "total_recorded_colonies": 127,
+          "mean_colonies_per_source_row": 42.3333333333,
+          "min_source_colony_count": 37,
+          "max_source_colony_count": 49
+        },
+        {
+          "Strain": "2",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 16.1",
+            "2 A1 16.2",
+            "2 A1 16.3"
+          ],
+          "total_recorded_colonies": 255,
+          "mean_colonies_per_source_row": 85.0,
+          "min_source_colony_count": 83,
+          "max_source_colony_count": 87
+        },
+        {
+          "Strain": "2",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 16.1",
+            "2 A2 16.2",
+            "2 A2 16.3"
+          ],
+          "total_recorded_colonies": 137,
+          "mean_colonies_per_source_row": 45.6666666667,
+          "min_source_colony_count": 40,
+          "max_source_colony_count": 50
+        },
+        {
+          "Strain": "2",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 18.1",
+            "2 A1 18.2",
+            "2 A1 18.3"
+          ],
+          "total_recorded_colonies": 356,
+          "mean_colonies_per_source_row": 118.6666666667,
+          "min_source_colony_count": 113,
+          "max_source_colony_count": 125
+        },
+        {
+          "Strain": "2",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 18.1",
+            "2 A2 18.2",
+            "2 A2 18.3"
+          ],
+          "total_recorded_colonies": 253,
+          "mean_colonies_per_source_row": 84.3333333333,
+          "min_source_colony_count": 71,
+          "max_source_colony_count": 97
+        },
+        {
+          "Strain": "2",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 18.1",
+            "2 A1 18.2",
+            "2 A1 18.3"
+          ],
+          "total_recorded_colonies": 222,
+          "mean_colonies_per_source_row": 74.0,
+          "min_source_colony_count": 64,
+          "max_source_colony_count": 83
+        },
+        {
+          "Strain": "2",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 18.1",
+            "2 A2 18.2",
+            "2 A2 18.3"
+          ],
+          "total_recorded_colonies": 187,
+          "mean_colonies_per_source_row": 62.3333333333,
+          "min_source_colony_count": 54,
+          "max_source_colony_count": 71
+        },
+        {
+          "Strain": "2",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 20.1",
+            "2 A1 20.2",
+            "2 A1 20.3"
+          ],
+          "total_recorded_colonies": 181,
+          "mean_colonies_per_source_row": 60.3333333333,
+          "min_source_colony_count": 52,
+          "max_source_colony_count": 73
+        },
+        {
+          "Strain": "2",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 20.1",
+            "2 A2 20.2",
+            "2 A2 20.3"
+          ],
+          "total_recorded_colonies": 270,
+          "mean_colonies_per_source_row": 90.0,
+          "min_source_colony_count": 68,
+          "max_source_colony_count": 103
+        },
+        {
+          "Strain": "2",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 20.1",
+            "2 A1 20.2",
+            "2 A1 20.3"
+          ],
+          "total_recorded_colonies": 355,
+          "mean_colonies_per_source_row": 118.3333333333,
+          "min_source_colony_count": 111,
+          "max_source_colony_count": 132
+        },
+        {
+          "Strain": "2",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 20.1",
+            "2 A2 20.2",
+            "2 A2 20.3"
+          ],
+          "total_recorded_colonies": 327,
+          "mean_colonies_per_source_row": 109.0,
+          "min_source_colony_count": 99,
+          "max_source_colony_count": 126
+        },
+        {
+          "Strain": "2",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 22.1",
+            "2 A1 22.2",
+            "2 A1 22.3"
+          ],
+          "total_recorded_colonies": 204,
+          "mean_colonies_per_source_row": 68.0,
+          "min_source_colony_count": 60,
+          "max_source_colony_count": 76
+        },
+        {
+          "Strain": "2",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 22.1",
+            "2 A2 22.2",
+            "2 A2 22.3"
+          ],
+          "total_recorded_colonies": 233,
+          "mean_colonies_per_source_row": 77.6666666667,
+          "min_source_colony_count": 69,
+          "max_source_colony_count": 83
+        },
+        {
+          "Strain": "2",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 22.1",
+            "2 A1 22.2",
+            "2 A1 22.3"
+          ],
+          "total_recorded_colonies": 491,
+          "mean_colonies_per_source_row": 163.6666666667,
+          "min_source_colony_count": 145,
+          "max_source_colony_count": 183
+        },
+        {
+          "Strain": "2",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 22.1",
+            "2 A2 22.2",
+            "2 A2 22.3"
+          ],
+          "total_recorded_colonies": 251,
+          "mean_colonies_per_source_row": 83.6666666667,
+          "min_source_colony_count": 82,
+          "max_source_colony_count": 85
+        },
+        {
+          "Strain": "2",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 24.1",
+            "2 A1 24.2",
+            "2 A1 24.3"
+          ],
+          "total_recorded_colonies": 417,
+          "mean_colonies_per_source_row": 139.0,
+          "min_source_colony_count": 112,
+          "max_source_colony_count": 167
+        },
+        {
+          "Strain": "2",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 24.1",
+            "2 A2 24.2",
+            "2 A2 24.3"
+          ],
+          "total_recorded_colonies": 315,
+          "mean_colonies_per_source_row": 105.0,
+          "min_source_colony_count": 92,
+          "max_source_colony_count": 124
+        },
+        {
+          "Strain": "2",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 24.1",
+            "2 A1 24.2",
+            "2 A1 24.3"
+          ],
+          "total_recorded_colonies": 253,
+          "mean_colonies_per_source_row": 84.3333333333,
+          "min_source_colony_count": 77,
+          "max_source_colony_count": 89
+        },
+        {
+          "Strain": "2",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 24.1",
+            "2 A2 24.2",
+            "2 A2 24.3"
+          ],
+          "total_recorded_colonies": 146,
+          "mean_colonies_per_source_row": 48.6666666667,
+          "min_source_colony_count": 42,
+          "max_source_colony_count": 52
+        },
+        {
+          "Strain": "2",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 26.1",
+            "2 A1 26.2",
+            "2 A1 26.3"
+          ],
+          "total_recorded_colonies": 31,
+          "mean_colonies_per_source_row": 10.3333333333,
+          "min_source_colony_count": 1,
+          "max_source_colony_count": 19
+        },
+        {
+          "Strain": "2",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 26.1",
+            "2 A2 26.2",
+            "2 A2 26.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 26.1",
+            "2 A1 26.2",
+            "2 A1 26.3"
+          ],
+          "total_recorded_colonies": 102,
+          "mean_colonies_per_source_row": 34.0,
+          "min_source_colony_count": 7,
+          "max_source_colony_count": 55
+        },
+        {
+          "Strain": "2",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 26.1",
+            "2 A2 26.2",
+            "2 A2 26.3"
+          ],
+          "total_recorded_colonies": 53,
+          "mean_colonies_per_source_row": 17.6666666667,
+          "min_source_colony_count": 14,
+          "max_source_colony_count": 25
+        },
+        {
+          "Strain": "2",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 28.1",
+            "2 A1 28.2",
+            "2 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 28.1",
+            "2 A2 28.2",
+            "2 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 28.1",
+            "2 A1 28.2",
+            "2 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 28.1",
+            "2 A2 28.2",
+            "2 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 30.1",
+            "2 A1 30.2",
+            "2 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 30.1",
+            "2 A2 30.2",
+            "2 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A1 30.1",
+            "2 A1 30.2",
+            "2 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "2",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "2 A2 30.1",
+            "2 A2 30.2",
+            "2 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        }
+      ]
+    },
+    "strain_3": {
+      "source_file": "Growth_data_strain_3.xlsx",
+      "source_strain_label": "3",
+      "source_colony_field": "Colonly.Count",
+      "group_fields": [
+        "Strain",
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num",
+        "Mating.Type"
+      ],
+      "source_record_count": 168,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 30,
+      "records_per_temperature_run": {
+        "3": 4,
+        "6": 26
+      },
+      "strain_run_mating_cells": 56,
+      "records_per_strain_run_mating_cell": {
+        "3": 56
+      },
+      "source_total_recorded_colonies": 4437,
+      "source_distinct_picture_id_labels": 84,
+      "source_repeated_picture_id_rows": 84,
+      "groups": [
+        {
+          "Strain": "3",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 4.1",
+            "3 A1 4.2",
+            "3 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 4.1",
+            "3 A2 4.2",
+            "3 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 4.1",
+            "3 A1 4.2",
+            "3 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 4.1",
+            "3 A2 4.2",
+            "3 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 6.1",
+            "3 A1 6.2",
+            "3 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 6.1",
+            "3 A2 6.2",
+            "3 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 6.1",
+            "3 A1 6.2",
+            "3 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 6.1",
+            "3 A2 6.2",
+            "3 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 8.1",
+            "3 A1 8.2",
+            "3 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 8.1",
+            "3 A2 8.2",
+            "3 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 8.1",
+            "3 A1 8.2",
+            "3 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 8.1",
+            "3 A2 8.2",
+            "3 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 10.1",
+            "3 A1 10.2",
+            "3 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 10.1",
+            "3 A2 10.2",
+            "3 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 10.1",
+            "3 A1 10.2",
+            "3 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 10.1",
+            "3 A2 10.2",
+            "3 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 12.1",
+            "3 A1 12.2",
+            "3 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 12.1",
+            "3 A2 12.2",
+            "3 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 12.1",
+            "3 A1 12.2",
+            "3 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 12.1",
+            "3 A2 12.2",
+            "3 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 14.1",
+            "3 A1 14.2",
+            "3 A1 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 14.1",
+            "3 A2 14.2",
+            "3 A2 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 14.1",
+            "3 A1 14.2",
+            "3 A1 14.3"
+          ],
+          "total_recorded_colonies": 73,
+          "mean_colonies_per_source_row": 24.3333333333,
+          "min_source_colony_count": 13,
+          "max_source_colony_count": 34
+        },
+        {
+          "Strain": "3",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 14.1",
+            "3 A2 14.2",
+            "3 A2 14.3"
+          ],
+          "total_recorded_colonies": 200,
+          "mean_colonies_per_source_row": 66.6666666667,
+          "min_source_colony_count": 54,
+          "max_source_colony_count": 79
+        },
+        {
+          "Strain": "3",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 16.1",
+            "3 A1 16.2",
+            "3 A1 16.3"
+          ],
+          "total_recorded_colonies": 167,
+          "mean_colonies_per_source_row": 55.6666666667,
+          "min_source_colony_count": 52,
+          "max_source_colony_count": 62
+        },
+        {
+          "Strain": "3",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 16.1",
+            "3 A2 16.2",
+            "3 A2 16.3"
+          ],
+          "total_recorded_colonies": 218,
+          "mean_colonies_per_source_row": 72.6666666667,
+          "min_source_colony_count": 64,
+          "max_source_colony_count": 80
+        },
+        {
+          "Strain": "3",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 16.1",
+            "3 A1 16.2",
+            "3 A1 16.3"
+          ],
+          "total_recorded_colonies": 192,
+          "mean_colonies_per_source_row": 64.0,
+          "min_source_colony_count": 51,
+          "max_source_colony_count": 81
+        },
+        {
+          "Strain": "3",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 16.1",
+            "3 A2 16.2",
+            "3 A2 16.3"
+          ],
+          "total_recorded_colonies": 121,
+          "mean_colonies_per_source_row": 40.3333333333,
+          "min_source_colony_count": 35,
+          "max_source_colony_count": 48
+        },
+        {
+          "Strain": "3",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 18.1",
+            "3 A1 18.2",
+            "3 A1 18.3"
+          ],
+          "total_recorded_colonies": 219,
+          "mean_colonies_per_source_row": 73.0,
+          "min_source_colony_count": 61,
+          "max_source_colony_count": 82
+        },
+        {
+          "Strain": "3",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 18.1",
+            "3 A2 18.2",
+            "3 A2 18.3"
+          ],
+          "total_recorded_colonies": 207,
+          "mean_colonies_per_source_row": 69.0,
+          "min_source_colony_count": 56,
+          "max_source_colony_count": 83
+        },
+        {
+          "Strain": "3",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 18.1",
+            "3 A2 18.2",
+            "3 A2 18.3"
+          ],
+          "total_recorded_colonies": 167,
+          "mean_colonies_per_source_row": 55.6666666667,
+          "min_source_colony_count": 54,
+          "max_source_colony_count": 57
+        },
+        {
+          "Strain": "3",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 18.1",
+            "3 A1 18.2",
+            "3 A1 18.3"
+          ],
+          "total_recorded_colonies": 239,
+          "mean_colonies_per_source_row": 79.6666666667,
+          "min_source_colony_count": 63,
+          "max_source_colony_count": 100
+        },
+        {
+          "Strain": "3",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 20.1",
+            "3 A1 20.2",
+            "3 A1 20.3"
+          ],
+          "total_recorded_colonies": 245,
+          "mean_colonies_per_source_row": 81.6666666667,
+          "min_source_colony_count": 73,
+          "max_source_colony_count": 90
+        },
+        {
+          "Strain": "3",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 20.1",
+            "3 A2 20.2",
+            "3 A2 20.3"
+          ],
+          "total_recorded_colonies": 318,
+          "mean_colonies_per_source_row": 106.0,
+          "min_source_colony_count": 100,
+          "max_source_colony_count": 109
+        },
+        {
+          "Strain": "3",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 20.1",
+            "3 A1 20.2",
+            "3 A1 20.3"
+          ],
+          "total_recorded_colonies": 212,
+          "mean_colonies_per_source_row": 70.6666666667,
+          "min_source_colony_count": 61,
+          "max_source_colony_count": 77
+        },
+        {
+          "Strain": "3",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 20.1",
+            "3 A2 20.2",
+            "3 A2 20.3"
+          ],
+          "total_recorded_colonies": 220,
+          "mean_colonies_per_source_row": 73.3333333333,
+          "min_source_colony_count": 57,
+          "max_source_colony_count": 87
+        },
+        {
+          "Strain": "3",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 22.1",
+            "3 A1 22.2",
+            "3 A1 22.3"
+          ],
+          "total_recorded_colonies": 112,
+          "mean_colonies_per_source_row": 37.3333333333,
+          "min_source_colony_count": 34,
+          "max_source_colony_count": 43
+        },
+        {
+          "Strain": "3",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 22.1",
+            "3 A2 22.2",
+            "3 A2 22.3"
+          ],
+          "total_recorded_colonies": 205,
+          "mean_colonies_per_source_row": 68.3333333333,
+          "min_source_colony_count": 66,
+          "max_source_colony_count": 73
+        },
+        {
+          "Strain": "3",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 22.1",
+            "3 A1 22.2",
+            "3 A1 22.3"
+          ],
+          "total_recorded_colonies": 110,
+          "mean_colonies_per_source_row": 36.6666666667,
+          "min_source_colony_count": 31,
+          "max_source_colony_count": 40
+        },
+        {
+          "Strain": "3",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 22.1",
+            "3 A2 22.2",
+            "3 A2 22.3"
+          ],
+          "total_recorded_colonies": 211,
+          "mean_colonies_per_source_row": 70.3333333333,
+          "min_source_colony_count": 64,
+          "max_source_colony_count": 79
+        },
+        {
+          "Strain": "3",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 24.1",
+            "3 A1 24.2",
+            "3 A1 24.3"
+          ],
+          "total_recorded_colonies": 251,
+          "mean_colonies_per_source_row": 83.6666666667,
+          "min_source_colony_count": 71,
+          "max_source_colony_count": 100
+        },
+        {
+          "Strain": "3",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 24.1",
+            "3 A2 24.2",
+            "3 A2 24.3"
+          ],
+          "total_recorded_colonies": 233,
+          "mean_colonies_per_source_row": 77.6666666667,
+          "min_source_colony_count": 67,
+          "max_source_colony_count": 86
+        },
+        {
+          "Strain": "3",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 24.1",
+            "3 A2 24.2",
+            "3 A2 24.3"
+          ],
+          "total_recorded_colonies": 206,
+          "mean_colonies_per_source_row": 68.6666666667,
+          "min_source_colony_count": 66,
+          "max_source_colony_count": 71
+        },
+        {
+          "Strain": "3",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "10",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 24.1",
+            "3 A1 24.2",
+            "3 A1 24.3"
+          ],
+          "total_recorded_colonies": 105,
+          "mean_colonies_per_source_row": 35.0,
+          "min_source_colony_count": 32,
+          "max_source_colony_count": 37
+        },
+        {
+          "Strain": "3",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 26.1",
+            "3 A1 26.2",
+            "3 A1 26.3"
+          ],
+          "total_recorded_colonies": 15,
+          "mean_colonies_per_source_row": 5.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 15
+        },
+        {
+          "Strain": "3",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 26.1",
+            "3 A2 26.2",
+            "3 A2 26.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 26.1",
+            "3 A1 26.2",
+            "3 A1 26.3"
+          ],
+          "total_recorded_colonies": 102,
+          "mean_colonies_per_source_row": 34.0,
+          "min_source_colony_count": 28,
+          "max_source_colony_count": 39
+        },
+        {
+          "Strain": "3",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 26.1",
+            "3 A2 26.2",
+            "3 A2 26.3"
+          ],
+          "total_recorded_colonies": 89,
+          "mean_colonies_per_source_row": 29.6666666667,
+          "min_source_colony_count": 23,
+          "max_source_colony_count": 36
+        },
+        {
+          "Strain": "3",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 28.1",
+            "3 A1 28.2",
+            "3 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 28.1",
+            "3 A2 28.2",
+            "3 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 28.1",
+            "3 A1 28.2",
+            "3 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 28.1",
+            "3 A2 28.2",
+            "3 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 30.1",
+            "3 A1 30.2",
+            "3 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 30.1",
+            "3 A2 30.2",
+            "3 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A1 30.1",
+            "3 A1 30.2",
+            "3 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "3",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "3 A2 30.1",
+            "3 A2 30.2",
+            "3 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        }
+      ]
+    },
+    "strain_4": {
+      "source_file": "Growth_data_strain_4.xlsx",
+      "source_strain_label": "4",
+      "source_colony_field": "Colonly.Count",
+      "group_fields": [
+        "Strain",
+        "Temperature",
+        "Temp.Rep",
+        "Run.Num",
+        "Mating.Type"
+      ],
+      "source_record_count": 168,
+      "temperature_labels": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "12",
+        "14",
+        "16",
+        "18",
+        "20",
+        "22",
+        "24",
+        "26",
+        "28",
+        "30"
+      ],
+      "temperature_run_groups": 28,
+      "records_per_temperature_run": {
+        "6": 28
+      },
+      "strain_run_mating_cells": 56,
+      "records_per_strain_run_mating_cell": {
+        "3": 56
+      },
+      "source_total_recorded_colonies": 4940,
+      "source_distinct_picture_id_labels": 84,
+      "source_repeated_picture_id_rows": 84,
+      "groups": [
+        {
+          "Strain": "4",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 4.1",
+            "4 A1 4.2",
+            "4 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "4",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 4.1",
+            "4 A2 4.2",
+            "4 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 4.1",
+            "4 A1 4.2",
+            "4 A1 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "4",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 4.1",
+            "4 A2 4.2",
+            "4 A2 4.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 6.1",
+            "4 A1 6.2",
+            "4 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "6",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 6.1",
+            "4 A2 6.2",
+            "4 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 6.1",
+            "4 A1 6.2",
+            "4 A1 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "6",
+          "Temp.Rep": "2",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 6.1",
+            "4 A2 6.2",
+            "4 A2 6.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 8.1",
+            "4 A1 8.2",
+            "4 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "8",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 8.1",
+            "4 A2 8.2",
+            "4 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 8.1",
+            "4 A1 8.2",
+            "4 A1 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "8",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 8.1",
+            "4 A2 8.2",
+            "4 A2 8.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 10.1",
+            "4 A1 10.2",
+            "4 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "10",
+          "Temp.Rep": "1",
+          "Run.Num": "9",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 10.1",
+            "4 A2 10.2",
+            "4 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 10.1",
+            "4 A1 10.2",
+            "4 A1 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "10",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 10.1",
+            "4 A2 10.2",
+            "4 A2 10.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 12.1",
+            "4 A1 12.2",
+            "4 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "12",
+          "Temp.Rep": "1",
+          "Run.Num": "4",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 12.1",
+            "4 A2 12.2",
+            "4 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 12.1",
+            "4 A1 12.2",
+            "4 A1 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "12",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 12.1",
+            "4 A2 12.2",
+            "4 A2 12.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 14.1",
+            "4 A1 14.2",
+            "4 A1 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "14",
+          "Temp.Rep": "1",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 14.1",
+            "4 A2 14.2",
+            "4 A2 14.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 14.1",
+            "4 A1 14.2",
+            "4 A1 14.3"
+          ],
+          "total_recorded_colonies": 215,
+          "mean_colonies_per_source_row": 71.6666666667,
+          "min_source_colony_count": 47,
+          "max_source_colony_count": 95
+        },
+        {
+          "Strain": "4",
+          "Temperature": "14",
+          "Temp.Rep": "2",
+          "Run.Num": "11",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 14.1",
+            "4 A2 14.2",
+            "4 A2 14.3"
+          ],
+          "total_recorded_colonies": 178,
+          "mean_colonies_per_source_row": 59.3333333333,
+          "min_source_colony_count": 55,
+          "max_source_colony_count": 67
+        },
+        {
+          "Strain": "4",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 16.1",
+            "4 A1 16.2",
+            "4 A1 16.3"
+          ],
+          "total_recorded_colonies": 211,
+          "mean_colonies_per_source_row": 70.3333333333,
+          "min_source_colony_count": 67,
+          "max_source_colony_count": 75
+        },
+        {
+          "Strain": "4",
+          "Temperature": "16",
+          "Temp.Rep": "1",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 16.1",
+            "4 A2 16.2",
+            "4 A2 16.3"
+          ],
+          "total_recorded_colonies": 160,
+          "mean_colonies_per_source_row": 53.3333333333,
+          "min_source_colony_count": 49,
+          "max_source_colony_count": 60
+        },
+        {
+          "Strain": "4",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 16.1",
+            "4 A1 16.2",
+            "4 A1 16.3"
+          ],
+          "total_recorded_colonies": 108,
+          "mean_colonies_per_source_row": 36.0,
+          "min_source_colony_count": 33,
+          "max_source_colony_count": 38
+        },
+        {
+          "Strain": "4",
+          "Temperature": "16",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 16.1",
+            "4 A2 16.2",
+            "4 A2 16.3"
+          ],
+          "total_recorded_colonies": 226,
+          "mean_colonies_per_source_row": 75.3333333333,
+          "min_source_colony_count": 71,
+          "max_source_colony_count": 83
+        },
+        {
+          "Strain": "4",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 18.1",
+            "4 A1 18.2",
+            "4 A1 18.3"
+          ],
+          "total_recorded_colonies": 177,
+          "mean_colonies_per_source_row": 59.0,
+          "min_source_colony_count": 52,
+          "max_source_colony_count": 63
+        },
+        {
+          "Strain": "4",
+          "Temperature": "18",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 18.1",
+            "4 A2 18.2",
+            "4 A2 18.3"
+          ],
+          "total_recorded_colonies": 236,
+          "mean_colonies_per_source_row": 78.6666666667,
+          "min_source_colony_count": 75,
+          "max_source_colony_count": 81
+        },
+        {
+          "Strain": "4",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 18.1",
+            "4 A1 18.2",
+            "4 A1 18.3"
+          ],
+          "total_recorded_colonies": 245,
+          "mean_colonies_per_source_row": 81.6666666667,
+          "min_source_colony_count": 69,
+          "max_source_colony_count": 88
+        },
+        {
+          "Strain": "4",
+          "Temperature": "18",
+          "Temp.Rep": "2",
+          "Run.Num": "8",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 18.1",
+            "4 A2 18.2",
+            "4 A2 18.3"
+          ],
+          "total_recorded_colonies": 202,
+          "mean_colonies_per_source_row": 67.3333333333,
+          "min_source_colony_count": 57,
+          "max_source_colony_count": 76
+        },
+        {
+          "Strain": "4",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 20.1",
+            "4 A1 20.2",
+            "4 A1 20.3"
+          ],
+          "total_recorded_colonies": 153,
+          "mean_colonies_per_source_row": 51.0,
+          "min_source_colony_count": 42,
+          "max_source_colony_count": 57
+        },
+        {
+          "Strain": "4",
+          "Temperature": "20",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 20.1",
+            "4 A2 20.2",
+            "4 A2 20.3"
+          ],
+          "total_recorded_colonies": 394,
+          "mean_colonies_per_source_row": 131.3333333333,
+          "min_source_colony_count": 123,
+          "max_source_colony_count": 148
+        },
+        {
+          "Strain": "4",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 20.1",
+            "4 A1 20.2",
+            "4 A1 20.3"
+          ],
+          "total_recorded_colonies": 203,
+          "mean_colonies_per_source_row": 67.6666666667,
+          "min_source_colony_count": 62,
+          "max_source_colony_count": 75
+        },
+        {
+          "Strain": "4",
+          "Temperature": "20",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 20.1",
+            "4 A2 20.2",
+            "4 A2 20.3"
+          ],
+          "total_recorded_colonies": 171,
+          "mean_colonies_per_source_row": 57.0,
+          "min_source_colony_count": 55,
+          "max_source_colony_count": 59
+        },
+        {
+          "Strain": "4",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 22.1",
+            "4 A1 22.2",
+            "4 A1 22.3"
+          ],
+          "total_recorded_colonies": 275,
+          "mean_colonies_per_source_row": 91.6666666667,
+          "min_source_colony_count": 87,
+          "max_source_colony_count": 97
+        },
+        {
+          "Strain": "4",
+          "Temperature": "22",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 22.1",
+            "4 A2 22.2",
+            "4 A2 22.3"
+          ],
+          "total_recorded_colonies": 206,
+          "mean_colonies_per_source_row": 68.6666666667,
+          "min_source_colony_count": 59,
+          "max_source_colony_count": 88
+        },
+        {
+          "Strain": "4",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 22.1",
+            "4 A1 22.2",
+            "4 A1 22.3"
+          ],
+          "total_recorded_colonies": 176,
+          "mean_colonies_per_source_row": 58.6666666667,
+          "min_source_colony_count": 51,
+          "max_source_colony_count": 68
+        },
+        {
+          "Strain": "4",
+          "Temperature": "22",
+          "Temp.Rep": "2",
+          "Run.Num": "5",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 22.1",
+            "4 A2 22.2",
+            "4 A2 22.3"
+          ],
+          "total_recorded_colonies": 121,
+          "mean_colonies_per_source_row": 40.3333333333,
+          "min_source_colony_count": 31,
+          "max_source_colony_count": 45
+        },
+        {
+          "Strain": "4",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 24.1",
+            "4 A1 24.2",
+            "4 A1 24.3"
+          ],
+          "total_recorded_colonies": 185,
+          "mean_colonies_per_source_row": 61.6666666667,
+          "min_source_colony_count": 52,
+          "max_source_colony_count": 69
+        },
+        {
+          "Strain": "4",
+          "Temperature": "24",
+          "Temp.Rep": "1",
+          "Run.Num": "3",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 24.1",
+            "4 A2 24.2",
+            "4 A2 24.3"
+          ],
+          "total_recorded_colonies": 218,
+          "mean_colonies_per_source_row": 72.6666666667,
+          "min_source_colony_count": 66,
+          "max_source_colony_count": 79
+        },
+        {
+          "Strain": "4",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 24.1",
+            "4 A1 24.2",
+            "4 A1 24.3"
+          ],
+          "total_recorded_colonies": 195,
+          "mean_colonies_per_source_row": 65.0,
+          "min_source_colony_count": 61,
+          "max_source_colony_count": 67
+        },
+        {
+          "Strain": "4",
+          "Temperature": "24",
+          "Temp.Rep": "2",
+          "Run.Num": "7",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 24.1",
+            "4 A2 24.2",
+            "4 A2 24.3"
+          ],
+          "total_recorded_colonies": 175,
+          "mean_colonies_per_source_row": 58.3333333333,
+          "min_source_colony_count": 44,
+          "max_source_colony_count": 68
+        },
+        {
+          "Strain": "4",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 26.1",
+            "4 A1 26.2",
+            "4 A1 26.3"
+          ],
+          "total_recorded_colonies": 126,
+          "mean_colonies_per_source_row": 42.0,
+          "min_source_colony_count": 40,
+          "max_source_colony_count": 45
+        },
+        {
+          "Strain": "4",
+          "Temperature": "26",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 26.1",
+            "4 A2 26.2",
+            "4 A2 26.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 26.1",
+            "4 A1 26.2",
+            "4 A1 26.3"
+          ],
+          "total_recorded_colonies": 232,
+          "mean_colonies_per_source_row": 77.3333333333,
+          "min_source_colony_count": 69,
+          "max_source_colony_count": 85
+        },
+        {
+          "Strain": "4",
+          "Temperature": "26",
+          "Temp.Rep": "2",
+          "Run.Num": "6",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 26.1",
+            "4 A2 26.2",
+            "4 A2 26.3"
+          ],
+          "total_recorded_colonies": 152,
+          "mean_colonies_per_source_row": 50.6666666667,
+          "min_source_colony_count": 46,
+          "max_source_colony_count": 53
+        },
+        {
+          "Strain": "4",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 28.1",
+            "4 A1 28.2",
+            "4 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "28",
+          "Temp.Rep": "1",
+          "Run.Num": "2",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 28.1",
+            "4 A2 28.2",
+            "4 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 28.1",
+            "4 A1 28.2",
+            "4 A1 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "28",
+          "Temp.Rep": "2",
+          "Run.Num": "13",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 28.1",
+            "4 A2 28.2",
+            "4 A2 28.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 30.1",
+            "4 A1 30.2",
+            "4 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "30",
+          "Temp.Rep": "1",
+          "Run.Num": "1",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 30.1",
+            "4 A2 30.2",
+            "4 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A1",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A1 30.1",
+            "4 A1 30.2",
+            "4 A1 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        },
+        {
+          "Strain": "4",
+          "Temperature": "30",
+          "Temp.Rep": "2",
+          "Run.Num": "12",
+          "Mating.Type": "A2",
+          "source_assay_rows": 3,
+          "source_replicate_labels": [
+            "1",
+            "2",
+            "3"
+          ],
+          "source_picture_ids": [
+            "4 A2 30.1",
+            "4 A2 30.2",
+            "4 A2 30.3"
+          ],
+          "total_recorded_colonies": 0,
+          "mean_colonies_per_source_row": 0.0,
+          "min_source_colony_count": 0,
+          "max_source_colony_count": 0
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Counts describe original assay rows, not independent randomized temperature units.",
+    "Picture ID labels may recur across temperature replicates; no rows are removed.",
+    "Mating types and strains are kept separate; their counts are not pooled into effects.",
+    "Run.Num and Temp.Rep are source codes, not verified independent growth chambers.",
+    "Strain 3 splits some recorded temperature/run groups by mating-type run codes.",
+    "No growth rate, temperature model, significance test or causal effect is estimated."
+  ]
+}
