@@ -112,6 +112,12 @@ summarize `Colonly.Count` by strain, temperature/run and mating type while
 preserving source picture-ID collisions and all assay rows. The apparent
 repetition of picture labels does not establish duplicate biological samples.
 
+The [Dryad greenhouse infection-status descriptive exports](../../docs/external_dryad_greenhouse_status_descriptives.md)
+preserve 1,112 original scored rows across 852 recorded visit cells, with
+frequencies for the four literal status codes. The 141 fully repeated rows
+remain counted because they cannot be identified as duplicate plants.
+No disease-risk denominator or join to the separate death-case file is made.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and

@@ -81,6 +81,12 @@ growth datasets. Source mating-type and temperature/run groups are preserved,
 and repeated picture IDs are reported without deduplication. They do not
 grant an inferential heat-response analysis.
 
+The [Dryad greenhouse infection-status exports](external_dryad_greenhouse_status_descriptives.md)
+exercise only the `disease_status_frequencies` permission. All 1,112 scored
+rows, 852 source visit cells, four literal codes, and 141 excess identical
+rows are retained without a disease/healthy recoding or a join to death cases.
+The plant-identity, codebook and cluster requirements remain unresolved.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:

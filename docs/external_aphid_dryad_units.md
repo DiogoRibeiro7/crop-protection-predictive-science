@@ -151,6 +151,12 @@ strain-3 run-code mismatch, without fitting a temperature-response model.
 The `Rep`/`replicate` fields and family labels can help stratify future
 analyses; they do not restore the missing individual-plant links.
 
+The [greenhouse infection-status descriptive exports](external_dryad_greenhouse_status_descriptives.md)
+retain the seven source visit-cell labels, report all four literal status
+frequencies and preserve every fully repeated record. They do not create
+plant identifiers, construct binary disease outcomes, or combine the
+death-case workbook with scored records.
+
 ### Field plants, summaries, and weather
 
 - The raw field workbook has **178 distinct plant positions**, keyed by
