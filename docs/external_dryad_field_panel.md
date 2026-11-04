@@ -77,3 +77,8 @@ The source-data [profile](../data/external/PROFILE.md),
 [unit audit](../results/external_aphid_dryad_units.json) establish the
 underlying row counts and provenance. Neither the workbooks nor the weather
 file have been edited.
+
+The follow-on [within-plant field-status exports](external_dryad_field_status_descriptives.md)
+preserve all 178 original plant identities and 27 literal dated status records
+per plant in CSV, with visit-level label frequencies. They do not advance
+the protocol-gated longitudinal modelling permissions.
