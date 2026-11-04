@@ -7,6 +7,11 @@ fit models or interpret effects. Its 18 assets correspond exactly to the
 observation tables in the [structural profile](../data/external/PROFILE.md).
 Workbook documentation sheets are deliberately excluded.
 
+The [research-readiness ledger](external_analysis_readiness.md) materializes
+the contract's permitted actions, verified descriptive exports, unimplemented
+but allowed descriptions, protocol prerequisites, and explicit prohibitions.
+It cannot promote a gated action to an allowed one.
+
 Each asset references one of ten policies. All permit a structural inventory;
 the additional descriptive permissions, protocol requirements, and explicit
 prohibitions are summarized below.
