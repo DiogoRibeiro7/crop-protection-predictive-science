@@ -57,6 +57,12 @@ an incomplete `Ever.dis` field, and a reversed weather high/low measurement on
 a field-visit date. These findings do not lift the field or weather protocol
 requirements.
 
+The [within-plant field-status exports](external_dryad_field_status_descriptives.md)
+exercise the narrowly allowed `within_plant_status_description` action.
+They retain the 178 plant keys across 27 dated observations and expose exact
+literal label counts, but do not treat repeated visits as independent units
+or infer a disease process.
+
 The [controlled-aphid condition exports](external_aphid_controlled_descriptives.md)
 exercise the existing `condition_mortality_description` permission for
 Experiments 1–4. They preserve source time labels, record-count imbalance and

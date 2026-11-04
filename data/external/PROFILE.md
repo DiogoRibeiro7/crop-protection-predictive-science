@@ -102,6 +102,11 @@ reconciles the original field-status header dates, flower-summary dates and
 weather observations; catalogs source status strings without recoding them;
 and locates the two known weather anomalies on the calendar.
 
+The [Dryad within-plant status exports](../../docs/external_dryad_field_status_descriptives.md)
+retain 4,806 plant–visit rows for 178 distinct plants across 27 dates, plus
+literal visit/field status frequency counts. Repeated visits are not separate
+experimental units; source status codes and blanks are not recoded.
+
 The [Dryad germination/conjugation descriptive exports](../../docs/external_dryad_lab_assay_descriptives.md)
 retain the original run and replicate labels in four distinct source-assay
 tables. They sum recorded numerator/denominator counts within each
