@@ -118,6 +118,11 @@ frequencies for the four literal status codes. The 141 fully repeated rows
 remain counted because they cannot be identified as duplicate plants.
 No disease-risk denominator or join to the separate death-case file is made.
 
+The [Dryad greenhouse death-case descriptive exports](../../docs/external_dryad_greenhouse_death_descriptives.md)
+retain 173 original `dead=1` rows in 115 recorded cells. They preserve
+58 fully matching excess rows without deduplication and never divide
+case counts by unrelated infection-workbook records.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and

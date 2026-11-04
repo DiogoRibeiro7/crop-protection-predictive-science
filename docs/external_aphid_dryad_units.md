@@ -157,6 +157,11 @@ frequencies and preserve every fully repeated record. They do not create
 plant identifiers, construct binary disease outcomes, or combine the
 death-case workbook with scored records.
 
+The [separate death-case descriptive exports](external_dryad_greenhouse_death_descriptives.md)
+retain all 173 source cases, 115 case cells, and 58 fully repeated rows.
+Neither the case file nor the infection-status table supplies the unique
+plant links or at-risk denominators needed to estimate mortality rates.
+
 ### Field plants, summaries, and weather
 
 - The raw field workbook has **178 distinct plant positions**, keyed by

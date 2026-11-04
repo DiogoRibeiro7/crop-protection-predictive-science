@@ -87,6 +87,12 @@ rows, 852 source visit cells, four literal codes, and 141 excess identical
 rows are retained without a disease/healthy recoding or a join to death cases.
 The plant-identity, codebook and cluster requirements remain unresolved.
 
+The [Dryad greenhouse death-case tallies](external_dryad_greenhouse_death_descriptives.md)
+exercise the separate `death_case_tally` permission for 173 case-only rows.
+They retain 115 recorded case cells and 58 excess identical rows without
+inventing noncase denominators, event times, or plant links. The death-risk
+model remains gated by the original protocol requirements.
+
 ## Reproducible checks
 
 Run from the repository root, with no network requests:
