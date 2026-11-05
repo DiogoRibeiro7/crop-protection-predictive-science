@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "source_file": "daily_high_temps.txt",
+  "source_table": "daily_high_temps.txt",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "predecessor_field_panel_sha256": "aec258c400fd0c656e2f7a5260e6d7f6ae3b4c603a2114a3324a1a43d41d35ac",
+  "analysis": "source_weather_quality_review",
+  "observational_unit": "weather_station_calendar_day_not_individual_plant",
+  "source_weather_rows": 214,
+  "distinct_dates": 214,
+  "first_weather_date": "2021-05-01",
+  "last_weather_date": "2021-11-30",
+  "out_of_order_source_rows": 0,
+  "missing_calendar_days_between_records": 0,
+  "calendar_gaps": [],
+  "quality_flag_counts": {
+    "low_above_high": 1,
+    "missing_low": 1,
+    "ok": 212
+  },
+  "records_missing_high": 0,
+  "records_missing_low": 1,
+  "records_low_above_high": 1,
+  "source_anomaly_dates": [
+    "2021-08-30",
+    "2021-08-31"
+  ],
+  "weather_dates_matching_field_visits": 27,
+  "field_visit_date_count": 27,
+  "field_visits_without_weather": [],
+  "field_visits_on_source_anomaly_dates": [
+    "2021-08-31"
+  ],
+  "limitations": [
+    "Source High and Low strings and blanks are retained without correction.",
+    "A missing component or Low above High requires source-level resolution.",
+    "The source README names the Beltsville weather station; site exposure is unverified.",
+    "Matching a weather date to a field visit is not exposure validation.",
+    "No weather interpolation, reordering, unit conversion or lag building occurs.",
+    "No temperature association, causal effect or disease model is fitted."
+  ]
+}

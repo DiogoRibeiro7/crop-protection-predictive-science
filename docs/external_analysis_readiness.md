@@ -30,8 +30,8 @@ suite; a matching summary alone is not an experimental-unit proof.
 | --- | ---: | --- |
 | Source observation tables | 18 | Complete, audited original-data coverage across ten policy families. |
 | Permitted source-level descriptive actions | 36 | One structural inventory and one scoped descriptive action per source table. |
-| Permitted actions with crosschecked committed reports | 35 | Includes 18 common structural inventories and 17 additional scoped descriptions. |
-| Permitted descriptions without standalone exports | 1 | Dryad source weather quality. It may be implemented without changing permission. |
+| Permitted actions with crosschecked committed reports | 36 | Includes 18 common structural inventories and 18 additional scoped descriptions. |
+| Permitted descriptions without standalone exports | 0 | All currently permitted descriptive actions now have committed exports. |
 | Protocol-gated inferential questions | 19 | Each currently requires an explicit, separately reviewed policy revision. |
 | Recorded prerequisite checklist entries | 59 | Repeated per source table where experiments share a policy; **not** 59 independently verified gaps. |
 | Explicitly blocked source/action combinations | 34 | Examples include treating repeated observations as independent replicates and invalid cross-publication joins. |
@@ -76,11 +76,11 @@ The [Dryad flowering-summary export](external_dryad_flowering_summary_descriptiv
 now also covers 27 visit-level source aggregates and reports arithmetic
 agreement for the recorded component sums and rounded proportions.
 
-The remaining **already allowed** descriptive deliverable is:
-
-1. Dryad weather-quality review (214 source dates): isolate missing and
-   reversed high/low records, retain source values, and avoid interpreting
-   an unverified station/site series as plant-level causal exposure.
+The [Dryad weather-quality review](external_dryad_weather_quality_descriptives.md)
+completes the last already-permitted descriptive action: 214 source station
+dates, one missing low temperature and one reversed high/low pair. The source
+values are unchanged; the reversed pair coincides with a field visit.
+**No new inferential action has been approved.**
 
 ## Protocol requests before inferential work
 
