@@ -55,6 +55,12 @@ prove that the underlying paper or authors lack the information.
 or stale. New policy families, discrepancies in reported source units, and
 unexpected promotion of gated actions fail closed.
 
+The [protocol evidence request pack](external_protocol_evidence_review.md)
+is the next stage after descriptive completeness. It maps all 59 pending
+prerequisite entries to 35 specific investigator questions, with exact
+locations for limited context in the original source READMEs. These are
+questions for protocol review, **not** newly approved models.
+
 ## Scientific questions we can address now
 
 The following are observational descriptions, not causal answers:

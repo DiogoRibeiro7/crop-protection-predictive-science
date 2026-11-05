@@ -186,6 +186,10 @@ changing the field-data modelling gate.
 The [Dryad weather-quality review](docs/external_dryad_weather_quality_descriptives.md)
 preserves 214 station-date records, flags an absent low and a reversed pair,
 and aligns dates without treating station weather as validated plant exposure.
+The [external protocol evidence request pack](docs/external_protocol_evidence_review.md)
+now translates all 59 still-open protocol prerequisites into 35 distinct
+investigator questions, using original-source README anchors only as context.
+No inferential model gate has been lifted.
 
 ## Scientific principles demonstrated
 

@@ -42,6 +42,12 @@ linkage requirement. The datasets must be evaluated independently before
 scientific modelling, especially where dose units, targets, treatments, and
 experimental units differ.
 
+For unresolved study protocols, see the
+[external protocol evidence request pack](../../docs/external_protocol_evidence_review.md).
+Its separate, authored request configuration is not an original-source file.
+It uses pinned source README snippets only as limited context and leaves all
+inferential permissions unchanged.
+
 The [structural profile](PROFILE.md) inventories worksheet variables, source
 record counts, blank cells, and literal `NA` codes in a reproducible JSON file.
 It also records scientific caveats discovered during the first source review.

@@ -1,0 +1,15 @@
+ref_id,source_document,source_line,literal_anchor
+aphid_controlled_conditions,data/external/zenodo_aphid_pesticide_19805135/README.txt,4,Sheet 1 (Experiment 1) examines the effects of varying pesticide concentrations
+aphid_field_date,data/external/zenodo_aphid_pesticide_19805135/README.txt,65,Date: Calendar date of sampling.
+aphid_field_mortality,data/external/zenodo_aphid_pesticide_19805135/README.txt,72,Mortality: Observed aphid mortality rate following treatment.
+aphid_field_replicate,data/external/zenodo_aphid_pesticide_19805135/README.txt,63,Replicate: Replicate identifier for each treatment.
+aphid_field_treatment,data/external/zenodo_aphid_pesticide_19805135/README.txt,62,"Treat: Treatment group based on pesticide application timing (A, B, C)."
+dryad_field_codes,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,115,"V=vegetative, B=bolting, D=diseased (all)"
+dryad_field_dates,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,89,monitored for symptoms from May- November 2021
+dryad_field_plant,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,113,"Each row is one plant, with different columns for status at each day."
+dryad_flower_status,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,117,Columns marked ‘infected_date’ are scored as either
+dryad_greenhouse_deaths,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,85,raw number of dead plants used in the analysis
+dryad_greenhouse_temperatures,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,63,"seedlings were inoculated at 24 °C, 26 °C, and 30 °C"
+dryad_lab_germination,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,51,germinated after 20 hours at each temperature
+dryad_lab_growth,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,55,number of visible colonies after one week at each temperature
+dryad_station,data/external/dryad_pathogen_temperature_4mw6m90jv/README.md,107,Beltsville weather station
