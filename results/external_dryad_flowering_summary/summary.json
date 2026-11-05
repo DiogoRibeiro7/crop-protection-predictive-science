@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "source_doi": "10.5061/dryad.4mw6m90jv",
+  "source_workbook": "flower_summary_data.xlsx",
+  "source_sheet": "flower summary data",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "predecessor_field_panel_sha256": "aec258c400fd0c656e2f7a5260e6d7f6ae3b4c603a2114a3324a1a43d41d35ac",
+  "analysis": "aggregate_flowering_description",
+  "observational_unit": "aggregate_visit_row_not_individual_plant",
+  "source_visit_rows": 27,
+  "source_plant_rows_used_only_for_arithmetic_check": 178,
+  "first_visit_date": "2021-05-17",
+  "last_visit_date": "2021-11-18",
+  "original_source_columns": [
+    "days",
+    "Date",
+    "high",
+    "low",
+    "Data.collection.pt",
+    "high.7",
+    "low.7",
+    "liquid.in",
+    "Degree.days",
+    "Evap.in",
+    "high.14",
+    "low.14",
+    "high.10",
+    "low.10",
+    "high.12",
+    "low.12",
+    "high.16",
+    "low.16",
+    "Flwer.data",
+    "total.D.flwr",
+    "total.H.flwr",
+    "total",
+    "proportion",
+    "Flwr.plants",
+    "Fully.Smutty.plants",
+    "Partial.dis",
+    "any.disease",
+    "Prop.any.dis",
+    "prop.flwr"
+  ],
+  "recorded_flower_data_flag_counts": {
+    "0": 8,
+    "1": 19
+  },
+  "flower_count_availability": {
+    "complete": 19,
+    "not_collected": 8
+  },
+  "nonblank_cells_by_count_or_fraction_field": {
+    "total.D.flwr": 19,
+    "total.H.flwr": 19,
+    "total": 26,
+    "Flwr.plants": 27,
+    "Fully.Smutty.plants": 27,
+    "Partial.dis": 27,
+    "any.disease": 27,
+    "proportion": 19,
+    "Prop.any.dis": 27,
+    "prop.flwr": 27
+  },
+  "arithmetic_check_counts": {
+    "source_flower_total_sum": {
+      "agrees": 19,
+      "not_recorded": 8
+    },
+    "source_flower_fraction": {
+      "agrees": 19,
+      "not_recorded": 8
+    },
+    "source_any_disease_count_sum": {
+      "agrees": 27
+    },
+    "source_any_disease_fraction": {
+      "agrees": 27
+    },
+    "source_flowering_fraction_vs_plant_rows": {
+      "agrees": 27
+    }
+  },
+  "limitations": [
+    "Source flowering fractions are retained, not interpreted as independent risks.",
+    "Twenty-seven aggregate visits are not twenty-seven new individual plants.",
+    "The 178 field rows are used only to inspect recorded fraction arithmetic.",
+    "Flower totals are recorded for fewer visits than flowering-plant totals.",
+    "Summary weather fields are raw source strings, not validated exposures.",
+    "No weather association, causal effect, or disease transition model is fitted."
+  ]
+}

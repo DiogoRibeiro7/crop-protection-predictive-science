@@ -107,6 +107,11 @@ retain 4,806 plant–visit rows for 178 distinct plants across 27 dates, plus
 literal visit/field status frequency counts. Repeated visits are not separate
 experimental units; source status codes and blanks are not recoded.
 
+The [Dryad aggregate flowering-summary exports](../../docs/external_dryad_flowering_summary_descriptives.md)
+preserve all 27 source visits and their original strings. Only 19 dates have
+recorded detailed flower counts, although flowering-plant totals appear on
+all 27 dates. Reported proportions are checked arithmetically, not modelled.
+
 The [Dryad germination/conjugation descriptive exports](../../docs/external_dryad_lab_assay_descriptives.md)
 retain the original run and replicate labels in four distinct source-assay
 tables. They sum recorded numerator/denominator counts within each
