@@ -112,6 +112,11 @@ preserve all 27 source visits and their original strings. Only 19 dates have
 recorded detailed flower counts, although flowering-plant totals appear on
 all 27 dates. Reported proportions are checked arithmetically, not modelled.
 
+The [Dryad daily-weather quality export](../../docs/external_dryad_weather_quality_descriptives.md)
+preserves all 214 station-date source records, including one blank low and one
+low-above-high pair; 27 field visits match station calendar dates, but this
+does not establish plant exposure or clear the weather-model protocol gate.
+
 The [Dryad germination/conjugation descriptive exports](../../docs/external_dryad_lab_assay_descriptives.md)
 retain the original run and replicate labels in four distinct source-assay
 tables. They sum recorded numerator/denominator counts within each
@@ -135,8 +140,8 @@ case counts by unrelated infection-workbook records.
 
 The [cross-dataset research-readiness ledger](../../docs/external_analysis_readiness.md)
 checks the reported units of each permitted descriptive export against this
-profile's eligibility contract. It separately lists the two remaining
-permitted descriptions and all currently gated or blocked research questions.
+profile's eligibility contract. All 36 permitted descriptive actions have
+source-crosschecked reports; inferential questions remain gated or blocked.
 
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks

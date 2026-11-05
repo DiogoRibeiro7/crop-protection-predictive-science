@@ -44,8 +44,8 @@ def test_original_reports_and_contract_reproduce_checked_in_readiness() -> None:
     assert metadata["source_assets"] == 18
     assert metadata["policy_families"] == 10
     assert metadata["allowed_descriptive_rows"] == 36
-    assert metadata["crosschecked_descriptive_rows"] == 35
-    assert metadata["descriptive_rows_not_yet_exported"] == 1
+    assert metadata["crosschecked_descriptive_rows"] == 36
+    assert metadata["descriptive_rows_not_yet_exported"] == 0
     assert metadata["protocol_gated_question_rows"] == 19
     assert metadata["protocol_requirement_rows"] == 59
     assert metadata["explicitly_blocked_rows"] == 34
@@ -65,12 +65,11 @@ def test_allowed_export_state_is_separate_from_scientific_permission() -> None:
     assert all(int(row["recorded_groups"]) >= 1 for row in exports)
     assert all(row["evidence_path"] for row in exports if row["export_state"] != "not_exported")
     pending = [row for row in exports if row["export_state"] == "not_exported"]
-    assert {(r["asset_id"], r["action"]) for r in pending} == {
-        ("dryad_daily_weather", "source_weather_quality_review"),
-    }
-    assert all(not r["evidence_path"] for r in pending)
+    assert pending == []
+    weather = next(row for row in exports if row["action"] == "source_weather_quality_review")
+    assert weather["evidence_path"] == "results/external_dryad_weather_quality/summary.json"
     assert sum(r["action"] == "structural_inventory" for r in exports) == 18
-    assert sum(r["export_state"] == "crosschecked_committed_report" for r in exports) == 35
+    assert sum(r["export_state"] == "crosschecked_committed_report" for r in exports) == 36
 
 
 def test_protocol_requirements_never_become_allowed_inferential_analyses() -> None:
@@ -138,6 +137,32 @@ def test_explicit_source_count_regression_is_detected(tmp_path: Path) -> None:
             asset,
             "within_plant_status_description",
             "tampered.json",
+            existing["manifest_sha256"],
+            existing["analysis_contract_sha256"],
+        )
+
+
+def test_weather_summary_count_regression_is_detected(tmp_path: Path) -> None:
+    existing = json.loads(
+        (_ROOT / "results/external_dryad_weather_quality/summary.json").read_text(encoding="utf-8")
+    )
+    existing["distinct_dates"] = 213
+    report_path = tmp_path / "tampered_weather.json"
+    report_path.write_text(json.dumps(existing), encoding="utf-8")
+    asset: dict[str, Any] = {
+        "id": "dryad_daily_weather",
+        "policy": "dryad_weather",
+        "file": "dryad_pathogen_temperature_4mw6m90jv/daily_high_temps.txt",
+        "table": "daily_high_temps.txt",
+        "rows": 214,
+        "group_count": 214,
+    }
+    with pytest.raises(ValueError, match="source-unit disagreement"):
+        _verify_export(
+            tmp_path,
+            asset,
+            "source_weather_quality_review",
+            "tampered_weather.json",
             existing["manifest_sha256"],
             existing["analysis_contract_sha256"],
         )

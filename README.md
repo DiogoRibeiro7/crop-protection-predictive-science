@@ -178,10 +178,14 @@ lab-to-field experiments.
 
 The [external research-readiness ledger](docs/external_analysis_readiness.md)
 distinguishes completed descriptive exports from unresolved protocol-gated
-effect models and records the remaining permitted descriptive work.
+effect models. All 36 currently permitted source-level descriptive actions
+have crosschecked reports, without clearing any inferential protocol gate.
 The [Dryad flowering-summary export](docs/external_dryad_flowering_summary_descriptives.md)
 preserves the 27 visit-level aggregates and checks source arithmetic without
 changing the field-data modelling gate.
+The [Dryad weather-quality review](docs/external_dryad_weather_quality_descriptives.md)
+preserves 214 station-date records, flags an absent low and a reversed pair,
+and aligns dates without treating station weather as validated plant exposure.
 
 ## Scientific principles demonstrated
 

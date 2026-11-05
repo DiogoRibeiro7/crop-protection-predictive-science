@@ -74,6 +74,12 @@ visit-level source records. They reconcile original component counts and
 rounded proportions but never turn aggregate rows into individual plants or
 estimate a weather effect.
 
+The [Dryad daily-weather quality review](external_dryad_weather_quality_descriptives.md)
+exercises only `source_weather_quality_review`, retaining all 214 literal
+station-date records. A missing low value and a low-above-high pair are flagged
+without correction. Field-visit date matching does not grant site-level
+weather exposure validity or change the `weather_exposure_model` gate.
+
 The [controlled-aphid condition exports](external_aphid_controlled_descriptives.md)
 exercise the existing `condition_mortality_description` permission for
 Experiments 1–4. They preserve source time labels, record-count imbalance and
