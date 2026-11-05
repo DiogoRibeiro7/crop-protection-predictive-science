@@ -44,8 +44,8 @@ def test_original_reports_and_contract_reproduce_checked_in_readiness() -> None:
     assert metadata["source_assets"] == 18
     assert metadata["policy_families"] == 10
     assert metadata["allowed_descriptive_rows"] == 36
-    assert metadata["crosschecked_descriptive_rows"] == 34
-    assert metadata["descriptive_rows_not_yet_exported"] == 2
+    assert metadata["crosschecked_descriptive_rows"] == 35
+    assert metadata["descriptive_rows_not_yet_exported"] == 1
     assert metadata["protocol_gated_question_rows"] == 19
     assert metadata["protocol_requirement_rows"] == 59
     assert metadata["explicitly_blocked_rows"] == 34
@@ -66,12 +66,11 @@ def test_allowed_export_state_is_separate_from_scientific_permission() -> None:
     assert all(row["evidence_path"] for row in exports if row["export_state"] != "not_exported")
     pending = [row for row in exports if row["export_state"] == "not_exported"]
     assert {(r["asset_id"], r["action"]) for r in pending} == {
-        ("dryad_flowering_summary", "aggregate_flowering_description"),
         ("dryad_daily_weather", "source_weather_quality_review"),
     }
     assert all(not r["evidence_path"] for r in pending)
     assert sum(r["action"] == "structural_inventory" for r in exports) == 18
-    assert sum(r["export_state"] == "crosschecked_committed_report" for r in exports) == 34
+    assert sum(r["export_state"] == "crosschecked_committed_report" for r in exports) == 35
 
 
 def test_protocol_requirements_never_become_allowed_inferential_analyses() -> None:

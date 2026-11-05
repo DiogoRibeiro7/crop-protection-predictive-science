@@ -179,6 +179,9 @@ lab-to-field experiments.
 The [external research-readiness ledger](docs/external_analysis_readiness.md)
 distinguishes completed descriptive exports from unresolved protocol-gated
 effect models and records the remaining permitted descriptive work.
+The [Dryad flowering-summary export](docs/external_dryad_flowering_summary_descriptives.md)
+preserves the 27 visit-level aggregates and checks source arithmetic without
+changing the field-data modelling gate.
 
 ## Scientific principles demonstrated
 

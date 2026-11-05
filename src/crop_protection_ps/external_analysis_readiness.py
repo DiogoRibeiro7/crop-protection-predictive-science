@@ -23,8 +23,8 @@ from crop_protection_ps.analysis_eligibility import (
 )
 
 # The paths are a deliberately reviewed list of existing descriptive outputs.
-# No report for the aggregate flower summary or the weather quality review is
-# committed yet. Their descriptive permissions are nevertheless in force.
+# The weather-quality review has no standalone report yet; its descriptive
+# permission is nevertheless in force.
 _EXPORTS: dict[str, str | None] = {
     "wheat_field": "results/external_wheat_pairability.json",
     "aphid_cohort": "results/external_aphid_controlled/summary.json",
@@ -34,7 +34,7 @@ _EXPORTS: dict[str, str | None] = {
     "dryad_greenhouse_infection": "results/external_dryad_greenhouse_status/summary.json",
     "dryad_greenhouse_death": "results/external_dryad_greenhouse_deaths/summary.json",
     "dryad_field": "results/external_dryad_field_statuses/summary.json",
-    "dryad_summary": None,
+    "dryad_summary": "results/external_dryad_flowering_summary/summary.json",
     "dryad_weather": None,
 }
 _ALLOWED_FIELDS = (
@@ -152,6 +152,14 @@ def _verify_export(
         }[policy]
         _integer_field(report, row_field, rows)
         _integer_field(report, group_field, groups)
+    elif policy == "dryad_summary":
+        if (
+            report.get("source_workbook") != source_file
+            or report.get("source_sheet") != asset["table"]
+        ):
+            raise ValueError("Dryad flowering-summary source-table disagreement")
+        _integer_field(report, "source_visit_rows", rows)
+        _integer_field(report, "source_visit_rows", groups)
     else:
         raise ValueError(f"unrecognised descriptive export policy: {policy}")
 

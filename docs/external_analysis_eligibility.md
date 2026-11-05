@@ -68,6 +68,12 @@ They retain the 178 plant keys across 27 dated observations and expose exact
 literal label counts, but do not treat repeated visits as independent units
 or infer a disease process.
 
+The [Dryad flowering-summary exports](external_dryad_flowering_summary_descriptives.md)
+exercise the separate `aggregate_flowering_description` permission for 27
+visit-level source records. They reconcile original component counts and
+rounded proportions but never turn aggregate rows into individual plants or
+estimate a weather effect.
+
 The [controlled-aphid condition exports](external_aphid_controlled_descriptives.md)
 exercise the existing `condition_mortality_description` permission for
 Experiments 1–4. They preserve source time labels, record-count imbalance and
