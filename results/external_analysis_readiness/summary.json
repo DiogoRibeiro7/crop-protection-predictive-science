@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "contract_status": "protocol_review_pending",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "source_profile_sha256": "53c19054eee0245cf798b7ce788ce1761b94c3c4ecb18f09dd44970f4cc6231b",
+  "source_assets": 18,
+  "policy_families": 10,
+  "allowed_descriptive_rows": 36,
+  "crosschecked_descriptive_rows": 34,
+  "descriptive_rows_not_yet_exported": 2,
+  "protocol_requirement_rows": 59,
+  "protocol_gated_question_rows": 19,
+  "explicitly_blocked_rows": 34,
+  "limitations": [
+    "A committed descriptive report is metadata-crosschecked, not a model approval.",
+    "A requirements checklist is not proof that a protocol element is absent.",
+    "An aligned calendar date may still need protocol-level review.",
+    "Recorded groups are not verified independent experimental units.",
+    "No inferential action has permission in the current contract.",
+    "No cross-publication candidate linkage or causal estimation is attempted."
+  ]
+}

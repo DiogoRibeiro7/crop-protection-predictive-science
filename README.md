@@ -176,6 +176,10 @@ as well as [within-plant field-status records](docs/external_dryad_field_status_
 These are not new validated intervention-effect models or linked
 lab-to-field experiments.
 
+The [external research-readiness ledger](docs/external_analysis_readiness.md)
+distinguishes completed descriptive exports from unresolved protocol-gated
+effect models and records the remaining permitted descriptive work.
+
 ## Scientific principles demonstrated
 
 The repository is organised around a few recurring rules rather than a catalogue of algorithms:

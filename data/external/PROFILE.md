@@ -128,6 +128,11 @@ retain 173 original `dead=1` rows in 115 recorded cells. They preserve
 58 fully matching excess rows without deduplication and never divide
 case counts by unrelated infection-workbook records.
 
+The [cross-dataset research-readiness ledger](../../docs/external_analysis_readiness.md)
+checks the reported units of each permitted descriptive export against this
+profile's eligibility contract. It separately lists the two remaining
+permitted descriptions and all currently gated or blocked research questions.
+
 The [analysis-eligibility contract](../../docs/external_analysis_eligibility.md)
 turns these audits into explicit table-level permissions: descriptive checks
 that are currently safe, inferential analyses awaiting protocol evidence, and
