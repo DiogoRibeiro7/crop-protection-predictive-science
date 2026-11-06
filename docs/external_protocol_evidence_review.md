@@ -96,6 +96,10 @@ available, sufficient or absent from the full original publications.
 - The wheat source import does not contain a separately pinned original-source
   README. The review therefore does not manufacture a source-text citation for
   its unresolved requirements.
+- The subsequent [wheat publication-identity review](external_wheat_publication_identity.md)
+  inspects the original Zenodo release inventory and two R source scripts. It
+  decomposes the difference between 76 trial codes and 56 rounded geocodes,
+  but still cannot identify independent physical experiments or clear the gate.
 - Obtaining one document or resolving one reading is not enough to promote an
   inferential model. All applicable requirements must be reviewed together,
   followed by a separately tested versioned change to the eligibility contract.
