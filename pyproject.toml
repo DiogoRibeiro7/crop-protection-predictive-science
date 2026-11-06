@@ -45,6 +45,7 @@ mypy = ">=1.11"
 pre-commit = ">=3.8"
 nbclient = ">=0.10"
 nbformat = ">=5.10"
+rdata = "==1.1.0"
 
 [build-system]
 requires = ["poetry-core>=1.9.0"]

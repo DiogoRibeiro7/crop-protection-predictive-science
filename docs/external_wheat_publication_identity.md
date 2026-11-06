@@ -106,3 +106,12 @@ No permission in [analysis_eligibility.json](../data/external/analysis_eligibili
 is modified. No new treatment-effect model or pooled trial estimator is
 introduced. No author has been contacted; the generated request is ready for
 human review before any outreach.
+
+### Subsequent binary-source review
+
+The original `basf-wheat-diseases.Rdata` file was downloaded and examined in
+the [binary/TSV parity audit](external_wheat_binary_parity.md) after this
+dated source-inventory review. It contains only the 2,276-row, 17-column
+`obs` object matching the TSV, not an additional trial mapping. The earlier
+review-status snapshot above remains an accurate record of what had been
+examined *at that point in the research process*.

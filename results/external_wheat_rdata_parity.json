@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "analysis": "format_parity_without_experimental_unit_identification",
+  "source_record": "https://zenodo.org/records/6521175",
+  "source_doi": "10.5281/zenodo.6521175",
+  "binary_file": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.Rdata",
+  "binary_size_bytes": 23452,
+  "binary_original_md5": "943b8cd7276896dc2753c46bb6ed0c51",
+  "binary_sha256": "00da208c310ea6dea38fc946e27955c3c21f8019634da5053f87d3c6308e774d",
+  "tsv_file": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "tsv_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "published_trial_count": 56,
+  "source_trial_id_codes": 76,
+  "original_r_objects": [
+    "obs"
+  ],
+  "comparison": {
+    "rows_compared": 2276,
+    "columns_compared": 17,
+    "column_names": [
+      "TrialId",
+      "Country",
+      "Latitude",
+      "Longitude",
+      "Date",
+      "Daft",
+      "GsFrom",
+      "GsTo",
+      "NumSprays",
+      "Treatment",
+      "Organism",
+      "Parameter",
+      "Clarifier",
+      "Method",
+      "SampleUnit",
+      "PlantPart",
+      "Value"
+    ],
+    "cells_compared": 38692,
+    "column_results": [
+      {
+        "column": "TrialId",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Country",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Latitude",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Longitude",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Date",
+        "binary_dtype": "float64",
+        "comparison": "iso_date_from_r_epoch_days",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Daft",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "GsFrom",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 32,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "GsTo",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 132,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "NumSprays",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Treatment",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Organism",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Parameter",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Clarifier",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 903,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Method",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "SampleUnit",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 32,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "PlantPart",
+        "binary_dtype": "category",
+        "comparison": "exact_factor_or_text_label",
+        "missing_in_both": 2,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      },
+      {
+        "column": "Value",
+        "binary_dtype": "float64",
+        "comparison": "numeric_ieee754_at_most_one_ulp",
+        "missing_in_both": 0,
+        "rows_compared": 2276,
+        "unexplained_mismatches": 0
+      }
+    ],
+    "rounding_only_differences": [
+      {
+        "source_line": 1161,
+        "column": "Value",
+        "rdata_value": 86.09091599999999,
+        "tsv_value": 86.090916,
+        "absolute_difference": 1.4210854715202004e-14
+      }
+    ],
+    "rounding_only_difference_count": 1,
+    "unexplained_mismatches": 0,
+    "row_order_preserved": true
+  },
+  "additional_plot_or_trial_keys_found": false,
+  "trial_identity_established": false,
+  "model_permission": "requires_protocol",
+  "limitations": [
+    "RData contains one obs data.frame with the same 17 fields and 2276 ordered rows.",
+    "One floating-point double differs by one ULP after decimal text export.",
+    "Row-level format parity does not identify independent trials, plots or replicates.",
+    "Source binary is integrity-checked separately from the original TSV manifest.",
+    "No treatment-effect analysis or permission change follows from this parity result."
+  ]
+}
