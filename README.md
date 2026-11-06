@@ -193,6 +193,9 @@ The [wheat publication-identity audit](docs/external_wheat_publication_identity.
 also checks the original Zenodo supplementary-file inventory and separates
 the 76 trial codes, 65 geocode-years and 56 rounded locations without
 reclassifying any as independent experimental units.
+The follow-up [RData/TSV parity audit](docs/external_wheat_binary_parity.md)
+now checks both original source formats cell by cell, finding no additional
+trial identifiers or unexplained measurement differences.
 No inferential model gate has been lifted.
 
 ## Scientific principles demonstrated
