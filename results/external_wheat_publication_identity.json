@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "analysis": "descriptive_wheat_publication_identity_evidence_only",
+  "source_doi": "10.5281/zenodo.6521175",
+  "source_record_url": "https://zenodo.org/records/6521175",
+  "source_path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "source_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "publication_evidence_path": "data/external/wheat_publication_evidence.json",
+  "publication_evidence_sha256": "4f7761322c08f168353752879d22c25c905f19951b41f57f28a92e9d0ed85019",
+  "published_record_version": "1.0",
+  "publisher_source_file_count": 5,
+  "source_scripts_reviewed": [
+    "basf-wheat-diseases.R",
+    "setup.R"
+  ],
+  "uninspected_publisher_files": [
+    "basf-wheat-diseases.Rdata",
+    "basf-wheat-diseases-map.png"
+  ],
+  "counts": {
+    "source_trial_id_codes": 76,
+    "distinct_recorded_geocode_years": 65,
+    "distinct_recorded_geocodes": 56,
+    "published_trial_count": 56,
+    "trial_ids_above_geocode_year_count": 11,
+    "geocode_years_above_geocode_count": 9,
+    "trial_ids_above_geocode_count": 20,
+    "published_count_equals_geocode_count": true,
+    "published_count_equals_geocode_year_count": false,
+    "published_count_equals_trial_id_count": false,
+    "geocode_years_with_multiple_trial_ids": 9,
+    "geocodes_reused_across_years": 8
+  },
+  "maximum_shared_geocode_year": {
+    "country": "BULGARIA",
+    "latitude": "43.3",
+    "longitude": "25.0",
+    "year": 2019,
+    "trial_ids": [
+      "31",
+      "32",
+      "33",
+      "34"
+    ]
+  },
+  "cross_year_geocode_example": {
+    "country": "FRANCE",
+    "latitude": "48.0",
+    "longitude": "1.8",
+    "trial_ids_by_year": [
+      {
+        "year": 2017,
+        "trial_ids": [
+          "8",
+          "10"
+        ]
+      },
+      {
+        "year": 2018,
+        "trial_ids": [
+          "23"
+        ]
+      },
+      {
+        "year": 2019,
+        "trial_ids": [
+          "46"
+        ]
+      }
+    ]
+  },
+  "model_permission": "requires_protocol",
+  "remaining_protocol_requirements": [
+    "reconcile_56_published_trials_vs_76_trial_ids",
+    "plot_replicate_identity",
+    "treatment_dictionary",
+    "endpoint_protocol"
+  ],
+  "experimental_unit_identity_established": false,
+  "inference_permitted": false,
+  "limitations": [
+    "Equal counts do not prove that 56 published trials are 56 rounded geocodes.",
+    "0.1-degree geocodes cannot identify physical experiments, plots or replicates.",
+    "Publisher R scripts were read for mapping and loading logic only, not study design.",
+    "The publisher binary Rdata and map image were inventoried but not examined.",
+    "No 76-to-56 mapping, treatment assignment or treatment effects are asserted."
+  ]
+}

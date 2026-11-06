@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "record_url": "https://zenodo.org/records/6521175",
+  "record_doi": "10.5281/zenodo.6521175",
+  "record_version": "1.0",
+  "publisher_title": "Data from 56 fungicide trials in wheat fields across Europe 2017-2019",
+  "publisher_trial_count": 56,
+  "publication_date": "2022-03-14",
+  "reviewed_on": "2026-11-06",
+  "review_scope": "Zenodo record page and the two publicly readable R source scripts; the binary Rdata and map image were not inspected for protocol definitions.",
+  "publisher_files": [
+    {
+      "name": "basf-wheat-diseases.txt",
+      "md5": "107ba039c535832223bf484acf1e5602",
+      "review_status": "locally_imported_and_checksum_verified"
+    },
+    {
+      "name": "basf-wheat-diseases.R",
+      "md5": "b45c3c26f9e8d9cffff23f64c905b4f9",
+      "review_status": "publisher_text_read"
+    },
+    {
+      "name": "setup.R",
+      "md5": "2a90dfca4960ec49dd5eea14321d1e75",
+      "review_status": "publisher_text_read"
+    },
+    {
+      "name": "basf-wheat-diseases.Rdata",
+      "md5": "943b8cd7276896dc2753c46bb6ed0c51",
+      "review_status": "publisher_inventory_only"
+    },
+    {
+      "name": "basf-wheat-diseases-map.png",
+      "md5": "659c05fe78ac8fa01191ac48b6e0edf3",
+      "review_status": "publisher_inventory_only"
+    }
+  ],
+  "source_script_findings": [
+    {
+      "file": "basf-wheat-diseases.R",
+      "source_url": "https://zenodo.org/records/6521175/files/basf-wheat-diseases.R?download=1",
+      "observed_purpose": "Sources setup.R, loads the binary observation object, summarizes it and plots a geographic map.",
+      "trial_dictionary_defined_in_reviewed_script": false
+    },
+    {
+      "file": "setup.R",
+      "source_url": "https://zenodo.org/records/6521175/files/setup.R?download=1",
+      "observed_purpose": "Defines map plotting with longitude and latitude and configures plotting libraries.",
+      "trial_dictionary_defined_in_reviewed_script": false
+    }
+  ]
+}

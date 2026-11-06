@@ -189,6 +189,10 @@ and aligns dates without treating station weather as validated plant exposure.
 The [external protocol evidence request pack](docs/external_protocol_evidence_review.md)
 now translates all 59 still-open protocol prerequisites into 35 distinct
 investigator questions, using original-source README anchors only as context.
+The [wheat publication-identity audit](docs/external_wheat_publication_identity.md)
+also checks the original Zenodo supplementary-file inventory and separates
+the 76 trial codes, 65 geocode-years and 56 rounded locations without
+reclassifying any as independent experimental units.
 No inferential model gate has been lifted.
 
 ## Scientific principles demonstrated
