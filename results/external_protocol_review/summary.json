@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "analysis": "protocol_evidence_request_review_only",
+  "contract_status": "protocol_review_pending",
+  "manifest_sha256": "8a984ff6ea41d90923957321c61987b4097b17d65a6ffbe1937bc6e004809251",
+  "analysis_contract_sha256": "e4d7a4e0f4abe61cd7e298a0d095b0f31d458660fdbc1603a38404cd40db10b2",
+  "research_readiness_sha256": "b7f3cbbbb9d3aaf78e05a17d45878db9ab30a32a2fbd8d9dab0fac84b5488c95",
+  "protocol_questions_config_sha256": "a258e36e718330b7138bacf3952bdd44778b07718136bc55b7fab51049977cfc",
+  "original_readme_sha256": {
+    "data/external/zenodo_aphid_pesticide_19805135/README.txt": "5a5388a7eed77070875eb32b550e1040a29cd17a3c9c3fa735bd03d20fad0b43",
+    "data/external/dryad_pathogen_temperature_4mw6m90jv/README.md": "e5116c18fe91487b3370e740a7a6ed05fb8b382582ee672b4ad68ffb8a1fcb84"
+  },
+  "source_assets": 18,
+  "policy_families": 10,
+  "protocol_gated_question_rows": 19,
+  "protocol_requirement_rows": 59,
+  "unique_requirement_templates": 35,
+  "source_anchor_count": 14,
+  "requirement_rows_with_source_context": 41,
+  "requirement_rows_without_curated_context": 18,
+  "requirements_cleared": 0,
+  "limitations": [
+    "Original README context is only a source hint, not a reviewed protocol clearance.",
+    "A missing curated README anchor does not prove the source paper lacks information.",
+    "All 59 prerequisite entries retain their not_cleared_by_contract status.",
+    "Duplicate policy questions across source assets are not independent evidence.",
+    "No eligibility contract changes, inferential models or causal estimates are made."
+  ]
+}

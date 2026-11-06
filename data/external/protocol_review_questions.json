@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "source_anchors": {
+    "aphid_controlled_conditions": {
+      "document": "aphid_readme",
+      "anchor": "Sheet 1 (Experiment 1) examines the effects of varying pesticide concentrations"
+    },
+    "aphid_field_treatment": {
+      "document": "aphid_readme",
+      "anchor": "Treat: Treatment group based on pesticide application timing (A, B, C)."
+    },
+    "aphid_field_replicate": {
+      "document": "aphid_readme",
+      "anchor": "Replicate: Replicate identifier for each treatment."
+    },
+    "aphid_field_date": {
+      "document": "aphid_readme",
+      "anchor": "Date: Calendar date of sampling."
+    },
+    "aphid_field_mortality": {
+      "document": "aphid_readme",
+      "anchor": "Mortality: Observed aphid mortality rate following treatment."
+    },
+    "dryad_lab_germination": {
+      "document": "dryad_readme",
+      "anchor": "germinated after 20 hours at each temperature"
+    },
+    "dryad_lab_growth": {
+      "document": "dryad_readme",
+      "anchor": "number of visible colonies after one week at each temperature"
+    },
+    "dryad_greenhouse_temperatures": {
+      "document": "dryad_readme",
+      "anchor": "seedlings were inoculated at 24 °C, 26 °C, and 30 °C"
+    },
+    "dryad_greenhouse_deaths": {
+      "document": "dryad_readme",
+      "anchor": "raw number of dead plants used in the analysis"
+    },
+    "dryad_field_dates": {
+      "document": "dryad_readme",
+      "anchor": "monitored for symptoms from May- November 2021"
+    },
+    "dryad_field_plant": {
+      "document": "dryad_readme",
+      "anchor": "Each row is one plant, with different columns for status at each day."
+    },
+    "dryad_field_codes": {
+      "document": "dryad_readme",
+      "anchor": "V=vegetative, B=bolting, D=diseased (all)"
+    },
+    "dryad_flower_status": {
+      "document": "dryad_readme",
+      "anchor": "Columns marked ‘infected_date’ are scored as either"
+    },
+    "dryad_station": {
+      "document": "dryad_readme",
+      "anchor": "Beltsville weather station"
+    }
+  },
+  "requests": {
+    "wheat_field": {
+      "trial_level_treatment_effect": {
+        "reconcile_56_published_trials_vs_76_trial_ids": {
+          "question": "What physical trial entity does each TrialId represent, and how do 76 recorded TrialIds map to the 56 trials described by the source?",
+          "evidence_needed": "Trial-code crosswalk and field-season-site definitions from the investigators.",
+          "context": []
+        },
+        "plot_replicate_identity": {
+          "question": "Which original plot, block and replicate identifiers belong to each treatment and endpoint row?",
+          "evidence_needed": "Field layout, plot keys, block and replication metadata.",
+          "context": []
+        },
+        "treatment_dictionary": {
+          "question": "What are the exact treated/untreated labels, products, application timings, doses and randomization protocol?",
+          "evidence_needed": "Treatment allocation and intervention codebook.",
+          "context": []
+        },
+        "endpoint_protocol": {
+          "question": "How and when were disease incidence, severity and yield recorded, and which endpoint observations repeat the same experimental plot?",
+          "evidence_needed": "Endpoint scoring protocol, observation schedule and repeated-measure definitions.",
+          "context": []
+        }
+      }
+    },
+    "aphid_cohort": {
+      "binomial_temperature_interaction": {
+        "randomized_exposure_unit": {
+          "question": "Was temperature and pesticide randomized at the aphid, container, chamber or run level in experiments 1–4?",
+          "evidence_needed": "Original allocation schedule and physical exposure-unit definitions.",
+          "context": ["aphid_controlled_conditions"]
+        },
+        "batch_and_replicate_identity": {
+          "question": "Can each TOTAL/DEAD row be assigned to a unique batch, chamber, container and biological replicate?",
+          "evidence_needed": "Run-level replicate keys and physical batch/chamber logs.",
+          "context": ["aphid_controlled_conditions"]
+        },
+        "clustering_and_overdispersion_plan": {
+          "question": "How should shared exposure chambers, batches and overdispersion be represented in inference across experiments 1–4?",
+          "evidence_needed": "Investigator-supported dependence structure and prespecified statistical analysis plan.",
+          "context": []
+        }
+      }
+    },
+    "aphid_field": {
+      "field_treatment_effect": {
+        "experimental_plot_identity": {
+          "question": "Does the Replicate field identify an independent randomized plot, and is its meaning stable across both sampling days and sites?",
+          "evidence_needed": "Plot map, stable plot ID and replicate/block definitions.",
+          "context": ["aphid_field_replicate"]
+        },
+        "treatment_allocation_protocol": {
+          "question": "How were treatment groups A, B and C allocated within each site, replicate and environmental condition?",
+          "evidence_needed": "Randomization and treatment-timing protocol with field plot assignments.",
+          "context": ["aphid_field_treatment", "aphid_field_replicate"]
+        },
+        "field_date_reconciliation": {
+          "question": "What actual calendar dates and treatment dates do the source Excel date serials represent at each site?",
+          "evidence_needed": "Date-system declaration, sampling calendar and treatment logs.",
+          "context": ["aphid_field_date"]
+        },
+        "repeated_measure_analysis_plan": {
+          "question": "Which day-3 and day-7 measurements share the same plot and how should rate denominators and correlation be modelled?",
+          "evidence_needed": "Plot-level longitudinal identifier, mortality-rate definition and dependence plan.",
+          "context": ["aphid_field_replicate", "aphid_field_mortality"]
+        }
+      }
+    },
+    "dryad_binomial_lab": {
+      "temperature_response_model": {
+        "run_and_chamber_allocation": {
+          "question": "Which germination or conjugation runs shared incubators, chambers and randomized temperature assignments?",
+          "evidence_needed": "Run-to-incubator allocation and experiment-specific randomization schedule.",
+          "context": ["dryad_lab_germination"]
+        },
+        "temperature_replicate_independence": {
+          "question": "Which counted spores are technical subsamples versus distinct independently exposed biological replicates?",
+          "evidence_needed": "Source biological-replicate hierarchy and exposure-unit design.",
+          "context": []
+        },
+        "within_run_clustering_plan": {
+          "question": "Which counts are nested in common temperature runs, and what within-run dependence should a response model allow?",
+          "evidence_needed": "Chamber/run grouping keys and modelling or dispersion protocol.",
+          "context": []
+        }
+      }
+    },
+    "dryad_growth": {
+      "temperature_response_model": {
+        "run_and_chamber_allocation": {
+          "question": "Which colonies of strains 2–4 were exposed together, and how were temperatures assigned to independent chambers or runs?",
+          "evidence_needed": "Temperature allocation schedule, run log and chamber identities.",
+          "context": ["dryad_lab_growth"]
+        },
+        "nested_replicate_structure": {
+          "question": "What is the true biological unit behind strain, mating-type, run and picture labels, including repeated picture IDs?",
+          "evidence_needed": "Biological replicate and picture-to-culture mapping.",
+          "context": ["dryad_lab_growth"]
+        },
+        "strain_and_mating_type_plan": {
+          "question": "Were strain and mating-type comparisons prespecified and independently replicated across temperatures?",
+          "evidence_needed": "Factorial allocation, strain/mating-type protocol and statistical plan.",
+          "context": ["dryad_lab_growth"]
+        }
+      }
+    },
+    "dryad_greenhouse_infection": {
+      "disease_risk_model": {
+        "plant_level_independence_or_identity": {
+          "question": "Do the 1,112 scored rows identify distinct plants, or do some rows repeatedly score the same plant?",
+          "evidence_needed": "Unique plant keys and observation/replicate linkage.",
+          "context": ["dryad_greenhouse_temperatures"]
+        },
+        "disease_status_codebook": {
+          "question": "What exactly do the greenhouse disease/healthy codes mean, including unscored, sterile and uncertain cases?",
+          "evidence_needed": "Experiment-2-specific scoring codebook and exclusions.",
+          "context": ["dryad_greenhouse_temperatures"]
+        },
+        "family_and_replicate_clustering": {
+          "question": "Which greenhouse plants share seed families, inoculum batches, chamber exposure and biological replicates?",
+          "evidence_needed": "Family, batch, chamber and replicate assignments.",
+          "context": []
+        }
+      }
+    },
+    "dryad_greenhouse_death": {
+      "plant_death_risk_model": {
+        "at_risk_plant_denominators": {
+          "question": "How many live and at-risk plants were followed in every death-case cell, including those that never died?",
+          "evidence_needed": "Complete initial plant registry and risk-set counts by treatment/time.",
+          "context": ["dryad_greenhouse_deaths"]
+        },
+        "unique_plant_linkage": {
+          "question": "Is there a validated unique plant key connecting the greenhouse infection and death records without ambiguous many-to-many joins?",
+          "evidence_needed": "Author-supplied unique cross-workbook identifiers or linkage codebook.",
+          "context": ["dryad_greenhouse_deaths"]
+        },
+        "event_time_and_censoring_definition": {
+          "question": "On which date did each plant die or leave observation, and how were survivors and censoring defined?",
+          "evidence_needed": "Plant-level event chronology and censoring protocol.",
+          "context": ["dryad_greenhouse_deaths"]
+        }
+      }
+    },
+    "dryad_field": {
+      "longitudinal_disease_model": {
+        "state_transition_codebook": {
+          "question": "How should mixed or undocumented source status labels be interpreted, and which transitions between V, D, PD, LD, X and other labels are biologically admissible?",
+          "evidence_needed": "Complete field status/transition codebook, including mixed labels.",
+          "context": ["dryad_field_plant", "dryad_field_codes", "dryad_flower_status"]
+        },
+        "death_and_censoring_handling": {
+          "question": "Is recorded X a terminal death state and how are blank visits, missed visits and postreproductive plants handled?",
+          "evidence_needed": "Field observation and mortality/censoring rules.",
+          "context": ["dryad_field_codes"]
+        },
+        "date_alignment": {
+          "question": "What is the actual plant scoring schedule, including missed visits or delayed measurements, beyond the matching calendar headers?",
+          "evidence_needed": "Original field visit logs and plant observation dates.",
+          "context": ["dryad_field_dates"]
+        }
+      },
+      "temperature_causal_effect": {
+        "weather_quality_resolution": {
+          "question": "Can the missing 30 August low and reversed 31 August high/low source values be independently verified or explicitly excluded under a prespecified rule?",
+          "evidence_needed": "Original station records and an investigator-approved quality rule.",
+          "context": ["dryad_station"]
+        },
+        "confounder_measurement": {
+          "question": "Which site, plant, seasonal and management variables affected both measured field temperature and disease expression?",
+          "evidence_needed": "Causal covariate map and measured confounder sources.",
+          "context": ["dryad_field_dates", "dryad_station"]
+        },
+        "causal_identification_design": {
+          "question": "What intervention or quasi-experiment would identify a causal temperature effect rather than seasonal correlation?",
+          "evidence_needed": "Investigator-supported estimand, identification assumptions and sensitivity plan.",
+          "context": []
+        }
+      }
+    },
+    "dryad_summary": {
+      "weather_association_model": {
+        "aggregation_and_denominator_definitions": {
+          "question": "How were visit-level flower and plant totals aggregated and which denominator and risk set are valid for each endpoint?",
+          "evidence_needed": "Source aggregation code and endpoint/denominator specification.",
+          "context": ["dryad_field_plant", "dryad_flower_status"]
+        },
+        "weather_quality_resolution": {
+          "question": "How were moving temperature windows constructed from station dates containing the two flagged 30–31 August anomalies?",
+          "evidence_needed": "Original weather preprocessing, missing-data rules and window definitions.",
+          "context": ["dryad_station"]
+        },
+        "field_date_alignment": {
+          "question": "How exactly were visit dates, flower sampling and any prior-day weather windows joined?",
+          "evidence_needed": "Original date-join logic and field sampling schedule.",
+          "context": ["dryad_field_dates", "dryad_station"]
+        }
+      }
+    },
+    "dryad_weather": {
+      "weather_exposure_model": {
+        "resolve_missing_temperature": {
+          "question": "What is the verified Beltsville station low temperature for 30 August 2021, or the defensible rule if it is irrecoverable?",
+          "evidence_needed": "Original station log, station ID, units and correction or missingness policy.",
+          "context": ["dryad_station"]
+        },
+        "resolve_low_above_high": {
+          "question": "Which, if either, of the recorded 31 August 2021 High=85.00 and Low=90.00 values is incorrect?",
+          "evidence_needed": "Unmodified source-station archive and documented correction decision.",
+          "context": ["dryad_station"]
+        },
+        "site_and_date_alignment": {
+          "question": "Which plant sites and time zones are represented by the Beltsville station, and how should daily readings map to individual exposure intervals?",
+          "evidence_needed": "Site–station geolocation, observing-window definitions and exposure validation.",
+          "context": ["dryad_station", "dryad_field_dates"]
+        }
+      }
+    }
+  }
+}
