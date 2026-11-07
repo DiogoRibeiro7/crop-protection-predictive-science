@@ -99,6 +99,12 @@ Product-specific intervals are reported rather than suppressed. Several overlap 
 aggregate timing effect should not be interpreted as evidence that every product has the same
 magnitude of response.
 
+The [year-and-block sensitivity analysis](hop_timing_year_block_sensitivity.md)
+also checks whether this aggregate depends on one trial season or field block.
+It reports the influence of omitting each of four eligible years and each of
+20 year-by-block clusters, with a separate two-stage resampling sensitivity
+range. It is not a new confirmatory confidence interval.
+
 ## Analysis 2: source-aligned statistical model
 
 The published analysis used `sqrt(AUDPC)` and a general linear mixed model with fungicide, timing

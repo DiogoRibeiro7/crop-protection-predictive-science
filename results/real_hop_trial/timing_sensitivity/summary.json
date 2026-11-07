@@ -1,0 +1,43 @@
+{
+  "source_path": "data/raw/richardson_gent_hop_downy_mildew.csv",
+  "source_sha256": "4056c7290d264f5e9dda0f509dfd74cffdbf816f05de24e967a6c9f72b2768db",
+  "n_trial_years": 4,
+  "n_year_blocks": 20,
+  "n_complete_product_pairs": 92,
+  "source_excluded_year": 2019,
+  "estimands": {
+    "pair_weighted_audpc": 40.93152173913044,
+    "equal_year_audpc": 39.42721176470589,
+    "pair_weighted_sqrt_audpc": 1.2518921338241278,
+    "equal_year_sqrt_audpc": 1.2190864978833775
+  },
+  "year_effects_sign_agreement": true,
+  "leave_one_year_out_pair_weighted_raw_range": [
+    32.685522388059695,
+    45.57164179104477
+  ],
+  "maximum_absolute_year_block_influence_audpc": 8.303935532233886,
+  "nested_year_block_bootstrap": {
+    "resamples": 5000,
+    "seed": 20261107,
+    "percentile_intervals": {
+      "pair_weighted_audpc": {
+        "lower_95_percentile": 13.998713232239302,
+        "upper_95_percentile": 74.400085
+      },
+      "equal_year_audpc": {
+        "lower_95_percentile": 12.950631718750001,
+        "upper_95_percentile": 72.40184205882349
+      },
+      "pair_weighted_sqrt_audpc": {
+        "lower_95_percentile": 0.4074372076861879,
+        "upper_95_percentile": 2.191283541202701
+      },
+      "equal_year_sqrt_audpc": {
+        "lower_95_percentile": 0.3816416945464646,
+        "upper_95_percentile": 2.1484124907275612
+      }
+    }
+  },
+  "interpretation_boundary": "Four eligible years, after the source-defined exclusion of 2019. Nested bootstrap percentiles are sensitivity summaries, not small-sample calibrated confidence intervals, randomisation tests, or evidence of transportability to new locations or years."
+}
