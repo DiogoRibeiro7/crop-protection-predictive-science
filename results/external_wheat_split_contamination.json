@@ -1,0 +1,177 @@
+{
+  "source_doi": "10.5281/zenodo.6521175",
+  "source_path": "zenodo_wheat_fungicide_6521175/basf-wheat-diseases.txt",
+  "source_sha256": "7f3325fdf31261740e4988bbda8581ff3f2381e6c38d46947d374fad4b6af67a",
+  "schema_version": 1,
+  "source_rows": 2276,
+  "fold_count": 5,
+  "random_seed": 20261106,
+  "grouping_counts": {
+    "trial_id": 76,
+    "geocode_year": 65,
+    "geocode": 56
+  },
+  "cross_id_exact_record_signatures": 22,
+  "scientific_scope": "descriptive_validation_partition_structure_only",
+  "physical_trial_identity_verified": false,
+  "trial_level_treatment_effect_permitted": false,
+  "schemes": [
+    {
+      "scheme": "row",
+      "fold_row_counts": [
+        456,
+        455,
+        455,
+        455,
+        455
+      ],
+      "fold_assignment_unit_counts": [
+        456,
+        455,
+        455,
+        455,
+        455
+      ],
+      "recorded_group_overlap": {
+        "trial_id": {
+          "distinct_recorded_groups": 76,
+          "groups_spanning_folds": 76,
+          "rows_in_groups_spanning_folds": 2276,
+          "max_folds_per_group": 5
+        },
+        "geocode_year": {
+          "distinct_recorded_groups": 65,
+          "groups_spanning_folds": 65,
+          "rows_in_groups_spanning_folds": 2276,
+          "max_folds_per_group": 5
+        },
+        "geocode": {
+          "distinct_recorded_groups": 56,
+          "groups_spanning_folds": 56,
+          "rows_in_groups_spanning_folds": 2276,
+          "max_folds_per_group": 5
+        }
+      },
+      "cross_id_exact_record_signatures_spanning_folds": 19,
+      "rows_in_cross_id_exact_signatures_spanning_folds": 38
+    },
+    {
+      "scheme": "trial_id",
+      "fold_row_counts": [
+        454,
+        454,
+        454,
+        461,
+        453
+      ],
+      "fold_assignment_unit_counts": [
+        15,
+        15,
+        15,
+        16,
+        15
+      ],
+      "recorded_group_overlap": {
+        "trial_id": {
+          "distinct_recorded_groups": 76,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        },
+        "geocode_year": {
+          "distinct_recorded_groups": 65,
+          "groups_spanning_folds": 9,
+          "rows_in_groups_spanning_folds": 522,
+          "max_folds_per_group": 3
+        },
+        "geocode": {
+          "distinct_recorded_groups": 56,
+          "groups_spanning_folds": 10,
+          "rows_in_groups_spanning_folds": 739,
+          "max_folds_per_group": 3
+        }
+      },
+      "cross_id_exact_record_signatures_spanning_folds": 22,
+      "rows_in_cross_id_exact_signatures_spanning_folds": 44
+    },
+    {
+      "scheme": "geocode_year",
+      "fold_row_counts": [
+        455,
+        454,
+        453,
+        460,
+        454
+      ],
+      "fold_assignment_unit_counts": [
+        12,
+        13,
+        13,
+        14,
+        13
+      ],
+      "recorded_group_overlap": {
+        "trial_id": {
+          "distinct_recorded_groups": 76,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        },
+        "geocode_year": {
+          "distinct_recorded_groups": 65,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        },
+        "geocode": {
+          "distinct_recorded_groups": 56,
+          "groups_spanning_folds": 6,
+          "rows_in_groups_spanning_folds": 438,
+          "max_folds_per_group": 3
+        }
+      },
+      "cross_id_exact_record_signatures_spanning_folds": 0,
+      "rows_in_cross_id_exact_signatures_spanning_folds": 0
+    },
+    {
+      "scheme": "geocode",
+      "fold_row_counts": [
+        459,
+        459,
+        450,
+        458,
+        450
+      ],
+      "fold_assignment_unit_counts": [
+        11,
+        11,
+        11,
+        12,
+        11
+      ],
+      "recorded_group_overlap": {
+        "trial_id": {
+          "distinct_recorded_groups": 76,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        },
+        "geocode_year": {
+          "distinct_recorded_groups": 65,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        },
+        "geocode": {
+          "distinct_recorded_groups": 56,
+          "groups_spanning_folds": 0,
+          "rows_in_groups_spanning_folds": 0,
+          "max_folds_per_group": 1
+        }
+      },
+      "cross_id_exact_record_signatures_spanning_folds": 0,
+      "rows_in_cross_id_exact_signatures_spanning_folds": 0
+    }
+  ],
+  "site_hierarchy_source_rows": 2276
+}

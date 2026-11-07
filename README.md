@@ -196,6 +196,10 @@ reclassifying any as independent experimental units.
 The follow-up [RData/TSV parity audit](docs/external_wheat_binary_parity.md)
 now checks both original source formats cell by cell, finding no additional
 trial identifiers or unexplained measurement differences.
+The [wheat split-overlap audit](docs/external_wheat_split_contamination.md)
+also quantifies the recorded trial-ID and geocode collisions remaining under
+row-wise, trial-ID, geocode-year and geocode-aware cross-validation partitions,
+without making any model-accuracy or experimental-unit claim.
 No inferential model gate has been lifted.
 
 ## Scientific principles demonstrated
