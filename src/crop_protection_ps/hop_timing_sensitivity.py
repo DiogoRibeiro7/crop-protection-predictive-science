@@ -28,6 +28,7 @@ from crop_protection_ps.hop_trial import (
 _RAW_DELTA = "delta_audpc_late_minus_early"
 _SQRT_DELTA = "delta_sqrt_audpc_late_minus_early"
 _FIELDS = ("year", "block", "treatment", _RAW_DELTA, _SQRT_DELTA)
+_REPORT_DECIMALS = 10
 
 
 @dataclass(frozen=True)
@@ -70,10 +71,10 @@ def _estimates(frame: pd.DataFrame) -> dict[str, float]:
     """Compute row-pair-weighted and equally-year-weighted contrasts."""
     by_year = frame.groupby("year", observed=True)[[_RAW_DELTA, _SQRT_DELTA]].mean()
     return {
-        "pair_weighted_audpc": float(frame[_RAW_DELTA].mean()),
-        "equal_year_audpc": float(by_year[_RAW_DELTA].mean()),
-        "pair_weighted_sqrt_audpc": float(frame[_SQRT_DELTA].mean()),
-        "equal_year_sqrt_audpc": float(by_year[_SQRT_DELTA].mean()),
+        "pair_weighted_audpc": round(float(frame[_RAW_DELTA].mean()), _REPORT_DECIMALS),
+        "equal_year_audpc": round(float(by_year[_RAW_DELTA].mean()), _REPORT_DECIMALS),
+        "pair_weighted_sqrt_audpc": round(float(frame[_SQRT_DELTA].mean()), _REPORT_DECIMALS),
+        "equal_year_sqrt_audpc": round(float(by_year[_SQRT_DELTA].mean()), _REPORT_DECIMALS),
     }
 
 
@@ -128,8 +129,12 @@ def _nested_bootstrap(
     )
     return {
         name: {
-            "lower_95_percentile": float(np.quantile(draws[:, column], 0.025)),
-            "upper_95_percentile": float(np.quantile(draws[:, column], 0.975)),
+            "lower_95_percentile": round(
+                float(np.quantile(draws[:, column], 0.025)), _REPORT_DECIMALS
+            ),
+            "upper_95_percentile": round(
+                float(np.quantile(draws[:, column], 0.975)), _REPORT_DECIMALS
+            ),
         }
         for column, name in enumerate(names)
     }
@@ -184,8 +189,9 @@ def analyse_hop_timing_sensitivity(
                 "omitted_block": str(block),
                 "n_pairs": len(subset),
                 **subset_estimates,
-                "raw_effect_shift": (
-                    subset_estimates["pair_weighted_audpc"] - estimates["pair_weighted_audpc"]
+                "raw_effect_shift": round(
+                    subset_estimates["pair_weighted_audpc"] - estimates["pair_weighted_audpc"],
+                    _REPORT_DECIMALS,
                 ),
             }
         )
@@ -202,11 +208,11 @@ def analyse_hop_timing_sensitivity(
         "estimands": estimates,
         "year_effects_sign_agreement": bool((by_year_signs == by_year_signs[0]).all()),
         "leave_one_year_out_pair_weighted_raw_range": [
-            float(without_year["pair_weighted_audpc"].min()),
-            float(without_year["pair_weighted_audpc"].max()),
+            round(float(without_year["pair_weighted_audpc"].min()), _REPORT_DECIMALS),
+            round(float(without_year["pair_weighted_audpc"].max()), _REPORT_DECIMALS),
         ],
-        "maximum_absolute_year_block_influence_audpc": float(
-            without_cluster["raw_effect_shift"].abs().max()
+        "maximum_absolute_year_block_influence_audpc": round(
+            float(without_cluster["raw_effect_shift"].abs().max()), _REPORT_DECIMALS
         ),
         "nested_year_block_bootstrap": {
             "resamples": n_bootstrap,
@@ -232,9 +238,15 @@ def run_hop_timing_sensitivity(root: Path) -> dict[str, Any]:
     analysis = analyse_hop_timing_sensitivity(paired)
     output = root / "results/real_hop_trial/timing_sensitivity"
     output.mkdir(parents=True, exist_ok=True)
-    analysis.by_year.to_csv(output / "by_year.csv", index=False)
-    analysis.without_year.to_csv(output / "leave_one_year_out.csv", index=False)
-    analysis.without_year_block.to_csv(output / "leave_one_year_block_out.csv", index=False)
+    # Published digits are fixed to avoid irrelevant cross-runtime float noise.
+    float_format = f"%.{_REPORT_DECIMALS}f"
+    analysis.by_year.to_csv(output / "by_year.csv", index=False, float_format=float_format)
+    analysis.without_year.to_csv(
+        output / "leave_one_year_out.csv", index=False, float_format=float_format
+    )
+    analysis.without_year_block.to_csv(
+        output / "leave_one_year_block_out.csv", index=False, float_format=float_format
+    )
     summary: dict[str, Any] = {
         "source_path": raw_path.relative_to(root).as_posix(),
         "source_sha256": hashlib.sha256(raw_path.read_bytes()).hexdigest(),

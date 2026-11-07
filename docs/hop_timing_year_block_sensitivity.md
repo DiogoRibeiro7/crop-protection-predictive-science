@@ -86,5 +86,9 @@ Outputs are stored in
 - `summary.json`: source SHA-256, estimands, resampling seed, percentile ranges
   and interpretation limits.
 
+Results are serialized at ten decimal places, retaining far more precision
+than their scientific interpretation warrants while avoiding meaningless
+last-bit differences between supported Python runtimes.
+
 The source study and data provenance are described in
 [the original hop case study](real_case_hop_downy_mildew.md).
