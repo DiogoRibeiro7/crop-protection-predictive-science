@@ -8,6 +8,7 @@ controlled DGP should never be presented as estimates of real Crop Protection pe
 | Multi-site dose response | Controlled synthetic | Can dose response and site shift be audited against known truth? | `01_predictive_science_demo.ipynb` | `results/summary.json` | Synthetic environmental structure |
 | Fungicide field trial | **Public real data** | What does the experimental design support, and how does validation change for a new year? | `02_real_fungicide_field_trial.ipynb` | `results/real_hop_trial/summary.json` | One intervention experiment; four usable years after source exclusion |
 | Southern corn leaf blight phenotyping | **Independent public real data** | How well do hybrid burden and disease-curve shape transport to unseen field environments, and does a pre-known planting-window label improve that transport? | `crop-protection-bipolaris` | `results/bipolaris/summary.json`, `functional_eligibility.csv` | Host-resistance phenotyping, not a fungicide intervention trial; only six field environments |
+| Hop powdery-mildew schedule validation | **Independent public real data** | How does the risk-index spray schedule compare with 10-, 14- and 21-day intervals within field blocks and site-years? | `src/crop_protection_ps/hop_powdery_field.py` | `results/real_hop_powdery_mildew/field_interval/summary.json`, `environment_contrasts.csv` | No untreated arm or spray-count/cost outcomes; site-year differences descriptive; original CSV retained upstream |
 | Bayesian hierarchy | Real-data-derived | Does partial pooling stabilise inference and predictive uncertainty? | `03_bayesian_hierarchical_field_trial.ipynb` | `results/real_hop_trial/bayesian/summary.json` | Gaussian transformed-response hierarchy; limited years |
 | Environment transportability | Real field data + public weather | Which environment information transports to a held-out season? | `04_environment_transportability.ipynb` | `results/real_hop_trial/environment/summary.json` | Coarse city weather; sentinel is in-season, not fully prospective |
 | Adaptive replication | Real-data-derived decision simulation | Which additional paired block reduces decision uncertainty most? | `05_adaptive_experimental_design.ipynb` | `results/real_hop_trial/adaptive_design/summary.json` | No prospective follow-up experiment was actually run |
@@ -52,6 +53,19 @@ The exact upstream CSV is vendored at `data/raw/maize_bipolaris.csv`. Its acquis
 the upstream Git commit, path, byte length and Git blob identity. Normal reproduction is therefore
 offline; commit-pinned download remains only an explicit recovery path. See
 [`second_empirical_case_bipolaris.md`](second_empirical_case_bipolaris.md).
+
+### Hop powdery-mildew fungicide-schedule field validation
+
+The third empirical case uses the independently published Gent, Richardson & Massie (2025),
+*A Modified Disease Risk Index for Hop Powdery Mildew*,
+[10.1094/PHYTOFR-10-24-0117-R](https://doi.org/10.1094/PHYTOFR-10-24-0117-R).
+The publisher makes the article available as CC0. The original CSV and SAS files are maintained
+in the authors' public GitHub repository, which has no separate data-license declaration; the
+original CSV is not vendored here. The source identity, 12,880 records, eight site-year
+environments, 165 block-matched contrasts and one erroneous plant identifier are documented in
+[`real_case_hop_powdery_mildew_interval.md`](real_case_hop_powdery_mildew_interval.md).
+The independent experiment broadens field-intervention evidence but does not evaluate the same
+disease, treatments or estimand as the first hop downy-mildew study.
 
 ## Real-data claims that can be made
 
