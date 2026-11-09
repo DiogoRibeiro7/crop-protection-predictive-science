@@ -1,0 +1,30 @@
+{
+  "complete_end_season_plots": 221,
+  "design_cautions": [
+    "No untreated control exists in Interval.csv: this is not efficacy versus no spray.",
+    "Repeated plants and dates are subsamples, not independent field replicates.",
+    "Missing PM values are not zeros; only complete plot visits enter paired contrasts.",
+    "A repeated plant ID invalidates one early visit; no replacement ID is invented.",
+    "Site-year descriptives do not establish causal superiority or select new models.",
+    "Spray counts, pesticide identity and application costs are absent from this file."
+  ],
+  "doi": "10.1094/PHYTOFR-10-24-0117-R",
+  "duplicate_plant_identifier_rows": 1,
+  "end_season_plot_units": 224,
+  "excluded_incomplete_end_season_plots": 3,
+  "experimental_unit": "site-year x replicate block x fungicide scheduling treatment",
+  "missing_pm_plant_rows": 100,
+  "original_all_empty_csv_rows": 1,
+  "pair_sign": "risk index minus fixed schedule, in percentage points",
+  "plant_assessment_rows": 12880,
+  "plot_visit_units": 1288,
+  "plot_visits_with_invalid_plant_ids": 1,
+  "primary_endpoint": "incidence percentage at each site-year's last leaf assessment",
+  "site_year_environments": 8,
+  "source_canonical_sha256": "55feee5674bede0357a8eb404a149f10cf3dc9db4845783f800a52315688eb3b",
+  "source_file": "Interval.csv",
+  "source_git_blob_sha": "f88b19a34592ab23990bae4509eacdeb2876761e",
+  "source_repository": "https://github.com/DavidGent-Lab/Gent-et-al-2025-A-Modified-Disease-Risk-Index-for-Hop-Powdery-Mildew-PhytoFrontiers-",
+  "study": "Gent et al. (2025) hop powdery mildew field-validation intervals",
+  "within_block_risk_vs_fixed_pairs": 165
+}

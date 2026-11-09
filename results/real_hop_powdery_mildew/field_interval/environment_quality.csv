@@ -1,0 +1,9 @@
+year,site,assessment_dates,last_assessment,plant_rows,missing_plant_outcomes,end_season_plots,complete_end_season_plots,end_season_mean_incidence_percent
+2020,Prosser,6,2020-07-09,1680,0,28,28,0.0
+2020,Toppenish,6,2020-07-08,1680,0,28,28,5.0357142857
+2021,Prosser,6,2021-07-08,1680,40,28,27,0.037037037
+2021,Toppenish,6,2021-07-08,1680,0,28,28,0.0714285714
+2022,Prosser,5,2022-07-07,1400,30,28,27,0.037037037
+2022,Toppenish,6,2022-07-06,1680,30,28,27,20.9259259259
+2023,Prosser,5,2023-07-05,1400,0,28,28,0.2857142857
+2023,Toppenish,6,2023-07-05,1680,0,28,28,0.8214285714

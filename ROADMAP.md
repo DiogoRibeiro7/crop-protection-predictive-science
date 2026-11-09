@@ -6,12 +6,21 @@ The current empirical modelling programme is complete for the data presently in 
 The project remains active as a reproducible portfolio and can be reopened when genuinely new
 evidence changes the scientific question.
 
-Two independent public field-data cases are now represented:
+Three independent public field-data cases are now represented:
 
 - a hop fungicide-timing experiment with source-defined exclusion handling, paired treatment
   contrasts and leave-one-year-out validation;
 - a multi-environment southern corn leaf blight phenotyping dataset with scalar disease burden,
   functional trajectory comparison and prospective leave-one-environment-out transport.
+- an independently published hop powdery-mildew scheduling trial with 12,880 plant assessments
+  across eight site-year environments, original-source integrity checks and complete-block
+  end-of-season comparisons against the risk-index schedule.
+
+The third case reopens **source acquisition and descriptive field-study comparison only**. It
+does not reopen the six-environment Bipolaris model-selection sequence or create prospective
+out-of-sample evidence for the synthetic decision layers. The next scientifically defensible
+step would require a predeclared follow-up estimand and independent validation, not an additional
+post-hoc choice among the four scheduling arms.
 
 For the Bipolaris case, the current dataset contains 1,105 observations across six field
 environments and 13 hybrids. The functional audit finds 74 environment×hybrid curves and all 74

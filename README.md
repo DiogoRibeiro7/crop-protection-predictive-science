@@ -8,7 +8,7 @@ around one question:
 > **What decision is the model meant to support, does the validation design match that decision,
 > and when is another experiment more valuable than another prediction?**
 
-The project combines two independent public field-data cases with controlled experiments that make
+The project combines three independent public field-data cases with controlled experiments that make
 model failure, transfer error and decision quality auditable against known truth. It is deliberately
 closer to predictive science than to generic tabular machine learning.
 
@@ -155,6 +155,23 @@ Open [`docs/second_empirical_case_bipolaris.md`](docs/second_empirical_case_bipo
 poetry run crop-protection-bipolaris
 ```
 
+## A third empirical field case: Fungicide scheduling in hop powdery mildew
+
+The independent Gent et al. (2025) field-validation data cover 12,880 foliar disease records
+from two Washington locations over 2020–2023. The original experiment compares three fixed
+fungicide application intervals (10, 14, 21 days) with a modified weather-driven risk index.
+
+We preserve seven field blocks per site-year, rather than treating each sampled plant or
+assessment date as a randomised replicate. A source-integrity audit flags one duplicated plant
+identifier, 100 missing outcomes and one empty record. After excluding three incomplete
+end-of-season plots, 165 within-block risk-index-versus-fixed comparisons remain. Their
+**environment-specific differences are descriptive**, and they cannot establish profitability,
+unsprayed efficacy, or transportability to other seasons.
+
+Read [`docs/real_case_hop_powdery_mildew_interval.md`](docs/real_case_hop_powdery_mildew_interval.md)
+for source checksums, the official acquisition link, analysis code and derived results. The
+original CSV is downloaded from the authors rather than copied into this repository.
+
 ## What is real and what is controlled
 
 The project never mixes simulated performance numbers with empirical Crop Protection claims.
@@ -164,6 +181,7 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 | Multi-site dose response | Controlled synthetic | Audit dose response, site shift and D-optimal design against known truth |
 | Fungicide timing re-analysis | **Public real field data** | Experimental structure, paired contrasts, provenance and transportability |
 | Southern corn leaf blight phenotyping | **Independent public real field data** | Multi-environment disease-progress summaries and ranking stability |
+| Hop powdery-mildew field validation | **Independent public real field data** | Two-site, four-year field-block comparisons of fungicide scheduling strategies |
 | Bayesian hierarchy | Real-data-derived | Partial pooling, posterior checks and leave-one-year-out uncertainty |
 | Environment transportability | Real field data + public weather | Test prospective versus in-season environment information |
 | Adaptive replication | Real-data-derived decision simulation | Ask which additional paired block is decision-most-informative |
@@ -343,8 +361,9 @@ the package contract; the environment file is a reproducibility snapshot, not a 
 This is a **portfolio and research-methods demonstrator**, not a pesticide-use recommendation,
 registration study, regulatory risk assessment, or estimate of any company's R&D economics.
 
-The empirical evidence now comes from two independent public field-data cases: a multi-year hop
-fungicide-timing experiment and multi-environment maize disease-progress phenotyping. The later
+The empirical evidence now comes from three independent public field-data cases: a multi-year hop
+downy-mildew fungicide-timing experiment, multi-environment maize disease-progress phenotyping,
+and two-site hop powdery-mildew fungicide-scheduling validation. The later
 decision layers are controlled simulations designed to make methodological behaviour measurable
 against known truth. They demonstrate how the methods work; they do not establish that the reported
 percentage gains will transfer to a real discovery pipeline.
@@ -382,6 +401,15 @@ The second real-data case uses `maize_bipolaris.csv` from:
 
 Source repository:
 `https://github.com/emdelponte/paper-hgam-curves`
+
+The third real-data case uses the authors' `Interval.csv` accompanying:
+
+> Gent, D. H., Richardson, B. J. & Massie, S. T. (2025). *A Modified Disease Risk Index for Hop
+> Powdery Mildew*. *PhytoFrontiers*, 5(1), 30–41.
+> DOI: `10.1094/PHYTOFR-10-24-0117-R`.
+
+The source and reproducibility contract are described in
+[`docs/real_case_hop_powdery_mildew_interval.md`](docs/real_case_hop_powdery_mildew_interval.md).
 
 Product trade names appear only because they are present in the source experiment.
 
