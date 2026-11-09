@@ -14,13 +14,18 @@ Three independent public field-data cases are now represented:
   functional trajectory comparison and prospective leave-one-environment-out transport.
 - an independently published hop powdery-mildew scheduling trial with 12,880 plant assessments
   across eight site-year environments, original-source integrity checks and complete-block
-  end-of-season comparisons against the risk-index schedule.
+  end-of-season comparisons against the risk-index schedule. A separate late-season experiment
+  within the same paper contributes 140 quality plots from 2018–2022 and 1,120 cone infection
+  records in four of those years, with 105 quality and 65 complete disease block-pair contrasts.
 
 The third case reopens **source acquisition and descriptive field-study comparison only**. It
 does not reopen the six-environment Bipolaris model-selection sequence or create prospective
 out-of-sample evidence for the synthetic decision layers. The next scientifically defensible
 step would require a predeclared follow-up estimand and independent validation, not an additional
 post-hoc choice among the four scheduling arms.
+The additional cone-quality outcomes do not lift that boundary. Their farm identities differ
+across 2018–2020, Farm3 recurs after 2020, and an original alpha-acid extreme is retained with
+systematic block-deletion diagnostics instead of being edited to improve a contrast.
 
 For the Bipolaris case, the current dataset contains 1,105 observations across six field
 environments and 13 hybrids. The functional audit finds 74 environment×hybrid curves and all 74
