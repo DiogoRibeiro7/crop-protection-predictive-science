@@ -11,10 +11,10 @@ import pytest
 from crop_protection_ps.hop_cone_quality import (
     CASCADE_COLUMNS,
     CASCADE_SHA256,
-    ConeQualityAnalysis,
     METRICS,
     MILDEW_COLUMNS,
     MILDEW_SHA256,
+    ConeQualityAnalysis,
     run_late_season_cones,
 )
 
