@@ -1,0 +1,43 @@
+{
+  "source_path": "data/raw/richardson_gent_hop_downy_mildew.csv",
+  "source_sha256": "4056c7290d264f5e9dda0f509dfd74cffdbf816f05de24e967a6c9f72b2768db",
+  "n_trial_years": 4,
+  "n_year_blocks": 20,
+  "n_complete_product_pairs": 92,
+  "source_excluded_year": 2019,
+  "estimands": {
+    "pair_weighted_audpc": 40.9315217391,
+    "equal_year_audpc": 39.4272117647,
+    "pair_weighted_sqrt_audpc": 1.2518921338,
+    "equal_year_sqrt_audpc": 1.2190864979
+  },
+  "year_effects_sign_agreement": true,
+  "leave_one_year_out_pair_weighted_raw_range": [
+    32.6855223881,
+    45.571641791
+  ],
+  "maximum_absolute_year_block_influence_audpc": 8.3039355322,
+  "nested_year_block_bootstrap": {
+    "resamples": 5000,
+    "seed": 20261107,
+    "percentile_intervals": {
+      "pair_weighted_audpc": {
+        "lower_95_percentile": 13.9987132322,
+        "upper_95_percentile": 74.400085
+      },
+      "equal_year_audpc": {
+        "lower_95_percentile": 12.9506317188,
+        "upper_95_percentile": 72.4018420588
+      },
+      "pair_weighted_sqrt_audpc": {
+        "lower_95_percentile": 0.4074372077,
+        "upper_95_percentile": 2.1912835412
+      },
+      "equal_year_sqrt_audpc": {
+        "lower_95_percentile": 0.3816416945,
+        "upper_95_percentile": 2.1484124907
+      }
+    }
+  },
+  "interpretation_boundary": "Four eligible years, after the source-defined exclusion of 2019. Nested bootstrap percentiles are sensitivity summaries, not small-sample calibrated confidence intervals, randomisation tests, or evidence of transportability to new locations or years."
+}

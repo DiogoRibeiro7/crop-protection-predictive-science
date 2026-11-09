@@ -64,7 +64,13 @@ year is already represented, but it has no transportable meaning for a future se
 Open:
 [`02_real_fungicide_field_trial.ipynb`](notebooks/02_real_fungicide_field_trial.ipynb) ·
 [`year_transportability_gap.png`](results/real_hop_trial/figures/year_transportability_gap.png) ·
-[`real_case_hop_downy_mildew.md`](docs/real_case_hop_downy_mildew.md)
+[`real_case_hop_downy_mildew.md`](docs/real_case_hop_downy_mildew.md) ·
+[`hop_timing_year_block_sensitivity.md`](docs/hop_timing_year_block_sensitivity.md)
+
+The timing estimate remains positive when each eligible trial year is omitted in turn
+(range **32.69–45.57 AUDPC**). A separate nested year-and-block bootstrap describes
+uncertainty from the limited set of observed seasons; four eligible years are
+insufficient for calibrated generalisation to future environments.
 
 ### 2. Multi-fidelity evidence: cheap assays must earn the right to influence field decisions
 
