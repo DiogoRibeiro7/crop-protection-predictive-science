@@ -94,8 +94,10 @@ def analyse_cone_disease_bounds(
     are derived from those same source observations and experimental units.
     """
     groups: dict[tuple[int, str, int], list[ConeObservation]] = defaultdict(list)
-    for row in sources.mildew:
-        groups[(row.year, row.block, row.treatment)].append(row)
+    for observation in sources.mildew:
+        groups[(observation.year, observation.block, observation.treatment)].append(
+            observation
+        )
 
     intervals: dict[tuple[int, str, int], DiseaseInterval] = {}
     for key, plants in groups.items():
