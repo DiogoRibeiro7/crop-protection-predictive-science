@@ -181,6 +181,15 @@ alpha-acid value of 13.50% changes the corresponding seven-block mean contrast
 substantially. We retain the original observation and report the sensitivity.
 See [the cone disease–quality analysis](docs/real_case_hop_cone_quality.md).
 
+A separate [worst-case missing-disease audit](docs/real_case_hop_cone_bounds.md)
+recovers interval information from 19 previously incomplete disease contrasts
+without imputing healthy cones: 84 of 105 quality comparisons have a disease
+source, of which 65 have exact plot outcomes and 19 have partial bounds.
+In 2018–2019, all annual missing-data intervals span zero, despite zero
+infections among the **observed** cones. The fully observed 2020 and 2022
+contrasts retain their point values. These are identified ranges, **not
+confidence intervals or a basis for a treatment recommendation**.
+
 ## What is real and what is controlled
 
 The project never mixes simulated performance numbers with empirical Crop Protection claims.
@@ -191,7 +200,7 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 | Fungicide timing re-analysis | **Public real field data** | Experimental structure, paired contrasts, provenance and transportability |
 | Southern corn leaf blight phenotyping | **Independent public real field data** | Multi-environment disease-progress summaries and ranking stability |
 | Hop powdery-mildew field validation | **Independent public real field data** | Two-site, four-year field-block comparisons of fungicide scheduling strategies |
-| Late-season hop cone disease and quality | **Real data, separate experiment in third study** | Five-year cone chemistry and block-level infection comparisons with missingness and influence checks |
+| Late-season hop cone disease and quality | **Real data, separate experiment in third study** | Five-year cone chemistry, block-level comparisons, source missingness bounds and influence checks |
 | Bayesian hierarchy | Real-data-derived | Partial pooling, posterior checks and leave-one-year-out uncertainty |
 | Environment transportability | Real field data + public weather | Test prospective versus in-season environment information |
 | Adaptive replication | Real-data-derived decision simulation | Ask which additional paired block is decision-most-informative |

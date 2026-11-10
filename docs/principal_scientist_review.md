@@ -91,6 +91,13 @@ The additional hop trial is an intervention study but concerns a different patho
 programme and estimand. Its 2021 cone-disease absence and incomplete early disease years make
 it particularly important not to pool field rows without a design-level argument.
 
+The late-season follow-up now reports worst-case **partial identification** for
+the 203 unscored plant outcomes. It retains 19 previously incomplete paired
+contrasts with honest lower/upper limits rather than silently assuming missing
+plants were healthy. All six annual 2018–2019 contrast intervals cross zero;
+this removes a misleading impression of disease-free environments but does not
+resolve why plants were unscored or provide new randomized trial evidence.
+
 **What I would want next:** real linked discovery-stage evidence across assay fidelities, preferably
 with programme decisions and experimental costs recorded prospectively.
 

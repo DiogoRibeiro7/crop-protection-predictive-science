@@ -100,6 +100,12 @@ against an untreated arm or a transferable application recommendation.
 No new machine-learning model, hypothesis test, predictive validation gate or
 cross-study causal comparison was introduced.
 
+A separately reproducible
+[missing-disease partial-identification analysis](real_case_hop_cone_bounds.md)
+now quantifies the uncertainty from the 203 unscored plant outcomes without
+imputing zero infections. It preserves this analysis's complete-plot contrasts
+and records wider bounds wherever source disease observations are incomplete.
+
 ## Reproducibility
 
 Download the two original CSVs linked above. From the repository root, run:
