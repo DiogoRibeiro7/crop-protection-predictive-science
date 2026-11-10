@@ -1,0 +1,113 @@
+{
+  "alpha_acid_largest_original_value": {
+    "block": "VII",
+    "next_largest_percent": 9.31,
+    "treatment": 2,
+    "value_percent": 13.5,
+    "year": 2022
+  },
+  "cascade_canonical_sha256": "d8dbca537d19cd1c6894a442c0b7e9f1eecb74d2ee1c2ba8b0971c3892de0be4",
+  "contrast_direction": "bloom-plus-N minus cease-at-bloom within same year and block",
+  "doi": "10.1094/PHYTOFR-10-24-0117-R",
+  "largest_block_influence_by_metric": {
+    "alpha_acids_percent": {
+      "absolute_influence": 1.2976190476,
+      "additional_after_bloom": 1,
+      "all_block_mean_delta": 1.2142857143,
+      "ending_strategy": "bloom_plus_one",
+      "farm": "Farm3",
+      "full_minus_without": 1.2976190476,
+      "metric": "alpha_acids_percent",
+      "omitted_block": "VII",
+      "without_block_mean_delta": -0.0833333333,
+      "year": 2022
+    },
+    "beta_acids_percent": {
+      "absolute_influence": 0.3880952381,
+      "additional_after_bloom": 3,
+      "all_block_mean_delta": 0.2285714286,
+      "ending_strategy": "bloom_plus_three",
+      "farm": "Farm3",
+      "full_minus_without": -0.3880952381,
+      "metric": "beta_acids_percent",
+      "omitted_block": "I",
+      "without_block_mean_delta": 0.6166666667,
+      "year": 2021
+    },
+    "cone_color": {
+      "absolute_influence": 0.5,
+      "additional_after_bloom": 2,
+      "all_block_mean_delta": 0.0,
+      "ending_strategy": "bloom_plus_two",
+      "farm": "Farm1",
+      "full_minus_without": 0.5,
+      "metric": "cone_color",
+      "omitted_block": "I",
+      "without_block_mean_delta": -0.5,
+      "year": 2018
+    },
+    "dry_matter_percent": {
+      "absolute_influence": 1.5278571429,
+      "additional_after_bloom": 2,
+      "all_block_mean_delta": -0.6171428571,
+      "ending_strategy": "bloom_plus_two",
+      "farm": "Farm3",
+      "full_minus_without": 1.5278571429,
+      "metric": "dry_matter_percent",
+      "omitted_block": "II",
+      "without_block_mean_delta": -2.145,
+      "year": 2020
+    },
+    "hsi": {
+      "absolute_influence": 0.0067619047,
+      "additional_after_bloom": 3,
+      "all_block_mean_delta": 0.0035714286,
+      "ending_strategy": "bloom_plus_three",
+      "farm": "Farm3",
+      "full_minus_without": -0.0067619047,
+      "metric": "hsi",
+      "omitted_block": "I",
+      "without_block_mean_delta": 0.0103333333,
+      "year": 2021
+    }
+  },
+  "mildew_canonical_sha256": "2e26ce77ea392fee7e177b3b8f05a1411ebdde204af2c8d3da91758a272b5f75",
+  "mildew_complete_plots": 89,
+  "mildew_incomplete_plots": 23,
+  "mildew_missing_plant_rows": 203,
+  "mildew_plant_rows": 1120,
+  "mildew_source_years": [
+    2018,
+    2019,
+    2020,
+    2022
+  ],
+  "paired_complete_mildew_block_comparisons": 65,
+  "paired_quality_block_comparisons": 105,
+  "quality_only_plots": 28,
+  "quality_only_years": [
+    2021
+  ],
+  "quality_plot_rows": 140,
+  "quality_source_years": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022
+  ],
+  "scientific_limits": [
+    "Years are distinct environments, but Farm3 is reused across 2020-2022.",
+    "2021 has quality data and no Mildew.csv source rows; missing is not zero infection.",
+    "Mildew.csv has no farm label; joining requires one Cascade farm per year.",
+    "Mildew and quality dates can differ; the offset is recorded, not harmonised.",
+    "All treatments received fungicide; there is no untreated comparison or cost evidence.",
+    "Plant subsamples do not increase the seven field-block replicates per year.",
+    "Source-provided extreme alpha acid value is retained, with full block influence.",
+    "This is descriptive, not a predictive model or treatment recommendation."
+  ],
+  "source_cascade_git_blob": "aaa91ec59ec21b36d16289b79f165d51e813421b",
+  "source_mildew_git_blob": "bba8fffb6bfc77d57040ef568d50d5f4cde8e432",
+  "source_repository": "https://github.com/DavidGent-Lab/Gent-et-al-2025-A-Modified-Disease-Risk-Index-for-Hop-Powdery-Mildew-PhytoFrontiers-",
+  "study": "Gent et al. (2025) late-season hop cone disease and quality"
+}

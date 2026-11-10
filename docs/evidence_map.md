@@ -9,6 +9,7 @@ controlled DGP should never be presented as estimates of real Crop Protection pe
 | Fungicide field trial | **Public real data** | What does the experimental design support, and how does validation change for a new year? | `02_real_fungicide_field_trial.ipynb` | `results/real_hop_trial/summary.json` | One intervention experiment; four usable years after source exclusion |
 | Southern corn leaf blight phenotyping | **Independent public real data** | How well do hybrid burden and disease-curve shape transport to unseen field environments, and does a pre-known planting-window label improve that transport? | `crop-protection-bipolaris` | `results/bipolaris/summary.json`, `functional_eligibility.csv` | Host-resistance phenotyping, not a fungicide intervention trial; only six field environments |
 | Hop powdery-mildew schedule validation | **Independent public real data** | How does the risk-index spray schedule compare with 10-, 14- and 21-day intervals within field blocks and site-years? | `src/crop_protection_ps/hop_powdery_field.py` | `results/real_hop_powdery_mildew/field_interval/summary.json`, `environment_contrasts.csv` | No untreated arm or spray-count/cost outcomes; site-year differences descriptive; original CSV retained upstream |
+| Hop cone disease and quality | **Public real data, distinct late-season experiment in third study** | Does extending the final fungicide schedule coincide with cone disease and chemistry changes within the same trial block? | `src/crop_protection_ps/hop_cone_quality.py` | `results/real_hop_powdery_mildew/late_season/summary.json`, `year_comparisons.csv`, `block_influence.csv` | 2021 cone mildew absent, 2018–19 incomplete, one extreme alpha-acid observation, same farm reused across years |
 | Bayesian hierarchy | Real-data-derived | Does partial pooling stabilise inference and predictive uncertainty? | `03_bayesian_hierarchical_field_trial.ipynb` | `results/real_hop_trial/bayesian/summary.json` | Gaussian transformed-response hierarchy; limited years |
 | Environment transportability | Real field data + public weather | Which environment information transports to a held-out season? | `04_environment_transportability.ipynb` | `results/real_hop_trial/environment/summary.json` | Coarse city weather; sentinel is in-season, not fully prospective |
 | Adaptive replication | Real-data-derived decision simulation | Which additional paired block reduces decision uncertainty most? | `05_adaptive_experimental_design.ipynb` | `results/real_hop_trial/adaptive_design/summary.json` | No prospective follow-up experiment was actually run |
@@ -66,6 +67,15 @@ environments, 165 block-matched contrasts and one erroneous plant identifier are
 [`real_case_hop_powdery_mildew_interval.md`](real_case_hop_powdery_mildew_interval.md).
 The independent experiment broadens field-intervention evidence but does not evaluate the same
 disease, treatments or estimand as the first hop downy-mildew study.
+
+The same third publication reports a **separate late-season fungicide-ending
+experiment**, observed through `Cascade.csv` (2018–2022 cone quality) and
+`Mildew.csv` (2018, 2019, 2020, 2022 cone disease). The sources can be paired
+only at year–block–treatment level. The 2021 absence is explicitly recorded;
+all five quality metrics receive a systematic leave-one-block diagnostic.
+See [`real_case_hop_cone_quality.md`](real_case_hop_cone_quality.md) for data
+identity, exact matching, incomplete plots and the source-provided alpha-acid
+extreme.
 
 ## Real-data claims that can be made
 

@@ -78,14 +78,18 @@ scientifically defensible than reporting a point prediction for every input by c
 
 ### 1. Empirical breadth has improved, but it is still not an industrial discovery dataset
 
-The repository now contains two independent public field-data cases: the hop fungicide-timing trial
-and a multi-environment southern corn leaf blight phenotyping dataset. That removes the earlier
-single-dataset weakness and makes it harder to dismiss the empirical layer as one carefully chosen
-example.
+The repository now contains three independent public field-data cases: the hop downy-mildew
+fungicide-timing trial, multi-environment southern corn leaf blight phenotyping, and hop
+powdery-mildew field validation. The third paper also includes a distinct late-season cone
+disease-and-quality experiment. That removes the earlier single-dataset weakness and broadens
+the types of observed crop-protection endpoints.
 
 It does **not** turn the later synthetic layers into empirical industry evidence. The Bipolaris case
 is host-resistance phenotyping rather than a second fungicide intervention trial, and neither public
 case links historical lab, glasshouse and field observations from a discovery programme.
+The additional hop trial is an intervention study but concerns a different pathogen, treatment
+programme and estimand. Its 2021 cone-disease absence and incomplete early disease years make
+it particularly important not to pool field rows without a design-level argument.
 
 **What I would want next:** real linked discovery-stage evidence across assay fidelities, preferably
 with programme decisions and experimental costs recorded prospectively.
@@ -109,9 +113,9 @@ After the source-defined 2019 exclusion, the hop trial gives four usable years. 
 claims about year-level weather response or product × environment interaction poorly identified.
 The repository recognises this, which is why the failed G×E promotion gate is appropriate.
 
-The second empirical case supplies multiple field environments but a different scientific endpoint
-and experimental structure. It should not be used to pretend that the hop intervention model has
-suddenly acquired independent site-season replication.
+The later empirical cases supply different endpoints, interventions and structures. They should
+not be used to pretend that the original hop downy-mildew intervention model has suddenly acquired
+independent site-season replication.
 
 **What I would want next:** multiple intervention trials across sites and seasons with field-proximal
 weather, phenology, initial disease pressure, application conditions and protocol metadata.
