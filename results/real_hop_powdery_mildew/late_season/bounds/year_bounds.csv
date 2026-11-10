@@ -1,0 +1,16 @@
+year,farm,additional_after_bloom,ending_strategy,source_pairs,point_identified_pairs,partially_identified_pairs,mean_lower_percentage_points,mean_upper_percentage_points,bound_width_percentage_points,identified_direction
+2018,Farm1,1,bloom_plus_one,7,4,3,-30.0,28.5714285714,58.5714285714,not_sign_identified
+2018,Farm1,2,bloom_plus_two,7,3,4,-30.0,31.4285714286,61.4285714286,not_sign_identified
+2018,Farm1,3,bloom_plus_three,7,4,3,-30.0,28.5714285714,58.5714285714,not_sign_identified
+2019,Farm2,1,bloom_plus_one,7,4,3,-42.8571428571,42.8571428571,85.7142857142,not_sign_identified
+2019,Farm2,2,bloom_plus_two,7,4,3,-42.8571428571,42.8571428571,85.7142857142,not_sign_identified
+2019,Farm2,3,bloom_plus_three,7,4,3,-42.8571428571,42.8571428571,85.7142857142,not_sign_identified
+2020,Farm3,1,bloom_plus_one,7,7,0,-5.5714285714,-5.5714285714,0.0,negative
+2020,Farm3,2,bloom_plus_two,7,7,0,-2.0,-2.0,0.0,negative
+2020,Farm3,3,bloom_plus_three,7,7,0,-4.5714285714,-4.5714285714,0.0,negative
+2021,Farm3,1,bloom_plus_one,0,0,0,,,,not_in_source
+2021,Farm3,2,bloom_plus_two,0,0,0,,,,not_in_source
+2021,Farm3,3,bloom_plus_three,0,0,0,,,,not_in_source
+2022,Farm3,1,bloom_plus_one,7,7,0,-0.7142857143,-0.7142857143,0.0,negative
+2022,Farm3,2,bloom_plus_two,7,7,0,-0.4285714286,-0.4285714286,0.0,negative
+2022,Farm3,3,bloom_plus_three,7,7,0,-0.5714285714,-0.5714285714,0.0,negative

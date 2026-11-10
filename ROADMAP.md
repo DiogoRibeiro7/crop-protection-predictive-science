@@ -27,6 +27,15 @@ The additional cone-quality outcomes do not lift that boundary. Their farm ident
 across 2018–2020, Farm3 recurs after 2020, and an original alpha-acid extreme is retained with
 systematic block-deletion diagnostics instead of being edited to improve a contrast.
 
+The cone-disease missingness sensitivity now provides sharp worst-case ranges for
+the same predefined field-block contrasts. It retains 19 additional partially
+identified disease comparisons instead of dropping them or treating missing
+plants as healthy. All 2018–2019 annual contrast ranges cross zero, so their
+signs are not identified from the observed source data alone. In 2020 and
+2022 the missing-data bounds collapse to observed point differences; that is
+not a statement about sampling uncertainty or causal treatment effects.
+The 2021 disease source is absent, not bounded as a disease-free year.
+
 For the Bipolaris case, the current dataset contains 1,105 observations across six field
 environments and 13 hybrids. The functional audit finds 74 environment×hybrid curves and all 74
 satisfy the fixed 30–110 DAE support, assessment-count and mean-severity requirements. The current

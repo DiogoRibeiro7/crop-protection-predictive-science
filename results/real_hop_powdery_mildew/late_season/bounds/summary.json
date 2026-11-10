@@ -1,0 +1,28 @@
+{
+  "bounded_disease_pairs": 84,
+  "disease_pairs_without_source": 21,
+  "identification_contract": [
+    "Ten source plant slots per plot, each with ten cones at risk.",
+    "Missing plant cone counts may independently range from zero to ten.",
+    "No missing-at-random assumption, imputation or cross-year pooling.",
+    "2021 disease is absent from the source, not a plot bound of zero.",
+    "Block-paired and year-level intervals are deterministic worst-case bounds.",
+    "Bounds are descriptive, not treatment-effect inference or efficacy recommendations."
+  ],
+  "missing_plant_assessments": 203,
+  "observed_infected_cones": 515,
+  "paired_quality_comparisons": 105,
+  "partially_identified_disease_pairs": 19,
+  "partially_identified_plots": 23,
+  "plots_without_disease_source": 28,
+  "point_identified_disease_pairs": 65,
+  "point_identified_plots": 89,
+  "source_cascade_canonical_sha256": "d8dbca537d19cd1c6894a442c0b7e9f1eecb74d2ee1c2ba8b0971c3892de0be4",
+  "source_cascade_git_blob": "aaa91ec59ec21b36d16289b79f165d51e813421b",
+  "source_mildew_canonical_sha256": "2e26ce77ea392fee7e177b3b8f05a1411ebdde204af2c8d3da91758a272b5f75",
+  "source_mildew_git_blob": "bba8fffb6bfc77d57040ef568d50d5f4cde8e432",
+  "source_plots": 112,
+  "year_comparisons": 15,
+  "year_comparisons_with_full_source_coverage": 12,
+  "year_comparisons_with_identified_sign": 6
+}

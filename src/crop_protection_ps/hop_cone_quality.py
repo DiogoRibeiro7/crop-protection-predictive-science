@@ -109,6 +109,16 @@ class ConeQualityAnalysis:
     summary: dict[str, Any]
 
 
+@dataclass(frozen=True)
+class ConeQualitySources:
+    """Validated original tables and their exact, canonical source identities."""
+
+    mildew: list[ConeObservation]
+    qualities: list[ConeQuality]
+    mildew_sha: str
+    cascade_sha: str
+
+
 def _strict_int(value: str, field: str, lower: int, upper: int) -> int:
     """Validate numeric identifiers and source-scale response counts."""
     if not value.isascii() or not value.isdecimal():
@@ -467,14 +477,27 @@ def write_late_season_cones(result: ConeQualityAnalysis, output_dir: Path) -> No
     )
 
 
+def load_late_season_cone_sources(
+    mildew_path: Path, cascade_path: Path, *, verify_source: bool = True
+) -> ConeQualitySources:
+    """Load both original tables once for multiple non-mutating analyses."""
+    mildew, mildew_sha = _mildew_rows(mildew_path, verify_source=verify_source)
+    quality, cascade_sha = _quality_rows(cascade_path, verify_source=verify_source)
+    return ConeQualitySources(mildew, quality, mildew_sha, cascade_sha)
+
+
 def run_late_season_cones(
     mildew_path: Path, cascade_path: Path, output_dir: Path, *, verify_source: bool = True
 ) -> ConeQualityAnalysis:
     """Reproduce a sourced plot link without copying the original CSV files."""
-    mildew, mildew_sha = _mildew_rows(mildew_path, verify_source=verify_source)
-    quality, cascade_sha = _quality_rows(cascade_path, verify_source=verify_source)
+    sources = load_late_season_cone_sources(
+        mildew_path, cascade_path, verify_source=verify_source
+    )
     result = analyse_late_season_cones(
-        mildew, quality, mildew_sha=mildew_sha, cascade_sha=cascade_sha
+        sources.mildew,
+        sources.qualities,
+        mildew_sha=sources.mildew_sha,
+        cascade_sha=sources.cascade_sha,
     )
     write_late_season_cones(result, output_dir)
     return result
