@@ -1,0 +1,161 @@
+{
+  "analysis": "source_format_parity_without_protocol_identification",
+  "binary_original_md5": "a592e55691af3f08ef6928c51fa03a93",
+  "binary_sha256": "7f7844a868ae10a621679a832a7de10b348a96684c8e948ad1700f808b084940",
+  "binary_size_bytes": 310853,
+  "binary_url": "https://zenodo.org/records/6352735/files/corteva-potato-late-blight.Rdata?download=1",
+  "comparison": {
+    "cells_compared": 1270340,
+    "column_results": [
+      {
+        "binary_dtype": "category",
+        "column": "Country",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "float64",
+        "column": "Latitude",
+        "comparison": "ieee754_double_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "float64",
+        "column": "Longitude",
+        "comparison": "ieee754_double_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "float64",
+        "column": "Date",
+        "comparison": "r_epoch_day_to_iso_date_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "category",
+        "column": "CropStage",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "category",
+        "column": "Trial",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "category",
+        "column": "Plot",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "category",
+        "column": "Treatment",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "category",
+        "column": "Untreated",
+        "comparison": "r_factor_label_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      },
+      {
+        "binary_dtype": "float64",
+        "column": "Value",
+        "comparison": "ieee754_double_exact",
+        "mismatches": 0,
+        "rows_compared": 127034
+      }
+    ],
+    "columns_compared": 10,
+    "exact_numeric_parity": true,
+    "factor_vocabulary": [
+      {
+        "column": "Country",
+        "declared_factor_levels": 2,
+        "observed_factor_levels": 2,
+        "unused_factor_labels": []
+      },
+      {
+        "column": "CropStage",
+        "declared_factor_levels": 89,
+        "observed_factor_levels": 79,
+        "unused_factor_labels": [
+          "13",
+          "15",
+          "19",
+          "23",
+          "47",
+          "49",
+          "57",
+          "97",
+          "99",
+          "BBCH"
+        ]
+      },
+      {
+        "column": "Trial",
+        "declared_factor_levels": 9,
+        "observed_factor_levels": 8,
+        "unused_factor_labels": [
+          "0"
+        ]
+      },
+      {
+        "column": "Plot",
+        "declared_factor_levels": 112,
+        "observed_factor_levels": 109,
+        "unused_factor_labels": [
+          "44",
+          "55",
+          "56"
+        ]
+      },
+      {
+        "column": "Treatment",
+        "declared_factor_levels": 19,
+        "observed_factor_levels": 19,
+        "unused_factor_labels": []
+      },
+      {
+        "column": "Untreated",
+        "declared_factor_levels": 2,
+        "observed_factor_levels": 2,
+        "unused_factor_labels": []
+      }
+    ],
+    "row_order_preserved": true,
+    "rows_compared": 127034,
+    "unexplained_mismatches": 0
+  },
+  "experiment_identifiers_reconciled": false,
+  "interpretation_limits": [
+    "RData contains only obs with the same 127034 ordered rows and 10 TSV fields.",
+    "Both formats preserve the 2016 exact-record multiplicity; its cause is unknown.",
+    "Unused R factor levels are vocabulary metadata, not additional observations.",
+    "Neither format identifies yield as a distinct outcome column.",
+    "Parity alone cannot identify independent trials, plots or subsamples.",
+    "No treatment effects, model selection or data correction are authorized."
+  ],
+  "model_permission": "requires_protocol",
+  "r_objects": [
+    "obs"
+  ],
+  "schema_version": 1,
+  "source_doi": "10.5281/zenodo.6352735",
+  "source_duplicate_excess_rows_reproduced_in_both_formats": 118021,
+  "source_signatures_repeated_100x_reproduced_in_both_formats": 1192,
+  "text_sha256": "e89e391b32915df358f66ccd95e20c3d2d922c8ccfb5d1c6efb8b5ccdf198096",
+  "unrepresented_endpoint_columns_found": false
+}
