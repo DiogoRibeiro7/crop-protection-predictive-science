@@ -18,6 +18,18 @@ Three independent public field-data cases are now represented:
   within the same paper contributes 140 quality plots from 2018–2022 and 1,120 cone infection
   records in four of those years, with 105 quality and 65 complete disease block-pair contrasts.
 
+A **fourth independent public deposit is under source-only review**, not
+promoted into the validated empirical case count. The potato late-blight Zenodo
+TSV (UK/Ireland, 2013–2017) contains 127,034 source rows but only 9,013 distinct
+complete-record signatures. Most excess rows occur as 1,192 exactly-100×
+signatures in 2016. Although the title describes 18 trials, the release contains
+18 geocoded site-year cells and 34 site-year/`Trial` code cells. The audit also
+identifies 23 assessment keys with differing `Value` records. Only derived,
+non-inferential source ledgers are committed; the original TSV remains at Zenodo.
+The [source-identity and plot-design intake](docs/real_case_potato_source_audit.md)
+must be reconciled with an original protocol and endpoint dictionary before
+the source can support new estimands, effects or out-of-sample validation.
+
 The third case reopens **source acquisition and descriptive field-study comparison only**. It
 does not reopen the six-environment Bipolaris model-selection sequence or create prospective
 out-of-sample evidence for the synthetic decision layers. The next scientifically defensible

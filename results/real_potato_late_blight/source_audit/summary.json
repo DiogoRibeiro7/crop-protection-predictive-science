@@ -1,0 +1,48 @@
+{
+  "candidate_plot_keys": 602,
+  "distinct_assessment_event_keys": 8990,
+  "distinct_complete_row_signatures": 9013,
+  "distinct_trial_code_labels": 8,
+  "event_keys_with_different_recorded_values": 23,
+  "exact_repeat_excess_rows": 118021,
+  "exact_repeat_multiplicity_distribution": {
+    "1": 7808,
+    "100": 1192,
+    "2": 13
+  },
+  "interpretation_limits": [
+    "Rows repeated verbatim are signatures, not independent field observations.",
+    "The 18 geocoded site-years do not resolve 34 source trial-code cells.",
+    "Plot keys are provisional; a randomization and trial dictionary is still needed.",
+    "The Value column has no explicit endpoint-type field identifying tuber yield.",
+    "Same event keys with different values are retained and not averaged.",
+    "No source rows are deleted, corrected, imputed, or used for treatment inference."
+  ],
+  "original_source_rows": 127034,
+  "permitted_actions": [
+    "source_integrity_audit",
+    "design_identity_inventory"
+  ],
+  "requires_protocol": [
+    "trial_and_plot_allocation_reconciliation",
+    "value_endpoint_unit_dictionary",
+    "repeat_assessment_and_multiplicity_explanation",
+    "treatment_dictionary_across_site_years"
+  ],
+  "signatures_repeated_100_times": 1192,
+  "site_year_geocode_cells": 18,
+  "site_year_trial_code_cells": 34,
+  "source_doi": "10.5281/zenodo.6352735",
+  "source_md5": "4bd9fa37126cf6f6842bb3491a1779e7",
+  "source_md5_matches_zenodo": true,
+  "source_sha256": "e89e391b32915df358f66ccd95e20c3d2d922c8ccfb5d1c6efb8b5ccdf198096",
+  "source_trial_count_in_title": 18,
+  "source_url": "https://zenodo.org/records/6352735/files/corteva-potato-late-blight.txt?download=1",
+  "source_years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+  ]
+}

@@ -201,6 +201,7 @@ The project never mixes simulated performance numbers with empirical Crop Protec
 | Southern corn leaf blight phenotyping | **Independent public real field data** | Multi-environment disease-progress summaries and ranking stability |
 | Hop powdery-mildew field validation | **Independent public real field data** | Two-site, four-year field-block comparisons of fungicide scheduling strategies |
 | Late-season hop cone disease and quality | **Real data, separate experiment in third study** | Five-year cone chemistry, block-level comparisons, source missingness bounds and influence checks |
+| Potato late-blight source intake | **Fourth independent source, audit only; no accepted model** | Validate Zenodo source identity, exceptional exact-row repetition and provisional trial/plot identities before any treatment comparison |
 | Bayesian hierarchy | Real-data-derived | Partial pooling, posterior checks and leave-one-year-out uncertainty |
 | Environment transportability | Real field data + public weather | Test prospective versus in-season environment information |
 | Adaptive replication | Real-data-derived decision simulation | Ask which additional paired block is decision-most-informative |
@@ -244,6 +245,16 @@ also quantifies the recorded trial-ID and geocode collisions remaining under
 row-wise, trial-ID, geocode-year and geocode-aware cross-validation partitions,
 without making any model-accuracy or experimental-unit claim.
 No inferential model gate has been lifted.
+
+The [potato late-blight source-integrity audit](docs/real_case_potato_source_audit.md)
+opens an additional **candidate** intervention-data intake from 18 titled UK/Ireland
+fungicide trials (2013–2017). Its original TSV has 127,034 rows but only 9,013
+distinct complete-record signatures, including 1,192 signatures occurring exactly
+100 times in 2016. The analysis identifies 18 geocoded site-years, 34
+site-year/trial-code cells and 23 provisional event keys with multiple recorded values.
+These are source-design warnings—not plot replicates or estimates of fungicide
+effects. The original TSV stays upstream; the offline derived audit is committed.
+The count of *validated* empirical field modelling cases remains three.
 
 ## Scientific principles demonstrated
 
