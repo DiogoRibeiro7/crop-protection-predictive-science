@@ -39,8 +39,8 @@ Where identifiers cannot be released, an anonymized crosswalk that preserves the
 
 ## Evidence trail
 
-- [Source identity intake](../docs/real_case_potato_source_audit.md)
-- [RData/TSV parity audit and protocol gates](../docs/real_case_potato_binary_parity.md)
+- [Source identity intake](../../docs/real_case_potato_source_audit.md)
+- [RData/TSV parity audit and protocol gates](../../docs/real_case_potato_binary_parity.md)
 - Derived, non-inferential summaries in `results/real_potato_late_blight/`
 
 **Current decision:** The fourth candidate remains source-only; the three validated empirical field cases are unchanged. This document is a request template, not a claim that the original protocol has been obtained.
