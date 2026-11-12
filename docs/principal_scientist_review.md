@@ -91,6 +91,18 @@ The additional hop trial is an intervention study but concerns a different patho
 programme and estimand. Its 2021 cone-disease absence and incomplete early disease years make
 it particularly important not to pool field rows without a design-level argument.
 
+A further independent potato late-blight field-trial deposit is now inventoried
+as a **candidate source only**, not a fourth modelled case. Its original TSV
+has 127,034 rows but just 9,013 distinct exact-record signatures; in 2016,
+1,192 signatures occur 100 times each. The titled 18 trials also map to
+34 site-year/trial-code cells rather than a transparent set of independent
+randomized experiments, and 23 candidate assessment events contain multiple
+distinct values whose within-plot meaning is unresolved. A
+[reproducible intake audit](real_case_potato_source_audit.md) prevents
+these observations from being inadvertently counted as independent efficacy
+evidence. Trial allocation and endpoint documentation are prerequisites for
+any fourth empirical treatment analysis.
+
 The late-season follow-up now reports worst-case **partial identification** for
 the 203 unscored plant outcomes. It retains 19 previously incomplete paired
 contrasts with honest lower/upper limits rather than silently assuming missing

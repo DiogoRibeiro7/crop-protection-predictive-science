@@ -1,0 +1,6 @@
+year,source_rows,distinct_full_records,exact_repeat_excess,repeated_100x_signatures,site_year_cells,trial_code_cells,candidate_plot_ids,event_keys_with_different_values
+2013,1628,1624,4,0,2,6,120,0
+2014,2594,2594,0,0,4,8,166,0
+2015,2212,2203,9,0,5,8,140,23
+2016,119772,1764,118008,1192,4,7,116,0
+2017,828,828,0,0,3,5,60,0

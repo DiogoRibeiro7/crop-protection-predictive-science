@@ -11,6 +11,7 @@ controlled DGP should never be presented as estimates of real Crop Protection pe
 | Hop powdery-mildew schedule validation | **Independent public real data** | How does the risk-index spray schedule compare with 10-, 14- and 21-day intervals within field blocks and site-years? | `src/crop_protection_ps/hop_powdery_field.py` | `results/real_hop_powdery_mildew/field_interval/summary.json`, `environment_contrasts.csv` | No untreated arm or spray-count/cost outcomes; site-year differences descriptive; original CSV retained upstream |
 | Hop cone disease and quality | **Public real data, distinct late-season experiment in third study** | Does extending the final fungicide schedule coincide with cone disease and chemistry changes within the same trial block? | `src/crop_protection_ps/hop_cone_quality.py` | `results/real_hop_powdery_mildew/late_season/summary.json`, `year_comparisons.csv`, `block_influence.csv` | 2021 cone mildew absent, 2018–19 incomplete, one extreme alpha-acid observation, same farm reused across years |
 | Hop cone infection missingness sensitivity | **Partial-identification audit of the same real experiment** | What field-block disease differences remain identifiable if every unscored plant could have zero to ten infected cones? | `src/crop_protection_ps/hop_cone_bounds.py` | `results/real_hop_powdery_mildew/late_season/bounds/summary.json`, `paired_bounds.csv`, `year_bounds.csv` | Identified intervals are not confidence intervals; no 2021 disease data; no untreated control or treatment recommendation |
+| Potato late-blight trial deposit | **New independent candidate source; intake only** | How many exact source records, geocoded site-years, trial codes and provisional plot identities can be distinguished without overcounting 2016 repetitions? | `src/crop_protection_ps/potato_source_audit.py` | `results/real_potato_late_blight/source_audit/summary.json`, `years.csv`, `site_years.csv`, `trial_aliases.csv`, `conflicting_events.csv` | 127,034 original rows include 118,021 exact-repeat excess; title's 18 trials do not map directly to 34 source trial-code cells; no validated endpoint/plot dictionary or causal inference |
 | Bayesian hierarchy | Real-data-derived | Does partial pooling stabilise inference and predictive uncertainty? | `03_bayesian_hierarchical_field_trial.ipynb` | `results/real_hop_trial/bayesian/summary.json` | Gaussian transformed-response hierarchy; limited years |
 | Environment transportability | Real field data + public weather | Which environment information transports to a held-out season? | `04_environment_transportability.ipynb` | `results/real_hop_trial/environment/summary.json` | Coarse city weather; sentinel is in-season, not fully prospective |
 | Adaptive replication | Real-data-derived decision simulation | Which additional paired block reduces decision uncertainty most? | `05_adaptive_experimental_design.ipynb` | `results/real_hop_trial/adaptive_design/summary.json` | No prospective follow-up experiment was actually run |
@@ -84,6 +85,20 @@ point-identified and 19 are partially identified because of unscored plants;
 2021 remains missing at the source. The 2018–2019 annual ranges all cross
 zero under unrestricted missingness. This corrects potential overinterpretation
 of observed zero infections without adding inferential or causal claims.
+
+### Potato late-blight data (candidate case, not validated modelling evidence)
+
+The Holst & Donner (2022) Zenodo deposit
+[10.5281/zenodo.6352735](https://doi.org/10.5281/zenodo.6352735)
+describes 18 Corteva potato late-blight fungicide trials in the UK and Ireland
+from 2013 to 2017. The original TSV is not redistributed. A reproducible
+checksum-pinned [source-identity audit](real_case_potato_source_audit.md) and
+offline derived evidence record 9,013 distinct full-row signatures among
+127,034 rows, 18 candidate site-years, 34 source trial-code cells, 602
+provisional plot keys and 23 event keys with multiple numeric responses.
+These candidate identifiers are **not verified experimental units**. A source
+protocol, treatment dictionary, endpoint identity and duplication explanation
+are required before any treatment-effect or predictive-model claim.
 
 ## Real-data claims that can be made
 
