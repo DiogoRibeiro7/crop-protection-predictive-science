@@ -37,7 +37,9 @@ artifact. Unused R factor levels are not observations or additional trials.
 The IPM Decisions deliverable documents 0.1° geocode precision, further
 limiting site identity. Six concrete protocol evidence gates remain open:
 trial mapping, 2016 ETL lineage, subsample identities, endpoint semantics,
-treatment allocation and source rights. No inferential program reopens on
+treatment allocation and source rights. The [original-source evidence request](results/real_potato_late_blight/protocol_evidence_request.md)
+turns these into six answerable questions, with explicit decision rules and
+no claim that the investigators have been contacted. No inferential program reopens on
 parity evidence alone.
 
 The third case reopens **source acquisition and descriptive field-study comparison only**. It
