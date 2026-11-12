@@ -103,6 +103,15 @@ these observations from being inadvertently counted as independent efficacy
 evidence. Trial allocation and endpoint documentation are prerequisites for
 any fourth empirical treatment analysis.
 
+The subsequent [RData/TSV audit](real_case_potato_binary_parity.md) checks
+1,270,340 ordered source cells with **zero mismatches**. It finds one R `obs`
+data frame, the same ten fields and no hidden endpoint or allocation IDs.
+The exact 2016 repeats are present in both published formats, while the
+original IPM Decisions report specifies 0.1° rounded geocodes. These facts
+rule out the binary format as an independent source of experimental units
+and strengthen the existing protocol-gated status; they do not explain the
+duplication or authorize any new treatment-effect analysis.
+
 The late-season follow-up now reports worst-case **partial identification** for
 the 203 unscored plant outcomes. It retains 19 previously incomplete paired
 contrasts with honest lower/upper limits rather than silently assuming missing

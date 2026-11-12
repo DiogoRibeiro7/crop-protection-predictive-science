@@ -30,6 +30,16 @@ The [source-identity and plot-design intake](docs/real_case_potato_source_audit.
 must be reconciled with an original protocol and endpoint dictionary before
 the source can support new estimands, effects or out-of-sample validation.
 
+The follow-up [binary/text source-format parity audit](docs/real_case_potato_binary_parity.md)
+compares the Zenodo RData and TSV at all 1,270,340 ordered cells and finds no
+discrepancy. Their shared 2016 100× multiplicity is therefore not a TSV-only
+artifact. Unused R factor levels are not observations or additional trials.
+The IPM Decisions deliverable documents 0.1° geocode precision, further
+limiting site identity. Six concrete protocol evidence gates remain open:
+trial mapping, 2016 ETL lineage, subsample identities, endpoint semantics,
+treatment allocation and source rights. No inferential program reopens on
+parity evidence alone.
+
 The third case reopens **source acquisition and descriptive field-study comparison only**. It
 does not reopen the six-environment Bipolaris model-selection sequence or create prospective
 out-of-sample evidence for the synthetic decision layers. The next scientifically defensible

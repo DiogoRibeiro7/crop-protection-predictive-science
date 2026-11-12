@@ -255,6 +255,14 @@ site-year/trial-code cells and 23 provisional event keys with multiple recorded 
 These are source-design warnings—not plot replicates or estimates of fungicide
 effects. The original TSV stays upstream; the offline derived audit is committed.
 The count of *validated* empirical field modelling cases remains three.
+The additional [potato RData/TSV parity and protocol-gate review](docs/real_case_potato_binary_parity.md)
+compares the independently published binary and text files at every original
+cell. All 1,270,340 values and their row order match exactly, confirming that
+the exceptional 2016 row multiplicity is present in both formats. R factor
+metadata adds unused labels but no trial or outcome identifiers. The original
+IPM Decisions report also states that locations were georeferenced only to
+0.1°, so the 18 geocoded site-year cells cannot establish independent trial
+identity. Further modeling remains gated on source protocol evidence.
 
 ## Scientific principles demonstrated
 
