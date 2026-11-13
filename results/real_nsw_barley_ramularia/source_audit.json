@@ -1,0 +1,63 @@
+{
+  "block_count": 20,
+  "block_mainplot_groups": {
+    "FPB245WIR": {
+      "block_mainplot_groups": 10,
+      "genotype_labels_per_group": 2,
+      "treatment_labels_per_group": 6
+    },
+    "FPB255WIR": {
+      "block_mainplot_groups": 30,
+      "genotype_labels_per_group": 2,
+      "treatment_labels_per_group": 1
+    },
+    "FPC245WIR": {
+      "block_mainplot_groups": 10,
+      "genotype_labels_per_group": 2,
+      "treatment_labels_per_group": 6
+    },
+    "FPC255WIR": {
+      "block_mainplot_groups": 30,
+      "genotype_labels_per_group": 2,
+      "treatment_labels_per_group": 1
+    }
+  },
+  "distinct_plot_ids": 240,
+  "genotypes": {
+    "RGT_Planet": 120,
+    "Spartacus_CL": 120
+  },
+  "limitations": [
+    "Four trials share one research site over two seasons and irrigation regimes.",
+    "Plot rows are not independent treatment-randomization units.",
+    "Mainplot/Subplot coding differs between 2024 and 2025; reconcile with methods before estimating effects.",
+    "No treatment effects, endpoint statistics or out-of-trial models were estimated."
+  ],
+  "measurement_rows": 240,
+  "model_permission": "requires_protocol",
+  "plots_by_trial": {
+    "FPB245WIR": 60,
+    "FPB255WIR": 60,
+    "FPC245WIR": 60,
+    "FPC255WIR": 60
+  },
+  "sha256": {
+    "measurements": "b67fc91e33be73a342beb0c46de563ec113a1a5a6962dfc885bbe1233fa57a21",
+    "methods": "57b6f427ba45a6cb0f3c99db3c8b2dac028ac3bcf28cb82fda71f1f32f19f4b0",
+    "trials": "c5e09475329664a99ee9b1c4f3b5efe8030690a84c46632b064dcfc58047de05"
+  },
+  "source_columns": {
+    "measurements": 305,
+    "trials": 19
+  },
+  "status": "source_integrity_only",
+  "treatments": {
+    "Full_Control_Systiva(Seed)_Maxentis(Z31)_Revystar(Z41)_Bumper(Z51)_Maxentis(Z59)_Revystar(Z69)": 40,
+    "Maxentis_EC_(Z31)_Azoxystrobin+Prothioconazole": 40,
+    "Maxentis_EC_(Z59)_Azoxystrobin+Prothioconazole": 40,
+    "Nil_Control": 40,
+    "Revystar_(Z31)_Fluxapyroxad+Mefentrifluconazole": 40,
+    "Revystar_(Z59)_Fluxapyroxad+Mefentrifluconazole": 40
+  },
+  "trial_count": 4
+}
