@@ -117,6 +117,11 @@ experimental-design candidate. **No downloaded bytes have yet been checked**,
 and no fourth validated case or treatment-effect analysis is claimed. The next
 PR should establish source checksums, verify joins and experimental-unit
 hierarchy, and perform descriptive integrity checks before selecting an estimand.
+The [original-source integrity audit](docs/real_case_nsw_barley_source_audit.md)
+now pins the three original files, confirms four 60-plot trials and 240 distinct
+plot identifiers, and identifies a year-specific discrepancy in exported
+`Mainplot`/`Subplot` coding. A physical allocation reconciliation is required
+before defining split-plot treatment contrasts.
 
 ## Highest-value future empirical work
 
