@@ -40,7 +40,7 @@ def verify_sha256(path: Path, expected: str) -> str:
 def load_export(path: Path) -> tuple[list[str], list[dict[str, Any]]]:
     """Decode exactly one XLSX Export sheet, preserving missing cells."""
     try:
-        from openpyxl import load_workbook  # type: ignore[import-not-found]
+        from openpyxl import load_workbook  # type: ignore[import-untyped]
     except ImportError as exc:
         raise RuntimeError("Install openpyxl to audit original XLSX files") from exc
 
