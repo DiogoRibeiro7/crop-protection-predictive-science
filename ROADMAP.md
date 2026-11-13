@@ -106,6 +106,18 @@ candidate sequence. Suitable triggers include at least one of the following:
 If new environments are added, candidate definitions and promotion rules should be frozen before the
 new outcomes are opened wherever practical.
 
+## Newly identified source candidate: NSW barley Ramularia (metadata-only)
+
+The [2024–2025 NSW barley Ramularia source intake](docs/candidate_nsw_barley_ramularia.md)
+records four publicly listed split-plot fungicide trials (240 advertised plot
+records), original trial metadata, measurement workbooks and a separate methods
+PDF under publisher-stated Creative Commons Attribution terms. The advertised
+block, main-plot and subplot identifiers make this a promising independent
+experimental-design candidate. **No downloaded bytes have yet been checked**,
+and no fourth validated case or treatment-effect analysis is claimed. The next
+PR should establish source checksums, verify joins and experimental-unit
+hierarchy, and perform descriptive integrity checks before selecting an estimand.
+
 ## Highest-value future empirical work
 
 The strongest extension would not be a more complex algorithm. It would be a linked discovery-stage
