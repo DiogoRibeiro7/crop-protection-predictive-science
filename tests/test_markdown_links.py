@@ -1,8 +1,13 @@
 """Regression tests for offline Markdown reference validation."""
 
 from pathlib import Path
+from runpy import run_path
 
-from scripts.check_markdown_links import broken_links, destinations
+# The repository script is not an installed package under Poetry/pytest.
+# Load its functions from the checked-out file, independent of sys.path.
+_script = run_path(str(Path(__file__).resolve().parents[1] / "scripts" / "check_markdown_links.py"))
+broken_links = _script["broken_links"]
+destinations = _script["destinations"]
 
 
 def test_extracts_local_links_and_skips_fenced_examples() -> None:
